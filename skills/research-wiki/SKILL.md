@@ -461,5 +461,7 @@ The system suggests but does not auto-trigger. User decides.
 
 Inspired by [Karpathy's LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) — "compile knowledge once, keep it current, don't re-derive on every query."
 
-## 环境适配（QoderWake 安装时追加）
-- 本 Skill 的原文与支持文件（scripts/、references/、以及同级 ../shared-references/）源目录为：D:\skills\Auto-claude-code-research-in-sleep-main\Auto-claude-code-research-in-sleep-main\skills\research-wiki\n- 执行脚本或读取参考文件时，请以该源目录解析相对路径；SkillStore 中仅保存本 SKILL.md 正文。
+## 镜像说明（本公开仓库追加）
+- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
+  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- 执行技能时若引用支持文件，请从上游仓库解析相对路径。

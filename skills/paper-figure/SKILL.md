@@ -324,5 +324,7 @@ figures/
 
 Design pattern (type × style matrix) inspired by [baoyu-skills](https://github.com/jimliu/baoyu-skills). Publication style defaults and figure rules from [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow). Visualization decision tree from [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills).
 
-## 环境适配（QoderWake 安装时追加）
-- 本 Skill 的原文与支持文件（scripts/、references/、以及同级 ../shared-references/）源目录为：D:\skills\Auto-claude-code-research-in-sleep-main\Auto-claude-code-research-in-sleep-main\skills\paper-figure\n- 执行脚本或读取参考文件时，请以该源目录解析相对路径；SkillStore 中仅保存本 SKILL.md 正文。
+## 镜像说明（本公开仓库追加）
+- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
+  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- 执行技能时若引用支持文件，请从上游仓库解析相对路径。

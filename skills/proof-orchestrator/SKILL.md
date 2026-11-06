@@ -254,5 +254,7 @@ Record nontrivial repairs in `audit.md` or `codex-ledger.md`. Perform substantiv
 - Treat an unjustified target-to-subgoal reduction, a circular dependency, or a derivation that never returns to its stated target as an exposition blocker.
 - If correctness and elegance conflict, preserve correctness and state the remaining exposition issue explicitly.
 
-## 环境适配（QoderWake 安装时追加）
-- 本 Skill 的原文与支持文件（scripts/、references/、以及同级 ../shared-references/）源目录为：D:\skills\Auto-claude-code-research-in-sleep-main\Auto-claude-code-research-in-sleep-main\skills\proof-orchestrator\n- 执行脚本或读取参考文件时，请以该源目录解析相对路径；SkillStore 中仅保存本 SKILL.md 正文。
+## 镜像说明（本公开仓库追加）
+- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
+  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- 执行技能时若引用支持文件，请从上游仓库解析相对路径。

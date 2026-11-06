@@ -255,5 +255,7 @@ Suggest the row to the user but let them edit it in themselves if they want to c
 
 Extracted from the two pilot tutorials (Attention + Flow Matching, May 2026). Both passed cross-model review; the attention tutorial required 3 review rounds — catching a table-pipe collision and a callout-list collision that were not obvious from the rendered output. Those lessons are now baked into the style guide and reviewer checks 5+6 so future tutorials don't repeat them.
 
-## 环境适配（QoderWake 安装时追加）
-- 本 Skill 的原文与支持文件（scripts/、references/、以及同级 ../shared-references/）源目录为：D:\skills\Auto-claude-code-research-in-sleep-main\Auto-claude-code-research-in-sleep-main\skills\interview-cheatsheet\n- 执行脚本或读取参考文件时，请以该源目录解析相对路径；SkillStore 中仅保存本 SKILL.md 正文。
+## 镜像说明（本公开仓库追加）
+- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
+  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- 执行技能时若引用支持文件，请从上游仓库解析相对路径。

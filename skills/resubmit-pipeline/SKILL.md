@@ -457,5 +457,7 @@ Every Codex MCP reviewer call across all phases saves traces per `shared-referen
 - Page-shrink heuristic is ordered (compress conclusion → tighten hedging → move marginal figures → move proof sketches → compress related-work prose). The order is calibrated to "least risky to most risky" — compressing conclusion is mostly editorial; moving proof sketches changes the reading flow. Stop as early as page limit is met.
 - `RESUBMIT_REPORT.json` schema follows `shared-references/assurance-contract.md` exactly. This makes resubmit runs forensically reproducible. **Note**: `verify_paper_audits.sh` does not currently include `RESUBMIT_REPORT.json` in its `MANDATORY_AUDITS` list (the verifier checks proof / paper-claim / citation / kill-argument). The 4 mandatory audit files consumed by resubmit (which DO live in `<NEW_VENUE_DIR>/`) are recognized by the verifier as usual; `RESUBMIT_REPORT.json` is the orchestrator's own ledger and is not yet a verifier mandatory artifact. Adding it to the verifier is a separate follow-up if the user wants resubmit to be a submission gate via the verifier.
 
-## 环境适配（QoderWake 安装时追加）
-- 本 Skill 的原文与支持文件（scripts/、references/、以及同级 ../shared-references/）源目录为：D:\skills\Auto-claude-code-research-in-sleep-main\Auto-claude-code-research-in-sleep-main\skills\resubmit-pipeline\n- 执行脚本或读取参考文件时，请以该源目录解析相对路径；SkillStore 中仅保存本 SKILL.md 正文。
+## 镜像说明（本公开仓库追加）
+- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
+  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
