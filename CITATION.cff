@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: >-
+  If you load or reuse this clone kit (behavior manual, goal-first skill
+  routing, integrity audits), please cite this repository and keep the
+  upstream attributions in skills/NOTICE.md.
+title: "Thats-me: an open-source cyber clone for research"
+type: software
+license: MIT
+repository-code: "https://github.com/jiangfeng-strathclyde/Thats-me"
+url: "https://jiangfeng-strathclyde.github.io/Thats-me/"
+version: "1.0.0"
+date-released: "2026-11-06"
+authors:
+  - name: "Thats-me contributors"
+    alias: "jiangfeng-strathclyde"
+keywords:
+  - research-assistant
+  - llm-agents
+  - skills
+  - research-integrity
+  - reproducibility
+  - academic-writing
+  - remote-sensing
+references:
+  - type: software
+    title: "Auto-claude-code-research-in-sleep (ARIS), upstream of 87 mirrored skills"
+    authors:
+      - name: "wanshuiyin"
+    license: MIT
+    url: "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep"
+  - type: software
+    title: "crawl4ai-skill, upstream of 1 mirrored skill"
+    authors:
+      - name: "Lancelin"
+    license: MIT-0
+  - type: software
+    title: "excel-formula, upstream of 1 mirrored skill"
+    license: MIT

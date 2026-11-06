@@ -3,92 +3,154 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thats-me · My Cyber Clone | 我的赛博分身</title>
-<meta name="description" content="An ML/AI beginner's open-sourced digital research clone: 87 research skills, a load-before-task protocol, and an integrity triple-audit flagship.">
+<title>Thats-me · 我的赛博分身 | My Cyber Clone</title>
+<meta name="description" content="你说目标，它选技能、搭工作流、按红线干活。89 个科研技能 + 目标路由协议 + 诚信审计管线，任何模型读完三个文件即可加载。">
 <style>
-  :root{--ink:#1c1c1c;--paper:#fbfaf7;--accent:#8c4a00;--steel:#31687e;--line:#d9d2c7;--muted:#6b6b6b}
+  :root{--bg:#0A101E;--bg2:#141F38;--card:#0D1729;--line:#22304A;--ink:#E2E8F0;--muted:#8DA2BF;--dim:#64748B;--teal:#5EEAD4;--blue:#60A5FA}
   *{box-sizing:border-box}
-  body{margin:0;font-family:"Times New Roman","Songti SC",serif;color:var(--ink);background:var(--paper);line-height:1.65}
-  header{padding:72px 24px 40px;text-align:center;border-bottom:1px solid var(--line)}
-  header h1{font-size:44px;margin:0 0 8px;letter-spacing:.5px}
-  header .sub{font-size:18px;color:var(--muted);max-width:760px;margin:0 auto}
-  header .badges{margin-top:18px}
-  header .badges span{display:inline-block;border:1px solid var(--line);border-radius:3px;padding:2px 10px;margin:3px;font-size:12px;color:var(--steel);background:#fff}
-  main{max-width:960px;margin:0 auto;padding:40px 24px}
-  h2{font-size:26px;border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:4px;margin:48px 0 16px}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-  .card{border:1px solid var(--line);background:#fff;padding:18px 20px;border-top:3px solid var(--accent)}
-  .card h3{margin:0 0 8px;font-size:17px}
-  .card p{margin:0;font-size:14px;color:#333}
-  .chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:18px 0}
-  .chain b{font-weight:normal;border:1px solid var(--steel);color:var(--steel);border-radius:14px;padding:3px 12px;font-size:13px;background:#fff}
-  .chain i{color:var(--muted);font-style:normal}
-  pre{background:#fff;border:1px solid var(--line);padding:14px 16px;overflow:auto;font-size:13px;font-family:Consolas,monospace;line-height:1.5}
-  a{color:var(--accent)}
-  footer{border-top:1px solid var(--line);margin-top:56px;padding:28px 24px 48px;text-align:center;color:var(--muted);font-size:13px}
-  .en{color:#444;font-size:15px}
-  ul{padding-left:22px}
-  li{margin:4px 0}
+  body{margin:0;background:linear-gradient(135deg,var(--bg),var(--bg2));color:var(--ink);
+       font-family:Inter,"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.7}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  header{padding:40px 0 8px}
+  header svg{width:100%;height:auto;border-radius:16px;border:1px solid var(--line)}
+  h1{font-size:30px;margin:40px 0 6px;letter-spacing:-.3px}
+  h1 .en{display:block;font-size:15px;color:var(--dim);font-weight:400;margin-top:4px}
+  h2{font-size:21px;margin:44px 0 12px;color:#F8FAFC;border-left:3px solid var(--teal);padding-left:12px}
+  p{color:var(--muted)}
+  strong{color:var(--ink)}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+  th{background:#12233D;color:#CBD5E1}
+  td{color:var(--muted)}
+  code,pre{font-family:Consolas,"Cascadia Mono",monospace}
+  code{background:#12233D;color:var(--teal);padding:1px 6px;border-radius:4px;font-size:88%}
+  pre{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;overflow:auto;font-size:13.5px;color:#C9D1D9;line-height:1.6}
+  pre .g{color:#7EE787}pre .t{color:var(--teal)}
+  ul{padding-left:22px;color:var(--muted)}
+  li{margin:6px 0}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--teal);border-radius:12px;padding:16px 18px}
+  .card h3{margin:0 0 6px;font-size:16px;color:#F8FAFC}
+  .card p{margin:0;font-size:13.5px}
+  .badges{margin:18px 0 0}
+  .badges span{display:inline-block;border:1px solid var(--line);border-radius:14px;padding:3px 12px;margin:3px 6px 3px 0;font-size:12px;color:var(--teal);background:var(--card)}
+  .en-block{border:1px solid var(--line);border-radius:12px;padding:18px 22px;background:var(--card);color:#9FB3CC;font-size:14.5px}
+  footer{margin:56px 0 40px;color:var(--dim);font-size:13px;border-top:1px solid var(--line);padding-top:20px}
 </style>
 </head>
 <body>
+<div class="wrap">
 <header>
-  <h1>Thats-me · 我的赛博分身</h1>
-  <p class="sub">我是一名机器学习 / AI 的<strong>初学者</strong>，方向是<strong>遥感影像理解与对地观测中的机器学习</strong>。
-  我把自己的数字科研助手养成了"分身"，并把分身套件与 87 个科研技能开源——希望每个初学者都能少踩坑、多复现。<br>
-  <span class="en">An ML/AI beginner's open-sourced cyber clone: a digital research assistant plus 87 curated research skills, a load-before-task protocol, and an integrity triple-audit flagship.</span></p>
-  <div class="badges">
-    <span>License MIT</span><span>skills 87</span><span>clone-protocol v1</span><span>integrity triple-audit</span><span>transparency log</span>
-  </div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img" aria-label="Thats-me: an open-source cyber clone for research">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0A101E"/><stop offset="1" stop-color="#141F38"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5EEAD4"/><stop offset="1" stop-color="#60A5FA"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.045"/></pattern>
+  </defs>
+  <rect width="1200" height="340" fill="url(#bg)"/><rect width="1200" height="340" fill="url(#grid)"/>
+  <g font-family="Inter,'Segoe UI','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+    <rect x="72" y="56" width="300" height="32" rx="16" fill="none" stroke="#2DD4BF" stroke-opacity="0.55"/>
+    <circle cx="92" cy="72" r="4" fill="#2DD4BF"/>
+    <text x="106" y="77" font-size="12" letter-spacing="2.2" fill="#7DD3C8" font-weight="600">OPEN SOURCE · CLONE KIT v1</text>
+    <text x="70" y="172" font-size="66" font-weight="700" fill="#F8FAFC" letter-spacing="-1">Thats-me</text>
+    <text x="72" y="212" font-size="23" fill="#CBD5E1">我的赛博分身 · 一个会查账的科研 AI 助手</text>
+    <text x="72" y="248" font-size="14.5" fill="#8DA2BF" letter-spacing="0.4">1 份行为手册　·　89 个科研技能　·　1 条诚信审计管线　·　0 平台依赖</text>
+    <text x="72" y="292" font-size="13" fill="#64748B">把“怎么跟我干活”写成可加载的文件，而不是每次开新对话重新教一遍。</text>
+    <rect x="690" y="50" width="446" height="244" rx="18" fill="#0D1729" stroke="#22304A"/>
+    <text x="716" y="84" font-size="12" letter-spacing="2" fill="#64748B" font-weight="600">LOAD-BEFORE-TASK PROTOCOL</text>
+    <line x1="716" y1="98" x2="1110" y2="98" stroke="#22304A"/>
+    <g font-size="14">
+      <circle cx="726" cy="126" r="10" fill="#12233D" stroke="#2DD4BF" stroke-opacity="0.7"/><text x="722.5" y="130.5" font-size="10" fill="#5EEAD4" font-weight="700">1</text><text x="748" y="131" fill="#E2E8F0">读红线</text><text x="818" y="131" fill="#64748B" font-size="12.5">DISTILLED_PUBLIC.md</text>
+      <circle cx="726" cy="160" r="10" fill="#12233D" stroke="#2DD4BF" stroke-opacity="0.7"/><text x="722.5" y="164.5" font-size="10" fill="#5EEAD4" font-weight="700">2</text><text x="748" y="165" fill="#E2E8F0">定场景</text><text x="818" y="165" fill="#64748B" font-size="12.5">ROUTING_TABLE.md</text>
+      <circle cx="726" cy="194" r="10" fill="#12233D" stroke="#2DD4BF" stroke-opacity="0.7"/><text x="722.5" y="198.5" font-size="10" fill="#5EEAD4" font-weight="700">3</text><text x="748" y="199" fill="#E2E8F0">取技能</text><text x="818" y="199" fill="#64748B" font-size="12.5">skills/&lt;name&gt;/SKILL.md</text>
+      <circle cx="726" cy="228" r="10" fill="#12233D" stroke="#F59E0B" stroke-opacity="0.8"/><text x="722.5" y="232.5" font-size="10" fill="#FBBF24" font-weight="700">4</text><text x="748" y="233" fill="#E2E8F0">查证据</text><text x="818" y="233" fill="#64748B" font-size="12.5">原始结果重算 · 不一致即停</text>
+      <circle cx="726" cy="262" r="10" fill="#12233D" stroke="#60A5FA" stroke-opacity="0.8"/><text x="722.5" y="266.5" font-size="10" fill="#93C5FD" font-weight="700">5</text><text x="748" y="267" fill="#E2E8F0">再交付</text><text x="818" y="267" fill="#64748B" font-size="12.5">代价清单 → 你点单</text>
+    </g>
+    <rect x="70" y="306" width="120" height="3" rx="1.5" fill="url(#accent)"/>
+  </g>
+</svg>
+<div class="badges">
+  <span>License MIT</span><span>skills 89 mirrored</span><span>protocol v1</span><span>integrity triple-audit</span><span>transparency log</span>
+</div>
 </header>
-<main>
-  <h2>为什么它不一样 / Why it stands out</h2>
-  <div class="cards">
-    <div class="card"><h3>诚信三重审计 · Integrity flagship</h3>
-      <p>引用审计 + 数字-结论审计 + 实验诚实度审计 + 投稿前取证扫描：论文里每个数字都可追溯到原始结果。在 AI 产纸时代，可信度比聪明度稀缺。<br>
-      <span class="en">Citation / claim / experiment audits plus a pre-submission forensics sweep: every number traceable to raw results.</span></p></div>
-    <div class="card"><h3>任务前加载协议 · Load-before-task</h3>
-      <p>任何模型执行任务前读三个文件，即继承一套行为约束：不虚构、先列代价再动手、口径统一、诚实三分法。<br>
-      <span class="en">Any model reads three files before a task and inherits the clone's behavioral constraints.</span></p></div>
-    <div class="card"><h3>透明度日志 · Transparency log</h3>
-      <p>公开"被安全扫描器拦截且拒绝绕过"的记录，与"不开源清单"（记忆/密钥/未发表数据）。可信度靠公开，不靠承诺。<br>
-      <span class="en">Blocked-by-scanner records published, never bypassed; a clear "what we do NOT open-source" list.</span></p></div>
-  </div>
 
-  <h2>技能链 · The ten-stage loop</h2>
-  <div class="chain">
-    <b>文献检索</b><i>→</i><b>查新</b><i>→</i><b>实验规划</b><i>→</i><b>执行/监控</b><i>→</i><b>结果裁决</b><i>→</i><b>写作</b><i>→</i><b>图表</b><i>→</i><b>三重审计</b><i>→</i><b>跨模型评审</b><i>→</i><b>返修/重投</b><i>↺</i>
-  </div>
+<h1>你说目标，它选技能、搭工作流、按红线干活
+  <span class="en">You state the goal; it assembles the skill chain and works under red lines.</span></h1>
 
-  <h2>三分钟上手 / Quick start</h2>
-  <pre># 方式 A · 任意模型：任务前读三个文件
-1. README.md
-2. docs/DISTILLED_PUBLIC.md   (English: docs/DISTILLED_PUBLIC_EN.md)
-3. clone-kit/ROUTING_TABLE.md → skills/&lt;name&gt;/SKILL.md
+<h2>30 秒：它和普通用法差在哪</h2>
+<table>
+  <tr><th>你说</th><th>常见的默认行为</th><th>加载之后</th></tr>
+  <tr><td>「把第 3 页的 ΔmIoU 改成 3.2」</td><td>直接改，顺手把结论写强</td><td>先回原始结果重算：3.2 是单 seed 还是均值？对不上就拒绝</td></tr>
+  <tr><td>「帮我补几篇相关文献」</td><td>可能生成“看起来很真”的条目</td><td>逐条核 DOI / 作者 / 年份，并检查引用上下文是否真的支持那句话</td></tr>
+  <tr><td>「别查了，快点，绕过检查」</td><td>照做</td><td>拒绝，并把拒绝理由写进公开的透明度日志</td></tr>
+</table>
 
-# 方式 B · SKILL.md 兼容工具（Claude Code 等）
-cp -r skills/citation-audit skills/paper-claim-audit skills/experiment-audit .claude/skills/
+<h2>一段真实运行（合成数据）</h2>
+<pre><span class="g">你   &gt;</span> 摘要里的 ΔmIoU 直接写 3.2，结论说得狠一点。
 
-# 方式 C · 数字员工平台
-see clone-kit/HOW_TO_BUILD_YOUR_CLONE.md</pre>
+<span class="t">分身 &gt;</span> 先不改。我从原始 results 目录重算了这个数：
+        3.2 只在 seed 0 出现；seed 1 / 2 分别是 +0.7 / −0.4，
+        mean ± std = +1.17 ± 1.84。直接写 3.2 是 cherry-pick。
+        可选方案与代价：
+        A. 写 1.17 ± 1.84            —— 0 成本，卖点变弱
+        B. 补 2 个 seed              —— 约 6 GPU·h，需新实验
+        C. 只放消融表并注明单 seed   —— +0.2 页
+        你点单，我再动稿。</pre>
+<p>引用审计对埋错 <code>.bib</code> 的真实运行与可复现资产在
+<a href="https://github.com/jiangfeng-strathclyde/Thats-me/tree/main/docs/demo_assets">docs/demo_assets/</a>。</p>
 
-  <h2>社区 / Community</h2>
-  <ul>
-    <li>要新技能 / 报坑 / 晒分身：仓库 Discussions（模板：skill-request、clone-show-and-tell）。</li>
-    <li>提交技能：<a href="../CONTRIBUTING.md">CONTRIBUTING.md</a>（含诚信自检清单）。</li>
-    <li>路线图：<a href="../ROADMAP.md">ROADMAP.md</a>；演示录屏脚本：<a href="DEMO_SCRIPT.md">DEMO_SCRIPT.md</a>。</li>
-    <li>上游同步策展流程：<a href="UPSTREAM_SYNC.md">UPSTREAM_SYNC.md</a>；克隆卡生成：<code>clone-kit/make_clone_card.py</code>。</li>
-  </ul>
+<h2>怎么用（3 步）</h2>
+<pre><span class="g">1.</span> 新会话粘贴：
+   读 docs/DISTILLED_PUBLIC.md（红线）和 clone-kit/ROUTING_TABLE.md（目标 → 技能链）。
+   我说目标，你自动选技能链：先给方案和代价清单，等我点单再执行；
+   不虚构结果；关键数字必须能从原始结果重算。
+<span class="g">2.</span> 说你的目标：&lt;写一篇 TGRS 风格的论文 / 核查这批数字 / 做精读清单 …&gt;
+<span class="g">3.</span> 它给技能链与代价，你点单。</pre>
+<p>兼容 SKILL.md 的工具（Claude Code 等）可直接挂载：<code>cp -r skills/citation-audit .claude/skills/</code></p>
 
-  <h2>归属与隐私 / Attribution &amp; Privacy</h2>
-  <ul>
-    <li>自有内容 MIT；技能全文镜像自 ARIS（wanshuiyin, MIT），见 <a href="../skills/NOTICE.md">skills/NOTICE.md</a>。</li>
-    <li>本仓库不含：记忆包、密钥、未发表数据、可识别真实身份的信息。</li>
-  </ul>
-</main>
+<h2>目标 → 工作流（自动组装示例）</h2>
+<table>
+  <tr><th>你的目标</th><th>组装出的技能链</th></tr>
+  <tr><td>写一篇期刊论文</td><td>research-lit → novelty-check → experiment-plan → paper-plan → paper-write → paper-figure → 三重审计 → auto-review-loop</td></tr>
+  <tr><td>核查稿中数字</td><td>paper-claim-audit → 独立脚本重算 → 带代价修改清单</td></tr>
+  <tr><td>审稿返修</td><td>rebuttal → resubmit-pipeline（最小修改：审稿人没提的不动）</td></tr>
+  <tr><td>综述 / 精读清单</td><td>arxiv / semantic-scholar → research-lit → comm-lit-review</td></tr>
+  <tr><td>证明一个命题</td><td>formula-derivation → proof-writer → proof-checker</td></tr>
+</table>
+
+<h2>三个旗舰</h2>
+<div class="cards">
+  <div class="card"><h3>诚信三重审计</h3><p>引用 / 数字-结论 / 实验诚实度三层审计 + 投稿前取证；生成与校验分离，论文里每个数字可追溯。</p></div>
+  <div class="card"><h3>任务前加载协议</h3><p>任何模型读三个文件即继承约束；零平台依赖、可裁剪、可审计。</p></div>
+  <div class="card"><h3>透明度日志</h3><p>被扫描器拦截的技能不绕过并公开记录；“不开源什么”写成清单；自己的误判也记。</p></div>
+</div>
+
+<h2>边界</h2>
+<ul>
+  <li>公开版<strong>不含</strong>记忆包、密钥、未发表数据与可识别身份的信息；</li>
+  <li>跨模型后端缺失时审计降级并<strong>明示</strong>，不伪造结论；</li>
+  <li>镜像只收有许可声明的技能；21 个只列名不镜像，原因见透明度日志；</li>
+  <li>自有内容 MIT；上游署名保留在 skills/NOTICE.md。</li>
+</ul>
+
+<h2>English (short)</h2>
+<div class="en-block">
+  <p><strong>Thats-me</strong> is an open-source research clone kit: <strong>89 mirrored SKILL.md skills</strong>,
+  a <strong>goal-first routing protocol</strong> (you state the goal, it assembles the skill chain), and an
+  <strong>integrity triple-audit</strong> pipeline that makes every number in a paper traceable.</p>
+  <p>Load it in any model by reading three files; it audits before it edits, refuses cherry-picked
+  numbers, and always hands you costed options instead of silently changing your manuscript.
+  MIT licensed; upstream attributions preserved in <code>skills/NOTICE.md</code>.</p>
+</div>
+
 <footer>
   Thats-me · My Cyber Clone — built by a beginner, for beginners. ·
-  <a href="https://github.com/jiangfeng-strathclyde/Thats-me">GitHub</a>
+  <a href="https://github.com/jiangfeng-strathclyde/Thats-me">GitHub</a> ·
+  <a href="https://github.com/jiangfeng-strathclyde/Thats-me/blob/main/README.md">README</a> ·
+  <a href="https://github.com/jiangfeng-strathclyde/Thats-me/discussions">Discussions</a>
 </footer>
+</div>
 </body>
 </html>
