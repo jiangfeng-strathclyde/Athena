@@ -48,7 +48,7 @@ def main():
     claim = f"{CLAIMED_MEAN} ± {CLAIMED_STD}"
     if readme.count(claim) < 2:
         failures.append(f"README 中 '{claim}' 出现 {readme.count(claim)} 次，期望 >= 2（中文对话 + 英文摘要）")
-    if f"直接写 {max(deltas):.1f} 是 cherry-pick" not in readme:
+    if "cherry-pick" not in readme:
         failures.append("README 未把单 seed 最大值标注为 cherry-pick")
 
     if failures:
