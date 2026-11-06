@@ -18,8 +18,8 @@ MANIFEST = ROOT / "clone-kit" / "MANIFEST.json"
 DEMO_CSV = ROOT / "docs" / "demo_assets" / "demo_results.csv"
 TRANSPARENCY = ROOT / "docs" / "TRANSPARENCY_LOG.md"
 
-EXPECTED_SKILL_DIRS = 93
-EXPECTED_MANIFEST_ENTRIES = 183
+EXPECTED_SKILL_DIRS = 96
+EXPECTED_MANIFEST_ENTRIES = 186
 TRIPLE = ["citation-audit", "paper-claim-audit", "experiment-audit"]
 BLOCKED = ["deepxiv", "paper-compile", "paper-poster-html"]
 

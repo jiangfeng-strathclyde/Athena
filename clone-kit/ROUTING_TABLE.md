@@ -28,14 +28,15 @@
 
 | 场景 | 技能 |
 |---|---|
-| 文献检索与阅读 | arxiv, semantic-scholar, openalex, alphaxiv, deepxiv, research-lit, comm-lit-review（通信域）, gemini-search (ext), exa-search (ext), firecrawl-search (ext), keenable-search, crawl4ai-skill |
+| 文献检索与阅读 | arxiv, semantic-scholar, openalex, alphaxiv, deepxiv, research-lit, comm-lit-review（通信域）, gemini-search (ext), exa-search (ext), firecrawl-search (ext), keenable-search, crawl4ai-skill, lit-reading-assignment（精读清单/教学） |
 | 引用核验 | citation-audit, citation-crosscheck |
 | 选题 / 查新 / 打磨 | idea-creator, novelty-check, research-refine, research-refine-pipeline, idea-discovery, idea-discovery-robot（机器人域） |
 | 实验规划与执行 | experiment-plan, experiment-bridge, research-implement-feature, run-experiment, experiment-queue, monitor-experiment, training-check, dse-loop（架构/EDA 域） |
 | 算力资源 | vast-gpu (ext), serverless-modal (ext), qzcli (ext), system-profile |
-| 结果分析与裁决 | analyze-results, result-to-claim (ext), ablation-planner, experiment-audit, excel-formula（表格公式） |
+| 遥感/对地观测域 | remote-sensing-workbench（数据源/划分/评估口径/基线谱/写作约定） |
+| 结果分析与裁决 | analyze-results, result-to-claim (ext), ablation-planner, experiment-audit, excel-formula（表格公式）, data-profile-and-plot（剖析与出版级出图） |
 | 论文写作 | paper-plan, paper-write, paper-writing, writing-systems-papers（系统会域）, specification-writing, academic-paper-narrative（叙事与贡献立论） |
-| 图表与示意 | paper-figure, figure-spec, mermaid-diagram, paper-illustration (ext), paper-illustration-image2 (ext), pixel-art |
+| 图表与示意 | paper-figure, figure-spec, mermaid-diagram, paper-illustration (ext), paper-illustration-image2 (ext), pixel-art, data-profile-and-plot |
 | 编译与渲染 | paper-compile*, render-html |
 | 评审与对抗 | research-review (ext), auto-review-loop (ext), auto-review-loop-llm (ext), auto-review-loop-minimax (ext), kill-argument, auto-paper-improvement-loop (ext) |
 | 返修与重投 | rebuttal, resubmit-pipeline |

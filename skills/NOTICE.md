@@ -8,8 +8,9 @@
   Copyright (c) 2026 wanshuiyin, MIT License.（87 个科研技能）
 - **crawl4ai-skill** — Copyright (c) Lancelin, MIT-0 License.
 - **excel-formula** — MIT License（upstream frontmatter 声明，作者未署名）。
-- **自研技能（4 个）** — academic-paper-narrative、research-integrity-pipeline、
-  skill-evolution-manager、patent-disclosure-drafter；
+- **自研技能（7 个）** — academic-paper-narrative、research-integrity-pipeline、
+  skill-evolution-manager、patent-disclosure-drafter、remote-sensing-workbench、
+  data-profile-and-plot、lit-reading-assignment；
   Copyright (c) 2026 Thats-me contributors, MIT License。
   其中 patent-disclosure-drafter 的流程思想借鉴 `handsomestWei/patent-disclosure-skill`，文本为自研；
   公开版已移除私有仓库路径引用与内部角色名。

@@ -1335,5 +1335,32 @@
     "enabled": false,
     "mirrored": false,
     "mirror_reason": "MIT declared; not mirrored yet - curation pending demand (see SKILL_QUEUE)"
+  },
+  {
+    "name": "remote-sensing-workbench",
+    "source": "original",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "self-authored, MIT declared in frontmatter"
+  },
+  {
+    "name": "data-profile-and-plot",
+    "source": "original",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "self-authored, MIT declared in frontmatter"
+  },
+  {
+    "name": "lit-reading-assignment",
+    "source": "original",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "self-authored, MIT declared in frontmatter"
   }
 ]
