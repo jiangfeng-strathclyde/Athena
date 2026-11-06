@@ -6,13 +6,13 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT"></a>
-  <img src="https://img.shields.io/badge/skills-96-blue.svg" alt="96 skills">
+  <img src="https://img.shields.io/badge/skills-108-blue.svg" alt="108 skills">
   <a href="docs/CLONE_PROTOCOL.md"><img src="https://img.shields.io/badge/protocol-v1-2dd4bf.svg" alt="protocol v1"></a>
 </p>
 
 ## 这是什么
 
-- **一个技能库**：96 个科研技能全文（标准 SKILL.md 格式）；另有 21 个因许可/内部/厂商原因只列名不镜像，覆盖文献、查新、实验、写作、图表、审计、返修、专利、基金全流程；
+- **一个技能库**：108 个科研技能全文（标准 SKILL.md 格式）；另有 21 个因许可/内部/厂商原因只列名不镜像，覆盖文献、查新、实验、写作、图表、审计、返修、专利、基金全流程；
 - **一个路由器**：你只说目标（“写一篇 TGRS 风格的论文”“核查这批数字”“做一份精读清单”），协议按目标自动组装技能链，不用你记技能名字；
 - **一套红线**：不虚构结果、先查账再动笔、改动前列代价等你点单、统计口径不混用。
 
@@ -75,7 +75,7 @@ cp -r skills/citation-audit skills/paper-claim-audit skills/experiment-audit .cl
 
 ## English (short)
 
-**Thats-me** is an open-source research clone kit: **96 mirrored SKILL.md skills**, a
+**Thats-me** is an open-source research clone kit: **108 mirrored SKILL.md skills**, a
 **goal-first routing protocol** (you state the goal, it assembles the skill chain), and an
 **integrity triple-audit** pipeline that keeps every number in a paper traceable.
 Load it in any model by reading three files; it audits before it edits, refuses

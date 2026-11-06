@@ -52,3 +52,10 @@ qoderwake-assistant, wake-dws-cli
 alibabacloud-dataworks-infra-manage, alibabacloud-dataworks-workspace-manage, alibabacloud-sls-query
 
 若上游后续补充许可声明，按 `UPSTREAM_SYNC.md` 流程评估后策展入镜像，并在本节日志记录变更。
+
+## 6. 许可证据不一致记录
+
+- **Orchestra AI-Research-SKILLs 1.4.0**：README 徽章与仓库 LICENSE 文件均为 MIT
+  （Copyright (c) 2025 Claude AI Research Skills Contributors），但 `package.json` 的
+  `license` 字段写 ISC。本仓库以 **LICENSE 文件**为准镜像策展子集（12 个），
+  并在 `skills/NOTICE.md` 保留 MIT 署名；若上游澄清为 ISC，将重新评估并记录。

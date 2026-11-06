@@ -8,6 +8,11 @@
   Copyright (c) 2026 wanshuiyin, MIT License.（87 个科研技能）
 - **crawl4ai-skill** — Copyright (c) Lancelin, MIT-0 License.
 - **excel-formula** — MIT License（upstream frontmatter 声明，作者未署名）。
+- **Orchestra Research · AI-Research-SKILLs 1.4.0**（策展子集 12 个）
+  https://www.npmjs.com/package/@orchestra-research/ai-research-skills
+  Copyright (c) 2025 Claude AI Research Skills Contributors, MIT License（以仓库 LICENSE 文件为准）。
+  许可证据不一致已在 `../docs/TRANSPARENCY_LOG.md` 记录：README 徽章与 LICENSE 文件为 MIT，
+  而 package.json 的 `license` 字段为 ISC；本仓库依 LICENSE 文件镜像并保留本署名。
 - **自研技能（7 个）** — academic-paper-narrative、research-integrity-pipeline、
   skill-evolution-manager、patent-disclosure-drafter、remote-sensing-workbench、
   data-profile-and-plot、lit-reading-assignment；

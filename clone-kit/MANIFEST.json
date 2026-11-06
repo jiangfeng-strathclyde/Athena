@@ -1328,15 +1328,6 @@
     "mirror_reason": "self-authored, MIT declared in frontmatter"
   },
   {
-    "name": "ai-research-skills (Orchestra, 86 skills)",
-    "source": "third-party-mit",
-    "version": "1.4.0",
-    "installUrl": "https://www.npmjs.com/package/@orchestra-research/ai-research-skills",
-    "enabled": false,
-    "mirrored": false,
-    "mirror_reason": "MIT declared; not mirrored yet - curation pending demand (see SKILL_QUEUE)"
-  },
-  {
     "name": "remote-sensing-workbench",
     "source": "original",
     "version": "1.0.0",
@@ -1362,5 +1353,122 @@
     "enabled": true,
     "mirrored": true,
     "mirror_reason": "self-authored, MIT declared in frontmatter"
+  },
+  {
+    "name": "peft",
+    "source": "orchestra-mirror",
+    "version": "1.4.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
+  },
+  {
+    "name": "accelerate",
+    "source": "orchestra-mirror",
+    "version": "1.4.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
+  },
+  {
+    "name": "flash-attention",
+    "source": "orchestra-mirror",
+    "version": "1.4.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
+  },
+  {
+    "name": "lm-evaluation-harness",
+    "source": "orchestra-mirror",
+    "version": "1.4.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
+  },
+  {
+    "name": "weights-and-biases",
+    "source": "orchestra-mirror",
+    "version": "1.4.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
+  },
+  {
+    "name": "tensorboard",
+    "source": "orchestra-mirror",
+    "version": "1.4.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
+  },
+  {
+    "name": "sentence-transformers",
+    "source": "orchestra-mirror",
+    "version": "1.4.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
+  },
+  {
+    "name": "clip",
+    "source": "orchestra-mirror",
+    "version": "1.4.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
+  },
+  {
+    "name": "segment-anything",
+    "source": "orchestra-mirror",
+    "version": "1.4.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
+  },
+  {
+    "name": "transformer-lens",
+    "source": "orchestra-mirror",
+    "version": "1.4.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
+  },
+  {
+    "name": "ml-paper-writing",
+    "source": "orchestra-mirror",
+    "version": "1.4.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
+  },
+  {
+    "name": "brainstorming-research-ideas",
+    "source": "orchestra-mirror",
+    "version": "1.4.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
+  },
+  {
+    "name": "ai-research-skills (Orchestra, remaining 74)",
+    "source": "third-party-mit",
+    "version": "1.4.0",
+    "installUrl": "https://www.npmjs.com/package/@orchestra-research/ai-research-skills",
+    "enabled": false,
+    "mirrored": false,
+    "mirror_reason": "MIT; only curated subset mirrored, rest pending demand (SKILL_QUEUE)"
   }
 ]

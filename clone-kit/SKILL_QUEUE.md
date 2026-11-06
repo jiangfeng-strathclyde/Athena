@@ -49,9 +49,15 @@
 
 | 技能包 | 许可 | 状态 | 下一步 |
 |---|---|---|---|
-| Orchestra AI-Research-SKILLs 1.4.0（86 个，AI/ML 系统向） | MIT（README 徽章声明） | 不镜像，待需求 | 有 Discussion 需求或维护者评估后按 UPSTREAM_SYNC 策展子集 |
+| Orchestra AI-Research-SKILLs 1.4.0 剩余 74 个 | MIT（LICENSE 文件；package.json 字段为 ISC，见 TRANSPARENCY_LOG §6） | 已策展 12 个入镜像；其余待需求 | 有 Discussion 需求时按 UPSTREAM_SYNC 策展 |
 
 ## Batching 历史
+
+### 2026-11-06 · 策展 Orchestra 子集
+- 入镜像 12 个：peft, accelerate, flash-attention, lm-evaluation-harness, weights-and-biases,
+  tensorboard, sentence-transformers, clip, segment-anything, transformer-lens,
+  ml-paper-writing, brainstorming-research-ideas；
+- 其余 74 个继续列名待需求。
 
 ### 2026-11-06 · 建队
 - 社区请求 0 条；

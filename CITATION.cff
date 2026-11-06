@@ -36,3 +36,10 @@ references:
   - type: software
     title: "excel-formula, upstream of 1 mirrored skill"
     license: MIT
+  - type: software
+    title: "AI-Research-SKILLs 1.4.0 (Orchestra Research), upstream of 12 curated skills"
+    authors:
+      - name: "Claude AI Research Skills Contributors"
+    license: MIT
+    url: "https://www.npmjs.com/package/@orchestra-research/ai-research-skills"
+    notes: "package.json declares ISC while LICENSE file and README declare MIT; mirrored per LICENSE file, see docs/TRANSPARENCY_LOG.md section 6" 
