@@ -11,6 +11,9 @@
 
 ## 同步流程（每月或上游大版本时）
 
+0. **取差异（机器化）**：`python scripts/upstream_diff.py`（浅克隆上游到仓库外缓存，
+   剥离本仓库追加段/行尾/结尾空行后逐技能哈希对比），输出 added / removed / changed；
+   策展完成后 `--save-snapshot` 刷新 `clone-kit/UPSTREAM_SNAPSHOT.json` 基线。
 1. **取差异**：拉上游最新 tag/commit，与 MANIFEST 的快照 commit 对比：
    `git -C <上游克隆> log --oneline <快照commit>..HEAD -- skills/`；
    列出 新增 / 删除 / 修改 的技能目录。

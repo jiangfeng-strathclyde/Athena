@@ -72,3 +72,13 @@ cp -r skills/citation-audit skills/paper-claim-audit skills/experiment-audit .cl
 [`FAQ`](docs/FAQ.md) · [`端到端案例`](docs/EXAMPLES.md) · [`平台适配矩阵`](docs/PLATFORM_MATRIX.md) · [`蒸馏手册`](docs/DISTILLED_PUBLIC.md) · [`打造你自己的分身`](clone-kit/HOW_TO_BUILD_YOUR_CLONE.md) · [`落地页`](docs/index.html)
 
 有问题或想晒你的分身：[Discussions](https://github.com/jiangfeng-strathclyde/Thats-me/discussions)。
+
+## English (short)
+
+**Thats-me** is an open-source research clone kit: **89 mirrored SKILL.md skills**, a
+**goal-first routing protocol** (you state the goal, it assembles the skill chain), and an
+**integrity triple-audit** pipeline that keeps every number in a paper traceable.
+Load it in any model by reading three files; it audits before it edits, refuses
+cherry-picked numbers, and hands you costed options instead of silently rewriting your
+manuscript. MIT licensed; upstream attributions preserved in [`skills/NOTICE.md`](skills/NOTICE.md).
+Reproducible demos: [`docs/demo_assets/`](docs/demo_assets/).
