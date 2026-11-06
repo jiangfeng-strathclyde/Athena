@@ -3,9 +3,9 @@
   <rect x="0" y="0" width="640" height="64" fill="#31687e"/>
   <text x="24" y="40" fill="#ffffff" font-size="24">Thats-me Cyber Clone</text>
   <text x="24" y="92" fill="#1c1c1c" font-size="15">direction: remote sensing & ML / earth observation</text>
-  <text x="24" y="120" fill="#1c1c1c" font-size="15">skills curated: 89 (manifest total 178; {'template-preset': 67, 'built-in': 4, 'agent-created': 84, 'vendor': 3, 'community-unlicensed': 16, 'community-mirror': 2, 'platform-internal': 2})</text>
+  <text x="24" y="120" fill="#1c1c1c" font-size="15">skills mirrored: 89 · listed-only: 21 · platform presets w/o local text: 71</text>
   <text x="24" y="148" fill="#1c1c1c" font-size="15">clone protocol: v1 · integrity: triple-audit ON</text>
-  <text x="24" y="176" fill="#1c1c1c" font-size="15">snapshot: 2026-11-06 · commit: 7ecdba1</text>
+  <text x="24" y="176" fill="#1c1c1c" font-size="15">snapshot: 2026-11-06 · commit: 6e11b2f</text>
   <line x1="24" y1="196" x2="616" y2="196" stroke="#8c4a00" stroke-width="2"/>
   <text x="24" y="224" fill="#6b6b6b" font-size="13">red lines: never fabricate · costed change lists · unified counting ·</text>
   <text x="24" y="244" fill="#6b6b6b" font-size="13">honest trichotomy (verified / mathematical / candidate) · no bypassing scanners</text>

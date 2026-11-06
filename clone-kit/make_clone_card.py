@@ -13,7 +13,6 @@ import argparse
 import json
 import subprocess
 import sys
-from collections import Counter
 from datetime import date
 from pathlib import Path
 
@@ -38,7 +37,9 @@ def main() -> int:
     a = ap.parse_args()
 
     manifest = json.loads((HERE / "MANIFEST.json").read_text(encoding="utf-8"))
-    src = Counter(x.get("source", "?") for x in manifest)
+    listed_only = sum(1 for x in manifest if x.get("mirrored") is False)
+    no_local_text = sum(1 for x in manifest
+                        if x.get("source") in ("template-preset", "built-in"))
     skills_dir = HERE.parent / "skills"
     n_skills = sum(1 for p in skills_dir.iterdir() if p.is_dir()) if skills_dir.is_dir() \
         else len(manifest)
@@ -59,7 +60,7 @@ def main() -> int:
   <rect x="0" y="0" width="{w}" height="64" fill="#31687e"/>
   <text x="24" y="40" fill="#ffffff" font-size="24">{a.name}</text>
   <text x="24" y="92" fill="#1c1c1c" font-size="15">direction: {a.direction}</text>
-  <text x="24" y="120" fill="#1c1c1c" font-size="15">skills curated: {n_skills} (manifest total {len(manifest)}; {dict(src)})</text>
+  <text x="24" y="120" fill="#1c1c1c" font-size="15">skills mirrored: {n_skills} · listed-only: {listed_only} · platform presets w/o local text: {no_local_text}</text>
   <text x="24" y="148" fill="#1c1c1c" font-size="15">clone protocol: {a.protocol} · integrity: {a.integrity}</text>
   <text x="24" y="176" fill="#1c1c1c" font-size="15">snapshot: {snap} · commit: {commit}</text>
   <line x1="24" y1="196" x2="{w-24}" y2="196" stroke="#8c4a00" stroke-width="2"/>
