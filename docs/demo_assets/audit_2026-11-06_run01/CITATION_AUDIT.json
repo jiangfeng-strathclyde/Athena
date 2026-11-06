@@ -1,0 +1,50 @@
+{
+  "audit_skill": "citation-audit",
+  "verdict": "FAIL",
+  "reason_code": "hallucinated",
+  "summary": "5 synthetic entries: 2 KEEP, 2 FIX (year, author order), 1 REMOVE (fabricated paper/venue); matches expected_findings.md with no false positives.",
+  "audited_input_hashes": {
+    "docs/demo_assets/demo.bib": "see git history; file is synthetic and versioned"
+  },
+  "trace_path": "docs/demo_assets/audit_2026-11-06_run01/",
+  "thread_id": "zero-context-subagent-2026-11-06-run01",
+  "reviewer_model": "zero-context subagent (same family; codex MCP unavailable)",
+  "reviewer_reasoning": "degraded-per-protocol, disclosed in CITATION_AUDIT.md",
+  "generated_at": "2026-11-06T00:00:00Z",
+  "details": {
+    "total_entries": 5,
+    "counts": { "KEEP": 2, "FIX": 2, "REPLACE": 0, "REMOVE": 1 },
+    "per_entry": [
+      {
+        "key": "ronneberger2016unet",
+        "verdict": "FIX",
+        "axis_failures": ["METADATA"],
+        "note": "year should be 2015 (MICCAI 2015, LNCS 9351); Crossref 10.1007/978-3-319-24574-4_28"
+      },
+      {
+        "key": "he2016resnet",
+        "verdict": "FIX",
+        "axis_failures": ["METADATA"],
+        "note": "author order wrong: first author is Kaiming He; Crossref 10.1109/CVPR.2016.90"
+      },
+      {
+        "key": "wang2024swinsr",
+        "verdict": "REMOVE",
+        "axis_failures": ["EXISTENCE"],
+        "note": "paper and venue ICSEO not found in arXiv/Crossref/web; fabricated"
+      },
+      {
+        "key": "vaswani2017attention",
+        "verdict": "KEEP",
+        "axis_failures": [],
+        "note": "NeurIPS 2017 official record matches exactly"
+      },
+      {
+        "key": "chen2018deeplabv3plus",
+        "verdict": "KEEP",
+        "axis_failures": [],
+        "note": "ECCV 2018 record matches (Springer 10.1007/978-3-030-01234-2_1)"
+      }
+    ]
+  }
+}

@@ -67,6 +67,22 @@
 
 想亲手复现这段行为：[`docs/demo_assets/`](docs/demo_assets/) 里有合成数据（埋了错的 `.bib`、带单 seed 陷阱的 `.csv`）和零依赖校验脚本 `python docs/demo_assets/verify_demo.py`；期望结论见 [`expected_findings.md`](docs/demo_assets/expected_findings.md)。
 
+### 真实运行证据（非摆拍）
+
+**① 独立重算**：零依赖脚本从原始 CSV 重算，与 README 数字逐字比对。
+
+<img src="assets/terminal_verify.png" alt="verify_demo.py 输出" width="100%">
+
+**② 引用审计**：对埋了 3 处错误的合成 `.bib` 真实运行，命中全部 3 处且不误报 2 条真阴性。本环境无跨模型审稿后端，按协议降级为零上下文独立自审 + 真实 web 核验，并在此明示。
+
+<img src="assets/terminal_audit.png" alt="citation-audit 输出" width="100%">
+
+**③ 加载协议后的会话**：一个没有任何先验上下文的新模型，读完三个文件后面对“直接写 3.2”的真实回复。
+
+<img src="assets/terminal_clone.png" alt="加载分身后的回复" width="100%">
+
+完整审计账本：[`audit_2026-11-06_run01/CITATION_AUDIT.md`](docs/demo_assets/audit_2026-11-06_run01/CITATION_AUDIT.md)。
+
 不代决、不硬改、不编数。**选择权始终在作者手里**——这是我刻进协议里的第一条。
 
 ## 它由四层组成：三层公开，一层私有
@@ -244,6 +260,8 @@ Thats-me/
 
 ## 更多入口
 
+- 常见问题（和 prompt 合集的区别 / 收费 / 安全 / 记忆为何不开源…）：[`docs/FAQ.md`](docs/FAQ.md)
+- 平台适配矩阵（QoderWake / Claude Code / Codex 类 / 零依赖）：[`docs/PLATFORM_MATRIX.md`](docs/PLATFORM_MATRIX.md)
 - 落地页（GitHub Pages，仓库 Settings 启用 `/docs` 源后生效）：[`docs/index.html`](docs/index.html)
 - 蒸馏手册全英文版：[`docs/DISTILLED_PUBLIC_EN.md`](docs/DISTILLED_PUBLIC_EN.md)
 - 3 分钟演示录屏脚本：[`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md)

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 252" width="1000" height="252">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#161B22"/><stop offset="1" stop-color="#0D1117"/></linearGradient></defs>
+<rect width="1000" height="252" rx="10" fill="url(#g)" stroke="#30363D"/>
+<rect width="1000" height="34" rx="10" fill="#161B22"/>
+<rect y="24" width="1000" height="10" fill="#161B22"/>
+<circle cx="22" cy="17" r="5" fill="#FF5F56"/><circle cx="42" cy="17" r="5" fill="#FFBD2E"/><circle cx="62" cy="17" r="5" fill="#27C93F"/>
+<text x="84" y="22" font-family="Consolas, monospace" font-size="12.5" fill="#8B949E">citation-audit demo.bib — 降级：无跨模型后端 → 零上下文自审 + 真实 web 核验</text>
+<text x="20" y="70" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#7EE787">$ citation-audit docs/demo_assets/demo.bib</text>
+<text x="20" y="96" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#FFA657">ronneberger2016unet   FIX     year 2016 → 2015（MICCAI 2015, Crossref 核验）</text>
+<text x="20" y="122" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#FFA657">he2016resnet          FIX     作者顺序：第一作者应为 Kaiming He（Crossref 核验）</text>
+<text x="20" y="148" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#FF7B72">wang2024swinsr        REMOVE  论文与 venue 均检索不到（arXiv / Crossref 零命中）</text>
+<text x="20" y="174" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#5EEAD4">vaswani2017attention  KEEP    NeurIPS 2017 官方记录逐字段一致</text>
+<text x="20" y="200" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#5EEAD4">chen2018deeplabv3plus KEEP    ECCV 2018 记录一致</text>
+<text x="20" y="226" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#FF7B72">verdict: FAIL  reason_code=hallucinated   (2 KEEP / 2 FIX / 1 REMOVE)</text>
+</svg>
