@@ -1,0 +1,10 @@
+title: "[show-and-tell] 我的分身"
+labels: ["show-and-tell"]
+body:
+  - type: textarea
+    attributes:
+      label: 你的分身卡
+      description: 平台/工具、技能数、协议版本、诚信审计开关、一句话故事
+  - type: textarea
+    attributes:
+      label: 踩过的坑 / 教训

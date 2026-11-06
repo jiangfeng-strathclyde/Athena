@@ -1,0 +1,14 @@
+title: "[skill-request] "
+labels: ["skill-request"]
+body:
+  - type: textarea
+    attributes:
+      label: 想要的技能 / Desired skill
+      description: 场景、触发词、期望输入输出；是否已有上游实现可引用？
+  - type: checkboxes
+    attributes:
+      label: 诚信自检预承诺
+      options:
+        - label: 不要求读取/回显密钥
+        - label: 不含提权/绕过权限指令
+        - label: 外部调用失败时跳过或报错，不伪造结果
