@@ -57,9 +57,9 @@
 
 分身 > 先不改。我从原始 results 目录重算了这个数：
        3.2 只在 seed 0 出现；seed 1 / 2 分别是 +0.7 / −0.4，
-       mean ± std = +1.17 ± 1.93。直接写 3.2 是 cherry-pick。
+       mean ± std = +1.17 ± 1.84。直接写 3.2 是 cherry-pick。
        可选方案与代价：
-       A. 写 1.17 ± 1.93            —— 0 成本，卖点变弱
+       A. 写 1.17 ± 1.84            —— 0 成本，卖点变弱
        B. 补 2 个 seed              —— 约 6 GPU·h，需新实验
        C. 只放消融表并注明单 seed   —— +0.2 页
        你点单，我再动稿。
@@ -257,7 +257,7 @@ Thats-me/
 
 I am an ML/AI beginner working on remote sensing. I built this because I was tired of re-teaching the same rules in every new chat — and of nearly trusting a fabricated number.
 
-**What changes after loading it:** the assistant audits before it edits. Ask it to write `ΔmIoU = 3.2` and it recomputes from raw results, finds the value is single-seed, reports `1.17 ± 1.93`, and offers options *with costs* instead of silently cherry-picking. Ask it to bypass a safety check and it refuses — publicly.
+**What changes after loading it:** the assistant audits before it edits. Ask it to write `ΔmIoU = 3.2` and it recomputes from raw results, finds the value is single-seed, reports `1.17 ± 1.84`, and offers options *with costs* instead of silently cherry-picking. Ask it to bypass a safety check and it refuses — publicly.
 
 **Highlights**
 1. **Integrity triple audit** — citation, claim, and experiment audits plus a pre-submission forensics sweep; every number traceable, generation separated from verification.
