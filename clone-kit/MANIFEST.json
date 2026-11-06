@@ -1,1087 +1,1294 @@
 [
- {
-  "name": "excel-analysis",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/excel-analysis/latest/excel-analysis.zip",
-  "enabled": true
- },
- {
-  "name": "data-visualization-cloud",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/data-visualization-cloud/latest/data-visualization-cloud.zip",
-  "enabled": true
- },
- {
-  "name": "sql-query",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/sql-query/latest/sql-query.zip",
-  "enabled": true
- },
- {
-  "name": "diegosouzapw-ai-data-analyst",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-ai-data-analyst/latest/diegosouzapw-ai-data-analyst.zip",
-  "enabled": true
- },
- {
-  "name": "dicklesworthstone-detecting-data-anomalies",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/dicklesworthstone-detecting-data-anomalies/latest/dicklesworthstone-detecting-data-anomalies.zip",
-  "enabled": true
- },
- {
-  "name": "research-tools-skill",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/research-tools-skill/latest/research-tools-skill.zip",
-  "enabled": true
- },
- {
-  "name": "pdf-parser-mineru",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/pdf-parser-mineru/latest/pdf-parser-mineru.zip",
-  "enabled": true
- },
- {
-  "name": "majiayu000-excalidraw-flowchart",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-excalidraw-flowchart/latest/majiayu000-excalidraw-flowchart.zip",
-  "enabled": true
- },
- {
-  "name": "ghostscientist-experiment-design-checklist",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/ghostscientist-experiment-design-checklist/latest/ghostscientist-experiment-design-checklist.zip",
-  "enabled": true
- },
- {
-  "name": "eyadsibai-data-science",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/eyadsibai-data-science/latest/eyadsibai-data-science.zip",
-  "enabled": true
- },
- {
-  "name": "knowledge-graph-skill",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/knowledge-graph-skill/latest/knowledge-graph-skill.zip",
-  "enabled": true
- },
- {
-  "name": "codewithowais-senior-backend-dev",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/codewithowais-senior-backend-dev/latest/codewithowais-senior-backend-dev.zip",
-  "enabled": true
- },
- {
-  "name": "extract-pdf-text",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/extract-pdf-text/latest/extract-pdf-text.zip",
-  "enabled": true
- },
- {
-  "name": "duclm1x1-hergunmac",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/duclm1x1-hergunmac/latest/duclm1x1-hergunmac.zip",
-  "enabled": true
- },
- {
-  "name": "dicklesworthstone-regression-analysis-helper",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/dicklesworthstone-regression-analysis-helper/latest/dicklesworthstone-regression-analysis-helper.zip",
-  "enabled": true
- },
- {
-  "name": "mindmap-generator-pro",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/mindmap-generator-pro/latest/mindmap-generator-pro.zip",
-  "enabled": true
- },
- {
-  "name": "majiayu000-excalidraw-architect",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-excalidraw-architect/latest/majiayu000-excalidraw-architect.zip",
-  "enabled": true
- },
- {
-  "name": "dmonteroh-database-migration-sql",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/dmonteroh-database-migration-sql/latest/dmonteroh-database-migration-sql.zip",
-  "enabled": true
- },
- {
-  "name": "paper-search-and-download-automatically",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/paper-search-and-download-automatically/latest/paper-search-and-download-automatically.zip",
-  "enabled": true
- },
- {
-  "name": "ancoleman-generating-documentation",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/ancoleman-generating-documentation/latest/ancoleman-generating-documentation.zip",
-  "enabled": true
- },
- {
-  "name": "li-etl-handle",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/li-etl-handle/latest/li-etl-handle.zip",
-  "enabled": true
- },
- {
-  "name": "majiayu000-scientific-matlab",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-scientific-matlab/latest/majiayu000-scientific-matlab.zip",
-  "enabled": true
- },
- {
-  "name": "jackspace-scientific-pkg-statsmodels",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/jackspace-scientific-pkg-statsmodels/latest/jackspace-scientific-pkg-statsmodels.zip",
-  "enabled": true
- },
- {
-  "name": "k-dense-ai-scientific-visualization",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/k-dense-ai-scientific-visualization/latest/k-dense-ai-scientific-visualization.zip",
-  "enabled": true
- },
- {
-  "name": "diegosouzapw-scientific-schematics-bbgnsurftech",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-bbgnsurftech/latest/diegosouzapw-scientific-schematics-bbgnsurftech.zip",
-  "enabled": true
- },
- {
-  "name": "majiayu000-scientific-exploratory-data-analysis",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-scientific-exploratory-data-analysis/latest/majiayu000-scientific-exploratory-data-analysis.zip",
-  "enabled": true
- },
- {
-  "name": "ericmjl-scientific-eda",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/ericmjl-scientific-eda/latest/ericmjl-scientific-eda.zip",
-  "enabled": true
- },
- {
-  "name": "jackspace-scientific-pkg-aeon",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/jackspace-scientific-pkg-aeon/latest/jackspace-scientific-pkg-aeon.zip",
-  "enabled": true
- },
- {
-  "name": "k-dense-ai-scientific-schematics",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/k-dense-ai-scientific-schematics/latest/k-dense-ai-scientific-schematics.zip",
-  "enabled": true
- },
- {
-  "name": "majiayu000-scientific-statsmodels",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-scientific-statsmodels/latest/majiayu000-scientific-statsmodels.zip",
-  "enabled": true
- },
- {
-  "name": "majiayu000-scientific-polars",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-scientific-polars/latest/majiayu000-scientific-polars.zip",
-  "enabled": true
- },
- {
-  "name": "jackspace-scientific-thinking-scientific-visualization",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/jackspace-scientific-thinking-scientific-visualization/latest/jackspace-scientific-thinking-scientific-visualization.zip",
-  "enabled": true
- },
- {
-  "name": "diegosouzapw-scientific-schematics-arustydev",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-arustydev/latest/diegosouzapw-scientific-schematics-arustydev.zip",
-  "enabled": true
- },
- {
-  "name": "jackspace-scientific-db-gwas-database",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/jackspace-scientific-db-gwas-database/latest/jackspace-scientific-db-gwas-database.zip",
-  "enabled": true
- },
- {
-  "name": "diegosouzapw-scientific-schematics-jackychenlu",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-jackychenlu/latest/diegosouzapw-scientific-schematics-jackychenlu.zip",
-  "enabled": true
- },
- {
-  "name": "majiayu000-scientific-neuropixels-analysis",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-scientific-neuropixels-analysis/latest/majiayu000-scientific-neuropixels-analysis.zip",
-  "enabled": true
- },
- {
-  "name": "jackspace-scientific-db-alphafold-database",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/jackspace-scientific-db-alphafold-database/latest/jackspace-scientific-db-alphafold-database.zip",
-  "enabled": true
- },
- {
-  "name": "diegosouzapw-scientific-schematics-aiskillstore",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-aiskillstore/latest/diegosouzapw-scientific-schematics-aiskillstore.zip",
-  "enabled": true
- },
- {
-  "name": "jackspace-scientific-pkg-molfeat",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/jackspace-scientific-pkg-molfeat/latest/jackspace-scientific-pkg-molfeat.zip",
-  "enabled": true
- },
- {
-  "name": "diegosouzapw-scientific-schematics-danieldekay",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-danieldekay/latest/diegosouzapw-scientific-schematics-danieldekay.zip",
-  "enabled": true
- },
- {
-  "name": "majiayu000-scientific-umap-learn",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-scientific-umap-learn/latest/majiayu000-scientific-umap-learn.zip",
-  "enabled": true
- },
- {
-  "name": "diegosouzapw-scientific-schematics-majiayu000",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-majiayu000/latest/diegosouzapw-scientific-schematics-majiayu000.zip",
-  "enabled": true
- },
- {
-  "name": "diegosouzapw-scientific-schematics-pur3v4d3r",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-pur3v4d3r/latest/diegosouzapw-scientific-schematics-pur3v4d3r.zip",
-  "enabled": true
- },
- {
-  "name": "diegosouzapw-scientific-schematics-plurigrid",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-plurigrid/latest/diegosouzapw-scientific-schematics-plurigrid.zip",
-  "enabled": true
- },
- {
-  "name": "diegosouzapw-scientific-schematics-fabioeducacross",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-fabioeducacross/latest/diegosouzapw-scientific-schematics-fabioeducacross.zip",
-  "enabled": true
- },
- {
-  "name": "svg-ppt-generator",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/svg-ppt-generator/latest/svg-ppt-generator.zip",
-  "enabled": true
- },
- {
-  "name": "excel-data-analysis-and-report-generation",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/excel-data-analysis-and-report-generation/latest/excel-data-analysis-and-report-generation.zip",
-  "enabled": true
- },
- {
-  "name": "excel",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/excel/latest/excel.zip",
-  "enabled": true
- },
- {
-  "name": "data-visualization",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/data-visualization/latest/data-visualization.zip",
-  "enabled": true
- },
- {
-  "name": "data-analysis-pro",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/data-analysis-pro/latest/data-analysis-pro.zip",
-  "enabled": true
- },
- {
-  "name": "analytics-data-analysis",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/analytics-data-analysis/latest/analytics-data-analysis.zip",
-  "enabled": true
- },
- {
-  "name": "document-processor",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/document-processor/latest/document-processor.zip",
-  "enabled": true
- },
- {
-  "name": "chart-craft-plus",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/chart-craft-plus/latest/chart-craft-plus.zip",
-  "enabled": true
- },
- {
-  "name": "crawl4ai-skill",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/crawl4ai-skill/latest/crawl4ai-skill.zip",
-  "enabled": true
- },
- {
-  "name": "report-generation",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/report-generation/latest/report-generation.zip",
-  "enabled": true
- },
- {
-  "name": "excel-formula",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/excel-formula/latest/excel-formula.zip",
-  "enabled": true
- },
- {
-  "name": "alibabacloud-sls-query",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/alibabacloud-sls-query/latest/alibabacloud-sls-query.zip",
-  "enabled": true
- },
- {
-  "name": "prompt-extractor",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/prompt-extractor/latest/prompt-extractor.zip",
-  "enabled": true
- },
- {
-  "name": "alibabacloud-dataworks-infra-manage",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/alibabacloud-dataworks-infra-manage/latest/alibabacloud-dataworks-infra-manage.zip",
-  "enabled": true
- },
- {
-  "name": "skill-file-converter",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/skill-file-converter/latest/skill-file-converter.zip",
-  "enabled": true
- },
- {
-  "name": "data-scientist",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/data-scientist/latest/data-scientist.zip",
-  "enabled": true
- },
- {
-  "name": "excel-weekly-dashboard",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/excel-weekly-dashboard/latest/excel-weekly-dashboard.zip",
-  "enabled": true
- },
- {
-  "name": "alibabacloud-dataworks-workspace-manage",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/alibabacloud-dataworks-workspace-manage/latest/alibabacloud-dataworks-workspace-manage.zip",
-  "enabled": true
- },
- {
-  "name": "finance-charts",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/finance-charts/latest/finance-charts.zip",
-  "enabled": true
- },
- {
-  "name": "market-research-litiao",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/market-research-litiao/latest/market-research-litiao.zip",
-  "enabled": true
- },
- {
-  "name": "py-math-viz",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/py-math-viz/latest/py-math-viz.zip",
-  "enabled": true
- },
- {
-  "name": "data-extractor",
-  "source": "template-preset",
-  "version": "1.0.0",
-  "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/data-extractor/latest/data-extractor.zip",
-  "enabled": true
- },
- {
-  "name": "QoderWake Assistant",
-  "source": "built-in",
-  "version": "2.2.12",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "Record & Replay",
-  "source": "built-in",
-  "version": "1.0.6",
-  "installUrl": null,
-  "enabled": false
- },
- {
-  "name": "Wake DWS CLI",
-  "source": "built-in",
-  "version": "1.8.11",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "ablation-planner",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "alphaxiv",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "analyze-results",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "arxiv",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "auto-paper-improvement-loop",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "auto-review-loop",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "auto-review-loop-llm",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "auto-review-loop-minimax",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "citation-audit",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "citation-crosscheck",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "claims-drafting",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "comm-lit-review",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "dse-loop",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "embodiment-description",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "exa-search",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "experiment-audit",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "experiment-bridge",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "experiment-plan",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "experiment-queue",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "feishu-notify",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "figure-description",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "figure-spec",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "firecrawl-search",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "formula-derivation",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "gemini-search",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "grant-proposal",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "idea-creator",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "idea-discovery",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "idea-discovery-robot",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "integrity-forensics",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "interview-cheatsheet",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "invention-structuring",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "jurisdiction-format",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "keenable-search",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "kill-argument",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "lean-formalize",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "mermaid-diagram",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "meta-apply",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "meta-optimize",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "monitor-experiment",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "novelty-check",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "openalex",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "overleaf-sync",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "paper-claim-audit",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "paper-figure",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "paper-illustration",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "paper-illustration-image2",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "paper-plan",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "paper-poster",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "paper-slides",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "paper-talk",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "paper-write",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "paper-writing",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "patent-novelty-check",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "patent-pipeline",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "patent-review",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "pixel-art",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "prior-art-search",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "proof-checker",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "proof-orchestrator",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "proof-writer",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "qzcli",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "rebuttal",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "render-html",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "research-implement-feature",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "research-lit",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "research-pipeline",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "research-refine",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "research-refine-pipeline",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "research-review",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "research-wiki",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "resubmit-pipeline",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "result-to-claim",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "run-experiment",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "semantic-scholar",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "serverless-modal",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "slides-polish",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "specification-writing",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "system-profile",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "training-check",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "vast-gpu",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "web-debug-search",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "wiki-enrich",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "writing-systems-papers",
-  "source": "agent-created",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- },
- {
-  "name": "QoderWake Skill Self-Evolution",
-  "source": "built-in",
-  "version": "1.0.0",
-  "installUrl": null,
-  "enabled": true
- }
+  {
+    "name": "excel-analysis",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/excel-analysis/latest/excel-analysis.zip",
+    "enabled": true
+  },
+  {
+    "name": "data-visualization-cloud",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/data-visualization-cloud/latest/data-visualization-cloud.zip",
+    "enabled": true
+  },
+  {
+    "name": "sql-query",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/sql-query/latest/sql-query.zip",
+    "enabled": true
+  },
+  {
+    "name": "diegosouzapw-ai-data-analyst",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-ai-data-analyst/latest/diegosouzapw-ai-data-analyst.zip",
+    "enabled": true
+  },
+  {
+    "name": "dicklesworthstone-detecting-data-anomalies",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/dicklesworthstone-detecting-data-anomalies/latest/dicklesworthstone-detecting-data-anomalies.zip",
+    "enabled": true
+  },
+  {
+    "name": "research-tools-skill",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/research-tools-skill/latest/research-tools-skill.zip",
+    "enabled": true
+  },
+  {
+    "name": "pdf-parser-mineru",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/pdf-parser-mineru/latest/pdf-parser-mineru.zip",
+    "enabled": true
+  },
+  {
+    "name": "majiayu000-excalidraw-flowchart",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-excalidraw-flowchart/latest/majiayu000-excalidraw-flowchart.zip",
+    "enabled": true
+  },
+  {
+    "name": "ghostscientist-experiment-design-checklist",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/ghostscientist-experiment-design-checklist/latest/ghostscientist-experiment-design-checklist.zip",
+    "enabled": true
+  },
+  {
+    "name": "eyadsibai-data-science",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/eyadsibai-data-science/latest/eyadsibai-data-science.zip",
+    "enabled": true
+  },
+  {
+    "name": "knowledge-graph-skill",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/knowledge-graph-skill/latest/knowledge-graph-skill.zip",
+    "enabled": true
+  },
+  {
+    "name": "codewithowais-senior-backend-dev",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/codewithowais-senior-backend-dev/latest/codewithowais-senior-backend-dev.zip",
+    "enabled": true
+  },
+  {
+    "name": "extract-pdf-text",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/extract-pdf-text/latest/extract-pdf-text.zip",
+    "enabled": true
+  },
+  {
+    "name": "duclm1x1-hergunmac",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/duclm1x1-hergunmac/latest/duclm1x1-hergunmac.zip",
+    "enabled": true
+  },
+  {
+    "name": "dicklesworthstone-regression-analysis-helper",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/dicklesworthstone-regression-analysis-helper/latest/dicklesworthstone-regression-analysis-helper.zip",
+    "enabled": true
+  },
+  {
+    "name": "mindmap-generator-pro",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/mindmap-generator-pro/latest/mindmap-generator-pro.zip",
+    "enabled": true
+  },
+  {
+    "name": "majiayu000-excalidraw-architect",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-excalidraw-architect/latest/majiayu000-excalidraw-architect.zip",
+    "enabled": true
+  },
+  {
+    "name": "dmonteroh-database-migration-sql",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/dmonteroh-database-migration-sql/latest/dmonteroh-database-migration-sql.zip",
+    "enabled": true
+  },
+  {
+    "name": "paper-search-and-download-automatically",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/paper-search-and-download-automatically/latest/paper-search-and-download-automatically.zip",
+    "enabled": true
+  },
+  {
+    "name": "ancoleman-generating-documentation",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/ancoleman-generating-documentation/latest/ancoleman-generating-documentation.zip",
+    "enabled": true
+  },
+  {
+    "name": "li-etl-handle",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/li-etl-handle/latest/li-etl-handle.zip",
+    "enabled": true
+  },
+  {
+    "name": "majiayu000-scientific-matlab",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-scientific-matlab/latest/majiayu000-scientific-matlab.zip",
+    "enabled": true
+  },
+  {
+    "name": "jackspace-scientific-pkg-statsmodels",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/jackspace-scientific-pkg-statsmodels/latest/jackspace-scientific-pkg-statsmodels.zip",
+    "enabled": true
+  },
+  {
+    "name": "k-dense-ai-scientific-visualization",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/k-dense-ai-scientific-visualization/latest/k-dense-ai-scientific-visualization.zip",
+    "enabled": true
+  },
+  {
+    "name": "diegosouzapw-scientific-schematics-bbgnsurftech",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-bbgnsurftech/latest/diegosouzapw-scientific-schematics-bbgnsurftech.zip",
+    "enabled": true
+  },
+  {
+    "name": "majiayu000-scientific-exploratory-data-analysis",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-scientific-exploratory-data-analysis/latest/majiayu000-scientific-exploratory-data-analysis.zip",
+    "enabled": true
+  },
+  {
+    "name": "ericmjl-scientific-eda",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/ericmjl-scientific-eda/latest/ericmjl-scientific-eda.zip",
+    "enabled": true
+  },
+  {
+    "name": "jackspace-scientific-pkg-aeon",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/jackspace-scientific-pkg-aeon/latest/jackspace-scientific-pkg-aeon.zip",
+    "enabled": true
+  },
+  {
+    "name": "k-dense-ai-scientific-schematics",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/k-dense-ai-scientific-schematics/latest/k-dense-ai-scientific-schematics.zip",
+    "enabled": true
+  },
+  {
+    "name": "majiayu000-scientific-statsmodels",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-scientific-statsmodels/latest/majiayu000-scientific-statsmodels.zip",
+    "enabled": true
+  },
+  {
+    "name": "majiayu000-scientific-polars",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-scientific-polars/latest/majiayu000-scientific-polars.zip",
+    "enabled": true
+  },
+  {
+    "name": "jackspace-scientific-thinking-scientific-visualization",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/jackspace-scientific-thinking-scientific-visualization/latest/jackspace-scientific-thinking-scientific-visualization.zip",
+    "enabled": true
+  },
+  {
+    "name": "diegosouzapw-scientific-schematics-arustydev",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-arustydev/latest/diegosouzapw-scientific-schematics-arustydev.zip",
+    "enabled": true
+  },
+  {
+    "name": "jackspace-scientific-db-gwas-database",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/jackspace-scientific-db-gwas-database/latest/jackspace-scientific-db-gwas-database.zip",
+    "enabled": true
+  },
+  {
+    "name": "diegosouzapw-scientific-schematics-jackychenlu",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-jackychenlu/latest/diegosouzapw-scientific-schematics-jackychenlu.zip",
+    "enabled": true
+  },
+  {
+    "name": "majiayu000-scientific-neuropixels-analysis",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-scientific-neuropixels-analysis/latest/majiayu000-scientific-neuropixels-analysis.zip",
+    "enabled": true
+  },
+  {
+    "name": "jackspace-scientific-db-alphafold-database",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/jackspace-scientific-db-alphafold-database/latest/jackspace-scientific-db-alphafold-database.zip",
+    "enabled": true
+  },
+  {
+    "name": "diegosouzapw-scientific-schematics-aiskillstore",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-aiskillstore/latest/diegosouzapw-scientific-schematics-aiskillstore.zip",
+    "enabled": true
+  },
+  {
+    "name": "jackspace-scientific-pkg-molfeat",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/jackspace-scientific-pkg-molfeat/latest/jackspace-scientific-pkg-molfeat.zip",
+    "enabled": true
+  },
+  {
+    "name": "diegosouzapw-scientific-schematics-danieldekay",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-danieldekay/latest/diegosouzapw-scientific-schematics-danieldekay.zip",
+    "enabled": true
+  },
+  {
+    "name": "majiayu000-scientific-umap-learn",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/majiayu000-scientific-umap-learn/latest/majiayu000-scientific-umap-learn.zip",
+    "enabled": true
+  },
+  {
+    "name": "diegosouzapw-scientific-schematics-majiayu000",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-majiayu000/latest/diegosouzapw-scientific-schematics-majiayu000.zip",
+    "enabled": true
+  },
+  {
+    "name": "diegosouzapw-scientific-schematics-pur3v4d3r",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-pur3v4d3r/latest/diegosouzapw-scientific-schematics-pur3v4d3r.zip",
+    "enabled": true
+  },
+  {
+    "name": "diegosouzapw-scientific-schematics-plurigrid",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-plurigrid/latest/diegosouzapw-scientific-schematics-plurigrid.zip",
+    "enabled": true
+  },
+  {
+    "name": "diegosouzapw-scientific-schematics-fabioeducacross",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/diegosouzapw-scientific-schematics-fabioeducacross/latest/diegosouzapw-scientific-schematics-fabioeducacross.zip",
+    "enabled": true
+  },
+  {
+    "name": "svg-ppt-generator",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/svg-ppt-generator/latest/svg-ppt-generator.zip",
+    "enabled": true
+  },
+  {
+    "name": "excel-data-analysis-and-report-generation",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/excel-data-analysis-and-report-generation/latest/excel-data-analysis-and-report-generation.zip",
+    "enabled": true
+  },
+  {
+    "name": "excel",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/excel/latest/excel.zip",
+    "enabled": true
+  },
+  {
+    "name": "data-visualization",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/data-visualization/latest/data-visualization.zip",
+    "enabled": true
+  },
+  {
+    "name": "data-analysis-pro",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/data-analysis-pro/latest/data-analysis-pro.zip",
+    "enabled": true
+  },
+  {
+    "name": "analytics-data-analysis",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/analytics-data-analysis/latest/analytics-data-analysis.zip",
+    "enabled": true
+  },
+  {
+    "name": "document-processor",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/document-processor/latest/document-processor.zip",
+    "enabled": true
+  },
+  {
+    "name": "chart-craft-plus",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/chart-craft-plus/latest/chart-craft-plus.zip",
+    "enabled": true
+  },
+  {
+    "name": "crawl4ai-skill",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/crawl4ai-skill/latest/crawl4ai-skill.zip",
+    "enabled": true
+  },
+  {
+    "name": "report-generation",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/report-generation/latest/report-generation.zip",
+    "enabled": true
+  },
+  {
+    "name": "excel-formula",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/excel-formula/latest/excel-formula.zip",
+    "enabled": true
+  },
+  {
+    "name": "alibabacloud-sls-query",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/alibabacloud-sls-query/latest/alibabacloud-sls-query.zip",
+    "enabled": true
+  },
+  {
+    "name": "prompt-extractor",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/prompt-extractor/latest/prompt-extractor.zip",
+    "enabled": true
+  },
+  {
+    "name": "alibabacloud-dataworks-infra-manage",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/alibabacloud-dataworks-infra-manage/latest/alibabacloud-dataworks-infra-manage.zip",
+    "enabled": true
+  },
+  {
+    "name": "skill-file-converter",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/skill-file-converter/latest/skill-file-converter.zip",
+    "enabled": true
+  },
+  {
+    "name": "data-scientist",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/data-scientist/latest/data-scientist.zip",
+    "enabled": true
+  },
+  {
+    "name": "excel-weekly-dashboard",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/excel-weekly-dashboard/latest/excel-weekly-dashboard.zip",
+    "enabled": true
+  },
+  {
+    "name": "alibabacloud-dataworks-workspace-manage",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/alibabacloud-dataworks-workspace-manage/latest/alibabacloud-dataworks-workspace-manage.zip",
+    "enabled": true
+  },
+  {
+    "name": "finance-charts",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/finance-charts/latest/finance-charts.zip",
+    "enabled": true
+  },
+  {
+    "name": "market-research-litiao",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/market-research-litiao/latest/market-research-litiao.zip",
+    "enabled": true
+  },
+  {
+    "name": "py-math-viz",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/py-math-viz/latest/py-math-viz.zip",
+    "enabled": true
+  },
+  {
+    "name": "data-extractor",
+    "source": "template-preset",
+    "version": "1.0.0",
+    "installUrl": "https://qoder-skills.oss-accelerate.aliyuncs.com/public/data-extractor/latest/data-extractor.zip",
+    "enabled": true
+  },
+  {
+    "name": "QoderWake Assistant",
+    "source": "built-in",
+    "version": "2.2.12",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "Record & Replay",
+    "source": "built-in",
+    "version": "1.0.6",
+    "installUrl": null,
+    "enabled": false
+  },
+  {
+    "name": "Wake DWS CLI",
+    "source": "built-in",
+    "version": "1.8.11",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "ablation-planner",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "alphaxiv",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "analyze-results",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "arxiv",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "auto-paper-improvement-loop",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "auto-review-loop",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "auto-review-loop-llm",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "auto-review-loop-minimax",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "citation-audit",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "citation-crosscheck",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "claims-drafting",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "comm-lit-review",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "dse-loop",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "embodiment-description",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "exa-search",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "experiment-audit",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "experiment-bridge",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "experiment-plan",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "experiment-queue",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "feishu-notify",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "figure-description",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "figure-spec",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "firecrawl-search",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "formula-derivation",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "gemini-search",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "grant-proposal",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "idea-creator",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "idea-discovery",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "idea-discovery-robot",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "integrity-forensics",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "interview-cheatsheet",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "invention-structuring",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "jurisdiction-format",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "keenable-search",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "kill-argument",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "lean-formalize",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "mermaid-diagram",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "meta-apply",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "meta-optimize",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "monitor-experiment",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "novelty-check",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "openalex",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "overleaf-sync",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "paper-claim-audit",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "paper-figure",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "paper-illustration",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "paper-illustration-image2",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "paper-plan",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "paper-poster",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "paper-slides",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "paper-talk",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "paper-write",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "paper-writing",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "patent-novelty-check",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "patent-pipeline",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "patent-review",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "pixel-art",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "prior-art-search",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "proof-checker",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "proof-orchestrator",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "proof-writer",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "qzcli",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "rebuttal",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "render-html",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "research-implement-feature",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "research-lit",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "research-pipeline",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "research-refine",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "research-refine-pipeline",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "research-review",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "research-wiki",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "resubmit-pipeline",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "result-to-claim",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "run-experiment",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "semantic-scholar",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "serverless-modal",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "slides-polish",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "specification-writing",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "system-profile",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "training-check",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "vast-gpu",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "web-debug-search",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "wiki-enrich",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "writing-systems-papers",
+    "source": "agent-created",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "QoderWake Skill Self-Evolution",
+    "source": "built-in",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true
+  },
+  {
+    "name": "alibabacloud-dataworks-infra-manage",
+    "source": "vendor",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "vendor-published skill; not redistributed"
+  },
+  {
+    "name": "alibabacloud-dataworks-workspace-manage",
+    "source": "vendor",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "vendor-published skill; not redistributed"
+  },
+  {
+    "name": "alibabacloud-sls-query",
+    "source": "vendor",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "vendor-published skill; not redistributed"
+  },
+  {
+    "name": "analytics-data-analysis",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "chart-craft-plus",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "crawl4ai-skill",
+    "source": "community-mirror",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "license MIT-0 declared in upstream frontmatter"
+  },
+  {
+    "name": "data-analysis-pro",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "data-extractor",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "data-scientist",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "data-visualization",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "document-processor",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "excel",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "excel-data-analysis-and-report-generation",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "excel-formula",
+    "source": "community-mirror",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "license MIT declared in upstream frontmatter"
+  },
+  {
+    "name": "excel-weekly-dashboard",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "finance-charts",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "market-research-litiao",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "prompt-extractor",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "py-math-viz",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "qoderwake-assistant",
+    "source": "platform-internal",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "platform management skill; not published"
+  },
+  {
+    "name": "report-generation",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "skill-file-converter",
+    "source": "community-unlicensed",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "no license declared upstream; listed only, not mirrored"
+  },
+  {
+    "name": "wake-dws-cli",
+    "source": "platform-internal",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": false,
+    "mirror_reason": "platform management skill; not published"
+  }
 ]

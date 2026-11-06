@@ -33,3 +33,22 @@
 - 技能链中跨模型评审依赖外部后端；后端缺失时审计降级为单模型自审，结论强度下降且会明示；
 - 蒸馏手册是压缩态，与全量记忆不一致时以全量为准；
 - 本仓库技能镜像随上游 ARIS 演进，快照日期见 `clone-kit/MANIFEST.json`。
+
+## 5. 未镜像技能清单（只列名，不镜像全文）
+
+原则：**有许可声明才镜像**。以下 21 个技能在作者本地存在，但不进入公开 `skills/`，
+在 `clone-kit/MANIFEST.json` 中以 `mirrored: false` 标记并附原因。
+
+**上游未声明许可（16）**——公开再分发授权不明，仅列名：
+analytics-data-analysis, chart-craft-plus, data-analysis-pro, data-extractor,
+data-scientist, data-visualization, document-processor, excel,
+excel-data-analysis-and-report-generation, excel-weekly-dashboard, finance-charts,
+market-research-litiao, prompt-extractor, py-math-viz, report-generation, skill-file-converter
+
+**平台内部（2）**——含平台管理面指令与受管启动器描述，不公开：
+qoderwake-assistant, wake-dws-cli
+
+**厂商发布（3）**——vendor 文档衍生，不代为再分发：
+alibabacloud-dataworks-infra-manage, alibabacloud-dataworks-workspace-manage, alibabacloud-sls-query
+
+若上游后续补充许可声明，按 `UPSTREAM_SYNC.md` 流程评估后策展入镜像，并在本节日志记录变更。

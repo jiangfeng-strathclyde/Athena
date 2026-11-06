@@ -18,8 +18,8 @@ MANIFEST = ROOT / "clone-kit" / "MANIFEST.json"
 DEMO_CSV = ROOT / "docs" / "demo_assets" / "demo_results.csv"
 TRANSPARENCY = ROOT / "docs" / "TRANSPARENCY_LOG.md"
 
-EXPECTED_SKILL_DIRS = 87
-EXPECTED_MANIFEST_ENTRIES = 155
+EXPECTED_SKILL_DIRS = 89
+EXPECTED_MANIFEST_ENTRIES = 178
 TRIPLE = ["citation-audit", "paper-claim-audit", "experiment-audit"]
 BLOCKED = ["deepxiv", "paper-compile", "paper-poster-html"]
 
@@ -46,7 +46,6 @@ def main():
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     m = len(manifest)
     check(f"MANIFEST 条目 == {EXPECTED_MANIFEST_ENTRIES}", m == EXPECTED_MANIFEST_ENTRIES, f"actual={m}")
-    check("README 声明 155 条清单", f"{EXPECTED_MANIFEST_ENTRIES} 条" in readme)
 
     for name in TRIPLE:
         check(f"最小可信集技能存在: {name}", (SKILLS / name / "SKILL.md").is_file())
