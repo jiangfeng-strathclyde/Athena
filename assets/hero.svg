@@ -31,7 +31,7 @@
     <!-- title -->
     <text x="70" y="172" font-size="66" font-weight="700" fill="#F8FAFC" letter-spacing="-1">Thats-me</text>
     <text x="72" y="212" font-size="23" fill="#CBD5E1">我的赛博分身 · 一个会查账的科研 AI 助手</text>
-    <text x="72" y="248" font-size="14.5" fill="#8DA2BF" letter-spacing="0.4">1 份行为手册　·　89 个科研技能　·　1 条诚信审计管线　·　0 平台依赖</text>
+    <text x="72" y="248" font-size="14.5" fill="#8DA2BF" letter-spacing="0.4">1 份行为手册　·　93 个科研技能　·　1 条诚信审计管线　·　0 平台依赖</text>
 
     <text x="72" y="292" font-size="13" fill="#64748B">把“怎么跟我干活”写成可加载的文件，而不是每次开新对话重新教一遍。</text>
 

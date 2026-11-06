@@ -45,6 +45,12 @@
 不进入队列的两类（永久排除，理由见 TRANSPARENCY_LOG 第 5 节）：
 平台内部技能（qoderwake-assistant、wake-dws-cli）、厂商技能（alibabacloud-* 3 个）。
 
+## 第三方 MIT 技能包（待策展）
+
+| 技能包 | 许可 | 状态 | 下一步 |
+|---|---|---|---|
+| Orchestra AI-Research-SKILLs 1.4.0（86 个，AI/ML 系统向） | MIT（README 徽章声明） | 不镜像，待需求 | 有 Discussion 需求或维护者评估后按 UPSTREAM_SYNC 策展子集 |
+
 ## Batching 历史
 
 ### 2026-11-06 · 建队

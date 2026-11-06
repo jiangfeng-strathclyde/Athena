@@ -34,16 +34,16 @@
 | 实验规划与执行 | experiment-plan, experiment-bridge, research-implement-feature, run-experiment, experiment-queue, monitor-experiment, training-check, dse-loop（架构/EDA 域） |
 | 算力资源 | vast-gpu (ext), serverless-modal (ext), qzcli (ext), system-profile |
 | 结果分析与裁决 | analyze-results, result-to-claim (ext), ablation-planner, experiment-audit, excel-formula（表格公式） |
-| 论文写作 | paper-plan, paper-write, paper-writing, writing-systems-papers（系统会域）, specification-writing |
+| 论文写作 | paper-plan, paper-write, paper-writing, writing-systems-papers（系统会域）, specification-writing, academic-paper-narrative（叙事与贡献立论） |
 | 图表与示意 | paper-figure, figure-spec, mermaid-diagram, paper-illustration (ext), paper-illustration-image2 (ext), pixel-art |
 | 编译与渲染 | paper-compile*, render-html |
 | 评审与对抗 | research-review (ext), auto-review-loop (ext), auto-review-loop-llm (ext), auto-review-loop-minimax (ext), kill-argument, auto-paper-improvement-loop (ext) |
 | 返修与重投 | rebuttal, resubmit-pipeline |
 | 证明与公式 | proof-writer, proof-checker, proof-orchestrator, formula-derivation, lean-formalize |
-| 诚信与取证 | integrity-forensics, paper-claim-audit, experiment-audit, citation-audit |
-| 知识库与元优化 | research-wiki, wiki-enrich, meta-optimize, meta-apply |
+| 诚信与取证 | integrity-forensics, paper-claim-audit, experiment-audit, citation-audit, research-integrity-pipeline（证据链门禁） |
+| 知识库与元优化 | research-wiki, wiki-enrich, meta-optimize, meta-apply, skill-evolution-manager（技能沉淀/合并/丢弃） |
 | 汇报与展示 | paper-slides, paper-talk, slides-polish (ext), paper-poster*, paper-poster-html*, paper-illustration |
-| 专利与基金 | patent-pipeline, patent-novelty-check, claims-drafting, specification-writing, jurisdiction-format, embodiment-description, figure-description, prior-art-search, grant-proposal |
+| 专利与基金 | patent-pipeline, patent-novelty-check, claims-drafting, specification-writing, jurisdiction-format, embodiment-description, figure-description, prior-art-search, grant-proposal, patent-disclosure-drafter（交底书初稿） |
 | 通知与杂项 | feishu-notify (ext), interview-cheatsheet, web-debug-search（调试用，不作引用证据） |
 
 `*` = 平台侧未安装（安全扫描拦截，见 `docs/TRANSPARENCY_LOG.md`），镜像全文仅供本地自行审查使用。
