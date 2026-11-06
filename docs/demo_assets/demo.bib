@@ -1,0 +1,43 @@
+% SYNTHETIC DEMO FILE — 本文件为教学用合成数据，故意埋入 3 处可检出错误。
+% 用途：演示 citation-audit / citation-crosscheck 能抓到什么。
+% 真实论文条目仅用于提供"真阴性"对照；埋入错误不代表原文如此。
+
+% [PLANTED-1] 年份错误：U-Net 发表于 MICCAI 2015，此处故意写 2016。
+@inproceedings{ronneberger2016unet,
+  author    = {Ronneberger, Olaf and Fischer, Philipp and Brox, Thomas},
+  title     = {U-Net: Convolutional Networks for Biomedical Image Segmentation},
+  booktitle = {Proc. MICCAI},
+  year      = {2016}
+}
+
+% [PLANTED-2] 作者顺序错误：ResNet 第一作者为 Kaiming He，此处故意把 Xiangyu Zhang 放到首位。
+@inproceedings{he2016resnet,
+  author    = {Zhang, Xiangyu and He, Kaiming and Ren, Shaoqing and Sun, Jian},
+  title     = {Deep Residual Learning for Image Recognition},
+  booktitle = {Proc. IEEE CVPR},
+  year      = {2016}
+}
+
+% [PLANTED-3] 虚构 venue：不存在名为 ICSEO 的会议；条目整体为合成。
+@article{wang2024swinsr,
+  author  = {Wang, Y. and Li, H.},
+  title   = {SwinSR: Transformer Pretraining for Synthetic Aperture Imagery},
+  journal = {Proc. of the Intl. Conf. on Synthetic Earth Observation (ICSEO)},
+  year    = {2024}
+}
+
+% 真阴性对照 1
+@inproceedings{vaswani2017attention,
+  author    = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N. and Kaiser, Lukasz and Polosukhin, Illia},
+  title     = {Attention Is All You Need},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2017}
+}
+
+% 真阴性对照 2
+@inproceedings{chen2018deeplabv3plus,
+  author    = {Chen, Liang-Chieh and Zhu, Yukun and Papandreou, George and Schroff, Florian and Adam, Hartwig},
+  title     = {Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation},
+  booktitle = {Proc. ECCV},
+  year      = {2018}
+}

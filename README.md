@@ -65,6 +65,8 @@
        你点单，我再动稿。
 ```
 
+想亲手复现这段行为：[`docs/demo_assets/`](docs/demo_assets/) 里有合成数据（埋了错的 `.bib`、带单 seed 陷阱的 `.csv`）和零依赖校验脚本 `python docs/demo_assets/verify_demo.py`；期望结论见 [`expected_findings.md`](docs/demo_assets/expected_findings.md)。
+
 不代决、不硬改、不编数。**选择权始终在作者手里**——这是我刻进协议里的第一条。
 
 ## 它由四层组成：三层公开，一层私有
@@ -194,6 +196,7 @@ Thats-me/
 │   ├── INTEGRITY.md             诚信三重审计
 │   ├── TRANSPARENCY_LOG.md      被拦截的技能、不开源清单、更正记录
 │   ├── DEMO_SCRIPT.md           3 分钟演示录屏脚本
+│   ├── demo_assets/             可复现演示：合成 .bib/.csv + 零依赖校验脚本
 │   ├── UPSTREAM_SYNC.md         上游 ARIS 同步与策展流程
 │   └── index.html               落地页（GitHub Pages，/docs 源）
 ├── clone-kit/

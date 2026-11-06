@@ -1,0 +1,7 @@
+run_id,seed,method,miou
+r1,0,baseline,78.1
+r2,1,baseline,79.6
+r3,2,baseline,80.3
+r4,0,ours,81.3
+r5,1,ours,80.3
+r6,2,ours,79.9
