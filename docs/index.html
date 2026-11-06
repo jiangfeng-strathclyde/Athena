@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thats-me · My Cyber Clone | 我的赛博分身</title>
+<meta name="description" content="An ML/AI beginner's open-sourced digital research clone: 87 research skills, a load-before-task protocol, and an integrity triple-audit flagship.">
+<style>
+  :root{--ink:#1c1c1c;--paper:#fbfaf7;--accent:#8c4a00;--steel:#31687e;--line:#d9d2c7;--muted:#6b6b6b}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Times New Roman","Songti SC",serif;color:var(--ink);background:var(--paper);line-height:1.65}
+  header{padding:72px 24px 40px;text-align:center;border-bottom:1px solid var(--line)}
+  header h1{font-size:44px;margin:0 0 8px;letter-spacing:.5px}
+  header .sub{font-size:18px;color:var(--muted);max-width:760px;margin:0 auto}
+  header .badges{margin-top:18px}
+  header .badges span{display:inline-block;border:1px solid var(--line);border-radius:3px;padding:2px 10px;margin:3px;font-size:12px;color:var(--steel);background:#fff}
+  main{max-width:960px;margin:0 auto;padding:40px 24px}
+  h2{font-size:26px;border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:4px;margin:48px 0 16px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .card{border:1px solid var(--line);background:#fff;padding:18px 20px;border-top:3px solid var(--accent)}
+  .card h3{margin:0 0 8px;font-size:17px}
+  .card p{margin:0;font-size:14px;color:#333}
+  .chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:18px 0}
+  .chain b{font-weight:normal;border:1px solid var(--steel);color:var(--steel);border-radius:14px;padding:3px 12px;font-size:13px;background:#fff}
+  .chain i{color:var(--muted);font-style:normal}
+  pre{background:#fff;border:1px solid var(--line);padding:14px 16px;overflow:auto;font-size:13px;font-family:Consolas,monospace;line-height:1.5}
+  a{color:var(--accent)}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:28px 24px 48px;text-align:center;color:var(--muted);font-size:13px}
+  .en{color:#444;font-size:15px}
+  ul{padding-left:22px}
+  li{margin:4px 0}
+</style>
+</head>
+<body>
+<header>
+  <h1>Thats-me · 我的赛博分身</h1>
+  <p class="sub">我是一名机器学习 / AI 的<strong>初学者</strong>，方向是<strong>遥感影像理解与对地观测中的机器学习</strong>。
+  我把自己的数字科研助手养成了"分身"，并把分身套件与 87 个科研技能开源——希望每个初学者都能少踩坑、多复现。<br>
+  <span class="en">An ML/AI beginner's open-sourced cyber clone: a digital research assistant plus 87 curated research skills, a load-before-task protocol, and an integrity triple-audit flagship.</span></p>
+  <div class="badges">
+    <span>License MIT</span><span>skills 87</span><span>clone-protocol v1</span><span>integrity triple-audit</span><span>transparency log</span>
+  </div>
+</header>
+<main>
+  <h2>为什么它不一样 / Why it stands out</h2>
+  <div class="cards">
+    <div class="card"><h3>诚信三重审计 · Integrity flagship</h3>
+      <p>引用审计 + 数字-结论审计 + 实验诚实度审计 + 投稿前取证扫描：论文里每个数字都可追溯到原始结果。在 AI 产纸时代，可信度比聪明度稀缺。<br>
+      <span class="en">Citation / claim / experiment audits plus a pre-submission forensics sweep: every number traceable to raw results.</span></p></div>
+    <div class="card"><h3>任务前加载协议 · Load-before-task</h3>
+      <p>任何模型执行任务前读三个文件，即继承一套行为约束：不虚构、先列代价再动手、口径统一、诚实三分法。<br>
+      <span class="en">Any model reads three files before a task and inherits the clone's behavioral constraints.</span></p></div>
+    <div class="card"><h3>透明度日志 · Transparency log</h3>
+      <p>公开"被安全扫描器拦截且拒绝绕过"的记录，与"不开源清单"（记忆/密钥/未发表数据）。可信度靠公开，不靠承诺。<br>
+      <span class="en">Blocked-by-scanner records published, never bypassed; a clear "what we do NOT open-source" list.</span></p></div>
+  </div>
+
+  <h2>技能链 · The ten-stage loop</h2>
+  <div class="chain">
+    <b>文献检索</b><i>→</i><b>查新</b><i>→</i><b>实验规划</b><i>→</i><b>执行/监控</b><i>→</i><b>结果裁决</b><i>→</i><b>写作</b><i>→</i><b>图表</b><i>→</i><b>三重审计</b><i>→</i><b>跨模型评审</b><i>→</i><b>返修/重投</b><i>↺</i>
+  </div>
+
+  <h2>三分钟上手 / Quick start</h2>
+  <pre># 方式 A · 任意模型：任务前读三个文件
+1. README.md
+2. docs/DISTILLED_PUBLIC.md   (English: docs/DISTILLED_PUBLIC_EN.md)
+3. clone-kit/ROUTING_TABLE.md → skills/&lt;name&gt;/SKILL.md
+
+# 方式 B · SKILL.md 兼容工具（Claude Code 等）
+cp -r skills/citation-audit skills/paper-claim-audit skills/experiment-audit .claude/skills/
+
+# 方式 C · 数字员工平台
+see clone-kit/HOW_TO_BUILD_YOUR_CLONE.md</pre>
+
+  <h2>社区 / Community</h2>
+  <ul>
+    <li>要新技能 / 报坑 / 晒分身：仓库 Discussions（模板：skill-request、clone-show-and-tell）。</li>
+    <li>提交技能：<a href="../CONTRIBUTING.md">CONTRIBUTING.md</a>（含诚信自检清单）。</li>
+    <li>路线图：<a href="../ROADMAP.md">ROADMAP.md</a>；演示录屏脚本：<a href="DEMO_SCRIPT.md">DEMO_SCRIPT.md</a>。</li>
+    <li>上游同步策展流程：<a href="UPSTREAM_SYNC.md">UPSTREAM_SYNC.md</a>；克隆卡生成：<code>clone-kit/make_clone_card.py</code>。</li>
+  </ul>
+
+  <h2>归属与隐私 / Attribution &amp; Privacy</h2>
+  <ul>
+    <li>自有内容 MIT；技能全文镜像自 ARIS（wanshuiyin, MIT），见 <a href="../skills/NOTICE.md">skills/NOTICE.md</a>。</li>
+    <li>本仓库不含：记忆包、密钥、未发表数据、可识别真实身份的信息。</li>
+  </ul>
+</main>
+<footer>
+  Thats-me · My Cyber Clone — built by a beginner, for beginners. ·
+  <a href="https://github.com/jiangfeng-strathclyde/Thats-me">GitHub</a>
+</footer>
+</body>
+</html>

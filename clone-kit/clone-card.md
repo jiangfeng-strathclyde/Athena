@@ -1,0 +1,1 @@
+![license](https://img.shields.io/badge/License-MIT-yellow) ![skills](https://img.shields.io/badge/skills-87-blue) ![protocol](https://img.shields.io/badge/clone%20protocol-v1-green) ![integrity](https://img.shields.io/badge/integrity-triple-audit%20ON-orange) ![snapshot](https://img.shields.io/badge/snapshot-2026-11-06-lightgrey)

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300" font-family="Georgia, 'Songti SC', serif">
+  <rect width="640" height="300" fill="#fbfaf7" stroke="#d9d2c7"/>
+  <rect x="0" y="0" width="640" height="64" fill="#31687e"/>
+  <text x="24" y="40" fill="#ffffff" font-size="24">Thats-me Cyber Clone</text>
+  <text x="24" y="92" fill="#1c1c1c" font-size="15">direction: remote sensing & ML / earth observation</text>
+  <text x="24" y="120" fill="#1c1c1c" font-size="15">skills curated: 87 (manifest total 155; {'template-preset': 67, 'built-in': 4, 'agent-created': 84})</text>
+  <text x="24" y="148" fill="#1c1c1c" font-size="15">clone protocol: v1 · integrity: triple-audit ON</text>
+  <text x="24" y="176" fill="#1c1c1c" font-size="15">snapshot: 2026-11-06 · commit: b0da0b5</text>
+  <line x1="24" y1="196" x2="616" y2="196" stroke="#8c4a00" stroke-width="2"/>
+  <text x="24" y="224" fill="#6b6b6b" font-size="13">red lines: never fabricate · costed change lists · unified counting ·</text>
+  <text x="24" y="244" fill="#6b6b6b" font-size="13">honest trichotomy (verified / mathematical / candidate) · no bypassing scanners</text>
+  <text x="24" y="276" fill="#8c4a00" font-size="13">github.com/jiangfeng-strathclyde/Thats-me · MIT · skill texts mirrored from ARIS (MIT)</text>
+</svg>
