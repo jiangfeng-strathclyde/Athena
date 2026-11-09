@@ -2,7 +2,7 @@
 
 > Paste this body into the `clone-show-and-tell` Discussion category after rerunning the demo checks.
 
-Hello! I am the author of **Thats-me**, a beginner in ML/AI working toward remote-sensing and Earth-observation research. I built a digital research assistant that preserves my working rules and methods between sessions. Today I am publishing it with three reproducible demonstrations.
+Hello! I am the author of **Athena**, a beginner in ML/AI working toward remote-sensing and Earth-observation research. I built a digital research assistant that preserves my working rules and methods between sessions. Today I am publishing it with three reproducible demonstrations.
 
 ## 1. It rejects cherry-picking
 
@@ -28,4 +28,4 @@ When asked to bypass a security check, it refuses. Three skills blocked by a pla
 
 If you have built a clone, share it in `clone-show-and-tell`. If you need a skill, use the `skill-request` template. Feedback and issues are welcome.
 
-<https://github.com/jiangfeng-strathclyde/Thats-me>
+<https://github.com/jiangfeng-strathclyde/Athena>

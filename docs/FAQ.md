@@ -38,6 +38,6 @@ Yes, subject to the MIT or MIT-0 license attached to each component. You are als
 
 ## 10. How can I contribute or build my own clone?
 
-- Open a [Discussion](https://github.com/jiangfeng-strathclyde/Thats-me/discussions) for a skill request or clone showcase.
+- Open a [Discussion](https://github.com/jiangfeng-strathclyde/Athena/discussions) for a skill request or clone showcase.
 - Read [`CONTRIBUTING.md`](../CONTRIBUTING.md) before submitting a skill.
 - Follow [`HOW_TO_BUILD_YOUR_CLONE.md`](../clone-kit/HOW_TO_BUILD_YOUR_CLONE.md) to create your own version.

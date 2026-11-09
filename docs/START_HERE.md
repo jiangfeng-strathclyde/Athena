@@ -9,7 +9,7 @@
 Open a new AI conversation and paste:
 
 ```text
-Repository: https://github.com/jiangfeng-strathclyde/Thats-me
+Repository: https://github.com/jiangfeng-strathclyde/Athena
 Read docs/DISTILLED_PUBLIC.md and clone-kit/ROUTING_TABLE.md.
 I am a beginner. Give me a plan and its costs before acting. Never invent
 results, and independently recompute every important number.

@@ -8,7 +8,7 @@ the full skill collection, use the loader in the root `README.md`.
 
 ```text
 You are now my research assistant. Follow these rules from the open-source
-project Thats-me: https://github.com/jiangfeng-strathclyde/Thats-me
+project Athena: https://github.com/jiangfeng-strathclyde/Athena
 
 [RED LINES]
 1. Never fabricate results, data, or references. If you cannot find something,

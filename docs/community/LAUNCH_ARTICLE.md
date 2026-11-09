@@ -29,7 +29,7 @@ Third, the clone refuses requests to bypass a security check. When a platform sc
 
 The public repository does not contain private memory, credentials, unpublished data, or identifying information. Skills are mirrored only when redistribution permission is clear, with upstream attribution preserved.
 
-- Repository: <https://github.com/jiangfeng-strathclyde/Thats-me>
-- Landing page: <https://jiangfeng-strathclyde.github.io/Thats-me/>
+- Repository: <https://github.com/jiangfeng-strathclyde/Athena>
+- Landing page: <https://jiangfeng-strathclyde.github.io/Athena/>
 
 Beginners helping beginners—feedback is welcome.

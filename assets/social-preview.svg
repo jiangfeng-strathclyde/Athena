@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="Thats-me: an open-source cyber clone for research">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="Athena: an open-source cyber clone for research">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0A101E"/>
@@ -29,12 +29,12 @@
     <text x="138" y="130" font-size="14" letter-spacing="2.4" fill="#7DD3C8" font-weight="600">OPEN SOURCE · CLONE KIT v1</text>
 
     <!-- title -->
-    <text x="94" y="248" font-size="92" font-weight="700" fill="#F8FAFC" letter-spacing="-1.5">Thats-me</text>
+    <text x="94" y="248" font-size="92" font-weight="700" fill="#F8FAFC" letter-spacing="-1.5">Athena</text>
     <text x="98" y="308" font-size="32" fill="#CBD5E1">An open-source research clone kit</text>
     <text x="98" y="360" font-size="17" fill="#8DA2BF" letter-spacing="0.5">1 manual · 108 research skills · 1 integrity pipeline · 0 platform lock-in</text>
 
     <text x="98" y="430" font-size="19" fill="#64748B">Breaking the research barrier into loadable files, step by step.</text>
-    <text x="98" y="560" font-size="17" fill="#475569" letter-spacing="0.6">github.com/jiangfeng-strathclyde/Thats-me</text>
+    <text x="98" y="560" font-size="17" fill="#475569" letter-spacing="0.6">github.com/jiangfeng-strathclyde/Athena</text>
     <rect x="98" y="580" width="150" height="4" rx="2" fill="url(#accent)"/>
 
     <!-- protocol card -->

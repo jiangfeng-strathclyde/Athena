@@ -10,7 +10,7 @@ Skills in this repository retain their original attribution and license notices.
 - **Orchestra Research · AI-Research-SKILLs 1.4.0**
   <https://www.npmjs.com/package/@orchestra-research/ai-research-skills>
   Copyright (c) 2025 Claude AI Research Skills Contributors. The upstream evidence contains a license inconsistency: its README and LICENSE say MIT, while `package.json` says ISC. This repository preserves the upstream LICENSE and records the inconsistency in [`TRANSPARENCY_LOG.md`](../docs/TRANSPARENCY_LOG.md).
-- **Seven original research skills** — `academic-paper-narrative`, `research-integrity-pipeline`, `skill-evolution-manager`, `patent-disclosure-drafter`, `remote-sensing-workbench`, `data-profile-and-plot`, and `lit-reading-assignment`; Copyright (c) 2026 Thats-me contributors, MIT License.
+- **Seven original research skills** — `academic-paper-narrative`, `research-integrity-pipeline`, `skill-evolution-manager`, `patent-disclosure-drafter`, `remote-sensing-workbench`, `data-profile-and-plot`, and `lit-reading-assignment`; Copyright (c) 2026 Athena contributors, MIT License.
 
 The full permissions are defined by each upstream license. Added English guidance and environment-adaptation notes are explanatory and do not change the upstream instructions.
 

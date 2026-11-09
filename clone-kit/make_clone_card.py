@@ -29,7 +29,7 @@ def git(*args: str) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--name", default="Thats-me Cyber Clone")
+    ap.add_argument("--name", default="Athena Cyber Clone")
     ap.add_argument("--direction", default="remote sensing & ML / earth observation")
     ap.add_argument("--out", default=str(HERE / "clone-card"))
     ap.add_argument("--protocol", default="v1")
@@ -66,7 +66,7 @@ def main() -> int:
   <line x1="24" y1="196" x2="{w-24}" y2="196" stroke="#8c4a00" stroke-width="2"/>
   <text x="24" y="224" fill="#6b6b6b" font-size="13">red lines: never fabricate · costed change lists · unified counting ·</text>
   <text x="24" y="244" fill="#6b6b6b" font-size="13">honest trichotomy (verified / mathematical / candidate) · no bypassing scanners</text>
-  <text x="24" y="276" fill="#8c4a00" font-size="13">github.com/jiangfeng-strathclyde/Thats-me · MIT · skill texts mirrored from ARIS (MIT)</text>
+  <text x="24" y="276" fill="#8c4a00" font-size="13">github.com/jiangfeng-strathclyde/Athena · MIT · skill texts mirrored from ARIS (MIT)</text>
 </svg>
 """
     Path(a.out + ".svg").write_text(svg, encoding="utf-8")

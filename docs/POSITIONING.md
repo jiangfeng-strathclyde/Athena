@@ -10,7 +10,7 @@
 
 ## and“Make yourself at home. paper”Category framework differences
 
-| Dimensions | One key./Make yourself at home. paper Frame | Thats-me |
+| Dimensions | One key./Make yourself at home. paper Frame | Athena |
 |---|---|---|
 | Objective | End-to-end automatic output of essays | Let's learn and enjoy a reenactable scientific process. |
 | The position of the person. | Bystander/Approval Button | Decision-makers: Programs and costs are set out for you first, so you can do it. |

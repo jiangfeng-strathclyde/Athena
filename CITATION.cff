@@ -3,15 +3,15 @@ message: >-
   If you load or reuse this clone kit (behavior manual, goal-first skill
   routing, integrity audits), please cite this repository and keep the
   upstream attributions in skills/NOTICE.md.
-title: "Thats-me: an open-source cyber clone for research"
+title: "Athena: an open-source cyber clone for research"
 type: software
 license: MIT
-repository-code: "https://github.com/jiangfeng-strathclyde/Thats-me"
-url: "https://jiangfeng-strathclyde.github.io/Thats-me/"
+repository-code: "https://github.com/jiangfeng-strathclyde/Athena"
+url: "https://jiangfeng-strathclyde.github.io/Athena/"
 version: "1.0.0"
 date-released: "2026-11-06"
 authors:
-  - name: "Thats-me contributors"
+  - name: "Athena contributors"
     alias: "jiangfeng-strathclyde"
 keywords:
   - research-assistant
