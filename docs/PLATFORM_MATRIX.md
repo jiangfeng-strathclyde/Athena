@@ -4,6 +4,11 @@
 > host capabilities. It does not certify end-to-end testing on every host or
 > version. See [setup instructions and official references](INSTALL_ONCE.md).
 
+Actual runs are tracked separately in the [dated acceptance report](validation/2026-11-09.md).
+Two explicit-invocation numerical cases have passed on Codex CLI; the other
+four local hosts remain untested in the available environment. Use the
+[same fixture and evidence procedure](HOST_ACCEPTANCE.md) on each host.
+
 | Platform | Setup route | Scope and prerequisites |
 |---|---|---|
 | Claude Code | `--agent claude-code` | Personal skills in `~/.claude/skills`; local environment |

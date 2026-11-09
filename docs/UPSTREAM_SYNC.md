@@ -1,37 +1,59 @@
-# UPSTREAM_SYNC · Upstream synchronisation and synthesizing process
+# Upstream synchronization
 
-> `skills/` Mirror From [ARIS](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)（MIT）。
-> This document sets out how to track upstream evolution and make changes**Development**Into the warehouse: a mirror, an unmistakable, and a trail from the entire journey.
+Athena contains selected upstream skills and explicitly identified local
+adaptations. Synchronization must preserve licensing, provenance, and the
+dependencies required by each installed skill.
 
-## Snapshot Baseline
+## Baselines and packaging
 
-- Checkout date and list:`clone-kit/MANIFEST.json`（With every skill. source / version / installUrl）。
-- Mirror scope: Upper upstream 87 A skills directory. SKILL.md Original + Additional to this warehouse"Mirror description"Paragraph (see `skills/NOTICE.md`）。
-- Support documentation (%1)scripts/、references/、../shared-references/）**No mirror distribution**，Go back upstream when used.
+- The catalog is recorded in [MANIFEST.json](../clone-kit/MANIFEST.json).
+- The ARIS comparison baseline is recorded in
+  [UPSTREAM_SNAPSHOT.json](../clone-kit/UPSTREAM_SNAPSHOT.json).
+- Most of the 87 ARIS-derived skills contain mirrored instructions, not the
+  upstream scripts and shared references. Consult the dependency report before
+  describing them as standalone.
+- The `arxiv` skill is a standalone adaptation, with its own pinned
+  [provenance](../skills/arxiv/references/provenance.json), helper, and upstream
+  license. It must not be overwritten as an unchanged mirror.
+- Attribution and known license discrepancies are recorded in
+  [NOTICE.md](../skills/NOTICE.md) and
+  [TRANSPARENCY_LOG.md](TRANSPARENCY_LOG.md).
 
-## Synchronization of processes (on a monthly or larger upstream version)
+## Review a proposed update
 
-0. **Take differences (mechanized)**：`python scripts/upstream_diff.py`（Aluminous clones upstream of the warehouse cache, stripping out of this warehouse for additional sections/End of line/The end of the line is empty, and the skills of the Hashi comparison, the output. added / removed / changed；
-   When the show's done, `--save-snapshot` Refresh `clone-kit/UPSTREAM_SNAPSHOT.json` Baseline.
-1. **Take the difference.**：Upstream, newest. tag/commit，and MANIFEST A snapshot. commit Contrast:
-   `git -C <Upstream cloning> log --oneline <A snapshot.commit>..HEAD -- skills/`；
-   List New / Delete / Modify the skills directory.
-2. **Classification**：
-   - Revision: skills by skills diff SKILL.md；Determining whether to influence the semantics of the instructions (semanmatic changes)→Rerun security self-check list; plain language→Direct synchronization;
-   - Add: Press `CONTRIBUTING.md` (b) A self-checking list of good faith and a decision on whether or not to develop a mirror;
-   - Delete: Remove from mirror and TRANSPARENCY_LOG Records"Upstream Remove"。
-3. **Security Scan**：New/Change of content to the platform or CI Scanning;**I can't get past it.**，Press TRANSPARENCY_LOG Processes are publicly recorded.
-4. **Update List**：Refresh MANIFEST The date of the snapshot and the date of the version Fields;README Synchronizes the badges if they contain a count.
-5. **Queue submission**：commit message Fixed Prefix `sync(aris): <A snapshot.commitShort Hashi.> -> <New Hashi.>`，
-   body List New/Delete/Semantic changes to the list of three categories.
-6. **Announcement**：Discussions Send one. sync Bulletin (templates can be reused) skill-request the structure of the).)
+1. Select an explicit upstream commit or release. Compare it with the recorded
+   baseline in a dedicated checkout. Inspect new, changed, and removed files;
+   do not execute fetched installers or skill commands merely to inspect them.
+2. Classify each change as mirrored text, a local adaptation, or a new skill.
+   For adaptations, reconcile upstream fixes with the local behavior and tests.
+   Check scripts, templates, references, imports, and external tools as well as
+   `SKILL.md`; the static link scanner does not cover every dependency.
+3. Verify redistribution permission for every bundled file. Preserve upstream
+   copyright and license text. Record the source commit, source checksum where
+   applicable, local changes, and runtime requirements with the installed skill.
+4. Review executable behavior and host assumptions. Existing user data must not
+   be deleted or overwritten to recover from a failed dependency check. Missing
+   credentials or reviewer services must remain explicit limitations.
+5. Test the skill after installing it outside the Athena checkout. Run its
+   fixture tests, strict packaging check, and appropriate real-host acceptance
+   cases. Distinguish mocked requests, live helper calls, and agent-driven runs.
+6. Update the manifest or adaptation provenance, notices, and dated validation
+   record. Commit only the reviewed changes. Publishing announcements is a
+   separate maintainer action.
 
-## Principles of communication (why not all automatic mirrors)
+`scripts/upstream_diff.py` is a legacy comparison utility that updates an
+upstream cache. Inspect its filesystem and Git operations before using it;
+this procedure does not require running it or changing its baseline.
 
-- This warehouse is...**Policy version**：Keep subsets and Chinese guides useful to beginners, without upstream integrity fork；
-- Default for additional skills upstream**I'm not coming in.**Mirrors, menstruation. Discussion Entry after needs or maintenance assessment (demand-driven);
-- Any additional paragraphs to the upstream text (e.g."Mirror description"）It must be clearly marked and do not change the semantics of the instructions;
-- The chain of permits is continuous:NOTICE and LICENSE The upstream copyright line is always retained in the appendix.
+## Reusable checks
 
-## Not ARIS Source skills Community contribution or self-research skills entry `skills/` Hour:frontmatter Source indicated (original)/Upper URL），
-Permission must be granted. MIT compatibility; in MANIFEST Middle by `source: community|original` Tags, with `source: aris-mirror` Distinguishing.
+```text
+python scripts/check_skill_dependencies.py
+python scripts/check_skill_dependencies.py --skill arxiv --strict
+python -m unittest discover -s tests -v
+python scripts/check_repo_consistency.py
+```
+
+Use [host acceptance](HOST_ACCEPTANCE.md) for model-driven checks. Passing a
+packaging scan establishes neither tool availability nor scientific validity.
+New upstream skills are reviewed individually rather than added automatically.

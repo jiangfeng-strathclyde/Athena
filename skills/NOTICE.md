@@ -12,7 +12,19 @@ Skills in this repository retain their original attribution and license notices.
   Copyright (c) 2025 Claude AI Research Skills Contributors. The upstream evidence contains a license inconsistency: its README and LICENSE say MIT, while `package.json` says ISC. This repository preserves the upstream LICENSE and records the inconsistency in [`TRANSPARENCY_LOG.md`](../docs/TRANSPARENCY_LOG.md).
 - **Eight original research skills** — `academic-paper-narrative`, `research-integrity-pipeline`, `explorable-paper`, `skill-evolution-manager`, `patent-disclosure-drafter`, `remote-sensing-workbench`, `data-profile-and-plot`, and `lit-reading-assignment`; Copyright (c) 2026 Athena contributors, MIT License.
 
-The full permissions are defined by each upstream license. Added English guidance and environment-adaptation notes are explanatory and do not change the upstream instructions.
+The full permissions are defined by each upstream license. Mirror notes are
+explanatory; adapted implementations are identified separately below.
+
+## Standalone adaptations
+
+`arxiv` is an Athena adaptation of the ARIS skill and helper, pinned to commit
+`f76ec8d6b77792e2242cca049e08d0cbb7d54e19`. Its installed folder includes the
+Python helper, upstream MIT license, and [provenance record](arxiv/references/provenance.json).
+The adaptation preserves explicit paper versions, uses Python's standard
+library, and leaves existing files unchanged. Upstream wiki integration is
+outside this adaptation. Review its local changes before synchronizing it;
+replacing its instructions with the upstream mirror would restore dependencies
+that are not bundled here.
 
 ## Skills listed but not mirrored
 

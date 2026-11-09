@@ -27,5 +27,7 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Check the self-contained research entry point
         run: python scripts/check_skill_dependencies.py --skill research-integrity-pipeline --strict
+      - name: Check the standalone arXiv adaptation
+        run: python scripts/check_skill_dependencies.py --skill arxiv --strict
       - name: Report catalog packaging gaps (informational, not a runtime certification)
         run: python scripts/check_skill_dependencies.py

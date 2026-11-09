@@ -12,7 +12,8 @@ A discoverable skill is an instruction package, not a verified tool service.
 | Packaging | Static report of missing inline links, outside-folder references, and unbundled-support notices | Paths in executable examples, credentials, tools, and runtime behavior |
 | Research entry point | Self-contained instructions, a strict packaging check, and a bundled paired-results helper tested after isolated installation | Model behavior across tasks and hosts |
 | Numerical example | Offline recomputation from the included synthetic CSV | A model executing a complete scientific audit |
-| Multi-platform support | Documented host directories; CI configured for Windows, Linux, and macOS on Python 3.10 and 3.13 | A successful CI run until the workflow actually executes; host-level acceptance tests |
+| Upstream dependency adaptation | Standalone arXiv helper, pinned provenance and license, isolated-install tests, and one live API lookup | Agent-driven arXiv use and live PDF-download verification |
+| Multi-platform support | Five-host fixture preparation; two real Codex numerical cases with trace review | Other hosts, implicit activation, citation checks, and the full catalog |
 
 The implementation was tested locally on Windows on 2026-11-09. Tests that
 need symlink privileges can be skipped when the OS does not grant them; inspect
@@ -29,6 +30,7 @@ python scripts/check_skills_quality.py
 python docs/demo_assets/verify_demo.py
 python scripts/check_skill_dependencies.py
 python scripts/check_skill_dependencies.py --skill research-integrity-pipeline --strict
+python scripts/check_skill_dependencies.py --skill arxiv --strict
 python skills/research-integrity-pipeline/scripts/paired_summary.py docs/demo_assets/demo_results.csv --metric miou --baseline baseline --candidate ours --unit percentage-points
 ```
 
@@ -75,6 +77,12 @@ installed skill selection, dependency versions, inputs, and actual outputs.
    supplied manuscript, publishing material, or installing dependencies.
 
 These are acceptance criteria, not a record that all hosts have passed.
+
+Use [the cross-host test procedure](HOST_ACCEPTANCE.md) for isolated fixtures,
+actual model execution, saved-output checks, and trace review. The
+[2026-11-09 run report](validation/2026-11-09.md) records completed checks and
+unavailable environments. Unit tests and operating-system CI remain separate
+from model-driven acceptance; no authenticated model calls run in CI.
 
 ## Remaining work
 

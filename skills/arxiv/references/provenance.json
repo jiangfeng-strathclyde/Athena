@@ -1,0 +1,16 @@
+{
+  "upstream": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+  "commit": "f76ec8d6b77792e2242cca049e08d0cbb7d54e19",
+  "source_path": "tools/arxiv_fetch.py",
+  "source_utf8_sha256": "30446596ca9aeb66a0a2f20fc0919d5f473fbee34dd611fee5c3613fadf5e7fa",
+  "license": "MIT",
+  "adaptation": [
+    "Bundle helper and license inside the skill; remove ARIS/Bash/wiki dependencies.",
+    "Retain requested and returned paper versions; validate IDs before filesystem access.",
+    "Reject unsafe IDs and invalid existing PDFs without deletion; use exclusive creation.",
+    "Use HTTPS, bounded responses, three-second request delay, and no automatic retries.",
+    "Report API error entries instead of interpreting them as paper metadata."
+  ],
+  "runtime": {"python": ">=3.10", "packages": [], "network": ["export.arxiv.org", "arxiv.org"]},
+  "optional_integrations_bundled": []
+}
