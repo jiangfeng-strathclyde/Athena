@@ -1,0 +1,22 @@
+{
+  "upstream": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+  "commit": "f76ec8d6b77792e2242cca049e08d0cbb7d54e19",
+  "source_path": "skills/openalex/SKILL.md",
+  "source_git_blob_sha1": "5631ab9d56fef31155d302c64c1a2ef2ddb6c26d",
+  "license": "MIT",
+  "adaptation": [
+    "Replace ARIS helper-resolution and shared references with bundled Athena standard-library helpers.",
+    "Read-only bounded search and ID lookup; preserve raw metadata and explicit unknowns.",
+    "Remove automatic wiki integration, fixed quota claims, and field-of-study assumptions.",
+    "Credentials remain in the environment; suppress URLs and service bodies in errors; reject redirects."
+  ],
+  "runtime": {
+    "python": ">=3.10",
+    "packages": [],
+    "network": [
+      "api.openalex.org"
+    ],
+    "credential_environment": "OPENALEX_API_KEY"
+  },
+  "optional_integrations_bundled": []
+}

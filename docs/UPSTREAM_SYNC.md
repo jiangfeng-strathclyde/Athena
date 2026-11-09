@@ -15,6 +15,9 @@ dependencies required by each installed skill.
 - The `arxiv` skill is a standalone adaptation, with its own pinned
   [provenance](../skills/arxiv/references/provenance.json), helper, and upstream
   license. It must not be overwritten as an unchanged mirror.
+- `openalex` and `semantic-scholar` are also standalone adaptations with
+  Athena-authored helpers. Their per-skill provenance records pin the source
+  workflows. Preserve and test the local implementations when synchronizing.
 - Attribution and known license discrepancies are recorded in
   [NOTICE.md](../skills/NOTICE.md) and
   [TRANSPARENCY_LOG.md](TRANSPARENCY_LOG.md).

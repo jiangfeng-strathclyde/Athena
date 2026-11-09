@@ -780,8 +780,10 @@
   },
   {
     "name": "openalex",
-    "source": "agent-created",
-    "version": "1.0.0",
+    "source": "aris-adapted",
+    "version": "1.1.0",
+    "upstreamCommit": "f76ec8d6b77792e2242cca049e08d0cbb7d54e19",
+    "provenance": "skills/openalex/references/provenance.json",
     "installUrl": null,
     "enabled": true
   },
@@ -1011,8 +1013,10 @@
   },
   {
     "name": "semantic-scholar",
-    "source": "agent-created",
-    "version": "1.0.0",
+    "source": "aris-adapted",
+    "version": "1.1.0",
+    "upstreamCommit": "f76ec8d6b77792e2242cca049e08d0cbb7d54e19",
+    "provenance": "skills/semantic-scholar/references/provenance.json",
     "installUrl": null,
     "enabled": true
   },

@@ -13,12 +13,35 @@ ROOT = Path(__file__).resolve().parent.parent
 LINK = re.compile(r"\[[^\]]*\]\(([^\n)]+)\)")
 
 
+def markdown_prose(text: str) -> str:
+    """Exclude fenced/indented code and inline code from the link heuristic.
+
+    This is intentionally not a complete Markdown parser. In particular,
+    reference-style links and paths mentioned only in code are not audited.
+    """
+    lines = []
+    fence = None
+    for line in text.splitlines(keepends=True):
+        marker = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", line.rstrip("\r\n"))
+        if fence:
+            if marker and marker[1][0] == fence[0] and len(marker[1]) >= len(fence) and not marker[2].strip():
+                fence = None
+            continue
+        if marker:
+            fence = marker[1]
+            continue
+        if line.startswith(("    ", "\t")):
+            continue
+        lines.append(line)
+    return re.sub(r"(`+)(?!`)([\s\S]*?)(?<!`)\1(?!`)", "", "".join(lines))
+
+
 def inspect_skill(folder: Path) -> dict:
     document = folder / "SKILL.md"
     text = document.read_text(encoding="utf-8")
     missing = set()
     outside = set()
-    for match in LINK.finditer(text):
+    for match in LINK.finditer(markdown_prose(text)):
         raw = match.group(1).strip()
         if not raw:
             continue

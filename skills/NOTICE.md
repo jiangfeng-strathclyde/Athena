@@ -26,6 +26,14 @@ outside this adaptation. Review its local changes before synchronizing it;
 replacing its instructions with the upstream mirror would restore dependencies
 that are not bundled here.
 
+`openalex` and `semantic-scholar` also adapt the ARIS workflows at that commit.
+Each bundles an Athena-authored, read-only Python helper and HTTPS transport,
+the upstream MIT license, and a pinned provenance record:
+[OpenAlex](openalex/references/provenance.json) and
+[Semantic Scholar](semantic-scholar/references/provenance.json).
+These implementations do not require the ARIS runtime, shared references, or
+wiki integration. External API availability and access policies still apply.
+
 ## Skills listed but not mirrored
 
 Twenty-one individually named local skills are listed in [`MANIFEST.json`](../clone-kit/MANIFEST.json) with `mirrored: false`: sixteen lacked clear redistribution permission, two were platform-internal, and three were vendor-published skills not redistributed here. A separate manifest entry tracks the remaining, unmirrored Orchestra collection. Details are recorded in [`TRANSPARENCY_LOG.md`](../docs/TRANSPARENCY_LOG.md).
@@ -34,4 +42,4 @@ Twenty-one individually named local skills are listed in [`MANIFEST.json`](../cl
 
 Three mirrored skills—`deepxiv`, `paper-compile`, and `paper-poster-html`—were blocked by a platform security scanner and were not installed there. Their source remains available for local review. See [`BLOCKED_NOTE.md`](BLOCKED_NOTE.md).
 
-Last reviewed: 2026-11-06. The authoritative inventory is [`MANIFEST.json`](../clone-kit/MANIFEST.json).
+Last reviewed: 2026-11-09. The authoritative inventory is [`MANIFEST.json`](../clone-kit/MANIFEST.json).

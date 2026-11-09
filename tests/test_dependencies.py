@@ -42,6 +42,23 @@ class DependencyTests(unittest.TestCase):
     def test_empty_link_does_not_crash_scan(self):
         self.assertFalse(needs_attention(self.inspect("[empty]()")))
 
+    def test_code_examples_are_not_markdown_links(self):
+        result = self.inspect('''```python
+model = registry["vit_b"](checkpoint="weights.pth")
+```
+~~~text
+[example](not-a-real-file.md)
+~~~
+Inline `[example](also-not-a-file.md)` and ``[x](code.md)``.
+    [indented](example.md)
+[actual](missing.md)
+''')
+        self.assertEqual(result["missing_local_references"], ["missing.md"])
+
+    def test_shorter_fence_does_not_end_code_block(self):
+        result = self.inspect('````text\n```\n[x](code.md)\n````\n[x](real.md)')
+        self.assertEqual(result["missing_local_references"], ["real.md"])
+
     def test_strict_mode_fails_on_missing_packaging(self):
         with tempfile.TemporaryDirectory(prefix="athena-strict-test-") as temp:
             folder = Path(temp) / "skills" / "incomplete"

@@ -12,7 +12,7 @@ A discoverable skill is an instruction package, not a verified tool service.
 | Packaging | Static report of missing inline links, outside-folder references, and unbundled-support notices | Paths in executable examples, credentials, tools, and runtime behavior |
 | Research entry point | Self-contained instructions, a strict packaging check, and a bundled paired-results helper tested after isolated installation | Model behavior across tasks and hosts |
 | Numerical example | Offline recomputation from the included synthetic CSV | A model executing a complete scientific audit |
-| Upstream dependency adaptation | Standalone arXiv helper, pinned provenance and license, isolated-install tests, and one live API lookup | Agent-driven arXiv use and live PDF-download verification |
+| Upstream dependency adaptation | Standalone arXiv, OpenAlex, and Semantic Scholar helpers; pinned provenance/licenses; isolated-install tests; selected live requests | Agent-driven literature retrieval, rate-limited endpoints, live PDF downloads, and remaining mirror dependencies |
 | Multi-platform support | Five-host fixture preparation; two real Codex numerical cases with trace review | Other hosts, implicit activation, citation checks, and the full catalog |
 
 The implementation was tested locally on Windows on 2026-11-09. Tests that
@@ -31,6 +31,7 @@ python docs/demo_assets/verify_demo.py
 python scripts/check_skill_dependencies.py
 python scripts/check_skill_dependencies.py --skill research-integrity-pipeline --strict
 python scripts/check_skill_dependencies.py --skill arxiv --strict
+python scripts/check_skill_dependencies.py --skill openalex --skill semantic-scholar --skill academic-paper-narrative --strict
 python skills/research-integrity-pipeline/scripts/paired_summary.py docs/demo_assets/demo_results.csv --metric miou --baseline baseline --candidate ours --unit percentage-points
 ```
 
