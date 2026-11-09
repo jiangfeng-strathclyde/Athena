@@ -12,31 +12,39 @@
 
 **Athena** is an open-source research copilot. Tell it what you want to accomplish; it selects the right skills, proposes a plan, and checks the evidence before it writes conclusions.
 
-## Install once, then ask normally
+## Install once. Use it in any compatible agent.
 
-For Codex, install Athena for your user account:
+Clone Athena and let the installer configure the agents on your computer:
 
 ```bash
 git clone https://github.com/jiangfeng-strathclyde/Athena.git
 cd Athena
-python scripts/install_athena.py --agent codex
+python scripts/install_athena.py --auto
 ```
 
-Start a new session. Athena's skills are now available across conversations;
-just state the goal:
+Then start a new agent session and state the goal normally:
 
 - `Check whether the numerical claims in my draft are supported.`
 - `Plan a literature review on flood mapping with satellite imagery.`
 - `Help me design a reproducible ablation study.`
 
-All 108 skills are discoverable, while only the relevant instructions are
-loaded for each task. This keeps the context focused without requiring a
-loader in every conversation.
+| Your agent | Install command |
+|---|---|
+| Codex or a shared local setup | `python scripts/install_athena.py --agent universal` |
+| Claude Code | `python scripts/install_athena.py --agent claude-code` |
+| Cursor | `python scripts/install_athena.py --agent cursor` |
+| GitHub Copilot | `python scripts/install_athena.py --agent copilot` |
+| Gemini CLI | `python scripts/install_athena.py --agent gemini` |
+| Another `SKILL.md` host | `python scripts/install_athena.py --target /path/to/skills` |
+
+All 108 skills are available across conversations, while the agent loads only
+the instructions relevant to each task. No loader command is needed in every
+conversation. The older `--agent codex` command remains supported as an alias
+for `--agent universal`.
 
 Athena is also packaged as a ChatGPT/Codex plugin. See [Install once](docs/INSTALL_ONCE.md)
-for plugin details, Claude Code, custom skill directories, and updates. If a chat
-app cannot install skills or plugins, use the self-contained [Lite Loader](clone-kit/LOADER_LITE.md)
-as a fallback.
+for agent-specific details and updates. If a chat app cannot install skills or
+plugins, use the self-contained [Lite Loader](clone-kit/LOADER_LITE.md) as a fallback.
 
 ## What Athena does
 
