@@ -221,7 +221,8 @@ class InstallerTests(unittest.TestCase):
         real_install = installer.install
 
         def fail_second(target, force, skills):
-            if target == second:
+            # main resolves destinations, including OS-specific temp aliases.
+            if target == second.resolve():
                 raise OSError("simulated second-destination failure")
             return real_install(target, force, skills)
 
@@ -233,6 +234,7 @@ class InstallerTests(unittest.TestCase):
             self.assertEqual(installer.main(["--auto"]), 1)
         self.assertTrue((self.target / "alpha" / "SKILL.md").exists())
         self.assertFalse(second.exists())
+        self.assertIn("simulated second-destination failure", error_output.getvalue())
         self.assertIn("Earlier destinations remain installed", error_output.getvalue())
 
 
