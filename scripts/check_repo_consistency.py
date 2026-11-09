@@ -32,16 +32,21 @@ def check(label, ok, detail=""):
         failures.append(label)
 
 
+def declares_skill_count(text):
+    return (f"{EXPECTED_SKILL_DIRS} 个科研技能" in text
+            or f"{EXPECTED_SKILL_DIRS} research skills" in text)
+
+
 def main():
     readme = README.read_text(encoding="utf-8")
     skill_dirs = sorted(p.name for p in SKILLS.iterdir() if p.is_dir())
 
     n = len(skill_dirs)
     check(f"skills/ 目录数 == {EXPECTED_SKILL_DIRS}", n == EXPECTED_SKILL_DIRS, f"actual={n}")
-    check("README 声明 87 个科研技能", f"{EXPECTED_SKILL_DIRS} 个科研技能" in readme)
+    check("README 声明 108 个技能（中/英文任一）", declares_skill_count(readme))
     for svg in ["assets/hero.svg", "assets/social-preview.svg"]:
         text = (ROOT / svg).read_text(encoding="utf-8")
-        check(f"{svg} 声明 87 个科研技能", f"{EXPECTED_SKILL_DIRS} 个科研技能" in text)
+        check(f"{svg} 声明 108 个技能（中/英文任一）", declares_skill_count(text))
 
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     m = len(manifest)

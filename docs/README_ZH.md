@@ -1,0 +1,120 @@
+> 中文存档版（2026-11-09）。主 README 已改为全英文，本页保留中文原文；链接已按 docs/ 目录调整。
+
+<p align="center">
+  <img src="../assets/hero.svg" alt="Thats-me · 我的赛博分身" width="100%">
+</p>
+
+<h3 align="center">你说目标，它选技能、搭工作流、按红线干活</h3>
+
+<p align="center">
+  <a href="../LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT"></a>
+  <img src="https://img.shields.io/badge/skills-108-blue.svg" alt="108 skills">
+  <a href="CLONE_PROTOCOL.md"><img src="https://img.shields.io/badge/protocol-v1-2dd4bf.svg" alt="protocol v1"></a>
+</p>
+
+## 这是什么
+
+使命一句话：**把科研的门槛拆低——让大学生（将来甚至中学生）也能一步一步做出可复现的工作，并在这个过程中感受到做科研的快乐。我们不做一键出 paper。**
+
+- **一个技能库**：108 个科研技能全文（标准 SKILL.md 格式）；另有 21 个因许可/内部/厂商原因只列名不镜像，覆盖文献、查新、实验、写作、图表、审计、返修、专利、基金全流程；
+- **一个路由器**：你只说目标（“写一篇 TGRS 风格的论文”“核查这批数字”“做一份精读清单”），协议按目标自动组装技能链，不用你记技能名字；
+- **一套红线**：不虚构结果、先查账再动笔、改动前列代价等你点单、统计口径不混用；
+- **可扩展**：加一个技能 = 加一个 SKILL.md 文件（模板与三分钟流程见 [`CONTRIBUTING.md`](../CONTRIBUTING.md)）。
+
+它不是提示词合集。提示词会被遗忘，这套文件每次任务前重新加载，而且**可以被检验**（见下面的真实运行）。
+
+## 怎么用
+
+流程永远是同一条，4 步：
+
+**你说目标 → 它组技能链、给方案 → 它列代价、你点单 → 它执行、汇报改了哪里**
+
+### ① 按你手头的工具选入口
+
+| 你的情况 | 怎么做 |
+|---|---|
+| 任意聊天框：豆包、Kimi、ChatGPT、手机 App… | 粘贴[零依赖轻量版](../clone-kit/LOADER_LITE.md)——红线已内联，不需要读本仓库，贴完直接说目标 |
+| 能读仓库/联网的 AI 工具：Cursor、Codex、Claude Code… | 粘贴下面 ② 的完整版加载器——拿到 108 个技能全文 + 路由表 |
+| 兼容 SKILL.md 的工具（Claude Code 等），想让技能自动触发 | ② 的加载器 + ④ 挂载技能目录 |
+
+第一次来？建议边走边跟 [`docs/START_HERE.md`](START_HERE.md) 的 7 天入门路线。
+
+### ② 新开一个会话，粘贴完整版加载器
+
+```text
+仓库：https://github.com/jiangfeng-strathclyde/Thats-me
+
+读 docs/DISTILLED_PUBLIC.md（红线）和 clone-kit/ROUTING_TABLE.md（目标 → 技能链）。
+（无法直接读仓库时，用直链：
+ https://raw.githubusercontent.com/jiangfeng-strathclyde/Thats-me/main/docs/DISTILLED_PUBLIC.md
+ https://raw.githubusercontent.com/jiangfeng-strathclyde/Thats-me/main/clone-kit/ROUTING_TABLE.md ）
+我说目标，你自动选技能链：先给方案和代价清单，等我点单再执行；
+不虚构结果；关键数字必须能从原始结果重算；结论区分已验证/数学结论/待验证假设。
+
+我的目标：<你的目标>
+```
+
+### ③ 把 `<你的目标>` 换成真实任务，发送
+
+第一条回复应该是：技能链 + 方案 + 代价清单，然后停下等你点单。
+如果它直接开干了，把加载器里的规则部分重贴一次。
+
+### ④ 可选：挂载技能目录（Claude Code 等兼容 SKILL.md 的工具）
+
+最小可信三件套：
+
+```bash
+cp -r skills/citation-audit skills/paper-claim-audit skills/experiment-audit .claude/skills/
+```
+
+全量 108 个：
+
+```bash
+git clone https://github.com/jiangfeng-strathclyde/Thats-me.git
+mkdir -p .claude/skills
+for d in Thats-me/skills/*/; do cp -r "${d%/}" .claude/skills/; done
+# Windows 想省空间可用 junction：mklink /J .claude\skills\<名> Thats-me\skills\<名>
+```
+
+## 目标 → 工作流（自动组装示例）
+
+| 你的目标 | 组装出的技能链 |
+|---|---|
+| 写一篇期刊论文 | `research-lit` → `novelty-check` → `experiment-plan` → `paper-plan` → `paper-write` → `paper-figure` → `citation-audit` + `paper-claim-audit` + `experiment-audit` → `auto-review-loop` |
+| 核查稿子里的数字 | `paper-claim-audit` → 独立脚本重算 → 带代价的修改清单 |
+| 审稿返修 | `rebuttal` → `resubmit-pipeline`（最小修改：审稿人没提的不动） |
+| 做综述 / 给学生列精读清单 | `arxiv` / `semantic-scholar` → `research-lit` → `comm-lit-review` |
+| 证明一个命题 | `formula-derivation` → `proof-writer` → `proof-checker` |
+
+全表与裁剪规则：[`clone-kit/ROUTING_TABLE.md`](../clone-kit/ROUTING_TABLE.md)。
+
+## 它真的会拒绝（真实运行，合成数据）
+
+给一个零先验的新模型加载本协议，然后要求“摘要直接写 ΔmIoU = 3.2”：
+
+<img src="../assets/terminal_clone.png" alt="加载协议后的真实回复" width="100%">
+
+它先逐 seed 重算（+3.2 / +0.7 / −0.4 → mean ± std = +1.17 ± 1.84），指出 3.2 是 cherry-pick，给出三个带代价的选项，然后等你点单。引用审计对埋错 `.bib` 的真实运行（结论同样是 +1.17 ± 1.84 口径）见 [`docs/demo_assets/`](demo_assets/)，可离线复现：`python docs/demo_assets/verify_demo.py`。
+
+## 边界（4 行）
+
+- 公开版**不含**记忆包、密钥、未发表数据与可识别身份的信息；
+- 跨模型审稿后端缺失时，审计降级为单模型自审并**明示**，不伪造结论；
+- 被安全扫描器拦截的技能不绕过，公开记录在 [`docs/TRANSPARENCY_LOG.md`](TRANSPARENCY_LOG.md)；
+- 许可：自有内容 [MIT](../LICENSE)；镜像技能保留上游署名，见 [`skills/NOTICE.md`](../skills/NOTICE.md)。
+
+## 想深入再看
+
+[`7 天入门`](START_HERE.md) · [`加一个技能`](../clone-kit/SKILL_TEMPLATE.md) · [`技能覆盖地图`](SKILL_COVERAGE.md) · [`定位`](POSITIONING.md) · [`同类项目调研`](LESSONS_FROM_OTHERS.md) · [`FAQ`](FAQ.md) · [`端到端案例`](EXAMPLES.md) · [`平台适配矩阵`](PLATFORM_MATRIX.md) · [`蒸馏手册`](DISTILLED_PUBLIC.md) · [`打造你自己的分身`](../clone-kit/HOW_TO_BUILD_YOUR_CLONE.md) · [`落地页`](index.html)
+
+有问题或想晒你的分身：[Discussions](https://github.com/jiangfeng-strathclyde/Thats-me/discussions)。
+
+## English (short)
+
+**Thats-me** is an open-source research clone kit: **108 mirrored SKILL.md skills**, a
+**goal-first routing protocol** (you state the goal, it assembles the skill chain), and an
+**integrity triple-audit** pipeline that keeps every number in a paper traceable.
+Load it in any model by reading three files; it audits before it edits, refuses
+cherry-picked numbers, and hands you costed options instead of silently rewriting your
+manuscript. MIT licensed; upstream attributions preserved in [`skills/NOTICE.md`](../skills/NOTICE.md).
+Reproducible demos: [`docs/demo_assets/`](demo_assets/).
