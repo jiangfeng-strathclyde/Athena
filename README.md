@@ -12,6 +12,8 @@
 
 ## 这是什么
 
+使命一句话：**把科研的门槛拆低——让大学生（将来甚至中学生）也能一步一步做出可复现的工作，并在这个过程中感受到做科研的快乐。我们不做一键出 paper。**
+
 - **一个技能库**：108 个科研技能全文（标准 SKILL.md 格式）；另有 21 个因许可/内部/厂商原因只列名不镜像，覆盖文献、查新、实验、写作、图表、审计、返修、专利、基金全流程；
 - **一个路由器**：你只说目标（“写一篇 TGRS 风格的论文”“核查这批数字”“做一份精读清单”），协议按目标自动组装技能链，不用你记技能名字；
 - **一套红线**：不虚构结果、先查账再动笔、改动前列代价等你点单、统计口径不混用。
@@ -20,6 +22,7 @@
 
 ## 怎么用（3 步）
 
+0. 第一次来？先走 [`docs/START_HERE.md`](docs/START_HERE.md) 的 7 天入门路线；
 1. 新开一个会话，粘贴下面这段；
 2. 把 `<你的目标>` 换成真实任务；
 3. 它会先给技能链和带代价的方案，你点单它才动手。
@@ -69,7 +72,7 @@ cp -r skills/citation-audit skills/paper-claim-audit skills/experiment-audit .cl
 
 ## 想深入再看
 
-[`FAQ`](docs/FAQ.md) · [`端到端案例`](docs/EXAMPLES.md) · [`平台适配矩阵`](docs/PLATFORM_MATRIX.md) · [`蒸馏手册`](docs/DISTILLED_PUBLIC.md) · [`打造你自己的分身`](clone-kit/HOW_TO_BUILD_YOUR_CLONE.md) · [`落地页`](docs/index.html)
+[`7 天入门`](docs/START_HERE.md) · [`技能覆盖地图`](docs/SKILL_COVERAGE.md) · [`定位`](docs/POSITIONING.md) · [`FAQ`](docs/FAQ.md) · [`端到端案例`](docs/EXAMPLES.md) · [`平台适配矩阵`](docs/PLATFORM_MATRIX.md) · [`蒸馏手册`](docs/DISTILLED_PUBLIC.md) · [`打造你自己的分身`](clone-kit/HOW_TO_BUILD_YOUR_CLONE.md) · [`落地页`](docs/index.html)
 
 有问题或想晒你的分身：[Discussions](https://github.com/jiangfeng-strathclyde/Thats-me/discussions)。
 

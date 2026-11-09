@@ -172,3 +172,8 @@ crawl4ai-skill crawl https://example.com --format raw_markdown
 - 📦 [PyPI](https://pypi.org/project/crawl4ai-skill/)
 - 💻 [GitHub](https://github.com/lancelin111/crawl4ai-skill/)
 - 🦞 [ClawHub](https://clawhub.com/skills/crawl4ai-skill)
+
+
+## 镜像说明（本公开仓库追加）
+- 本文件为上游原文镜像；支持文件未随镜像分发，完整原件见上游仓库/包。
+- 执行技能时若引用支持文件，请从上游解析相对路径。

@@ -1355,7 +1355,7 @@
     "mirror_reason": "self-authored, MIT declared in frontmatter"
   },
   {
-    "name": "peft",
+    "name": "peft-fine-tuning",
     "source": "orchestra-mirror",
     "version": "1.4.0",
     "installUrl": null,
@@ -1364,7 +1364,7 @@
     "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
   },
   {
-    "name": "accelerate",
+    "name": "huggingface-accelerate",
     "source": "orchestra-mirror",
     "version": "1.4.0",
     "installUrl": null,
@@ -1373,7 +1373,7 @@
     "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
   },
   {
-    "name": "flash-attention",
+    "name": "optimizing-attention-flash",
     "source": "orchestra-mirror",
     "version": "1.4.0",
     "installUrl": null,
@@ -1382,7 +1382,7 @@
     "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
   },
   {
-    "name": "lm-evaluation-harness",
+    "name": "evaluating-llms-harness",
     "source": "orchestra-mirror",
     "version": "1.4.0",
     "installUrl": null,
@@ -1427,7 +1427,7 @@
     "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
   },
   {
-    "name": "segment-anything",
+    "name": "segment-anything-model",
     "source": "orchestra-mirror",
     "version": "1.4.0",
     "installUrl": null,
@@ -1436,7 +1436,7 @@
     "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
   },
   {
-    "name": "transformer-lens",
+    "name": "transformer-lens-interpretability",
     "source": "orchestra-mirror",
     "version": "1.4.0",
     "installUrl": null,

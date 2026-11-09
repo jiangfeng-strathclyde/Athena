@@ -33,7 +33,7 @@
     <text x="72" y="212" font-size="23" fill="#CBD5E1">我的赛博分身 · 一个会查账的科研 AI 助手</text>
     <text x="72" y="248" font-size="14.5" fill="#8DA2BF" letter-spacing="0.4">1 份行为手册　·　108 个科研技能　·　1 条诚信审计管线　·　0 平台依赖</text>
 
-    <text x="72" y="292" font-size="13" fill="#64748B">把“怎么跟我干活”写成可加载的文件，而不是每次开新对话重新教一遍。</text>
+    <text x="72" y="292" font-size="13" fill="#64748B">把科研的门槛拆成可加载的文件：初学者也能一步步做出可复现的工作。</text>
 
     <!-- protocol card -->
     <rect x="690" y="50" width="446" height="244" rx="18" fill="#0D1729" stroke="#22304A"/>

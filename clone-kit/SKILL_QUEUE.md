@@ -54,8 +54,8 @@
 ## Batching 历史
 
 ### 2026-11-06 · 策展 Orchestra 子集
-- 入镜像 12 个：peft, accelerate, flash-attention, lm-evaluation-harness, weights-and-biases,
-  tensorboard, sentence-transformers, clip, segment-anything, transformer-lens,
+- 入镜像 12 个：peft-fine-tuning, huggingface-accelerate, optimizing-attention-flash, evaluating-llms-harness, weights-and-biases,
+  tensorboard, sentence-transformers, clip, segment-anything-model, transformer-lens-interpretability,
   ml-paper-writing, brainstorming-research-ideas；
 - 其余 74 个继续列名待需求。
 
