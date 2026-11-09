@@ -102,14 +102,21 @@
 <p>引用审计对埋错 <code>.bib</code> 的真实运行与可复现资产在
 <a href="https://github.com/jiangfeng-strathclyde/Thats-me/tree/main/docs/demo_assets">docs/demo_assets/</a>。</p>
 
-<h2>怎么用（3 步）</h2>
-<pre><span class="g">1.</span> 新会话粘贴：
+<h2>怎么用</h2>
+<p>流程永远是同一条：<strong>你说目标 → 它组技能链、给方案 → 它列代价、你点单 → 它执行、汇报改了哪里</strong></p>
+<table>
+  <tr><th>你的情况</th><th>怎么做</th></tr>
+  <tr><td>任意聊天框（豆包、Kimi、ChatGPT、手机 App）</td><td>粘贴<a href="https://github.com/jiangfeng-strathclyde/Thats-me/blob/main/clone-kit/LOADER_LITE.md">零依赖轻量版</a>——红线已内联，贴完直接说目标</td></tr>
+  <tr><td>能读仓库/联网的 AI 工具（Cursor、Codex、Claude Code）</td><td>粘贴下面的完整版加载器</td></tr>
+  <tr><td>兼容 SKILL.md，想让技能自动触发</td><td>加载器 + 挂载：<code>cp -r skills/citation-audit .claude/skills/</code></td></tr>
+</table>
+<pre><span class="g">完整版加载器.</span> 新会话粘贴：
    读 docs/DISTILLED_PUBLIC.md（红线）和 clone-kit/ROUTING_TABLE.md（目标 → 技能链）。
    我说目标，你自动选技能链：先给方案和代价清单，等我点单再执行；
    不虚构结果；关键数字必须能从原始结果重算。
-<span class="g">2.</span> 说你的目标：&lt;写一篇 TGRS 风格的论文 / 核查这批数字 / 做精读清单 …&gt;
-<span class="g">3.</span> 它给技能链与代价，你点单。</pre>
-<p>兼容 SKILL.md 的工具（Claude Code 等）可直接挂载：<code>cp -r skills/citation-audit .claude/skills/</code></p>
+
+   我的目标：&lt;写一篇 TGRS 风格的论文 / 核查这批数字 / 做精读清单 …&gt;
+<span class="g">验收.</span> 第一条回复应是技能链 + 方案 + 代价清单，等你点单；直接开干就重贴规则。</pre>
 
 <h2>目标 → 工作流（自动组装示例）</h2>
 <table>
