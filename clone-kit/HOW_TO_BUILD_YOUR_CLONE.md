@@ -29,7 +29,7 @@ cp -r <本仓库>/skills/paper-claim-audit .claude/skills/
 ## 路线 C · 任意对话模型（零依赖）
 
 每次新会话开场粘贴或引用：
-1. `README.md` 的"三个亮点 + 隐私设计"两节；
+1. `README.md` 的"这是什么"与"边界（4 行）"两节；
 2. `docs/DISTILLED_PUBLIC.md` 全文；
 3. 本次任务对应技能的 SKILL.md 全文（按 `ROUTING_TABLE.md` 取）。
 

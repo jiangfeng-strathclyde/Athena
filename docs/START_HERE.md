@@ -12,6 +12,7 @@
 ```text
 仓库：https://github.com/jiangfeng-strathclyde/Thats-me
 读 docs/DISTILLED_PUBLIC.md 和 clone-kit/ROUTING_TABLE.md。
+（读不到仓库时用直链：https://raw.githubusercontent.com/jiangfeng-strathclyde/Thats-me/main/docs/DISTILLED_PUBLIC.md ）
 我是初学者：先给方案和代价，等我点单再执行；不虚构结果；数字要能重算。
 ```
 

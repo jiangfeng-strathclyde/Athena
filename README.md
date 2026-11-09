@@ -32,16 +32,29 @@
 仓库：https://github.com/jiangfeng-strathclyde/Thats-me
 
 读 docs/DISTILLED_PUBLIC.md（红线）和 clone-kit/ROUTING_TABLE.md（目标 → 技能链）。
+（无法直接读仓库时，用直链：
+ https://raw.githubusercontent.com/jiangfeng-strathclyde/Thats-me/main/docs/DISTILLED_PUBLIC.md
+ https://raw.githubusercontent.com/jiangfeng-strathclyde/Thats-me/main/clone-kit/ROUTING_TABLE.md ）
 我说目标，你自动选技能链：先给方案和代价清单，等我点单再执行；
 不虚构结果；关键数字必须能从原始结果重算；结论区分已验证/数学结论/待验证假设。
 
 我的目标：<你的目标>
 ```
 
-在 Claude Code 等兼容 SKILL.md 的工具里，也可以直接挂载技能目录：
+在 Claude Code 等兼容 SKILL.md 的工具里，也可以直接挂载技能目录。
+最小可信三件套：
 
 ```bash
 cp -r skills/citation-audit skills/paper-claim-audit skills/experiment-audit .claude/skills/
+```
+
+全量 108 个：
+
+```bash
+git clone https://github.com/jiangfeng-strathclyde/Thats-me.git
+mkdir -p .claude/skills
+for d in Thats-me/skills/*/; do cp -r "${d%/}" .claude/skills/; done
+# Windows 想省空间可用 junction：mklink /J .claude\skills\<名> Thats-me\skills\<名>
 ```
 
 ## 目标 → 工作流（自动组装示例）
