@@ -16,7 +16,8 @@
 
 - **一个技能库**：108 个科研技能全文（标准 SKILL.md 格式）；另有 21 个因许可/内部/厂商原因只列名不镜像，覆盖文献、查新、实验、写作、图表、审计、返修、专利、基金全流程；
 - **一个路由器**：你只说目标（“写一篇 TGRS 风格的论文”“核查这批数字”“做一份精读清单”），协议按目标自动组装技能链，不用你记技能名字；
-- **一套红线**：不虚构结果、先查账再动笔、改动前列代价等你点单、统计口径不混用。
+- **一套红线**：不虚构结果、先查账再动笔、改动前列代价等你点单、统计口径不混用；
+- **可扩展**：加一个技能 = 加一个 SKILL.md 文件（模板与三分钟流程见 [`CONTRIBUTING.md`](CONTRIBUTING.md)）。
 
 它不是提示词合集。提示词会被遗忘，这套文件每次任务前重新加载，而且**可以被检验**（见下面的真实运行）。
 
@@ -72,7 +73,7 @@ cp -r skills/citation-audit skills/paper-claim-audit skills/experiment-audit .cl
 
 ## 想深入再看
 
-[`7 天入门`](docs/START_HERE.md) · [`技能覆盖地图`](docs/SKILL_COVERAGE.md) · [`定位`](docs/POSITIONING.md) · [`FAQ`](docs/FAQ.md) · [`端到端案例`](docs/EXAMPLES.md) · [`平台适配矩阵`](docs/PLATFORM_MATRIX.md) · [`蒸馏手册`](docs/DISTILLED_PUBLIC.md) · [`打造你自己的分身`](clone-kit/HOW_TO_BUILD_YOUR_CLONE.md) · [`落地页`](docs/index.html)
+[`7 天入门`](docs/START_HERE.md) · [`加一个技能`](clone-kit/SKILL_TEMPLATE.md) · [`技能覆盖地图`](docs/SKILL_COVERAGE.md) · [`定位`](docs/POSITIONING.md) · [`FAQ`](docs/FAQ.md) · [`端到端案例`](docs/EXAMPLES.md) · [`平台适配矩阵`](docs/PLATFORM_MATRIX.md) · [`蒸馏手册`](docs/DISTILLED_PUBLIC.md) · [`打造你自己的分身`](clone-kit/HOW_TO_BUILD_YOUR_CLONE.md) · [`落地页`](docs/index.html)
 
 有问题或想晒你的分身：[Discussions](https://github.com/jiangfeng-strathclyde/Thats-me/discussions)。
 

@@ -2,6 +2,14 @@
 
 欢迎贡献！本仓库收两类贡献：**新技能**与**分身协议/文档改进**。
 
+## 三分钟加一个技能（自己用或贡献都适用）
+
+1. 复制模板：`cp clone-kit/SKILL_TEMPLATE.md skills/<my-skill>/SKILL.md`；
+2. 填四块：触发场景 / 流程 / 输出物 / 红线（模板里有占位与示例）；
+3. 在 frontmatter 写 `license: MIT`（原创）或注明上游出处；
+4. 想让它被“目标路由”选中：在 `clone-kit/ROUTING_TABLE.md` 对应场景行加一个名字；
+5. 自用到此为止；要贡献就开 PR，并按下面清单勾选。
+
 ## 提交技能（SKILL.md 格式）
 
 1. 目录结构：`skills/<skill-name>/SKILL.md`（可带 `scripts/`、`references/` 子目录）。
