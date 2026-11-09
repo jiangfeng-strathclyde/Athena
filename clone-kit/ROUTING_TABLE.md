@@ -18,6 +18,7 @@ or report them when unavailable, and never fabricate a result.
 | Run experiments | experiment-plan → run-experiment / experiment-queue → monitor-experiment → analyze-results → result-to-claim | Results dashboard and supported claims |
 | Develop a proof | formula-derivation → proof-writer → proof-checker → optional lean-formalize | Assumptions, derivation, and verification |
 | Prepare a talk or poster | paper-slides / paper-talk → slides-polish (ext) → paper-poster-html | Slides, notes, or poster |
+| Build an explorable paper | explorable-paper → research-integrity-pipeline | Offline interactive HTML, provenance note, and validation report |
 | Prepare a patent or grant | invention-structuring → claims-drafting → specification-writing → jurisdiction-format; grant-proposal | Application draft |
 
 ## Assembly rules
@@ -47,6 +48,7 @@ or report them when unavailable, and never fabricate a result.
 | Analysis and claim support | analyze-results, result-to-claim (ext), ablation-planner, experiment-audit, excel-formula, data-profile-and-plot, evaluating-llms-harness, weights-and-biases, tensorboard |
 | Academic writing | paper-plan, paper-write, paper-writing, writing-systems-papers, specification-writing, academic-paper-narrative, ml-paper-writing |
 | Figures and diagrams | paper-figure, figure-spec, mermaid-diagram, paper-illustration (ext), paper-illustration-image2 (ext), pixel-art, data-profile-and-plot |
+| Interactive research articles | explorable-paper, render-html, research-integrity-pipeline |
 | Compilation and rendering | paper-compile, render-html |
 | Review and adversarial critique | research-review (ext), auto-review-loop (ext), auto-review-loop-llm (ext), auto-review-loop-minimax (ext), kill-argument, auto-paper-improvement-loop (ext) |
 | Revision and resubmission | rebuttal, resubmit-pipeline |

@@ -37,7 +37,7 @@ configure browser accounts. Choose a native directory explicitly below if
 your client or sync workflow needs it. Previously installed native copies are
 left untouched; use one active location per host to avoid stale duplicates.
 
-The catalog contains 108 skills. The default install selects 105, excluding
+The catalog contains 109 skills. The default install selects 106, excluding
 `deepxiv`, `paper-compile`, and `paper-poster-html`. Review
 [`BLOCKED_NOTE.md`](../skills/BLOCKED_NOTE.md) before explicitly authorizing any
 of those skills; a scanner warning is not a confirmed diagnosis of harm.
@@ -183,8 +183,8 @@ option, use the local-agent or chat route above.
 
 ## What "all skills available" means
 
-The local installer copies the selected folders (105 by default from a catalog
-of 108). A compatible host discovers
+The local installer copies the selected folders (106 by default from a catalog
+of 109). A compatible host discovers
 skill metadata and loads relevant instructions on demand, rather than pasting
 all instruction files into every prompt. Actual discovery depends on the
 host's version, configuration, and limits. Skills that require external tools,

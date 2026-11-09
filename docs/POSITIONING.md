@@ -17,7 +17,7 @@
 | Could not close temporary folder: %s | Try again or beautify silently | Express demotion, retention of negative results, public failure to record |
 | Credibility | Reliance on model conscious | Hard process: Generate-Verify Separation + Third-tier audit + Transparency Log |
 | Beginner path | None (aimed at experienced users) | A seven-day guided route in `START_HERE.md`, including simpler fallback explanations |
-| Skills concept | Black Box in Frame | 108 Readable, tailorable, self-playable. SKILL.md Full text |
+| Skills concept | Black Box in Frame | 109 Readable, tailorable, self-playable. SKILL.md Full text |
 
 ## Subjects researched, excluded (category and reason)
 

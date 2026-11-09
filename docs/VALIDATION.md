@@ -83,4 +83,4 @@ These are acceptance criteria, not a record that all hosts have passed.
 - Review remaining mirrored instructions for translation quality and host-specific assumptions.
 - Resolve the recorded upstream license-metadata discrepancy before broadening that mirror.
 
-Keep those limitations visible when describing the 108-skill catalog.
+Keep those limitations visible when describing the 109-skill catalog.

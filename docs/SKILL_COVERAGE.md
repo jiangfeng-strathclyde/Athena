@@ -1,18 +1,18 @@
-# SKILL_COVERAGE · 108 A mirror skill to cover maps
+# SKILL_COVERAGE · 109 A mirror skill to cover maps
 
 > Snapshot:2026-11-09。Permission and signature [`../skills/NOTICE.md`](../skills/NOTICE.md)；
 > Only non-recorded entries listed are available. [`../clone-kit/SKILL_QUEUE.md`](../clone-kit/SKILL_QUEUE.md)。
 
-## I'd like to introduce you. 12 (numbers)
+## I'd like to introduce you. 13 (numbers)
 
-`citation-audit`、`paper-claim-audit`、`experiment-audit`、`research-lit`、`arxiv`、`lit-reading-assignment`、`data-profile-and-plot`、`novelty-check`、`paper-plan`、`mermaid-diagram`、`academic-paper-narrative`、`remote-sensing-workbench`
+`citation-audit`、`paper-claim-audit`、`experiment-audit`、`research-lit`、`arxiv`、`lit-reading-assignment`、`data-profile-and-plot`、`novelty-check`、`paper-plan`、`mermaid-diagram`、`academic-paper-narrative`、`remote-sensing-workbench`、`explorable-paper`
 
 Use this table together with the seven-day route in [`START_HERE.md`](START_HERE.md).
 
-## Self-researching skills (in thousands of US dollars)MIT，7）（7）
+## Self-researching skills (in thousands of US dollars)MIT，8）（8）
 
 `academic-paper-narrative`、`data-profile-and-plot`、`lit-reading-assignment`、`patent-disclosure-drafter`
-`remote-sensing-workbench`、`research-integrity-pipeline`、`skill-evolution-manager`
+`remote-sensing-workbench`、`research-integrity-pipeline`、`explorable-paper`、`skill-evolution-manager`
 
 ## Community-licensed mirrors (circumstances)2）（2）
 

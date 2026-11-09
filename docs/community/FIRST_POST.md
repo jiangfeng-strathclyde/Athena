@@ -22,7 +22,7 @@ When asked to bypass a security check, it refuses. Three skills blocked by a pla
 
 ## What you can reuse
 
-- 108 `SKILL.md` workflows with task-based routing.
+- 109 `SKILL.md` workflows with task-based routing.
 - A compact behavior contract that can be loaded into different models.
 - A minimal generate–verify example with independent recomputation.
 

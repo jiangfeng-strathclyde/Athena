@@ -242,17 +242,17 @@ class CatalogIntegrationTests(unittest.TestCase):
     def test_real_default_catalog_install_and_update(self):
         # The real catalog is read-only; all installed copies live under temp.
         selected = installer.select_skills()
-        self.assertEqual(len(selected), 105)
+        self.assertEqual(len(selected), 106)
         self.assertTrue(installer.FLAGGED.isdisjoint({p.name for p in selected}))
         with tempfile.TemporaryDirectory(prefix="athena-catalog-test-") as temp:
             target = Path(temp) / "skills"
-            self.assertEqual(installer.install(target, False), (105, 0, None))
+            self.assertEqual(installer.install(target, False), (106, 0, None))
             for skill in selected:
                 self.assertEqual((target / skill.name / "SKILL.md").read_bytes(),
                                  (skill / "SKILL.md").read_bytes())
             count, replaced, backup = installer.install(target, True)
-            self.assertEqual((count, replaced), (105, 105))
-            self.assertEqual(len(list(backup.iterdir())), 105)
+            self.assertEqual((count, replaced), (106, 106))
+            self.assertEqual(len(list(backup.iterdir())), 106)
 
     def test_entry_point_installs_alone(self):
         with tempfile.TemporaryDirectory(prefix="athena-entry-test-") as temp:

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Explorable Paper"
+  short_description: "Turn papers into evidence-linked interactive HTML"
+  brand_color: "#2DD4BF"
+  default_prompt: "Use $explorable-paper to turn this paper into an offline, evidence-linked interactive HTML exploration."
+
+policy:
+  allow_implicit_invocation: true

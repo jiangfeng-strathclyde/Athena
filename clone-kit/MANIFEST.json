@@ -1463,6 +1463,15 @@
     "mirror_reason": "curated subset of Orchestra AI-Research-SKILLs (MIT, LICENSE file)"
   },
   {
+    "name": "explorable-paper",
+    "source": "original",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "self-authored, MIT declared in frontmatter"
+  },
+  {
     "name": "ai-research-skills (Orchestra, remaining 74)",
     "source": "third-party-mit",
     "version": "1.4.0",
