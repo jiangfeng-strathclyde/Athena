@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
-"""技能入库 QC：扫描 skills/*/SKILL.md，硬检查 + 质量评分。
+"""Run structural checks and a non-blocking quality score for every skill.
 
-硬检查（任一失败则退出码 1，进 CI）：
-  H1 SKILL.md 存在且非空
-  H2 frontmatter 存在（--- 包围）
-  H3 frontmatter 含 name，且与目录名一致
-  H4 frontmatter 含 description，且 ≤1024 字符
-  H5 正文（frontmatter 之后）≥200 字符
+Hard checks fail CI:
+  H1 ``SKILL.md`` exists and is not empty.
+  H2 YAML-like frontmatter is present and closed.
+  H3 ``name`` is present and matches the directory name.
+  H4 ``description`` is present and no longer than 1,024 characters.
+  H5 The body contains at least 200 characters.
 
-质量评分（仅报告，不卡 CI；借鉴 24 分制 rubric 思路，见 docs/LESSONS_FROM_OTHERS.md）：
-  Q1 frontmatter 含 license 字段            +2
-  Q2 frontmatter 含 version 字段            +1
-  Q3 frontmatter 含 tags 或 dependencies    +1
-  Q4 正文含 ≥3 个 markdown 标题             +2
-  Q5 正文 ≥1000 字符                        +2
-  满分 8；仓库均分与最低分技能打印在末尾。
+The quality score is informational and follows the rubric in
+``docs/LESSONS_FROM_OTHERS.md``:
+  Q1 ``license`` field                         +2
+  Q2 ``version`` field                         +1
+  Q3 ``tags`` or ``dependencies`` field        +1
+  Q4 At least three Markdown headings          +2
+  Q5 Body contains at least 1,000 characters   +2
+  Maximum: 8 points.
 """
 import re
 import sys
@@ -64,25 +65,25 @@ def main():
     for d in dirs:
         f = d / "SKILL.md"
         if not f.is_file() or f.stat().st_size == 0:
-            failures.append(f"{d.name}: H1 SKILL.md 缺失或为空")
+            failures.append(f"{d.name}: H1 SKILL.md is missing or empty")
             continue
         text = f.read_text(encoding="utf-8").lstrip("\ufeff")
         fm, body = parse_frontmatter(text)
         if fm is None:
-            failures.append(f"{d.name}: H2 frontmatter 缺失或未闭合")
+            failures.append(f"{d.name}: H2 frontmatter is missing or unclosed")
             continue
         name = fm.get("name", "").strip("'\"")
         if not name:
-            failures.append(f"{d.name}: H3 缺 name")
+            failures.append(f"{d.name}: H3 name is missing")
         elif name != d.name:
-            failures.append(f"{d.name}: H3 name 与目录名不一致 (name={name})")
+            failures.append(f"{d.name}: H3 name does not match the directory (name={name})")
         desc = fm.get("description", "")
         if not desc:
-            failures.append(f"{d.name}: H4 缺 description")
+            failures.append(f"{d.name}: H4 description is missing")
         elif len(desc) > 1024:
-            failures.append(f"{d.name}: H4 description 超长 ({len(desc)} > 1024)")
+            failures.append(f"{d.name}: H4 description is too long ({len(desc)} > 1024)")
         if len(body.strip()) < 200:
-            failures.append(f"{d.name}: H5 正文过短 ({len(body.strip())} < 200)")
+            failures.append(f"{d.name}: H5 body is too short ({len(body.strip())} < 200)")
         scores.append((score(fm, body), d.name))
 
     print(f"scanned: {len(dirs)} skill dirs, {len(scores)} parsed")

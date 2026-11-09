@@ -1,6 +1,6 @@
 ---
 name: grant-proposal
-description: "Draft a structured grant proposal from research ideas and literature. Supports KAKENHI (Japan), NSF (US), NSFC (China, including 面上/青年/优青/杰青/海外优青/重点), ERC (EU), DFG (Germany), SNSF (Switzerland), ARC (Australia), NWO (Netherlands), and generic formats. Use when user says \"write grant\", \"grant proposal\", \"申請書\", \"write KAKENHI\", \"科研費\", \"基金申请\", \"写基金\", \"NSF proposal\", or wants to turn research ideas into a funding application."
+description: "Draft a structured grant proposal from research ideas and literature. Supports KAKENHI (Japan), NSF (US), NSFC (China, including On the face./Youth/Yuqing./Jacqing./Young people overseas/Focus), ERC (EU), DFG (Germany), SNSF (Switzerland), ARC (Australia), NWO (Netherlands), and generic formats. Use when user says \"write grant\", \"grant proposal\", \"Application\", \"write KAKENHI\", \"Scientific fees\", \"Fund applications\", \"Writing Fund\", \"NSF proposal\", or wants to turn research ideas into a funding application."
 argument-hint: "[research-direction — grant-type] [— style-ref: <source>]"
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, WebSearch, WebFetch, Skill, mcp__codex__codex, mcp__codex__codex-reply, mcp__antigravity__antigravity, mcp__antigravity__antigravity-reply, mcp__grok__grok, mcp__grok__grok-reply, mcp__claude-review__review, mcp__claude-review__review_reply, mcp__claude-review__review_start, mcp__claude-review__review_reply_start, mcp__claude-review__review_status
 ---
@@ -94,7 +94,7 @@ Sources accepted: local TeX dir / file, local PDF, arXiv id, http(s) URL. Overle
 
 **Strict rules** (full contract in `tools/extract_paper_style.py` docstring):
 
-- Use `style_profile.md` to align paragraph length tendency, figure budget, and citation density. Grant-type-mandated section order (KAKENHI 研究目的 → 研究計画・方法 → 準備状況, NSF Intellectual Merit → Broader Impacts, etc.) **always takes precedence** — the agency template wins, the style ref only refines secondary structure.
+- Use `style_profile.md` to align paragraph length tendency, figure budget, and citation density. Grant-type-mandated section order (KAKENHI Purpose of the study → Research plans・Methodology → Ready?, NSF Intellectual Merit → Broader Impacts, etc.) **always takes precedence** — the agency template wins, the style ref only refines secondary structure.
 - **Never copy proposal prose, claims, vision statements, or budget items** from anything reachable through the cache. The reference might be someone else's funded proposal; reproducing language risks plagiarism.
 - **Never pass `— style-ref` (or the cache contents) to the GPT-6-Astra reviewer sub-agent** when it scores the draft — the proposal must be judged on its own merits.
 
@@ -104,11 +104,11 @@ Sources accepted: local TeX dir / file, local PDF, arXiv id, http(s) URL. Overle
 
 | Field | Detail |
 |-------|--------|
-| **Sections** | 研究目的 (Research Objective), 研究計画・方法 (Plan & Methods), 準備状況 (Preparation Status), 人権の保護 (Ethics, if applicable) |
-| **Sub-types** | 基盤研究 A/B/C (Kiban), 若手研究 (Wakate), 研究活動スタート支援 (Start-up), 国際共同研究 (International), 学術変革領域 (Transformative), 挑戦的研究 (Challenging), DC1/DC2 (doctoral) |
+| **Sections** | Purpose of the study (Research Objective), Research plans・Methodology (Plan & Methods), Ready? (Preparation Status), I don't know what you're talking about.のProtection (Ethics, if applicable) |
+| **Sub-types** | Base-plate research A/B/C (Kiban), If the hand studies... (Wakate), Research activitiesスタートSupport (Start-up), Common inter-state studies (International), I'm learning the field. (Transformative), Research on pick-and-takes. (Challenging), DC1/DC2 (doctoral) |
 | **Language** | Japanese (English technical terms acceptable) |
-| **Review criteria** | 学術的重要性 (academic significance), 独創性 (originality), 研究計画の妥当性 (plan feasibility), 研究遂行能力 (PI capability) |
-| **Cultural norms** | Explicit yearly milestones (Year 1 / Year 2), budget justification integrated into plan, emphasize 社会的意義 (societal significance), concrete expected outputs (papers, datasets), reference KAKEN database for related funded projects |
+| **Review criteria** | The importance of science. (academic significance), Creative (originality), Research plansのAppropriateness (plan feasibility), Study the ability to move. (PI capability) |
+| **Cultural norms** | Explicit yearly milestones (Year 1 / Year 2), budget justification integrated into plan, emphasize The meaning of society. (societal significance), concrete expected outputs (papers, datasets), reference KAKEN database for related funded projects |
 
 ### NSF (US)
 
@@ -120,15 +120,15 @@ Sources accepted: local TeX dir / file, local PDF, arXiv id, http(s) URL. Overle
 | **Review criteria** | Intellectual Merit, Broader Impacts |
 | **Cultural norms** | Aim-based structure (Aim 1/2/3), preliminary data strongly expected, broader impacts must be concrete and specific (not generic "benefit society"), Results from Prior Support section |
 
-### NSFC (China — 国家自然科学基金)
+### NSFC (China — National Fund for Natural Sciences)
 
 | Field | Detail |
 |-------|--------|
-| **Sections** | 立项依据 (Rationale & Significance), 研究内容 (Content), 研究目标 (Objectives), 研究方案 (Plan & Methods), 可行性分析 (Feasibility), 创新性 (Innovation Points), 预期成果 (Expected Outcomes), 研究基础 (PI Foundation & Track Record) |
-| **Sub-types** | 面上项目 (General Program) — emphasis on scientific problem and research accumulation; 青年基金 (Young Scientists Fund) — age ≤35, emphasis on independence and growth potential; 优秀青年基金/优青 (Excellent Young Scientists) — age ≤38, emphasis on outstanding achievements; 杰出青年基金/杰青 (Distinguished Young Scientists) — age ≤45, emphasis on international-leading level; 海外优青 (Overseas Excellent Young Scientists) — emphasis on overseas experience and return contribution plan; 重点项目 (Key Program) — emphasis on systematic in-depth research |
+| **Sections** | Basis (Rationale & Significance), Contents of the study (Content), Research objectives (Objectives), Research programmes (Plan & Methods), Feasibility analysis (Feasibility), Innovative (Innovation Points), Expected accomplishments (Expected Outcomes), Research base (PI Foundation & Track Record) |
+| **Sub-types** | Face items (General Program) — emphasis on scientific problem and research accumulation; Youth Fund (Young Scientists Fund) — age ≤35, emphasis on independence and growth potential; Good Youth Fund/Yuqing. (Excellent Young Scientists) — age ≤38, emphasis on outstanding achievements; Distinguished Youth Fund/Jacqing. (Distinguished Young Scientists) — age ≤45, emphasis on international-leading level; Young people overseas (Overseas Excellent Young Scientists) — emphasis on overseas experience and return contribution plan; Priority items (Key Program) — emphasis on systematic in-depth research |
 | **Language** | Chinese |
-| **Review criteria** | 科学意义 (scientific significance), 创新性 (innovation), 可行性 (feasibility), 研究队伍 (team qualification) |
-| **Cultural norms** | Heavy emphasis on 国际前沿 (international frontier) positioning, detailed feasibility analysis, explicit citation of applicant's prior publications, 研究基础 section is critical for demonstrating PI capability |
+| **Review criteria** | Scientific significance (scientific significance), Innovative (innovation), Feasibility (feasibility), Research team (team qualification) |
+| **Cultural norms** | Heavy emphasis on International frontier (international frontier) positioning, detailed feasibility analysis, explicit citation of applicant's prior publications, Research base section is critical for demonstrating PI capability |
 
 ### ERC (EU — European Research Council)
 
@@ -212,8 +212,8 @@ On completion, set `"status": "completed"`.
 Parse `$ARGUMENTS` to extract:
 
 1. **Research direction/idea** — may reference existing files or be a freeform description
-2. **Grant type** — detect from keywords (e.g., "科研費"→KAKENHI, "NSF"→NSF, "国自然"→NSFC, "基金"→NSFC)
-3. **Grant sub-type** — detect from keywords (e.g., "Start-up", "若手", "青年", "CAREER", "优青", "海外优青")
+2. **Grant type** — detect from keywords (e.g., "Scientific fees"→KAKENHI, "NSF"→NSF, "It's natural."→NSFC, "Fund"→NSFC)
+3. **Grant sub-type** — detect from keywords (e.g., "Start-up", "♪ If the hand ♪", "Youth", "CAREER", "Yuqing.", "Young people overseas")
 4. **Overrides** — output format, language, review rounds
 
 Then gather context from the project directory:
@@ -402,9 +402,9 @@ Draft each section according to the grant type template. Write **complete prose*
 
 Grant proposals benefit greatly from clear diagrams. Generate the following figures using SVG or matplotlib (save to `grant-proposal/figures/`):
 
-1. **全体構成図 / Overview Diagram** — Show the relationship between aims (Aim 1 → Aim 2 → Aim 3), shared resources (participants, stimuli, pipeline), and outputs. This is the single most important figure.
-2. **実験パラダイム図 / Experimental Paradigm** — Visual schematic of each paradigm (stimulus timing, conditions, EEG recording).
-3. **年次計画 / Timeline Gantt Chart** — Year-by-year (or H1/H2) milestones with deliverables.
+1. **The whole body is made of cylindricals. / Overview Diagram** — Show the relationship between aims (Aim 1 → Aim 2 → Aim 3), shared resources (participants, stimuli, pipeline), and outputs. This is the single most important figure.
+2. **Xiao XingパラダイムXiao Xing / Experimental Paradigm** — Visual schematic of each paradigm (stimulus timing, conditions, EEG recording).
+3. **Yearly plans / Timeline Gantt Chart** — Year-by-year (or H1/H2) milestones with deliverables.
 
 For AI-generated publication-quality figures, invoke `/paper-illustration`:
 
@@ -418,9 +418,9 @@ For simpler diagrams (flowcharts, Gantt charts), generate clean SVG or matplotli
 
 ```
 🎨 The following figures would strengthen this proposal:
-1. 全体構成図 / Overview — aims relationship + shared resources
-2. 実験パラダイム図 / Paradigm — stimulus timing + conditions
-3. 年次計画 / Gantt — timeline with milestones
+1. The whole body is made of cylindricals. / Overview — aims relationship + shared resources
+2. Xiao XingパラダイムXiao Xing / Paradigm — stimulus timing + conditions
+3. Yearly plans / Gantt — timeline with milestones
 
 Which should I generate? (e.g., "1 and 3", "all", "skip")
 ```
@@ -430,11 +430,11 @@ Which should I generate? (e.g., "1 and 3", "all", "skip")
 #### Grant-Specific Drafting Guidelines
 
 **KAKENHI:**
-- Write in formal Japanese academic style (である調, not です/ます調)
+- Write in formal Japanese academic style (であるAdjust, not です/ますAdjust)
 - Use 「」for Japanese quotations, bold for emphasis
-- Structure: 研究の学術的背景 → 研究期間内に何をどこまで明らかにするか → 本研究の学術的な特色・独創性
-- Include explicit 年次計画 (yearly plan) with concrete milestones
-- Emphasize 社会的意義 (societal significance)
+- Structure: ResearchのThe background of the science. → During the research periodにWhat?をどこまでMing.らかにするか → This studyのI'm a technocrat.なFeatures・Creative
+- Include explicit Yearly plans (yearly plan) with concrete milestones
+- Emphasize The meaning of society. (societal significance)
 - Reference related KAKEN-funded projects to show awareness of the field
 
 **NSF:**
@@ -446,10 +446,10 @@ Which should I generate? (e.g., "1 and 3", "all", "skip")
 
 **NSFC:**
 - Write in formal Chinese academic style
-- 立项依据 must position work at 国际前沿 (international frontier)
-- 创新性 section must list numbered innovation points (创新点)
-- 研究基础 must cite PI's own publications (with IF and citations if possible)
-- 可行性分析 must address: technical feasibility, team capability, time feasibility, equipment/conditions
+- Basis must position work at International frontier (international frontier)
+- Innovative section must list numbered innovation points (Innovation point)
+- Research base must cite PI's own publications (with IF and citations if possible)
+- Feasibility analysis must address: technical feasibility, team capability, time feasibility, equipment/conditions
 
 **ERC:**
 - Write a compelling "high-risk/high-gain" narrative
@@ -653,7 +653,7 @@ What would you like to do next?
 - **Aims must be independently valuable.** If Aim 2 fails, Aim 1 and Aim 3 should still produce publishable results.
 - **Preliminary data de-risks.** Include any pilot results, existing datasets, or prior publications that demonstrate feasibility.
 - **Reviewer-facing structure.** Bold key sentences. Use numbered lists for clarity. Make the reviewer's job easy.
-- **Cultural norms matter.** KAKENHI expects 社会的意義; NSF expects Broader Impacts; NSFC expects 国际前沿 positioning. Missing these is a red flag for reviewers.
+- **Cultural norms matter.** KAKENHI expects The meaning of society.; NSF expects Broader Impacts; NSFC expects International frontier positioning. Missing these is a red flag for reviewers.
 - **Feishu notifications are optional.** If `~/.claude/feishu.json` exists, send `checkpoint` at each phase transition and `pipeline_done` at final output. If absent, skip silently.
 
 ## Parameter Pass-Through
@@ -712,7 +712,6 @@ Parameters can be passed inline with `—` separator. They flow to sub-skills wh
 > - **[Output Manifest Protocol](../shared-references/output-manifest.md)** — log every output to MANIFEST.md
 > - **[Output Language Protocol](../shared-references/output-language.md)** — respect the project's language setting
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

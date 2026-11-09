@@ -2,69 +2,64 @@
 license: MIT
 name: remote-sensing-workbench
 description: >-
-  遥感影像理解与对地观测机器学习任务的工作台技能：公开数据源与许可核查、
-  预处理与防泄漏划分惯例、评估口径与多 seed 协议、常用基线谱、期刊写作约定。
-  当用户做遥感/对地观测/地理空间 ML 的选题、实验设计、基线选择、评估或写作时使用。
+  Remote sensing image understanding and workstation skills for Earth observation machine learning missions: open data sources and licensing verification, pre-processing and leak-proof classification practices, assessment of calibres and multiples seed Agreement, common baseline spectra, periodical writing./Earth observation/Geospatial ML for the selection of topics, experimental design, baseline selection, assessment or writing.
 version: 1.0.0
 ---
 
-# Remote Sensing Workbench（遥感/对地观测 ML 工作台）
+# Remote Sensing Workbench（Remote sensing/Earth observation ML Workstations)
 
-## 触发场景
+## Trigger scene
 
-- 遥感影像分类/分割/变化检测/反演/时序预测等任务的方法与实验设计；
-- 选择公开数据集、预处理管线、空间/时间划分方式；
-- 确定评估指标口径与对照基线谱；
-- 面向 TGRS/GRSL/ISPRS/RSE 等期刊的写作与图表约定。
+- Remote sensing image classification/Split/Change detection/Reverse/Methodology and experimental design of tasks such as time series predictions;
+- Select open data sets, pre-processing tubes, space/Time-sharing;
+- (b) The establishment of a baseline spectrometry for the assessment of the caliber and comparison of the indicators;
+- Face TGRS/GRSL/ISPRS/RSE It's the writing of periodicals and charts.
 
-## 1. 数据源与许可（先核后用）
+## 1. Data sources and licences (cantoned before use)
 
-| 类别 | 常见公开源 | 核查点 |
+| Category | Common open source | Verification point |
 |---|---|---|
-| 光学多光谱 | Sentinel-2、Landsat 8/9、MODIS | 开放许可；云掩膜版本；处理级别（L1C/L2A） |
-| SAR | Sentinel-1、ALOS-2（按项目许可） | 极化/轨道方向一致性；斑点噪声处理声明 |
-| 高程/地形 | SRTM、Copernicus DEM | 分辨率与基准面（EGM96/EGM08） |
-| 气象/水文 | ERA5、GPM、GNSS 公开站网 | 再分析版本；时间分辨率与重采样方式 |
-| 标注/基准 | 公开竞赛与基准数据集 | 训练/测试划分是否官方；禁止跨划分混用 |
+| Optical Multispectral | Sentinel-2、Landsat 8/9、MODIS | Open permission; cloud cover version; processing level (L1C/L2A） |
+| SAR | Sentinel-1、ALOS-2（by project) | Polarization/Orbital orientation consistency; spot noise disposal statements |
+| High speed./Topography | SRTM、Copernicus DEM | Resolution & Baseline (EGM96/EGM08） |
+| Meteorological/Hydrological | ERA5、GPM、GNSS Open site network | re-analyse version; time resolution and re-sampling |
+| Description/Benchmark | Open competitions and benchmark data sets | Training/Test whether the division is official; prohibition of mixing across divisions |
 
-红线：**任何数据源写入论文前核对许可与版本**；版本不同视为不同数据集，口径不混。
+Red wire:**Check the permissions and versions before any data source is written to the paper**；The versions are considered to be different data sets and not mixed.
 
-## 2. 预处理与防泄漏划分
+## 2. Pre-treatment and leak-proof separation
 
-- 辐射/几何校正、坐标系统一（声明 CRS 与重采样方法）；
-- 划分必须防空间自相关泄漏：优先 **scene-held-out / 区域留出**，而非随机像素切块；
-  时序任务用 **时间留出**；两者都做时分别报告；
-- patch 裁剪需声明重叠率与边界处理；统计量（均值/方差）只在训练折内计算；
-- 损坏/缺云-free 样本按预注册规则剔除并保留原始行，不按分数挑。
+- Radiation/Geometric correction, coordinate system I (declaration) CRS (b) In relation to re-sampling methods;
+- Division must be space-proof from the relevant leaks: priority **scene-held-out / Area set aside**，instead of random pixel slices; time-series tasks **Time set.**；Both are reported separately;
+- patch Crop needs to state overlap rates and boundary processing; statistics (average)/(b) Calculated only within training discounts;
+- Damage/Cloud loss.-free Samples are excluded by pre-registration rules and the original rows are retained without fractions.
 
-## 3. 评估口径
+## 3. Assessment calibre
 
-- 分割/分类：mIoU、F1、OA、Kappa 同时报；**patch 级与 scene 级口径分开报**，不混；
-- 回归/反演：RMSE/MAE/R² 并注明单位与样本层级；
-- 多 seed（≥3）报 mean ± std；单 seed 结果只能进消融表并注明；
-- 对照基线谱至少覆盖：经典网络（U-Net、DeepLabv3+、HRNet）+ Transformer 系（SegFormer/Swin 系）
-  + 目标期刊近 2 年主流方法；缺席的要写明范围与原因。
+- Split/Classification:mIoU、F1、OA、Kappa (a) Simultaneous reporting;**patch Level and scene Separated calibres.**，Not mixed;
+- Returns/Retro:RMSE/MAE/R² and indicates the unit and sample level;
+- More seed（≥3）Report! mean ± std；Single seed The result can only be taken into account and noted;
+- At least coverage against baseline spectrum: classic network (U-Net、DeepLabv3+、HRNet）+ Transformer Yes (%)SegFormer/Swin Yes)
+  + The target journal is close. 2 The annual mainstream approach; absences are stated in terms of scope and cause.
 
-## 4. 写作与图表约定（期刊向）
+## 4. Writing and charting agreement (periodical direction)
 
-- 方法图分层：整体网络 + 模块面板，参考目标期刊已发表论文画法；
-- 定性结果网格用“多列少行”以适配双栏版心；图表紧随正文首次引用处；
-- 研究叙事按“机理 → 架构内在含义 → 数学本质 → 推导 → 空/频域贯通”链条组织方法论；
-- 摘要不出现未定义符号；复杂度等结论用自然语言表述。
+- Methodology stratification: overall network + Modular panels, based on the publication of papers in targeted periodicals;
+- Qualitative result grid“Multiple rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows, rows”To match the two-column content; the chart follows the initial references in the body of the text;
+- Study of narratives“Mechanism → Inherent meaning of structure → Mathematical nature → Indication → Empty/Frequency access.”(a) The chain organization methodology;
+- No undefined symbols appear in the summary; conclusions such as complexity are expressed in natural languages.
 
-## 5. 输出物
+## 5. Output
 
-- `DATA_CARD.md`：数据源、版本、许可、划分方式、口径声明；
-- `EVAL_PROTOCOL.md`：指标、层级、seed 数、基线谱与缺席说明；
-- 写作阶段的章节骨架与图表清单。
+- `DATA_CARD.md`：Data source, version, permission, division, calibre statement;
+- `EVAL_PROTOCOL.md`：Indicators, levels,seed Number, baseline spectrum and absence statement;
+- List of chapter skeletons and graphs at the writing stage.
 
-## 红线（与仓库总红线叠加）
+## Red wires (to be added to the warehouse's main red line)
 
-- 不虚构传感器参数、坐标、分辨率；不确定就标 UNCERTAIN 并核查；
-- 不混 patch/scene、不混 campaign 口径；报告数量标明层级；
-- 不擅自启动新训练/新前向；机时代价先报再等点单。
+- Parameters, coordinates, resolution of non-constructed sensors; markers without certainty UNCERTAIN and verification;
+- No, I'm not. patch/scene、No, I'm not. campaign calibre; number of reports indicated hierarchy;
+- You're not allowed to start a new training./New forwards; aircraft costs are reported before the list.
 
-## 协作技能
-
-检索 `research-lit` / `semantic-scholar`；查新 `novelty-check`；实验规划 `experiment-plan`；
-出图 `paper-figure` / `data-profile-and-plot`；数字审计 `paper-claim-audit`。
+## Collaborative skills Retrieval `research-lit` / `semantic-scholar`；Chasing `novelty-check`；Experimental planning `experiment-plan`；
+Chart `paper-figure` / `data-profile-and-plot`；Digital audits `paper-claim-audit`。

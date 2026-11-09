@@ -61,8 +61,8 @@ Add to `~/.claude/settings.json`:
 | **Kimi (Moonshot)** | `https://api.moonshot.cn/v1` | `moonshot-v1-8k`, `moonshot-v1-32k` |
 | **ZhiPu (GLM)** | `https://open.bigmodel.cn/api/paas/v4` | `glm-4`, `glm-4-plus` |
 | **SiliconFlow** | `https://api.siliconflow.cn/v1` | `Qwen/Qwen2.5-72B-Instruct` |
-| **阿里云百炼** | `https://dashscope.aliyuncs.com/compatible-mode/v1` | `qwen-max` |
-| **零一万物** | `https://api.lingyiwanwu.com/v1` | `yi-large` |
+| **Ali Yun Baek.** | `https://dashscope.aliyuncs.com/compatible-mode/v1` | `qwen-max` |
+| **It's nothing.** | `https://api.lingyiwanwu.com/v1` | `yi-large` |
 
 The `llm-chat` server defaults to `gpt-6.1-sol`. When `LLM_FALLBACK_MODEL` is
 unset, the 504-timeout fallback inherits `LLM_MODEL` (so it is not a fixed,
@@ -284,7 +284,6 @@ mcp__llm-chat__chat:
 > - **[Output Manifest Protocol](../shared-references/output-manifest.md)** — log every output to MANIFEST.md
 > - **[Output Language Protocol](../shared-references/output-language.md)** — respect the project's language setting
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

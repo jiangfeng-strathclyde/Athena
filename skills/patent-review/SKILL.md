@@ -1,6 +1,6 @@
 ---
 name: patent-review
-description: "Get an external patent examiner review of a patent application. Use when user says \"专利审查\", \"patent review\", \"审查意见\", \"examiner review\", or wants critical feedback on patent claims and specification."
+description: "Get an external patent examiner review of a patent application. Use when user says \"Patent review\", \"patent review\", \"Review observations\", \"examiner review\", or wants critical feedback on patent claims and specification."
 argument-hint: "[patent-directory-or-scope]"
 allowed-tools: Bash(*), Read, Grep, Glob, Write, Edit, mcp__codex__codex, mcp__codex__codex-reply, mcp__antigravity__antigravity, mcp__antigravity__antigravity-reply, mcp__grok__grok, mcp__grok__grok-reply, mcp__claude-review__review, mcp__claude-review__review_reply, mcp__claude-review__review_start, mcp__claude-review__review_reply_start, mcp__claude-review__review_status
 ---
@@ -217,7 +217,6 @@ Write `patent/PATENT_REVIEW.md`:
 - If the patentability score is below 5/10 after Round 2, recommend significant rework before filing.
 - The review is advisory -- actual prosecution may proceed differently.
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""上游 ARIS 月度 diff：列出新增/删除/语义可能变更的技能，供策展决策。
+"""Compare mirrored skills with the current ARIS upstream repository.
 
-用法：python scripts/upstream_diff.py [--cache DIR] [--save-snapshot]
-默认缓存：仓库外 ../.aris-upstream（不进入仓库）。仅浅克隆，无写仓库行为；
---save-snapshot 才更新 clone-kit/UPSTREAM_SNAPSHOT.json（策展完成后执行）。
-哈希前统一 LF 行尾、剥离本仓库追加段、去掉结尾空行，避免噪声。
+Run with: ``python scripts/upstream_diff.py [--cache DIR] [--save-snapshot]``
+The default cache lives outside this repository at ``../.aris-upstream``.
+``--save-snapshot`` updates ``clone-kit/UPSTREAM_SNAPSHOT.json`` and should be
+used only after maintainer review. Hashes normalize line endings and ignore the
+repository-specific sections appended to mirrored skills.
 """
 import argparse
 import hashlib
@@ -16,7 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 UPSTREAM = "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep"
 SNAPSHOT = ROOT / "clone-kit" / "UPSTREAM_SNAPSHOT.json"
-MARKERS = ("## 镜像说明", "## 环境适配")
+MARKERS = ("## The mirror illustrates", "## Environmental adaptation")
 CRLF = "\r\n"
 LF = "\n"
 
@@ -75,7 +76,7 @@ def main():
         r = subprocess.run(["git", "clone", "--depth", "1", UPSTREAM, str(cache)],
                            capture_output=True, text=True)
         if r.returncode != 0:
-            print("clone 失败：", r.stderr.strip()[:300])
+            print("clone failed:", r.stderr.strip()[:300])
             return 1
     else:
         git(cache, "fetch", "--depth", "1", "origin")
@@ -94,10 +95,10 @@ def main():
     print(f"added upstream : {len(added)}")
     for n in added:
         print("  +", n)
-    print(f"removed upstream: {len(removed)}  (本仓库非 ARIS 镜像项会列在这里，属预期)")
+    print(f"removed upstream: {len(removed)}  (repository-only skills are expected here)")
     for n in removed:
         print("  -", n)
-    print(f"content differs : {len(changed)}  (已剥离追加段/行尾/结尾空行，仍需人工判语义)")
+    print(f"content differs : {len(changed)}  (review semantic changes manually)")
     for n in changed:
         print("  ~", n)
 

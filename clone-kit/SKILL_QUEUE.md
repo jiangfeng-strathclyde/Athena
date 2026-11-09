@@ -1,65 +1,41 @@
-# SKILL_QUEUE · 技能请求队列（月度 batching）
+# SKILL_QUEUE · Monthly Skill Review
 
-> 流程定义见 [`../docs/UPSTREAM_SYNC.md`](../docs/UPSTREAM_SYNC.md)；许可门槛见
-> [`../docs/TRANSPARENCY_LOG.md`](../docs/TRANSPARENCY_LOG.md) 第 5 节。
-> 规则一句话：**有许可声明才镜像；没声明的进队列等许可，不偷偷镜像。**
+See [`UPSTREAM_SYNC.md`](../docs/UPSTREAM_SYNC.md) for the process and [`TRANSPARENCY_LOG.md`](../docs/TRANSPARENCY_LOG.md) for licensing decisions. A skill is mirrored only when redistribution permission is clear.
 
-## 流程（每月第一个周一，或上游大版本时）
+## Process
 
-1. 从 Discussions 的 `skill-request` 模板收集新请求，登记到下表“社区请求”区；
-2. 逐条判定：许可声明？与现有技能重复？维护成本？给出 `accept / defer / reject` 与理由；
-3. accept 的按 UPSTREAM_SYNC 策展入 `skills/`，刷新 MANIFEST 与克隆卡；
-4. 在 Discussions 发一条 batching 公告（接受了什么、拒绝了什么、为什么）；
-5. 本文件留痕：每次 batching 追加一节，不删历史。
+1. Collect requests from the `skill-request` Discussion template.
+2. Review the license, overlap with existing skills, usefulness, and maintenance cost.
+3. Mark each request `accept`, `defer`, or `reject`, with a reason.
+4. For accepted skills, follow `UPSTREAM_SYNC.md`, update `skills/`, refresh the manifest, and run repository checks.
+5. Publish a batch summary and preserve the history below.
 
-## 社区请求（当前：0 条）
+## Community requests
 
-| # | 技能/能力 | 请求来源 | 状态 | 理由 |
+| # | Skill or capability | Source | Status | Rationale |
 |---|---|---|---|---|
-| — | （暂无） | — | — | 队列于 2026-11-06 建立 |
+| — | None yet | — | — | Queue created 2026-11-06 |
 
-## 等待许可（listed-only，16 条）
+## Waiting for permission
 
-这些技能在作者本地存在、MANIFEST 中以 `mirrored: false` 标记；
-上游补出许可声明后，按上面流程评估策展。
+These 16 local skills are recorded in `MANIFEST.json` with `mirrored: false` because the upstream source did not declare a redistribution license:
 
-| 技能 | 阻塞 | 下一步 |
-|---|---|---|
-| analytics-data-analysis | 上游未声明许可 | 向上游请求补 LICENSE / frontmatter license 字段 |
-| chart-craft-plus | 同上 | 同上 |
-| data-analysis-pro | 同上 | 同上 |
-| data-extractor | 同上 | 同上 |
-| data-scientist | 同上 | 同上 |
-| data-visualization | 同上 | 同上 |
-| document-processor | 同上 | 同上 |
-| excel | 同上 | 同上 |
-| excel-data-analysis-and-report-generation | 同上 | 同上 |
-| excel-weekly-dashboard | 同上 | 同上 |
-| finance-charts | 同上 | 同上 |
-| market-research-litiao | 同上 | 同上 |
-| prompt-extractor | 同上 | 同上 |
-| py-math-viz | 同上 | 同上 |
-| report-generation | 同上 | 同上 |
-| skill-file-converter | 同上 | 同上 |
+`analytics-data-analysis`, `chart-craft-plus`, `data-analysis-pro`, `data-extractor`, `data-scientist`, `data-visualization`, `document-processor`, `excel`, `excel-data-analysis-and-report-generation`, `excel-weekly-dashboard`, `finance-charts`, `market-research-litiao`, `prompt-extractor`, `py-math-viz`, `report-generation`, and `skill-file-converter`.
 
-不进入队列的两类（永久排除，理由见 TRANSPARENCY_LOG 第 5 节）：
-平台内部技能（qoderwake-assistant、wake-dws-cli）、厂商技能（alibabacloud-* 3 个）。
+Platform-internal skills and the three `alibabacloud-*` vendor duplicates are permanently excluded; see the transparency log.
 
-## 第三方 MIT 技能包（待策展）
+## Third-party MIT collection
 
-| 技能包 | 许可 | 状态 | 下一步 |
-|---|---|---|---|
-| Orchestra AI-Research-SKILLs 1.4.0 剩余 74 个 | MIT（LICENSE 文件；package.json 字段为 ISC，见 TRANSPARENCY_LOG §6） | 已策展 12 个入镜像；其余待需求 | 有 Discussion 需求时按 UPSTREAM_SYNC 策展 |
+Twelve skills from Orchestra AI-Research-SKILLs 1.4.0 have been mirrored. The remaining skills will be reviewed only when requested. The upstream license evidence has an MIT/ISC metadata inconsistency documented in the transparency log.
 
-## Batching 历史
+## Batch history
 
-### 2026-11-06 · 策展 Orchestra 子集
-- 入镜像 12 个：peft-fine-tuning, huggingface-accelerate, optimizing-attention-flash, evaluating-llms-harness, weights-and-biases,
-  tensorboard, sentence-transformers, clip, segment-anything-model, transformer-lens-interpretability,
-  ml-paper-writing, brainstorming-research-ideas；
-- 其余 74 个继续列名待需求。
+### 2026-11-06 · Orchestra subset
 
-### 2026-11-06 · 建队
-- 社区请求 0 条；
-- 16 条 listed-only 入账“等待许可”；
-- 已镜像 89 个（87 ARIS MIT + crawl4ai-skill MIT-0 + excel-formula MIT）。
+Mirrored 12 skills: `peft-fine-tuning`, `huggingface-accelerate`, `optimizing-attention-flash`, `evaluating-llms-harness`, `weights-and-biases`, `tensorboard`, `sentence-transformers`, `clip`, `segment-anything-model`, `transformer-lens-interpretability`, `ml-paper-writing`, and `brainstorming-research-ideas`.
+
+### 2026-11-06 · Initial queue
+
+- Community requests: 0.
+- Waiting for permission: 16.
+- Existing public mirror at that time: 89 skills.

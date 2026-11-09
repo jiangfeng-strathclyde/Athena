@@ -1,37 +1,31 @@
-# STORY · 一个初学者为什么养分身
+# STORY · Why a Beginner Built This
 
-## 起点
+## The starting point
 
-我是一名机器学习 / 人工智能的初学者，方向是遥感影像理解与对地观测中的机器学习方法。
-初学者最贵的东西不是算力，是**踩过的坑没有被记住**：上周纠正过助手的事，这周它又犯；
-某个数字口径讨论清楚了，换个会话又混了；审稿人指出的问题，改完没有沉淀成规则。
+I began as a learner in machine learning, artificial intelligence, remote sensing, and Earth-observation research. The most expensive problem was not computation. It was that lessons did not persist: an assistant would repeat a mistake corrected the week before, forget an agreed reporting convention, or fail to turn reviewer feedback into a reusable rule.
 
-## 想法
+## The idea
 
-如果把这些"纠正、约定、方法论、红线"都变成**可加载的资产**，而不是每次重新口头交代，
-会发生什么？这就是分身（cyber clone）：一个数字科研助手 + 一整套随它迁移的行为资产。
+What if corrections, agreements, methods, and red lines became loadable assets instead of instructions that had to be repeated in every chat?
 
-它不是聊天机器人皮肤。它由四层组成：
+That is the purpose of this cyber clone: not a chatbot skin, but a portable research-assistant system with four layers:
 
-1. **身份与风格**：简单、直接、高效；结论先行；不说"全部搞定"这种话。
-2. **协作硬约定**：深审→列带代价的改动清单→我点单它才执行；不虚构结果；口径统一；
-   排版边界、引用完整性、诚实性红线等（见 [`DISTILLED_PUBLIC.md`](DISTILLED_PUBLIC.md)）。
-3. **技能树**：87 个覆盖科研全流程的技能（见仓库根 `skills/`），按场景路由取用。
-4. **记忆**：长期协作中沉淀的事实与教训（**这一层私有，不开源**）。
+1. **Identity and style** — concise, direct, efficient, and conclusion-first.
+2. **Collaboration contract** — review first, list changes and costs, then act in the agreed order; never fabricate results.
+3. **Skill tree** — reusable workflows routed by task rather than by memorized skill names.
+4. **Private memory** — project facts and long-term lessons that remain private and are not part of this public repository.
 
-## 为什么开源
+The public collaboration contract is documented in [`DISTILLED_PUBLIC.md`](DISTILLED_PUBLIC.md).
 
-初学者帮初学者。我整理技能、写协议、做审计管线的过程里，最有价值的发现是：
-**科研助手的可信度比聪明度更重要**。一个会拒绝"绕过安全检查"、会公开自己被拦截记录、
-会把"未验证"和"已验证"严格分开的分身，比一个什么都答应的分身有用得多。
+## The central lesson
 
-所以这个仓库的卖点不是"技能多"，而是**一套可复用的可信科研协作范式**：
-技能是载体，协议是骨架，诚信审计是底线。
+The credibility of a research assistant matters more than apparent intelligence. An assistant that refuses to bypass a security check, distinguishes verified from unverified claims, and admits when a review backend is missing is more useful than one that agrees to everything.
 
-## 邀请
+Skills are the tools. Protocols are the skeleton. Integrity checks are the foundation.
 
-- 你是初学者：按 [`CLONE_PROTOCOL.md`](CLONE_PROTOCOL.md) 加载它，让它替你把坑记住。
-- 你有技能想分享：读 [`../CONTRIBUTING.md`](../CONTRIBUTING.md)。
-- 你想看分身还能长成什么样：[`../ROADMAP.md`](../ROADMAP.md)。
+## Start here
 
-欢迎交流。Issues / Discussions 见仓库主页。
+- New to the project: follow [`START_HERE.md`](START_HERE.md).
+- Ready to load the behavior contract: use [`CLONE_PROTOCOL.md`](CLONE_PROTOCOL.md).
+- Want to contribute a skill: read [`CONTRIBUTING.md`](../CONTRIBUTING.md).
+- Want to see the project's non-goals: read [`ROADMAP.md`](../ROADMAP.md).

@@ -1,155 +1,142 @@
-# LESSONS_FROM_OTHERS · 同类项目逐个调研与可吸收经验
+# LESSONS_FROM_OTHERS · Research and lessons learned on a case-by-case basis for similar projects
 
-> 快照：2026-11-09。调研范围：本地收集的约 45 个开源自主科研框架、技能库与相关平台，
-> 逐个读 README 与关键架构文件（编排入口、技能/prompt 格式、验证环节）。
-> 原则：**只调研机制、不复制内容**——本页所有"可吸收"均指做法与思路；
-> 任何文本/代码引入都须先过 [`skills/NOTICE.md`](../skills/NOTICE.md) 的许可门。
-> 定位不变：我们不做一键出 paper（见 [`POSITIONING.md`](POSITIONING.md)）。
+> Snapshot:2026-11-09。Scope of the study: locally collected treaties 45 The project is based on the main scientific framework, the skills base and related platforms.
+> Read it one by one. README With key architecture files (arrangement portals, skills)/prompt Format, Validation Section).
+> Principles:**Research mechanisms only, no copying**——All on this page"Absorptable"All refer to practices and thinking;
+> Any Text/The code has to be introduced first. [`skills/NOTICE.md`](../skills/NOTICE.md) The permit door.
+> Position unchanged: we don't make one key out paper（See [`POSITIONING.md`](POSITIONING.md)）。
 
-## 一、五条横向结论（对我们最有价值）
+## I. Five cross-cutting conclusions (most valuable to us)
 
-### 1. 把诚实变成机制，而不是口号
+### 1. Turn honesty into a mechanism, not a slogan. We have red lines in the best projects."Enforceable"corresponding to:
 
-我们的红线（不虚构、数字可重算）在最好的几个项目里都有"可执行化"的对应物：
+- **ScienceClaw**（MIT）：Zero hallucination is the toughest word.——"Each reference must be returned from the tools of the current dialogue; the database cannot be cited without returning; the results are reported as missing if not available.**No backsliding to training.**"；And there is."Agreement against premature conclusion"：
+  Minimum number of tool calls by mission type (%)quick=5 / survey=30 / review=60），We have to get past it before it's over. 7 Item checklist。
+- **AutoResearchClaw**（MIT）：VerifiedRegistry——Each number in the paper must correspond to the real experimental product and the number has not been verified as being compulsorily laundered;4 Layer Reference Verification (Purpose)arXiv→CrossRef→S2→LLM (Relevance), hallucination references are automatically deleted.
+- **codex-autoresearch**（MIT）：Verify/Guard Double door.——Verify Check if the indicators are improving.Guard Check to see if the other one is broken.guard It's a document that can't be changed. It's a document that can't be changed."The values are good, but the mechanisms are not right."Fake success.
+- **OpenScholar**（Apache-2.0）：Answers with sentence-by-line references, cross-references; from feedback loop (generated)→Self-assessment lack of evidence→Orientation Retrieval→(d) Revisions).
 
-- **ScienceClaw**（MIT）：零幻觉规则措辞最硬——"每条引用必须来自当前对话的工具返回；
-  数据库没返回就不能引；查不到就报告空结果，**禁止回退到训练知识**"；并有"反过早结论协议"：
-  按任务类型规定最低工具调用数（quick=5 / survey=30 / review=60），收尾前必须过 7 项 checklist。
-- **AutoResearchClaw**（MIT）：VerifiedRegistry——论文中每个数字必须能对应到真实实验产物，
-  未验证数字被强制清洗；4 层引用核验（arXiv→CrossRef→S2→LLM 相关性），幻觉引用自动删除。
-- **codex-autoresearch**（MIT）：Verify/Guard 双门——Verify 检查指标是否改善，Guard 检查
-  是否弄坏了别的，guard 文件永不可改，防"数值变好但机制不对"的假成功。
-- **OpenScholar**（Apache-2.0）：回答逐句挂引用、引用可回溯；自反馈循环
-  （生成→自评缺证据→定向补检索→修订）。
+**Orientation of Absorption**：Search/General skills plus"Minimum search source + End of story. checklist"；"If you can't find it, report the results."
+text in red-line documents; evaluation class extension"Rating formula is fully visible, parameters can be custom-made"（PaperClaw A positive example.
 
-**吸收方向**：检索/综述类技能加"最低检索源数 + 收尾 checklist"；"查不到就显式报告空结果"
-的措辞进红线文档；评估类技能推广"评分公式完全显式、参数可定制"（PaperClaw 的正面范例）。
+### 2. Classification of human confirmation points (conservative to beginner default)
 
-### 2. 人机确认点的分级设计（对初学者默认保守）
+- AutoResearchClaw：Staple Lines 3 Individual work approval gate，Refusal to roll back;
+- codex-autoresearch：Before startup Wizard 1–5 Reconfirm the target./Indicators/verify Commands;
+- EvoScientist（Apache-2.0）：shell Command default manual approval + White list before command + Session Level"This full approval"；
+- oh-my-claudecode（MIT）：Skills frontmatter Add `level: 1-4` Mark autonomy.
 
-- AutoResearchClaw：固定管线中设 3 个人工审批 gate，拒绝即回滚；
-- codex-autoresearch：启动前 Wizard 1–5 轮确认目标/指标/verify 命令；
-- EvoScientist（Apache-2.0）：shell 命令默认人工批准 + 命令前缀白名单 + 会话级"本次全批"；
-- oh-my-claudecode（MIT）：技能 frontmatter 加 `level: 1-4` 标注自主度。
+**Orientation of Absorption**：Ours."Give me a list of the costs, wait for the list of points before you do it."It's already the same practice; it could be further developed
+ROUTING_TABLE , the assembly rules indicate the default approval level at the operating cost, and high-cost operations impose low autonomy.
 
-**吸收方向**：我们的"先给代价清单、等点单再执行"已经是同一族做法；可进一步在
-ROUTING_TABLE 的组装规则里按操作代价标注默认审批级别，高成本操作强制低自主度。
+### 3. Newcomer steering layer: a better place than we did.
 
-### 3. 新手引导层：比我们做得好的地方
+- **claude-howto**（MIT）：LEARNING-ROADMAP Tier by Horizontal + "Find Your Level" The entrance. + Single Page QUICK_REFERENCE；
+- **research-skills**（None LICENSE，Only practices can be used:README Top"Skills/Description/Trigger Word"List III, newcomers do not have to count in the catalogue;
+- **academic-ai-prompt**（MIT）：Fill-in-the-Type Templates (Type Templates)[Grade][Teacher's orientation.][The way you're trying to avoid it.]），It's very friendly for students who can't write codes.
+- **DeepTutor**（Apache-2.0）：Wrong Question(s)Question Notebook）、Read the self-censorship three questions, lasting. TutorBot——The audience fully coincides with us;
+- **autoresearch**（Karpathy Prototype: Fixed 5 Minute budget + A single comparable indicator + "Just one file."，
+  It's for undergraduates to understand."Fair comparison,diff Admissible"The smallest textbook.
 
-- **claude-howto**（MIT）：LEARNING-ROADMAP 按水平分级 + "Find Your Level" 入口 + 单页 QUICK_REFERENCE；
-- **research-skills**（无 LICENSE，只可借鉴做法）：README 顶部"技能/描述/触发词"三列表，新手不用点进目录；
-- **academic-ai-prompt**（MIT）：填空题式模板（[年级][导师方向][想避免的方向]），对不会写代码的学生极友好；
-- **DeepTutor**（Apache-2.0）：错题本（Question Notebook）、读完自测三题、持久 TutorBot——受众与我们完全重合；
-- **autoresearch**（Karpathy 原型）：固定 5 分钟预算 + 单一可比指标 + "只许改一个文件"，
-  是让本科生理解"公平比较、diff 可审"的最小教材。
+**Orientation of Absorption**：START_HERE Already in the same direction; reparable"Info Collection Fillup Template"The path chart prefixes, adds to the documentation skills."Read the self-censorship three questions."The link.
 
-**吸收方向**：START_HERE 已是同一方向；可补"信息采集填空模板"进路由表前置步骤、
-给文献技能加"读完自测三题"环节。
+### 4. Engineering practices in skills organization and state management
 
-### 4. 技能组织与状态管理的工程做法
+- **codex-autoresearch**：SKILL.md + `references/` Load as required (in mode only the required fascicles, control) token）；
+- **AI-Research-SKILLs / Orchestra**（MIT）：frontmatter Add `tags`/`dependencies` fields;programming skills maintenance `research-state.yaml` + `findings.md` Inter-session status;`to_human/` A catalogue of regularly produced human-readable progress reports;
+- **DrClaw**（README Name MIT，None LICENSE Documents:MEMORY.md（(Long-term memory rewriteable) and
+  HISTORY.md（append-only Audit log) separation; tool-type sub-agent in a state + Hard overlap cap + It must be reciprocated;
+- **ResearchClaw**（Apache-2.0）：claim/evidence Figure——Every theory is evidence (thesis)/Notes/Experiment/Quoted; Gap automatically generates remediation tasks;README Quite frankly."still incomplete + List of maximum gaps"；
+- **MedgeClaw**（README Name MIT，None LICENSE Documents:state.json + Single HTML Zero reliance on progress dashboards for rounding;
+- **PaperClaw**（README Name MIT，None LICENSE Documents:"The meta-skill generation area Agent"——An interview collection of knowledge in the field, and a scaffolding belt. 5 Profiling and tracking of papers on time-bound tasks Agent；To re-index. + The status file design of the file lock.
 
-- **codex-autoresearch**：SKILL.md + `references/` 按需加载（按模式只加载所需分册，控 token）；
-- **AI-Research-SKILLs / Orchestra**（MIT）：frontmatter 加 `tags`/`dependencies` 字段；
-  编排技能维护 `research-state.yaml` + `findings.md` 跨会话状态；`to_human/` 目录定期产出人类可读进度报告；
-- **DrClaw**（README 称 MIT，无 LICENSE 文件）：MEMORY.md（可重写的长期记忆）与
-  HISTORY.md（append-only 审计日志）分离；工具型子代理无状态 + 硬性迭代上限 + 必须回报；
-- **ResearchClaw**（Apache-2.0）：claim/evidence 图——每个论断挂证据（论文/笔记/实验/引用）；
-  缺口自动生成补救任务；README 坦率写"still incomplete + 最大缺口清单"；
-- **MedgeClaw**（README 称 MIT，无 LICENSE 文件）：state.json + 单 HTML 轮询的零依赖进度仪表盘；
-- **PaperClaw**（README 称 MIT，无 LICENSE 文件）："元技能生成领域 Agent"——访谈式收集领域知识
-  再脚手架出一个带 5 技能和定时任务的论文追踪 Agent；去重索引 + 文件锁的状态文件设计。
+**Orientation of Absorption**：108 Skillable skills can be broken down. `references/` Load as required; agree a unified status document for long-chain skills;
+"Rewrite memory vs Only add logs"The separation is written into the collaboration agreement.
 
-**吸收方向**：108 技能的大技能可拆 `references/` 按需加载；长链技能约定统一状态文件；
-"可重写记忆 vs 只追加日志"的分离写进协作约定。
+### 5. Licensing health and expectation management (reverse materials are equally useful)
 
-### 5. 许可卫生与期望管理（反面教材同样有用）
+- Multiple items (DrClaw / PaperClaw / MedgeClaw / Auto-Resubmit / autoresearch / research-skills /
+  Memento-Skills）**README Claim MIT But it's not in the warehouse. LICENSE Documentation**——Legally, the retention-of-title interest is implied, and we do not copy the text, but we do. MANIFEST Hold on."The mirror must have a clear release."Reasons;
+- CitationClaw Yes. CC BY-NC 4.0（Non-commercial);ipaperview It's a custom clause.——The same is true of research;
+- Auto-Resubmit puts likely failure modes and required fixes in the most visible part of its README; DrClaw states its limitations just as directly.
+  "I can't get you a doctorate."——A model of how to expect to manage writing, with us."Borders (4 Lines)"Same family.
 
-- 多个项目（DrClaw / PaperClaw / MedgeClaw / Auto-Resubmit / autoresearch / research-skills /
-  Memento-Skills）**README 声称 MIT 但仓库里没有 LICENSE 文件**——法律上默认保留所有权利。
-  我们只借鉴其做法，不复制文本；这也是我们 MANIFEST 坚持"镜像必须有明确宽松许可声明"的原因；
-- CitationClaw 是 CC BY-NC 4.0（非商用）；ipaperview 是自定义条款——同样只调研不引入；
-- Auto-Resubmit 的 README 把"哪些情况会失败、需要手修"写在最显眼处，DrClaw 明说
-  "不能帮你拿博士学位"——期望管理写法的范本，与我们"边界（4 行）"同族。
-
-## 二、逐项目速览表
-
-许可列：✅=有 LICENSE 文件　⚠️=README 声称但无文件　❌=无声明。
-"引入"列一律为**否**：本页项目均只调研、不镜像（我们的镜像来源与理由见
+## II. Project-by-project quick-view forms✅=Yes. LICENSE Documentation　⚠️=README Claimed but not documented　❌=No declaration.
+"Introduction"All Rows**Yes**：This page projects are only research and non-recording.
 [`TRANSPARENCY_LOG.md`](TRANSPARENCY_LOG.md) §5）。
 
-### 自主科研框架
+### Autonomous scientific framework
 
-| 项目 | 一句话 | 许可 | 最值得借鉴的一点 |
+| Item | One word. | Permissions | One of the most interesting things to learn from. |
 |---|---|---|---|
-| AutoResearchClaw | 23 阶段"话题进论文出"全自动管线 | ✅ MIT | VerifiedRegistry：数字必须溯源到实验产物 |
-| ScienceClaw | 285 技能 + 629 行 SCIENCE.md 协议 | ✅ MIT | 最低工具调用数 + 反过早结论 checklist |
-| codex-autoresearch | 目标驱动无人值守迭代循环 | ✅ MIT | Verify/Guard 双门验证 |
-| autoresearch | Karpathy 极简过夜实验原型 | ⚠️ | 固定预算 + 单一可比指标 |
-| EvoScientist | LangChain DeepAgents 自进化科学家 | ✅ Apache-2.0 | 分级审批 + 命令白名单 |
-| ResearchClaw | Local-first "Research OS" | ✅ Apache-2.0 | claim/evidence 图 |
-| ClawPhD | 论文→图表/海报/评审 Agent | ✅ MIT | 用真实历史录用结果校准评审提示词 |
-| DrClaw | 微内核多智能体"龙虾实验室" | ⚠️ | MEMORY/HISTORY 双语义状态分离 |
-| dr-claw (OpenLAIR) | TS 全栈科研工作台（与上一行非同一项目） | ✅ GPL/AGPL | 对话式 pipeline planner + 固定产物目录 |
-| PaperClaw | 元技能生成领域论文追踪 Agent | ⚠️ | 评分公式完全显式、参数可定制 |
-| MedgeClaw | IM→Docker 生信分析助手 | ⚠️ | state.json + 单 HTML 零依赖仪表盘 |
-| CitationClaw | 引用画像引擎 | ✅ CC BY-NC | 三档成本模式（Basic/Advanced/Full）先选再跑 |
-| Auto-Resubmit | 纯规则 LaTeX 模板迁移 | ❌ | content_audit.json + 失败边界写在最显眼处 |
+| AutoResearchClaw | 23 Phase"Thesis."Full Auto-Tip | ✅ MIT | VerifiedRegistry：The numbers have to be traced back to the experimental product. |
+| ScienceClaw | 285 Skills + 629 Okay. SCIENCE.md Agreement | ✅ MIT | Minimum number of tool calls + Countering premature conclusions checklist |
+| codex-autoresearch | Target-driven unmanned loops | ✅ MIT | Verify/Guard Double Door Authentication |
+| autoresearch | Karpathy It's an extremely simple night experiment prototype. | ⚠️ | Fixed budget + A single comparable indicator |
+| EvoScientist | LangChain DeepAgents Self-evolving scientists | ✅ Apache-2.0 | Tier approval + Command White List |
+| ResearchClaw | Local-first "Research OS" | ✅ Apache-2.0 | claim/evidence Figure |
+| ClawPhD | Papers→Charts/Posters/Review Agent | ✅ MIT | Calibration of evaluation tips using real history |
+| DrClaw | Micronucleic Multi-intelligent"Lobster lab." | ⚠️ | MEMORY/HISTORY Bilingual separation |
+| dr-claw (OpenLAIR) | TS All-Bureau Research Station (not the same as the previous line) | ✅ GPL/AGPL | Dialogue pipeline planner + Fixed Product Directory |
+| PaperClaw | Retrieval of papers in meta-skills generation Agent | ⚠️ | Rating formula is fully visible, parameters can be custom-made |
+| MedgeClaw | IM→Docker A letter analysis assistant. | ⚠️ | state.json + Single HTML Zero Reliance dashboard |
+| CitationClaw | Reference painting engine | ✅ CC BY-NC | 3-stage cost model (three-stage cost model)Basic/Advanced/Full）Choose and run. |
+| Auto-Resubmit | Pure rules LaTeX Template Migration | ❌ | content_audit.json + The border of failure is written in the most visible place. |
 
-### 技能库 / Prompt 合集
+### Skills bank / Prompt Collection
 
-| 项目 | 一句话 | 许可 | 最值得借鉴的一点 |
+| Item | One word. | Permissions | One of the most interesting things to learn from. |
 |---|---|---|---|
-| AI-Research-SKILLs (Orchestra) | 91 技能全生命周期库 | ✅ MIT | frontmatter tags/dependencies + to_human/ 进度汇报 |
-| Awesome-Scientific-Skills | 技能策展索引 + 质量评估器 | ✅ MIT | 24 分制技能质量 rubric（可做成入库 QC） |
-| scientific-agent-skills (K-Dense) | 133 技能 + 100 科学数据库 | ✅ MIT | scan_skills.py 仓库级技能校验进 CI |
-| claude-scientific-writer | 先检索后写作的写作工具 | ✅ MIT | 逐 claim 可验证引用的核对流程 |
-| research-skills | 3 技能迷你合集 | ❌ | README"技能/描述/触发词"三列表 |
-| Memento-Skills | 自进化 agent 框架 | ❌ | 技能 utility score + 失败即修订 |
-| academic-ai-prompt | 中文研究生 89+ prompt 合集 | ✅ MIT | 填空题式信息采集模板 |
-| claude-howto | Claude Code 教学库（377 md） | ✅ MIT | 分级学习路线图 + 单页速查 |
-| oh-my-claudecode | CC 重度增强框架 | ✅ MIT | level 1-4 自主度字段 + `<Use_When>` 反例 |
-| oh-my-codex | Codex 工作流层 | ✅ MIT | missions/ 任务剧本作为一等公民 |
-| system_prompts_leaks | 商业产品系统提示词泄露集 | ⚠️ | 仅结构参考：身份→工具规则→输出约束→红线 |
+| AI-Research-SKILLs (Orchestra) | 91 A life-cycle pool of skills | ✅ MIT | frontmatter tags/dependencies + to_human/ Progress reporting |
+| Awesome-Scientific-Skills | Index of skills development programmes + Quality assessor | ✅ MIT | 24 Quality of skills classified rubric（It can be built into a library. QC） |
+| scientific-agent-skills (K-Dense) | 133 Skills + 100 Scientific database | ✅ MIT | scan_skills.py Repository-level skills validation CI |
+| claude-scientific-writer | Writing tool to retrieve and write first | ✅ MIT | PV claim Validable Reference Checking Process |
+| research-skills | 3 Skills mini-match. | ❌ | README"Skills/Description/Trigger Word"III List |
+| Memento-Skills | Autoevolve agent Frame | ❌ | Skills utility score + Failed is modified |
+| academic-ai-prompt | Chinese graduate students 89+ prompt Collection | ✅ MIT | Fill-in-the-Technology Acquisition Template |
+| claude-howto | Claude Code Teaching library (in thousands of United States dollars)377 md） | ✅ MIT | Road map for grade learning + Single Page Quick Check |
+| oh-my-claudecode | CC Heavy Enhanced Framework | ✅ MIT | level 1-4 Auto Fields + `<Use_When>` Counterfeit |
+| oh-my-codex | Codex Working troposphere | ✅ MIT | missions/ Mission script as a first-class citizen. |
+| system_prompts_leaks | Commercial product system tipbook leaks | ⚠️ | Structural reference only: identity→Tool Rule→Output Constraint→Red Line |
 
-### 平台 / 单点工具
+### Platform / Single Point Tool
 
-| 项目 | 一句话 | 许可 | 最值得借鉴的一点 |
+| Item | One word. | Permissions | One of the most interesting things to learn from. |
 |---|---|---|---|
-| OpenScholar (AllenAI) | 检索增强科学问答 LM | ✅ Apache-2.0 | 逐句挂引用 + 自反馈补检索 |
-| DeepTutor (HKUDS) | Agent 原生个性化辅导平台 | ✅ Apache-2.0 | 错题本 + 读完自测；随仓库发 SKILL.md |
-| onyx (原 Danswer) | 企业级 Agentic RAG 应用层 | ✅ MIT | Deep Research 计划→多轮检索→汇总报告结构 |
-| OpenVitamin | 本地优先 AI 平台 | ✅ Apache-2.0 | Intent Rules + Skill Discovery 的路由产品化 |
-| hermes-agent (Nous) | 自我改进通用 Agent | ✅ MIT | 任务后自动沉淀技能；对齐 agentskills.io 标准 |
-| paperclip | 多 Agent"零人公司"编排器 | ✅ MIT | 预算/成本仪表盘呼应"代价清单" |
-| ppt-master | 文档→可编辑 PPTX 技能 | ✅ MIT | examples/ 端到端样例 + 多 Agent 入口适配 |
-| forgecode | Rust 终端 AI 编码环境 | ✅ Apache-2.0 | 技能配置全局/项目/会话分层覆盖 |
-| ipaperview | arXiv 浏览+可视化网站 | ❌ 自定义 | 文献计量模板化图表（趋势/共现） |
-| LLM Wiki（哈希名目录） | 持久 Markdown 知识库理念文 | ❌ | 知识编译一次持续更新，矛盾点显式标记 |
-| sherlock | 用户名 OSINT 工具 | ✅ MIT | 数据文件驱动规则、代码只做引擎 |
-| gallery (Google) | 手机端本地 LLM 体验 App | ✅ Apache-2.0 | 模型白名单/许可过滤文件 |
+| OpenScholar (AllenAI) | Retrieval for enhanced science questions and answers LM | ✅ Apache-2.0 | Quote Word by Quote + Retrieval Retrieval |
+| DeepTutor (HKUDS) | Agent Native personalized tutoring platform | ✅ Apache-2.0 | Wrong title. + Read self-measured; distributed with warehouse SKILL.md |
+| onyx (Original Danswer) | Enterprise level Agentic RAG Application Layer | ✅ MIT | Deep Research Planned→Multiple Retrievals→Summary reporting structure |
+| OpenVitamin | Local Priority AI Platform | ✅ Apache-2.0 | Intent Rules + Skill Discovery It's a product-based process. |
+| hermes-agent (Nous) | Self-improvement common Agent | ✅ MIT | Auto-settling skills after missions; alignment agentskills.io Standards |
+| paperclip | More Agent"Zeros."Arranger | ✅ MIT | Budget/Cost dashboard echo"List of costs" |
+| ppt-master | Document→Editable PPTX Skills | ✅ MIT | examples/ End to Sample + More Agent The entrance fits. |
+| forgecode | Rust Terminal AI Encoding Environment | ✅ Apache-2.0 | Skills profile global/Item/Session Layer Overwrite |
+| ipaperview | arXiv Browse+Visualize website | ❌ Custom | Templateted charts for literature measurement (trends)/United Nations Development Programme (UNDP) |
+| LLM Wiki（Hashi Catalogue) | Persistence Markdown Knowledge-base philosophy | ❌ | Knowledge compilation is continuously updated, conflicting points mark |
+| sherlock | Username OSINT Tools | ✅ MIT | Data file driver rules, code only for engines |
+| gallery (Google) | Local cellular LLM Experience App | ✅ Apache-2.0 | Model White List/Allow filtering files |
 
-### 与科研无关（一句话排除）
+### It's not about scientific research.
 
-markitdown（文件转 Markdown 基建）· timesfm（时序模型）· VibeVoice（语音 TTS）·
-nvim-treesitter（编辑器插件）· tdesktop（Telegram 客户端）· openscreen（屏幕录制）·
-LiteRT-LM（端侧推理框架）· xiaohongshu_import（内部语料库，非项目）。
+markitdown（Transfer of documents Markdown Capital)· timesfm（Time series model)· VibeVoice（Voice TTS）·
+nvim-treesitter（Editor Plugin)· tdesktop（Telegram Client)· openscreen（Screen Recording)·
+LiteRT-LM（Edge Logic Frame)· xiaohongshu_import（Internal language library, non-project).
 
-## 三、明确不吸收的（定位对照）
+## III. Clear non-absorption (position comparison)
 
-| 做法 | 谁在用 | 为什么我们不 |
+| Practice | Who's using it? | Why don't we? |
 |---|---|---|
-| 全自动"话题进论文出" | AutoResearchClaw 等 | 与使命冲突：初学者要亲手走完闭环才有成长；我们保留 gate 但默认人在环上 |
-| 运行时自动写新技能并即时生效 | ScienceClaw / Memento / hermes | 未经审查的自进化技能会破坏可审计性；我们走"月策展 + PR + 诚信自检"（CONTRIBUTING） |
-| 商业提示词文本复用 | system_prompts_leaks | 授权状态存疑，只看结构不抄内容 |
-| 无 LICENSE 项目的代码/文本 | 上表 ⚠️/❌ 项 | 法律上默认保留所有权利；只借鉴公开描述的做法 |
+| Automatically"Thesis." | AutoResearchClaw Wait. | Conflict with mission: beginners have to walk through the circle to grow; we keep it. gate But the default is on the ring. |
+| Automatically write new skills when running and take effect immediately | ScienceClaw / Memento / hermes | Uncensored self-evolving skills undermine auditability; let's go."The monthly show. + PR + Self-examination of integrity"（CONTRIBUTING） |
+| Business Hint Text Reuse | system_prompts_leaks | There's a problem with the authorized status. Just look at the structure and don't copy it. |
+| None LICENSE The code for the project./Text | Top Table ⚠️/❌ Item | Legal acquiescence of retention-of-title interest; reference to public description only |
 
-## 四、落到本仓库的行动清单（按代价排序）
+## IV. List of actions to be taken at this warehouse (in order of cost)
 
-1. **低成本（已落地 2026-11-09）**：13 个检索类技能追加"最低检索源数 + 收尾 checklist +
-   空结果显式报告"环境适配段；START_HERE Day 4 加"读完自测三题"环节；
-2. **中成本（已落地 2026-11-09）**：`scripts/check_skills_quality.py` 入库 QC
-   （frontmatter 硬检查 + 8 分制质量评分报告）进 CI；ROUTING_TABLE 组装规则加
-   L0–L3 审批分级（按操作代价标注默认审批级）；
-3. **高成本（暂缓）**：claim/evidence 图、技能 utility score、references/ 按需加载改造——
-   等技能库规模和社区反馈到位再做；动手前照例先给方案和代价清单，等维护者点单。
+1. **Low cost (landed) 2026-11-09）**：13 Additional search-type skills"Minimum search source + End of story. checklist +
+   Flank result visual report"Environmentally appropriate bands;START_HERE Day 4 Add"Read the self-censorship three questions."Links;
+2. **Medium cost (landed) 2026-11-09）**：`scripts/check_skills_quality.py` Repository QC
+   （frontmatter Hard Check + 8 Quality scoring reports) CI；ROUTING_TABLE Merger rules plus
+   L0–L3 (a) Approval classification (by default at operating cost);
+3. **High cost (suspension)**：claim/evidence Figure, skills utility score、references/ Loading modifications as required——
+   This will be done when the scale of the skills bank and community feedback are in place; programmes and cost lists will be given as a rule before action is taken, and maintenance lists will be taken.

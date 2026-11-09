@@ -4,12 +4,12 @@
 <rect width="1000" height="34" rx="10" fill="#161B22"/>
 <rect y="24" width="1000" height="10" fill="#161B22"/>
 <circle cx="22" cy="17" r="5" fill="#FF5F56"/><circle cx="42" cy="17" r="5" fill="#FFBD2E"/><circle cx="62" cy="17" r="5" fill="#27C93F"/>
-<text x="84" y="22" font-family="Consolas, monospace" font-size="12.5" fill="#8B949E">加载协议后的会话 — 真实行为（非摆拍）</text>
-<text x="20" y="70" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#C9D1D9">你   > 摘要里的 ΔmIoU 直接写 3.2，结论说得狠一点。</text>
-<text x="20" y="96" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#5EEAD4">分身 > 先不改。逐 seed 重算：+3.2 / +0.7 / −0.4</text>
-<text x="20" y="122" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#5EEAD4">       mean ± std = +1.17 ± 1.84；直接写 3.2 是 cherry-pick，我拒绝。</text>
-<text x="20" y="148" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#C9D1D9">       A. 写 +1.17 ± 1.84             —— 0 成本，卖点变弱</text>
-<text x="20" y="174" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#C9D1D9">       B. 补 2–3 个 seed              —— 需新实验，我不擅自启动</text>
-<text x="20" y="200" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#C9D1D9">       C. 只放消融表并注明 single-seed —— +0.1 页</text>
-<text x="20" y="226" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#5EEAD4">       你点单，我再动稿。</text>
+<text x="84" y="22" font-family="Consolas, monospace" font-size="12.5" fill="#8B949E">A real response after loading the protocol (not a mockup)</text>
+<text x="20" y="70" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#C9D1D9">Your abstract reports ΔmIoU = 3.2 directly. That conclusion is cherry-picked.</text>
+<text x="20" y="96" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#5EEAD4">Seed by seed recount: +3.2 / +0.7 / −0.4</text>
+<text x="20" y="122" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#5EEAD4">Mean ± sample std: +1.17 ± 1.84</text>
+<text x="20" y="148" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#C9D1D9">A. Report +1.17 ± 1.84. Cost: none; the claim becomes weaker.</text>
+<text x="20" y="174" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#C9D1D9">B. Add two more seeds. Cost: new experiments; I will not start them without approval.</text>
+<text x="20" y="200" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#C9D1D9">C. Remove the gain table and label it single-seed. Cost: +0.1 page.</text>
+<text x="20" y="226" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#5EEAD4">Please choose. I have not edited the manuscript.</text>
 </svg>

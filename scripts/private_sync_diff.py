@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""私有分身手册 ↔ 公开蒸馏手册 的漂移检查（只报计数与归属侧，不落盘私有内容）。
+"""Report drift between a private handbook and its public distillation.
 
-用法：python scripts/private_sync_diff.py [--private PATH]
-默认私有路径：D:\\Max分身\\docs\\MAX_DISTILLED.md
-输出仅到 stdout；是否把某条“可迁移红线/方法论”同步进公开版，由人工判定后编辑公开版。
+Run with: ``python scripts/private_sync_diff.py [--private PATH]``
+The default private path is ``D:\\MaxSeparation\\docs\\MAX_DISTILLED.md``.
+Only counts, hashes, and short bullet previews are printed; the script never
+writes private content into the repository.
 """
 import argparse
 import hashlib
@@ -13,7 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / "docs" / "DISTILLED_PUBLIC.md"
-DEFAULT_PRIVATE = Path("D:/Max分身/docs/MAX_DISTILLED.md")
+DEFAULT_PRIVATE = Path("D:/MaxSeparation/docs/MAX_DISTILLED.md")
 
 SECTIONS = ("2", "3", "5")
 
@@ -43,7 +44,7 @@ def main():
     a = ap.parse_args()
     priv = Path(a.private)
     if not priv.is_file():
-        print(f"私有手册不存在：{priv}（跳过漂移检查）")
+        print(f"Private handbook not found: {priv} (skipping drift check)")
         return 0
     pb, ub = bullets(priv), bullets(PUBLIC)
     only_priv = [t for t in pb if t not in ub]
@@ -52,8 +53,8 @@ def main():
     print(f"private sha : {sha(priv)}  ({priv})")
     print(f"public  sha : {sha(PUBLIC)}")
     print(f"common      : {len(common)}")
-    print(f"only-private: {len(only_priv)}  -> 逐条判定是否可迁移（项目事实永不迁移）")
-    print(f"only-public : {len(only_pub)}  -> 检查是否已被私有版废弃")
+    print(f"only-private: {len(only_priv)}  -> review for safe public migration")
+    print(f"only-public : {len(only_pub)}  -> check whether the private handbook is stale")
     for t in only_priv:
         print(f"  [priv-only §{pb[t]}] {t[:60]}")
     for t in only_pub:

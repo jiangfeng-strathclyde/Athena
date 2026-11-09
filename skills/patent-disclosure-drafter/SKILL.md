@@ -1,69 +1,69 @@
 ---
 license: MIT
 name: "patent-disclosure-drafter"
-description: "当论文、代码、项目文档、实验记录或 Demo 需要转成专利点清单、查新记录、技术交底书初稿和成果转化材料时使用。"
+description: "When a paper, code, project document, experimental record or Demo They need to be converted into patent-point lists, new records, a first draft of a technology-base book and results-conversion materials."
 ---
 
-# 专利交底书与成果转化技能
+# Profiling and results-conversion skills
 
-## 触发场景
+## Trigger scene
 
-- 用户提到：专利、专利点、技术交底书、查新、现有技术对比、知识产权、成果转化。
-- 项目进入“科研成果转化”插件，需要把论文、代码、样机或 Demo 包装成 IP 资产。
-- 老板或投资人需要看到某项技术的可保护点、证据链和代理人协作材料。
+- Users mentioned: patents, patent sites, technology clearing books, updates, technology comparisons available, intellectual property rights, transformation of results.
+- Project access“Conversion of research results”Plugin with a paper, code, prototype or Demo Packaging IP assets.
+- Bosses or investors need to see a technology ' s protected point, evidence chain and proxy collaboration material.
 
-## 输入
+## Input
 
-- 技术主题或项目路径。
-- 原始材料：论文、代码、README、PPT、Word、实验记录、Demo 页面、架构图。
-- 专利类型倾向：方法、系统、装置、介质、组合。
-- 保密等级：公开材料、内部材料、客户材料、投稿前材料。
-- 目标输出：专利点清单、查新记录、交底书初稿、成果转化包。
+- Technical theme or project path.
+- Original material: papers, codes,README、PPT、Word、Experimental records,Demo page, structure chart.
+- Patent type preferences: methods, systems, devices, media, combinations.
+- Level of confidentiality: public, internal, client, pre-draft material.
+- Target output: List of patent points, new records, first drafts of correspondence, results conversion packages.
 
-## 输出
+## Output
 
-- PatentCase 摘要。
-- 材料索引和证据表。
-- 候选专利点表。
-- 查新检索词和现有技术对比记录。
-- 技术交底书初稿结构。
-- Mermaid 系统框图和流程图草稿。
-- 自检报告和人工审批清单。
-- 代理人问题清单。
+- PatentCase Summary.
+- Material indexes and evidentiary forms.
+- Candidature patent list.
+- Check new search terms and existing technical comparison records.
+- (c) The structure of the first draft of the technical background book.
+- Mermaid System frame and flow chart draft.
+- Self-censorship reports and manual clearance lists.
+- List of proxies.
 
-## 工作流
+## Workstream
 
-1. 先问最少边界问题：技术主题、专利类型倾向、是否有保密材料。
-2. 扫描项目材料，区分事实、推断、假设和待补证据。
-3. 抽取技术问题、技术方案、关键模块、数据流、流程步骤、效果指标。
-4. 生成 3-8 个候选专利点，标注证据来源和风险。
-5. 为选定方向生成 2-8 个查新语义块，优先官方专利来源；无法联网时输出“待人工查新”的检索计划。
-6. 组织交底书：背景、现有技术缺点、解决问题、详细方案、系统框图、流程图、参数、技术效果、保护点。
-7. 进行自检：逻辑闭环、术语一致、参数一致、图文一致、脱敏完整。
-8. 若用户要求修改已有交底书，走迭代模式，另存版本并追加修订记录。
+1. The question of the least border is first asked: technical subjects, patent type preferences, availability of confidential material.
+2. Scanning project materials to distinguish between facts, assumptions, assumptions and to be completed evidence.
+3. Extraction of technical issues, technical options, key modules, data flow, process steps, impact indicators.
+4. Generate 3-8 A candidate patent point, indicating the source of the evidence and the risks.
+5. Generate for selected direction 2-8 A new semantic block giving priority to official patent sources; output if not connected“To be checked manually”The search plan.
+6. Organization background book: background, existing technical shortcomings, problem solving, detailed programme, system frame map, flow chart, parameters, technical effects, protection point.
+7. Self-censorship: logical seals, consistency of terminology, consistency of parameters, consistency of text, desensitization.
+8. If the user requests changes to a completed book, an iterative mode is followed, a separate version is saved and an additional revision is made.
 
-## 质量门禁
+## Quality off-limits
 
-- AI 输出不是法律意见，不承诺授权结果。
-- 正式提交专利前必须由专利代理人/律师审核。
-- 查新结果只是辅助，不得写成确定法律结论。
-- 不得泄露客户名、合作单位、未公开论文、源码、真实实验参数和商业秘密。
-- 没有证据来源的创新点必须标注“待确认”。
-- 交底书正文不得包含内部自检清单。
-- 每次对外交付必须保留版本号、时间戳和修订摘要。
+- AI The output is not a legal opinion and does not commit itself to authorizing the outcome.
+- The patent agent must be in place before the patent is formally submitted./Bar clearance.
+- A new finding is only an aid and cannot be written to establish a legal conclusion.
+- Customer names, collaborating units, unpublished papers, source codes, real laboratory parameters and commercial secrets shall not be disclosed.
+- Innovative points without a source of evidence must be marked“To be confirmed”。
+- Internal self-censorship lists shall not be included in the body of the book.
+- Each external delivery must retain a version number, a time stamp and a revised summary.
 
-## OPC 协作
+## OPC Collaboration
 
-- 扫描岗：材料扫描、专利点挖掘、资产沉淀。
-- 架构岗：系统架构、模块边界、流程图。
-- 文书岗：交底书语言和成果故事。
-- 技术岗：算法/API/数据流程。
-- 质检岗：自检和验收。
-- 保密岗：保密边界与访问审批。
-- 商务岗：报价、代理服务预算和成本风险。
+- Scanposts: material scanning, patent site excavation, asset deposition.
+- Architecture: System architecture, modular boundaries, flow chart.
+- Clerical posts: Composing language and results stories.
+- Technical post: algorithm/API/Data flow.
+- Quality inspection: self-checking and acceptance.
+- Confidentiality: confidential borders and access clearance.
+- Business postings: quotations, agent service budgets and cost risks.
 
-## 参考来源
+## References
 
-- 流程思想参考 GitHub: `handsomestWei/patent-disclosure-skill`（仅借鉴流程，文本为自研）；
-- 私有仓库中的评审/管线/商业包文件不随公开版分发，公开版仅保留流程与模板。
+- Process Thought Reference GitHub: `handsomestWei/patent-disclosure-skill`（Based on the process only, the text is self-researched;
+- Evaluation in private warehouses/Pipe/The commercial package documents are not distributed in the public version, which only retains the process and template.
 

@@ -991,7 +991,7 @@ See [templates/README.md](templates/README.md) for detailed setup instructions.
 **Systems Venues:** [OSDI 2026](https://www.usenix.org/conference/osdi26/call-for-papers) | [NSDI 2027](https://www.usenix.org/conference/nsdi27/call-for-papers) | [ASPLOS 2027](https://www.asplos-conference.org/asplos2026/call-for-papers-asplos27/) | [SOSP 2026](https://sigops.org/s/conferences/sosp/2026/cfp.html)
 
 
-## 镜像说明（本公开仓库追加）
-- 本文件镜像自 Orchestra Research 的 AI-Research-SKILLs（MIT，见仓库 NOTICE）；
-  支持文件与脚本未随镜像分发，完整原件见上游 npm 包 @orchestra-research/ai-research-skills。
-- 执行技能时若引用支持文件，请从上游包解析。
+## Mirror description (additional to this open warehouse)
+- This document is mirrored from Orchestra Research AI-Research-SKILLs under the MIT License; see `skills/NOTICE.md`.
+  Support documents and scripts were not distributed with mirrors, and the full originals are available upstream npm Bag. @orchestra-research/ai-research-skills。
+- If supporting documents are quoted in the implementation skills, please wrap them up upstream.

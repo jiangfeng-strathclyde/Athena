@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""独立第二实现：从原始 fold 级 CSV 重算 README 演示对话里的统计量。
+"""Independently recompute the statistics shown in the README demo.
 
-用法：python docs/demo_assets/verify_demo.py
-退出码 0 = 与 README 声明一致；1 = 不一致（按协议应停稿）。
-仅用标准库。数据为合成示例，见同目录 README.md。
+Run with: ``python docs/demo_assets/verify_demo.py``
+Exit status 0 means the CSV and README agree; status 1 blocks the check.
+The data is synthetic and documented in this directory's README.
 """
 import csv
 import statistics
@@ -26,7 +26,7 @@ def load_deltas():
     seeds = sorted(per_seed)
     missing = [s for s in seeds if set(per_seed[s]) != {"baseline", "ours"}]
     if missing:
-        raise SystemExit(f"FAIL: seed {missing} 缺少 baseline/ours 配对，口径不完整")
+        raise SystemExit(f"FAIL: seed(s) {missing} lack a complete baseline/ours pair")
     return seeds, [round(per_seed[s]["ours"] - per_seed[s]["baseline"], 4) for s in seeds]
 
 
@@ -40,23 +40,23 @@ def main():
 
     failures = []
     if round(mean, 2) != CLAIMED_MEAN:
-        failures.append(f"mean {mean:.2f} != README 声明 {CLAIMED_MEAN}")
+        failures.append(f"mean {mean:.2f} != README claim {CLAIMED_MEAN}")
     if round(std, 2) != CLAIMED_STD:
-        failures.append(f"std {std:.2f} != README 声明 {CLAIMED_STD}")
+        failures.append(f"std {std:.2f} != README claim {CLAIMED_STD}")
 
     readme = README_PATH.read_text(encoding="utf-8")
     claim = f"{CLAIMED_MEAN} ± {CLAIMED_STD}"
     if readme.count(claim) < 2:
-        failures.append(f"README 中 '{claim}' 出现 {readme.count(claim)} 次，期望 >= 2（中文对话 + 英文摘要）")
+        failures.append(f"README contains '{claim}' {readme.count(claim)} time(s); expected at least 2")
     if "cherry-pick" not in readme:
-        failures.append("README 未把单 seed 最大值标注为 cherry-pick")
+        failures.append("README does not label the single-seed maximum as cherry-picking")
 
     if failures:
         print("FAIL:")
         for f in failures:
             print("  -", f)
         return 1
-    print("PASS: README 的数字与原始 CSV 的独立重算一致。")
+    print("PASS: README statistics match the independent CSV recomputation.")
     return 0
 
 

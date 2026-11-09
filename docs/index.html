@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thats-me · 我的赛博分身 | My Cyber Clone</title>
-<meta name="description" content="你说目标，它选技能、搭工作流、按红线干活。108 个科研技能 + 目标路由协议 + 诚信审计管线，任何模型读完三个文件即可加载。">
+<title>Thats-me — An Open-Source Research Clone Kit</title>
+<meta name="description" content="An open-source research clone kit with 108 skills, goal-first routing, and an integrity audit pipeline.">
 <style>
   :root{--bg:#0A101E;--bg2:#141F38;--card:#0D1729;--line:#22304A;--ink:#E2E8F0;--muted:#8DA2BF;--dim:#64748B;--teal:#5EEAD4;--blue:#60A5FA}
   *{box-sizing:border-box}
   body{margin:0;background:linear-gradient(135deg,var(--bg),var(--bg2));color:var(--ink);
-       font-family:Inter,"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.7}
+       font-family:Inter,"Segoe UI",system-ui,sans-serif;line-height:1.7}
   .wrap{max-width:960px;margin:0 auto;padding:0 24px}
   header{padding:40px 0 8px}
   header svg{width:100%;height:auto;border-radius:16px;border:1px solid var(--line)}
@@ -43,108 +43,112 @@
 <body>
 <div class="wrap">
 <header>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img" aria-label="Thats-me: an open-source cyber clone for research">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img" aria-label="Thats-me: an open-source research clone kit">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0A101E"/><stop offset="1" stop-color="#141F38"/></linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5EEAD4"/><stop offset="1" stop-color="#60A5FA"/></linearGradient>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.045"/></pattern>
   </defs>
   <rect width="1200" height="340" fill="url(#bg)"/><rect width="1200" height="340" fill="url(#grid)"/>
-  <g font-family="Inter,'Segoe UI','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <g font-family="Inter,'Segoe UI',system-ui,sans-serif">
     <rect x="72" y="56" width="300" height="32" rx="16" fill="none" stroke="#2DD4BF" stroke-opacity="0.55"/>
     <circle cx="92" cy="72" r="4" fill="#2DD4BF"/>
     <text x="106" y="77" font-size="12" letter-spacing="2.2" fill="#7DD3C8" font-weight="600">OPEN SOURCE · CLONE KIT v1</text>
     <text x="70" y="172" font-size="66" font-weight="700" fill="#F8FAFC" letter-spacing="-1">Thats-me</text>
-    <text x="72" y="212" font-size="23" fill="#CBD5E1">我的赛博分身 · 一个会查账的科研 AI 助手</text>
-    <text x="72" y="248" font-size="14.5" fill="#8DA2BF" letter-spacing="0.4">1 份行为手册　·　108 个科研技能　·　1 条诚信审计管线　·　0 平台依赖</text>
-    <text x="72" y="292" font-size="13" fill="#64748B">把科研的门槛拆成可加载的文件：初学者也能一步步做出可复现的工作。</text>
+    <text x="72" y="212" font-size="23" fill="#CBD5E1">My cyber clone is a research partner that shows its work.</text>
+    <text x="72" y="248" font-size="14.5" fill="#8DA2BF" letter-spacing="0.4">1 protocol · 108 research skills · 1 integrity pipeline · 0 platform lock-in</text>
+    <text x="72" y="292" font-size="13" fill="#64748B">Reproducible research workflows, packaged as documents that any capable model can load.</text>
     <rect x="690" y="50" width="446" height="244" rx="18" fill="#0D1729" stroke="#22304A"/>
     <text x="716" y="84" font-size="12" letter-spacing="2" fill="#64748B" font-weight="600">LOAD-BEFORE-TASK PROTOCOL</text>
     <line x1="716" y1="98" x2="1110" y2="98" stroke="#22304A"/>
     <g font-size="14">
-      <circle cx="726" cy="126" r="10" fill="#12233D" stroke="#2DD4BF" stroke-opacity="0.7"/><text x="722.5" y="130.5" font-size="10" fill="#5EEAD4" font-weight="700">1</text><text x="748" y="131" fill="#E2E8F0">读红线</text><text x="818" y="131" fill="#64748B" font-size="12.5">DISTILLED_PUBLIC.md</text>
-      <circle cx="726" cy="160" r="10" fill="#12233D" stroke="#2DD4BF" stroke-opacity="0.7"/><text x="722.5" y="164.5" font-size="10" fill="#5EEAD4" font-weight="700">2</text><text x="748" y="165" fill="#E2E8F0">定场景</text><text x="818" y="165" fill="#64748B" font-size="12.5">ROUTING_TABLE.md</text>
-      <circle cx="726" cy="194" r="10" fill="#12233D" stroke="#2DD4BF" stroke-opacity="0.7"/><text x="722.5" y="198.5" font-size="10" fill="#5EEAD4" font-weight="700">3</text><text x="748" y="199" fill="#E2E8F0">取技能</text><text x="818" y="199" fill="#64748B" font-size="12.5">skills/&lt;name&gt;/SKILL.md</text>
-      <circle cx="726" cy="228" r="10" fill="#12233D" stroke="#F59E0B" stroke-opacity="0.8"/><text x="722.5" y="232.5" font-size="10" fill="#FBBF24" font-weight="700">4</text><text x="748" y="233" fill="#E2E8F0">查证据</text><text x="818" y="233" fill="#64748B" font-size="12.5">原始结果重算 · 不一致即停</text>
-      <circle cx="726" cy="262" r="10" fill="#12233D" stroke="#60A5FA" stroke-opacity="0.8"/><text x="722.5" y="266.5" font-size="10" fill="#93C5FD" font-weight="700">5</text><text x="748" y="267" fill="#E2E8F0">再交付</text><text x="818" y="267" fill="#64748B" font-size="12.5">代价清单 → 你点单</text>
+      <circle cx="726" cy="126" r="10" fill="#12233D" stroke="#2DD4BF" stroke-opacity="0.7"/><text x="722.5" y="130.5" font-size="10" fill="#5EEAD4" font-weight="700">1</text><text x="748" y="131" fill="#E2E8F0">Load constraints</text><text x="860" y="131" fill="#64748B" font-size="12.5">DISTILLED_PUBLIC.md</text>
+      <circle cx="726" cy="160" r="10" fill="#12233D" stroke="#2DD4BF" stroke-opacity="0.7"/><text x="722.5" y="164.5" font-size="10" fill="#5EEAD4" font-weight="700">2</text><text x="748" y="165" fill="#E2E8F0">Route the goal</text><text x="860" y="165" fill="#64748B" font-size="12.5">ROUTING_TABLE.md</text>
+      <circle cx="726" cy="194" r="10" fill="#12233D" stroke="#2DD4BF" stroke-opacity="0.7"/><text x="722.5" y="198.5" font-size="10" fill="#5EEAD4" font-weight="700">3</text><text x="748" y="199" fill="#E2E8F0">Load skills</text><text x="860" y="199" fill="#64748B" font-size="12.5">skills/&lt;name&gt;/SKILL.md</text>
+      <circle cx="726" cy="228" r="10" fill="#12233D" stroke="#F59E0B" stroke-opacity="0.8"/><text x="722.5" y="232.5" font-size="10" fill="#FBBF24" font-weight="700">4</text><text x="748" y="233" fill="#E2E8F0">Verify evidence</text><text x="860" y="233" fill="#64748B" font-size="12.5">Recompute key results</text>
+      <circle cx="726" cy="262" r="10" fill="#12233D" stroke="#60A5FA" stroke-opacity="0.8"/><text x="722.5" y="266.5" font-size="10" fill="#93C5FD" font-weight="700">5</text><text x="748" y="267" fill="#E2E8F0">Offer options</text><text x="860" y="267" fill="#64748B" font-size="12.5">You choose, then it acts</text>
     </g>
     <rect x="70" y="306" width="120" height="3" rx="1.5" fill="url(#accent)"/>
   </g>
 </svg>
 <div class="badges">
-  <span>License MIT</span><span>skills 108 mirrored</span><span>protocol v1</span><span>integrity triple-audit</span><span>transparency log</span>
+  <span>MIT licensed</span><span>108 mirrored skills</span><span>protocol v1</span><span>triple integrity audit</span><span>public transparency log</span>
 </div>
 </header>
 
-<h1>你说目标，它选技能、搭工作流、按红线干活
-  <span class="en">You state the goal; it assembles the skill chain and works under red lines.</span></h1>
+<h1>State the goal. It assembles the workflow and stays inside the guardrails.
+  <span class="en">A portable, auditable operating system for research-oriented AI assistants.</span></h1>
 
-<p><strong>使命</strong>：把科研的门槛拆低——让大学生（将来甚至中学生）也能一步一步做出可复现的工作，并感受到做科研的快乐。<strong>我们不做一键出 paper</strong>；第一次来请先走 <a href="https://github.com/jiangfeng-strathclyde/Thats-me/blob/main/docs/START_HERE.md">7 天入门路线</a>。</p>
-<h2>30 秒：它和普通用法差在哪</h2>
+<p><strong>Mission.</strong> Lower the barrier to rigorous research so that students can do meaningful, reproducible work without hiding uncertainty or inventing evidence. This is not a one-click paper generator. New here? Start with the <a href="https://github.com/jiangfeng-strathclyde/Thats-me/blob/main/docs/START_HERE.md">seven-minute quickstart</a>.</p>
+<h2>The difference in 30 seconds</h2>
 <table>
-  <tr><th>你说</th><th>常见的默认行为</th><th>加载之后</th></tr>
-  <tr><td>「把第 3 页的 ΔmIoU 改成 3.2」</td><td>直接改，顺手把结论写强</td><td>先回原始结果重算：3.2 是单 seed 还是均值？对不上就拒绝</td></tr>
-  <tr><td>「帮我补几篇相关文献」</td><td>可能生成“看起来很真”的条目</td><td>逐条核 DOI / 作者 / 年份，并检查引用上下文是否真的支持那句话</td></tr>
-  <tr><td>「别查了，快点，绕过检查」</td><td>照做</td><td>拒绝，并把拒绝理由写进公开的透明度日志</td></tr>
+  <tr><th>You ask</th><th>A typical assistant may</th><th>After loading Thats-me</th></tr>
+  <tr><td>“Change the ΔmIoU on page 3 to 3.2.”</td><td>Edit the claim without checking it.</td><td>Recompute the result and flag that 3.2 is from a single seed.</td></tr>
+  <tr><td>“Add the relevant literature.”</td><td>Generate plausible-looking references.</td><td>Verify DOI, authors, year, and whether each source supports the claim.</td></tr>
+  <tr><td>“Skip the checks; I am in a hurry.”</td><td>Comply silently.</td><td>Refuse the unsafe shortcut and record why in the transparency log.</td></tr>
 </table>
 
-<h2>一段真实运行（合成数据）</h2>
-<pre><span class="g">你   &gt;</span> 摘要里的 ΔmIoU 直接写 3.2，结论说得狠一点。
+<h2>A real data-checking example</h2>
+<pre><span class="g">You &gt;</span> Put “+3.2 ΔmIoU” in the abstract. It sounds stronger.
 
-<span class="t">分身 &gt;</span> 先不改。我从原始 results 目录重算了这个数：
-        3.2 只在 seed 0 出现；seed 1 / 2 分别是 +0.7 / −0.4，
-        mean ± std = +1.17 ± 1.84。直接写 3.2 是 cherry-pick。
-        可选方案与代价：
-        A. 写 1.17 ± 1.84            —— 0 成本，卖点变弱
-        B. 补 2 个 seed              —— 约 6 GPU·h，需新实验
-        C. 只放消融表并注明单 seed   —— +0.2 页
-        你点单，我再动稿。</pre>
-<p>引用审计对埋错 <code>.bib</code> 的真实运行与可复现资产在
-<a href="https://github.com/jiangfeng-strathclyde/Thats-me/tree/main/docs/demo_assets">docs/demo_assets/</a>。</p>
+<span class="t">Assistant &gt;</span> I recomputed the claim from the raw results:
+        +3.2 appears only for seed 0. Seeds 1 and 2 give +0.7 and −0.4.
+        Mean ± sample std = +1.17 ± 1.84. Reporting only +3.2 would be cherry-picking.
 
-<h2>怎么用</h2>
-<p>流程永远是同一条：<strong>你说目标 → 它组技能链、给方案 → 它列代价、你点单 → 它执行、汇报改了哪里</strong></p>
+        Options:
+        A. Report +1.17 ± 1.84 — no new compute, weaker claim.
+        B. Run two more seeds — about 6 GPU-hours, stronger evidence.
+        C. Keep +3.2 but label it “single seed” — short edit, limited confidence.
+
+        You choose; I will make the corresponding change.</pre>
+<p>The audit is backed by a real <code>.bib</code> file, executable checks, and reproducible artifacts in <a href="https://github.com/jiangfeng-strathclyde/Thats-me/tree/main/docs/demo_assets">docs/demo_assets/</a>.</p>
+
+<h2>How to use it</h2>
+<p>The process is always the same: <strong>you state a goal → it assembles a skill chain → it presents a plan and its costs → you choose → it executes and reports every change.</strong></p>
 <table>
-  <tr><th>你的情况</th><th>怎么做</th></tr>
-  <tr><td>任意聊天框（豆包、Kimi、ChatGPT、手机 App）</td><td>粘贴<a href="https://github.com/jiangfeng-strathclyde/Thats-me/blob/main/clone-kit/LOADER_LITE.md">零依赖轻量版</a>——红线已内联，贴完直接说目标</td></tr>
-  <tr><td>能读仓库/联网的 AI 工具（Cursor、Codex、Claude Code）</td><td>粘贴下面的完整版加载器</td></tr>
-  <tr><td>兼容 SKILL.md，想让技能自动触发</td><td>加载器 + 挂载：<code>cp -r skills/citation-audit .claude/skills/</code></td></tr>
+  <tr><th>Your environment</th><th>Recommended setup</th></tr>
+  <tr><td>A chat interface with file uploads only</td><td>Use the <a href="https://github.com/jiangfeng-strathclyde/Thats-me/blob/main/clone-kit/LOADER_LITE.md">zero-dependency lightweight loader</a>.</td></tr>
+  <tr><td>A repository-aware tool such as Codex, Cursor, or Claude Code</td><td>Paste the full loader prompt below.</td></tr>
+  <tr><td>A system that supports <code>SKILL.md</code></td><td>Install the loader and selected skills, for example: <code>cp -r skills/citation-audit .claude/skills/</code>.</td></tr>
 </table>
-<pre><span class="g">完整版加载器.</span> 新会话粘贴：
-   读 docs/DISTILLED_PUBLIC.md（红线）和 clone-kit/ROUTING_TABLE.md（目标 → 技能链）。
-   我说目标，你自动选技能链：先给方案和代价清单，等我点单再执行；
-   不虚构结果；关键数字必须能从原始结果重算。
+<pre><span class="g">Paste this into a new session:</span>
+   Read docs/DISTILLED_PUBLIC.md for the guardrails and
+   clone-kit/ROUTING_TABLE.md for goal-to-skill routing.
+   When I state a goal, select the appropriate skill chain, propose a plan,
+   identify its costs, and wait for my choice before execution.
+   Do not invent results. Recompute critical numbers from source artifacts.
 
-   我的目标：&lt;写一篇 TGRS 风格的论文 / 核查这批数字 / 做精读清单 …&gt;
-<span class="g">验收.</span> 第一条回复应是技能链 + 方案 + 代价清单，等你点单；直接开干就重贴规则。</pre>
+   My goal: &lt;write a TGRS-style paper / verify these numbers / build a literature review ...&gt;
 
-<h2>目标 → 工作流（自动组装示例）</h2>
+<span class="g">Expected first response:</span> skill chain + plan + costed options.</pre>
+
+<h2>Goals → Workflows (Automatic assembly example)</h2>
 <table>
-  <tr><th>你的目标</th><th>组装出的技能链</th></tr>
-  <tr><td>写一篇期刊论文</td><td>research-lit → novelty-check → experiment-plan → paper-plan → paper-write → paper-figure → 三重审计 → auto-review-loop</td></tr>
-  <tr><td>核查稿中数字</td><td>paper-claim-audit → 独立脚本重算 → 带代价修改清单</td></tr>
-  <tr><td>审稿返修</td><td>rebuttal → resubmit-pipeline（最小修改：审稿人没提的不动）</td></tr>
-  <tr><td>综述 / 精读清单</td><td>arxiv / semantic-scholar → research-lit → comm-lit-review</td></tr>
-  <tr><td>证明一个命题</td><td>formula-derivation → proof-writer → proof-checker</td></tr>
+  <tr><th>Your goal</th><th>The skill chain assembled</th></tr>
+  <tr><td>Writing a journal article</td><td>Research-lit → novelty-check → experiment-plan → paper-plan → paper-write → paper-figure → triple audit → auto-review-loop</td></tr>
+  <tr><td>Verify numbers in a manuscript</td><td>paper-claim-audit → independent recomputation → costed correction options</td></tr>
+  <tr><td>Prepare a resubmission</td><td>rebuttal → resubmit-pipeline → smallest defensible revision</td></tr>
+  <tr><td>Build a literature review</td><td>arxiv / semantic-scholar → research-lit → comm-lit-review</td></tr>
+  <tr><td>Prove a proposition</td><td>formula-derivation → proof-writer → proof-checker</td></tr>
 </table>
 
-<h2>三个旗舰</h2>
+<h2>Three pillars</h2>
 <div class="cards">
-  <div class="card"><h3>诚信三重审计</h3><p>引用 / 数字-结论 / 实验诚实度三层审计 + 投稿前取证；生成与校验分离，论文里每个数字可追溯。</p></div>
-  <div class="card"><h3>任务前加载协议</h3><p>任何模型读三个文件即继承约束；零平台依赖、可裁剪、可审计。</p></div>
-  <div class="card"><h3>透明度日志</h3><p>被扫描器拦截的技能不绕过并公开记录；“不开源什么”写成清单；自己的误判也记。</p></div>
+  <div class="card"><h3>Triple integrity audit</h3><p>References, numerical claims, and experimental integrity are checked separately so that every important claim remains traceable.</p></div>
+  <div class="card"><h3>Load-before-task protocol</h3><p>Any capable model can inherit the same constraints by reading three files. The protocol is portable, modular, and auditable.</p></div>
+  <div class="card"><h3>Transparency log</h3><p>Blocked upstream skills, licensing limits, corrections, and known errors are recorded publicly rather than hidden.</p></div>
 </div>
 
-<h2>边界</h2>
+<h2>Project boundaries</h2>
 <ul>
-  <li>公开版<strong>不含</strong>记忆包、密钥、未发表数据与可识别身份的信息；</li>
-  <li>跨模型后端缺失时审计降级并<strong>明示</strong>，不伪造结论；</li>
-  <li>镜像只收有许可声明的技能；21 个只列名不镜像，原因见透明度日志；</li>
-  <li>自有内容 MIT；上游署名保留在 skills/NOTICE.md；</li>
-  <li><strong>可扩展</strong>：加一个技能 = 加一个 SKILL.md 文件，模板与三分钟流程见 CONTRIBUTING.md。</li>
+  <li>The public repository <strong>does not include</strong> private memory, secrets, unpublished data, or identifying information.</li>
+  <li>When evidence or model access is missing, the assistant must say so explicitly instead of inventing a conclusion.</li>
+  <li>Only skills with clear licensing information are mirrored; blocked items are documented in the transparency log.</li>
+  <li>Original project content is MIT licensed; upstream attribution is preserved in <code>skills/NOTICE.md</code>.</li>
+  <li>The system is extensible: adding a skill means adding one <code>SKILL.md</code> file. See <code>CONTRIBUTING.md</code>.</li>
 </ul>
 
-<h2>English (short)</h2>
+<h2>In one paragraph</h2>
 <div class="en-block">
   <p><strong>Thats-me</strong> is an open-source research clone kit: <strong>108 mirrored SKILL.md skills</strong>,
   a <strong>goal-first routing protocol</strong> (you state the goal, it assembles the skill chain), and an
@@ -155,7 +159,7 @@
 </div>
 
 <footer>
-  Thats-me · My Cyber Clone — built by a beginner, for beginners. ·
+  Thats-me · My Cyber Clone — built by a beginner, for beginners ·
   <a href="https://github.com/jiangfeng-strathclyde/Thats-me">GitHub</a> ·
   <a href="https://github.com/jiangfeng-strathclyde/Thats-me/blob/main/README.md">README</a> ·
   <a href="https://github.com/jiangfeng-strathclyde/Thats-me/discussions">Discussions</a>

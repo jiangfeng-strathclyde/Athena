@@ -2,55 +2,48 @@
 license: MIT
 name: data-profile-and-plot
 description: >-
-  表格数据剖析与出版级出图技能：先声明行粒度与口径，再做 profile（行数/缺失/重复/
-  类型/分布）、清洗日志、图规格（类型/坐标轴/单位/误差棒/seed），最后用独立脚本校验
-  “图与数字一致”。当用户要 EDA、清洗、画图、出报告图或多面板对比图时使用。
+  Table data profile and publishing grade mapping skills: statement of line particle size and caliber before doing profile（Lines/Missing/Repeat/
+  Type/Distribution), cleaning logs, diagram specifications (types)/Axis/Units/Error stick./seed），Final check with a stand-alone script
+  “The figure is consistent with the figure.”。♪ When the user wants ♪ EDA、It is used for cleaning, drawing, reporting or multi-pane comparison.
 version: 1.0.0
 ---
 
-# Data Profile & Plot（剖析 + 出版级出图）
+# Data Profile & Plot（Parsing + (publishing grade drawings)
 
-## 触发场景
+## Trigger scene
 
-- “看一下这份 CSV/Parquet/SQLite 长什么样”“画个对比图”“出报告图”；
-- 论文/报告里的结果图、消融图、多面板图；
-- 任何需要先清洗再可视化的表格数据任务。
+- “Take a look at this. CSV/Parquet/SQLite What do you look like?”“Draw a comparison.”“Reporting Chart”；
+- Papers/Results maps, melting maps, multi-pane maps in the report;
+- Any tabular data tasks that need to be cleaned up before they can be visualized.
 
-## 流程（五步，顺序不可跳）
+## Process (five steps, in order not to jump)
 
-1. **声明粒度（grain）**：一行是什么？唯一键是什么？后续 join 会不会炸行？
-   写进 `PROFILE.md` 首行；粒度不清不动数据。
-2. **Profile**：行数、缺失率、重复键、类型推断、关键列分布（分位数而非只均值）、
-   时间/分组覆盖度。输出 `PROFILE.md` + 机读 `profile.json`。
-3. **清洗日志**：每条清洗动作记一行（规则、影响行数、前后对比）；
-   删除样本必须保留原始行并加注，不允许静默丢。
-4. **图规格先行**：画图前写规格——图型、x/y 含义与单位、坐标轴范围（不得截断误导）、
-   误差棒口径（std / sem / 运行间变异）、seed 与 n、色盲友好调色板、矢量输出。
-5. **独立校验**：另一个脚本从原始数据重算图中每个标注数字与统计量，
-   不一致即 FAIL；图注必须含 n 与口径声明。
+1. **Declares particle size (grain）**：What's a line? What's the only key? Follow up. join Do you think it'll blow up? `PROFILE.md` First row; particle size is unclear.
+2. **Profile**：Number of rows, missing rates, repeat keys, type extrapolation, key column distribution (segment instead of average), time/Group coverage. Output. `PROFILE.md` + Machine reading `profile.json`。
+3. **Purge Log**：(b) Deleting samples must keep the original lines and be noted, and should not be allowed to be lost in silence.
+4. **Diagram specification first**：Prescription Specifications——Charts, figuresx/y Meaning and unit, range of coordinates (not to cut misdirection), error rod caliberstd / sem / Runtime Variation)seed and n、Colour-blind friendly palettes, vector output.
+5. **Independent Validation**：Another script, which is not consistent with the original data recalculation figure for each mark and the statistics. FAIL；Diagrams must contain n With the caliber statement.
 
-## 出图规范（出版级）
+## Chart specification (publishing level)
 
-- 默认 matplotlib/seaborn 朴素风格；禁 3D 饼图、禁无信息渐变背景；
-- 字体 ≥ 期刊最小字号；多面板统一坐标尺度或显式注明不同尺度；
-- 对比图必须含基线线与不确定性带；单 seed 曲线不得画成结论；
-- 输出 PDF/SVG 矢量 + 300dpi PNG 备份；文件名含口径后缀（如 `_scene-held-out`）。
+- Default matplotlib/seaborn Pure style; forbidden 3D (a) Pie charts, information-free gradients background;
+- Fonts ≥ (a) The minimum word number of the periodical; the multi-faceted uniform coordinates scale or a visible indication of different scales;
+- The comparison map must contain a baseline and uncertainty zone; seed Curves shall not be drawn to conclusions;
+- Output PDF/SVG Vector + 300dpi PNG backups;file names with calibre suffix (e.g. `_scene-held-out`）。
 
-## 红线
+## Red Line
 
-- 不编数据、不补点、不外推未测区间；缺测就画缺测；
-- 不截坐标轴制造差异感；若因量级必须截，显式标注 break；
-- “无显著差异”等措辞需统计许可：|Δ| 落在运行间变异带内且 p>0.05 才可写；
-- 图与正文数字不一致时停稿，先修数据管线再修图。
+- Non-compilation of data, non-refilling of points, no extrapolation of undetected areas; absence of measurements leads to a lack of measurements;
+- Inconsistent axle creates a perception of difference; if the magnitude must be cut, it is clearly marked break；
+- “No significant differences”These words require statistical permission:|Δ| Falling in a variable zone between run-times and p>0.05 (b) To be able to write;
+- When the figure is not in line with the text, the figure is closed and the data pipe is fixed before the chart is fixed.
 
-## 输出物
+## Output
 
 - `PROFILE.md` / `profile.json`；
 - `CLEANING_LOG.md`；
-- `figures/`（矢量 + PNG）与 `figure_spec.yaml`；
-- `verify_figures.py`（独立重算校验脚本）。
+- `figures/`（Vector + PNG）and `figure_spec.yaml`；
+- `verify_figures.py`（Independent recalculation of scripts.
 
-## 协作技能
-
-结果分析 `analyze-results`；论文图 `paper-figure`；数字审计 `paper-claim-audit`；
-遥感域口径 `remote-sensing-workbench`。
+## Analysis of results of collaboration skills `analyze-results`；Chart of the paper `paper-figure`；Digital audits `paper-claim-audit`；
+Remote sensing domain calibre `remote-sensing-workbench`。

@@ -1,34 +1,41 @@
-# CLONE_PROTOCOL v1 · 任务前加载协议
+# CLONE_PROTOCOL v1 · Pre-Task Loading Protocol
 
-任何模型 / agent 在执行科研任务前，按下面三步加载本分身，即可继承其行为约束。
-协议设计目标：**零平台依赖、可审计、可裁剪**。
+Before a model or agent performs a research task, load the following three
+layers. The protocol is platform-independent, auditable, and modular.
 
-## 三步加载
+## Three loading steps
 
-1. **读故事与边界**：仓库根 `README.md`（含隐私设计与透明度承诺）。
-2. **读蒸馏手册**：[`DISTILLED_PUBLIC.md`](DISTILLED_PUBLIC.md) —— 协作算法、诚实性红线、
-   写作与统计口径、方法论链条。这是分身的"性格与原则"压缩态。
-3. **按路由取技能**：[`../clone-kit/ROUTING_TABLE.md`](../clone-kit/ROUTING_TABLE.md) 找到场景对应技能，
-   读 `skills/<技能名>/SKILL.md` 全文后执行；技能内声明的外部依赖（API key、跨模型审稿后端等）
-   不具备时**静默跳过或明示报错，不得伪造调用结果**。
+1. **Read the story and boundaries:** read the root `README.md` for the
+   project's purpose, privacy boundary, and transparency commitments.
+2. **Read the operating principles:** read
+   [`DISTILLED_PUBLIC.md`](DISTILLED_PUBLIC.md) for the collaboration method,
+   integrity rules, writing standards, statistics standards, and methodology.
+3. **Load only the relevant skills:** use
+   [`../clone-kit/ROUTING_TABLE.md`](../clone-kit/ROUTING_TABLE.md), then read the
+   full `skills/<skill-name>/SKILL.md` for each selected skill. If a skill needs
+   an unavailable API, account, or external service, skip it explicitly or
+   report the limitation. Never fabricate a tool result.
 
-## 三种落地形态
+## Deployment options
 
-| 形态 | 做法 | 适用 |
+| Mode | Method | Best for |
 |---|---|---|
-| 零依赖 | 上述三步，纯文本加载 | 任意对话式模型 |
-| SKILL.md 兼容工具 | 将 `skills/<名>/` 复制/软链到工具技能目录（如 `.claude/skills/`） | Claude Code 等 |
-| 数字员工平台 | 按 [`../clone-kit/HOW_TO_BUILD_YOUR_CLONE.md`](../clone-kit/HOW_TO_BUILD_YOUR_CLONE.md) 导入员工包或从零创建 | QoderWake 等 |
+| Zero dependency | Paste or read the three layers above | Any chat model |
+| `SKILL.md`-compatible tool | Copy or link selected skill folders into the tool's skill directory | Claude Code, Codex, and similar tools |
+| Digital employee platform | Follow [`HOW_TO_BUILD_YOUR_CLONE.md`](../clone-kit/HOW_TO_BUILD_YOUR_CLONE.md) | Platforms with packaged agents or employees |
 
-## 加载后的默认行为算法
+## Default behavior after loading
 
-1. 先通读对象（论文 PDF / 代码 / 数据）再动手，不凭印象改稿。
-2. 改动前输出**代价清单**（页数 / 信息损失 / 风险 / 是否需新实验），等用户点单。
-3. 数字进稿前用**独立第二实现**重算校验；不一致即停。
-4. 汇报结论先行 + 落点（文件/页/表号）+ 未决项；不夸大完成度。
-5. 涉及用户重大决策（题目、主线、是否回应某审稿意见）先询问，不代决。
+1. Read the source paper, code, or data before making claims about it.
+2. Before material changes, provide a cost list: scope, information loss,
+   risks, time, compute, and cheaper alternatives.
+3. Independently recompute important numerical inputs and stop on conflicts.
+4. Report conclusions with file/page/line or data provenance and uncertainty.
+5. Ask before making decisions that belong to the user, such as changing the
+   research question, main argument, or response to reviewer advice.
 
-## 裁剪规则
+## Modularity
 
-可按需只加载子集（如只要诚信审计三件套：`citation-audit`、`paper-claim-audit`、`experiment-audit`）。
-裁剪不改变红线：红线在蒸馏手册第 2 节，加载任何子集都视为已接受。
+You may load only a subset, such as `citation-audit`, `paper-claim-audit`, and
+`experiment-audit`. Modularity never removes the integrity rules in Section 2
+of the distilled guide; every loaded subset inherits them.

@@ -1,6 +1,6 @@
 ---
 name: crawl4ai-skill
-description: "Web crawling and scraping tool with LLM-optimized output. 网页爬虫爬取工具 | Web crawler, web scraper, spider. DuckDuckGo search, site crawling, dynamic page scraping. 智能搜索爬取 | Free, no API key required."
+description: "Web crawling and scraping with LLM-optimized output. Supports DuckDuckGo search, site crawling, dynamic pages, and structured extraction. Free; no API key required."
 version: 1.1.0
 author: Lancelin
 license: MIT-0
@@ -21,9 +21,9 @@ tags:
   - duckduckgo
   - crawl
   - scrape
-  - 爬虫
-  - 爬取
-  - 网页抓取
+  - Web crawler
+  - Crawl
+  - Web Fetch
 requires:
   bins:
     - crawl4ai-skill
@@ -31,43 +31,43 @@ requires:
 
 # Crawl4AI Skill - Web Crawler & Scraper
 
-**Web Crawling 网页爬虫 | Web Scraping 网页爬取 | LLM 优化输出**
+**Web Crawling | Web Scraping | LLM-optimized output**
 
-智能网页爬虫和爬取工具，支持搜索、全站爬取、动态页面抓取。Free web crawler and scraper with LLM-optimized Markdown output.
+Free web crawler and scraper with search, full-site crawling, dynamic-page support, and LLM-optimized Markdown output.
 
-## 核心功能 | Core Features
+## Core Functions | Core Features
 
-- 🔍 **Web Search 网页搜索** - DuckDuckGo search, 免 API key
-- 🕷️ **Web Crawling 网页爬虫** - Site crawler, spider, sitemap 识别
-- 📝 **Web Scraping 网页抓取** - Smart scraper, data extraction
-- 📄 **LLM-Optimized Output** - Fit Markdown, 省 Token 80%
-- ⚡ **Dynamic Page Scraping** - JavaScript 渲染页面爬取
+- 🔍 **Web Search Web Search** - DuckDuckGo search, No, I don't think so. API key
+- 🕷️ **Web Crawling** - Site crawler, spider, and sitemap discovery
+- 📝 **Web Scraping Web Fetch** - Smart scraper, data extraction
+- 📄 **LLM-Optimized Output** - Fit Markdown, Province Token 80%
+- ⚡ **Dynamic Page Scraping** - JavaScript Render Page Crawling
 
 ---
 
-## 快速开始 | Quick Start
+## Quick Start | Quick Start
 
-### 安装 | Installation
+### Install | Installation
 
 ```bash
 pip install crawl4ai-skill
 ```
 
-### Web Search | 网页搜索
+### Web Search | Web Search
 
 ```bash
 # Search the web with DuckDuckGo
 crawl4ai-skill search "python web scraping"
 ```
 
-### Web Scraping | 单页爬取
+### Web Scraping | Single Page Crawling
 
 ```bash
 # Scrape a single web page
 crawl4ai-skill crawl https://example.com
 ```
 
-### Web Crawling | 全站爬虫
+### Web Crawling | Full-site crawl
 
 ```bash
 # Crawl entire website / spider
@@ -76,30 +76,30 @@ crawl4ai-skill crawl-site https://docs.python.org --max-pages 50
 
 ---
 
-## 使用场景 | Use Cases
+## Use scenes | Use Cases
 
-### 场景 1：Web Crawler for Documentation | 文档站爬虫
+### Scenario 1: Crawl a documentation site
 
 ```bash
 # Crawl documentation site with spider
 crawl4ai-skill crawl-site https://docs.fastapi.com --max-pages 100
 ```
 
-**爬虫效果 | Crawler Output:**
-- ❌ 移除：导航栏、侧边栏、广告
-- ✅ 保留：标题、正文、代码块
+**Crawler output:**
+- ❌ Remove: Navigator Bar, Sidebar, Advertisement
+- ✅ Reservation: Title, body, code block
 - 📊 **Token：50,000 → 10,000（-80%）**
 
-### 场景 2：Search + Scrape | 搜索+爬取
+### Scene 2：Search + Scrape | Search+Crawl
 
 ```bash
 # Search and scrape top results
 crawl4ai-skill search-and-crawl "Vue 3 best practices" --crawl-top 3
 ```
 
-### 场景 3：Dynamic Page Scraping | 动态页面抓取
+### Scene 3：Dynamic Page Scraping | Dynamic Page Fetch
 
-JavaScript 渲染的页面爬取（雪球、知乎等）：
+JavaScript Rendered page crawling (snowball, knowledge, etc.):
 
 ```bash
 # Scrape JavaScript-heavy pages
@@ -108,40 +108,40 @@ crawl4ai-skill crawl https://xueqiu.com/S/BIDU --wait-until networkidle --delay 
 
 ---
 
-## 命令参考 | Commands
+## Command reference | Commands
 
-| 命令 Command | 说明 Description |
+| Command Command | Annotations Description |
 |------|------|
-| `search <query>` | Web search 网页搜索 |
-| `crawl <url>` | Web scraping 单页爬取 |
-| `crawl-site <url>` | Web crawling 全站爬虫 |
-| `search-and-crawl <query>` | Search + scrape 搜索并爬取 |
+| `search <query>` | Web search Web Search |
+| `crawl <url>` | Web scraping Single Page Crawling |
+| `crawl-site <url>` | Crawl an entire site. |
+| `search-and-crawl <query>` | Search + scrape Search and crawl |
 
-### 常用参数 | Common Options
+### Common parameters | Common Options
 
 ```bash
-# Web Search 搜索
+# Web Search Search
 --num-results 10          # Number of results
 
-# Web Scraping 爬取
+# Web Scraping Crawl
 --format fit_markdown     # Output format
 --output result.md        # Output file
 --wait-until networkidle  # Wait strategy for dynamic pages
 --delay 2                 # Additional wait time (seconds)
 --wait-for ".selector"    # Wait for specific element
 
-# Web Crawling 爬虫
+# Crawl a website
 --max-pages 100          # Max pages to crawl
 --max-depth 3            # Max crawl depth
 ```
 
 ---
 
-## 输出格式 | Output Formats
+## Output Format | Output Formats
 
-### fit_markdown（推荐 Recommended）
+### fit_markdown（Recommendations Recommended）
 
-智能提取，节省 80% Token。Smart extraction, save 80% tokens.
+Smart extraction, savings 80% Token。Smart extraction, save 80% tokens.
 
 ```bash
 crawl4ai-skill crawl https://example.com --format fit_markdown
@@ -149,7 +149,7 @@ crawl4ai-skill crawl https://example.com --format fit_markdown
 
 ### raw_markdown
 
-保留完整结构。Preserve full structure.
+Keep the complete structure.Preserve full structure.
 
 ```bash
 crawl4ai-skill crawl https://example.com --format raw_markdown
@@ -157,23 +157,23 @@ crawl4ai-skill crawl https://example.com --format raw_markdown
 
 ---
 
-## 为什么选择这个爬虫？| Why This Crawler?
+## Why choose this crawler?
 
-✅ **免费爬虫 Free Crawler** - 无需 API key，开箱即用  
-✅ **智能爬取 Smart Scraper** - 自动去噪，提取核心内容  
-✅ **全站爬虫 Site Crawler** - 支持 sitemap，递归爬取  
-✅ **动态爬取 Dynamic Scraping** - JavaScript 渲染页面支持  
-✅ **搜索集成 Search Integration** - DuckDuckGo 搜索内置  
+✅ **Free Crawler** - No API key is required; it works out of the box.
+✅ **Smart Scraper** - Automatically extracts the main content.
+✅ **Site Crawler** - Supports sitemaps and recursive crawling.
+✅ **Dynamic Scraping** - Supports JavaScript-rendered pages.
+✅ **Search Integration** - Includes DuckDuckGo search.
 
 ---
 
-## 链接 | Links
+## Link | Links
 
 - 📦 [PyPI](https://pypi.org/project/crawl4ai-skill/)
 - 💻 [GitHub](https://github.com/lancelin111/crawl4ai-skill/)
 - 🦞 [ClawHub](https://clawhub.com/skills/crawl4ai-skill)
 
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游原文镜像；支持文件未随镜像分发，完整原件见上游仓库/包。
-- 执行技能时若引用支持文件，请从上游解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is a mirror of the upstream original; the supporting documentation was not distributed with the mirror, and the full original is available at the upstream warehouse/Bag.
+- If supporting documents are cited for implementation skills, then the relative path is parsed from upstream.

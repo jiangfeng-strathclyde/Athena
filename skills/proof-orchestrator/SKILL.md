@@ -254,7 +254,6 @@ Record nontrivial repairs in `audit.md` or `codex-ledger.md`. Perform substantiv
 - Treat an unjustified target-to-subgoal reduction, a circular dependency, or a derivation that never returns to its stated target as an exposition blocker.
 - If correctness and elegance conflict, preserve correctness and state the remaining exposition issue explicitly.
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

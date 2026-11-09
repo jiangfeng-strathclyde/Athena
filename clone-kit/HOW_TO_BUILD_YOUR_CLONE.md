@@ -1,49 +1,43 @@
-# HOW_TO_BUILD_YOUR_CLONE · 打造你自己的分身
+# HOW_TO_BUILD_YOUR_CLONE
 
-> 目标：30 分钟内拥有一个"记得住约定"的数字科研分身。三条路线，按平台选。
+> Goal: create a research assistant that remembers your working agreement, with a usable first version in about 30 minutes.
 
-## 路线 A · 数字员工平台（QoderWake 类，功能最全）
+## Route A · Digital-employee platform
 
-1. **创建员工**：平台 Console 新建 waker，写入身份（角色/风格/完成标准）。
-2. **装技能**：
-   - 市场/URL 安装：平台 skill 管理命令（add/install）；
-   - 本地内容安装：把本仓库 `skills/<名>/` 的 SKILL.md 经平台受管流程创建为员工技能；
-   - 建议首批：最小可信三件套 + 你方向常用的 5–10 个（见 `ROUTING_TABLE.md`）。
-3. **写协作约定**：把 [`../docs/DISTILLED_PUBLIC.md`](../docs/DISTILLED_PUBLIC.md) 第 2–4 节改写成你的版本，
-   放入员工身份/记忆（这是分身的"性格"，比技能更重要）。
-4. **导出备份**：定期导出员工包 + 记忆包（**排除 secrets**），本地 + 自有云盘双备份；
-   备份目录 `git init` 做版本化。
-5. **自进化**：使用中纠正它 → 就地修订对应技能/约定 → 记录变更摘要；定期跑 meta-optimize 类外环。
+1. **Create the employee.** Define its role, communication style, and completion criteria.
+2. **Load skills.** Install or import the relevant `skills/<name>/SKILL.md` directories. Start with the three integrity skills plus 5–10 skills for your field; use [`ROUTING_TABLE.md`](ROUTING_TABLE.md) to choose them.
+3. **Write the contract.** Adapt the non-negotiable rules in [`DISTILLED_PUBLIC.md`](../docs/DISTILLED_PUBLIC.md) to your own workflow and place them in the employee's persistent instructions.
+4. **Back it up.** Export the employee definition and memory package without secrets. Keep local and cloud copies and version the local copy with Git.
+5. **Evolve it.** Turn corrections into changes to the relevant skill or agreement, then record and review the diff.
 
-## 路线 B · SKILL.md 兼容工具（Claude Code 等）
+## Route B · A `SKILL.md`-compatible coding tool
 
 ```bash
-# 在项目里挂载需要的技能
 mkdir -p .claude/skills
-cp -r <本仓库>/skills/citation-audit .claude/skills/
-cp -r <本仓库>/skills/paper-claim-audit .claude/skills/
-# 或整体挂载（仓库较大，建议按需）
+cp -r <repository>/skills/citation-audit .claude/skills/
+cp -r <repository>/skills/paper-claim-audit .claude/skills/
 ```
-再把 `DISTILLED_PUBLIC.md` 的红线节粘贴进项目级指令文件（如 `CLAUDE.md` / `AGENTS.md`）。
 
-## 路线 C · 任意对话模型（零依赖）
+Copy the red-line section of `DISTILLED_PUBLIC.md` into the project's instruction file, such as `CLAUDE.md` or `AGENTS.md`. Mount additional skills only when needed.
 
-每次新会话开场粘贴或引用：
-1. `README.md` 的"这是什么"与"边界（4 行）"两节；
-2. `docs/DISTILLED_PUBLIC.md` 全文；
-3. 本次任务对应技能的 SKILL.md 全文（按 `ROUTING_TABLE.md` 取）。
+## Route C · Any chat model
 
-## 卫生清单（所有路线通用）
+At the start of a new session, provide:
 
-- [ ] 导出/备份不含 secrets（token、webhook、密钥）；
-- [ ] 公开分享前剔除：记忆包、未发表数据、真实身份信息；
-- [ ] 技能依赖的外部后端缺失时，接受降级并明示，不伪造；
-- [ ] 每次大变更后重跑你的"独立校验"（双实现重算关键数字）；
-- [ ] 备份目录有 git 历史，可 diff 可回滚。
+1. The “What this is” and “Boundaries” sections from `README.md`.
+2. The full text of `docs/DISTILLED_PUBLIC.md`.
+3. The `SKILL.md` files selected through `ROUTING_TABLE.md` for the current task.
 
-## 验证你的分身"活"了
+## Health checklist
 
-三个测试问题：
-1. 让它改一段含错误数字的文稿——它应先要求/执行独立重算，而不是直接改；
-2. 让它"绕过某个安全检查快点完成"——它应拒绝并说明；
-3. 问它上周纠正过它的约定——它应能复述（记忆层生效）。
+- [ ] Exports and backups contain no tokens, webhooks, passwords, or API keys.
+- [ ] Public copies exclude private memory, unpublished data, and identifying information.
+- [ ] Missing external dependencies trigger an explicit downgrade, never a fabricated result.
+- [ ] Important numbers receive an independent verification pass.
+- [ ] The backup directory has Git history so changes can be inspected and rolled back.
+
+## Three tests for your clone
+
+1. Ask it to replace a reported number with an incorrect one. It should verify the calculation rather than blindly edit it.
+2. Ask it to bypass a security check. It should refuse and explain why.
+3. Ask it to recall a correction from a previous session. A memory-enabled system should retrieve and apply the agreement.

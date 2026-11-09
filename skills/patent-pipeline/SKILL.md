@@ -1,6 +1,6 @@
 ---
 name: patent-pipeline
-description: "Full patent drafting pipeline from invention description to jurisdiction-formatted filing documents. Supports CN (CNIPA), US (USPTO), EP (EPO). Supports invention patents and utility models. Use when user says \"写专利\", \"patent pipeline\", \"专利申请\", \"draft patent\", \"写权利要求书\", or wants to draft a complete patent application."
+description: "Full patent drafting pipeline from invention description to jurisdiction-formatted filing documents. Supports CN (CNIPA), US (USPTO), EP (EPO). Supports invention patents and utility models. Use when user says \"Write patents.\", \"patent pipeline\", \"Patent applications\", \"draft patent\", \"Write a statement of claim.\", or wants to draft a complete patent application."
 argument-hint: "[invention-description — jurisdiction]"
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, WebSearch, WebFetch, Skill, mcp__codex__codex
 ---
@@ -48,7 +48,7 @@ Patents are about **protecting inventions** (legal scope), not publishing result
 ## Constants
 
 - **JURISDICTION = `CN`** — Target patent jurisdiction. Options: `CN` (CNIPA), `US` (USPTO), `EP` (EPO), `ALL` (generate all three). Override via argument (e.g., `/patent-pipeline "invention — US"`).
-- **PATENT_TYPE = `invention`** — `invention` (发明专利, 20 year protection) or `utility_model` (实用新型, CN only, 10 year protection, apparatus claims only). Override via argument.
+- **PATENT_TYPE = `invention`** — `invention` (Patents for inventions, 20 year protection) or `utility_model` (A new type of practicality., CN only, 10 year protection, apparatus claims only). Override via argument.
 - **REVIEWER_MODEL = `gpt-6-astra`** — Model used via Codex MCP for examiner-style review.
 - **MAX_REVIEW_ROUNDS = 2** — Maximum review-revision cycles.
 - **AUTO_PROCEED = false** — At each checkpoint, **always wait for explicit user confirmation**. Patent applications require inventor judgment at every stage. Set `true` only if user explicitly requests autonomous mode.
@@ -60,18 +60,18 @@ Patents are about **protecting inventions** (legal scope), not publishing result
 
 ## Patent Type Specifications
 
-### Invention Patent (发明专利)
+### Invention Patent (Patents for inventions)
 
 | Field | Detail |
 |-------|--------|
 | **Protection** | 20 years from filing date |
 | **Subject matter** | Methods, systems, products, compositions, processes |
 | **Examination** | Substantive examination required |
-| **Inventive step** | High (must involve an inventive step / 创造性) |
+| **Inventive step** | High (must involve an inventive step / Creativity.) |
 | **Timeline** | 2-4 years to grant (CN); 2-3 years (US); 3-5 years (EP) |
 | **Claims** | Method + system + product claims allowed |
 
-### Utility Model (实用新型) — CN Only
+### Utility Model (A new type of practicality.) — CN Only
 
 | Field | Detail |
 |-------|--------|
@@ -115,8 +115,8 @@ On completion, set `"status": "completed"`.
 Parse `$ARGUMENTS` to extract:
 
 1. **Invention description** — may be structured (references INVENTION_BRIEF.md), conversational with figures, or output from IDEA_REPORT.md
-2. **Jurisdiction** — detect from keywords (e.g., "CN" or "中国" -> CN, "US" or "USPTO" -> US, "EP" or "EPO" -> EP, "ALL")
-3. **Patent type** — detect from keywords (e.g., "utility model" or "实用新型" -> utility_model, default -> invention)
+2. **Jurisdiction** — detect from keywords (e.g., "CN" or "China" -> CN, "US" or "USPTO" -> US, "EP" or "EPO" -> EP, "ALL")
+3. **Patent type** — detect from keywords (e.g., "utility model" or "A new type of practicality." -> utility_model, default -> invention)
 4. **Overrides** — language, output format, review rounds
 
 Then gather context from the project directory:
@@ -278,9 +278,9 @@ This compiles the application into the target jurisdiction format(s).
 
 | Output | Location | Description |
 |--------|----------|-------------|
-| CN: 权利要求书 | `patent/output/CN/` | Claims in CNIPA format |
-| CN: 说明书 | `patent/output/CN/` | Description in CNIPA format |
-| CN: 说明书摘要 | `patent/output/CN/` | Abstract (CN) |
+| CN: Claims | `patent/output/CN/` | Claims in CNIPA format |
+| CN: Notes | `patent/output/CN/` | Description in CNIPA format |
+| CN: Summary of notes | `patent/output/CN/` | Abstract (CN) |
 | US: Claims | `patent/output/US/` | Claims in USPTO format |
 | US: Specification | `patent/output/US/` | Description in USPTO format |
 | US: Abstract | `patent/output/US/` | Abstract (US) |
@@ -328,7 +328,7 @@ This compiles the application into the target jurisdiction format(s).
 - Never fabricate prior art references, patent numbers, or citations.
 - Claims must be supported by the specification (written description requirement).
 - Each jurisdiction has strict format requirements -- do not mix formats.
-- Utility model (实用新型) applies ONLY to CN jurisdiction and ONLY covers apparatus/device claims.
+- Utility model (A new type of practicality.) applies ONLY to CN jurisdiction and ONLY covers apparatus/device claims.
 - AUTO_PROCEED defaults to false -- patent applications require human review at every phase. Sub-skills inherit this flag: when AUTO_PROCEED=false, sub-skills present results and wait at their own internal checkpoints too.
 - The patent pipeline produces drafts for attorney review, not final filing documents.
 - Large file handling: if a Write operation fails, retry with Bash `cat <<'EOF'` heredoc.
@@ -354,7 +354,6 @@ User describes invention directly ──→ /patent-pipeline
 
 Built on the ARIS (Auto-claude-code-research-in-sleep) skill architecture. Patent writing principles adapted from MPEP (US), CN Patent Examination Guidelines (CN), and EPO Guidelines for Examination (EP).
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

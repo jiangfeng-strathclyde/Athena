@@ -1,6 +1,6 @@
 ---
 name: citation-crosscheck
-description: "Double-blind bibliographic cross-check: one agent extracts each cited entry verbatim from the local .bib, a second independently re-fetches the same paper's record from the web while blind to the .bib, and a third extractor emits a mechanical field-by-field delta to catch dropped/re-ordered authors, wrong years, wrong venues, and bad DOIs/arXiv ids. The main agent (never a shard) assigns the MATCH/MINOR/MISMATCH verdict per reference, and exports a side-by-side spreadsheet. Use when user says \"citation crosscheck\", \"double-blind citation check\", \"verify bib against scholar\", \"bib field audit\", \"引用交叉核对\", or before submission when bibliography FIELD accuracy (not just existence) must be certified."
+description: "Double-blind bibliographic cross-check: one agent extracts each cited entry verbatim from the local .bib, a second independently re-fetches the same paper's record from the web while blind to the .bib, and a third extractor emits a mechanical field-by-field delta to catch dropped/re-ordered authors, wrong years, wrong venues, and bad DOIs/arXiv ids. The main agent (never a shard) assigns the MATCH/MINOR/MISMATCH verdict per reference, and exports a side-by-side spreadsheet. Use when user says \"citation crosscheck\", \"double-blind citation check\", \"verify bib against scholar\", \"bib field audit\", \"Quote cross check\", or before submission when bibliography FIELD accuracy (not just existence) must be certified."
 argument-hint: "[paper-directory-or-bib-file] [--xlsx <path>] [--cited-only|--all]"
 allowed-tools: Bash(*), Read, Grep, Glob, Write, Agent, WebFetch, WebSearch
 ---
@@ -530,7 +530,6 @@ preprint→published upgrades; that is an author choice).
 - **Report, do not silently upgrade.** Preprint-vs-published and cosmetic key/year-label
   mismatches are MINOR; list them, leave the choice to the author.
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

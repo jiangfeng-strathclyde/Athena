@@ -1,42 +1,37 @@
-# POSITIONING · 我们不做“一键出 paper”
+# POSITIONING · We're not doing it.“One key out. paper”
 
-> 调研快照：2026-11-06（2026-11-09 扩充）。对象：作者本地 `research agent/others/` 下约 45 个第三方
-> 自动科研框架/平台（仅调研，不镜像、不 fork）。逐项目机制与可吸收经验的完整版见
+> Research snapshot:2026-11-06（2026-11-09 Object: Local author `research agent/others/` Let's go. 45 A third party
+> Automated scientific framework/Platforms (research only, no mirrors, no fork）。For a complete version of the project-by-project mechanism and possible lessons learned, see
 > [`LESSONS_FROM_OTHERS.md`](LESSONS_FROM_OTHERS.md)。
 
-## 一句话定位
+## A word of orientation.
 
-**把科研的门槛拆低，让初学者（先大学生，将来甚至中学生）一步一步做出可复现的工作，
-并在这个过程中感受到做科研的快乐。** 科研的乐趣在过程：提问、查账、被反驳、再改进。
-任何把过程跳过的产品，都同时跳过了乐趣和训练。
+**We're going to take down the science threshold, and we're going to get beginners to take a step-by-step job, and we're going to feel happy doing it in the process.** The fun of science is in the process: asking questions, checking accounts, rebuttals, and improving. Any product that skips the process, skips the fun and the training at the same time.
 
-## 与“自主出 paper”类框架的差异
+## and“Make yourself at home. paper”Category framework differences
 
-| 维度 | 一键/自主出 paper 框架 | Thats-me |
+| Dimensions | One key./Make yourself at home. paper Frame | Thats-me |
 |---|---|---|
-| 目标 | 端到端自动产出论文稿 | 让人学会并享受可复现的科研过程 |
-| 人的位置 | 旁观者/审批按钮 | 决策者：方案与代价先列给你，你点单才执行 |
-| 失败处理 | 静默重试或美化 | 明示降级、保留负结果、公开不顺利记录 |
-| 可信度 | 依赖模型自觉 | 硬流程：生成-校验分离 + 三重审计 + 透明度日志 |
-| 初学者路径 | 无（面向熟练用户） | 7 天入门路线（`START_HERE.md`），含中学生降级版 |
-| 技能观 | 框架内置黑盒 | 108 个可读、可裁剪、可自演的 SKILL.md 全文 |
+| Objective | End-to-end automatic output of essays | Let's learn and enjoy a reenactable scientific process. |
+| The position of the person. | Bystander/Approval Button | Decision-makers: Programs and costs are set out for you first, so you can do it. |
+| Could not close temporary folder: %s | Try again or beautify silently | Express demotion, retention of negative results, public failure to record |
+| Credibility | Reliance on model conscious | Hard process: Generate-Verify Separation + Third-tier audit + Transparency Log |
+| Beginner path | None (aimed at experienced users) | A seven-day guided route in `START_HERE.md`, including simpler fallback explanations |
+| Skills concept | Black Box in Frame | 108 Readable, tailorable, self-playable. SKILL.md Full text |
 
-## 调研过、不采纳的对象（类别与理由）
+## Subjects researched, excluded (category and reason)
 
-| 类别 | 代表 | 不采纳理由 |
+| Category | Representative | Reasons for non-admission |
 |---|---|---|
-| 自主科研代理平台 | AutoResearchClaw、ResearchClaw、ScienceClaw、PaperClaw、MedgeClaw | 目标是自主产出，与“人在环 + 门槛阶梯”定位冲突；许可混杂（MIT/Apache/未知） |
-| 学术检索/写作代理 | OpenScholar、CitationClaw、ClawPhD | 重检索轻过程训练；部分许可未知 |
-| 教学代理 | DeepTutor | 方向相近但为独立产品形态；做法可借鉴（错题本/自测题），代码不镜像 |
-| 技能库（已部分策展） | AI-Research-SKILLs（Orchestra, MIT） | 已策展 12 个补 ML 系统侧；其余 74 个待需求，不批量镜像 |
-| 重投/模板迁移工具 | Auto-Resubmit | 单点工具，与返修管线重叠；按需再议 |
+| Autonomous Science Agency Platform | AutoResearchClaw、ResearchClaw、ScienceClaw、PaperClaw、MedgeClaw | The objective is to produce autonomous outputs, and“You're in the ring. + Threshold ladder”Positioning conflict;mixed (permitted)MIT/Apache/Unknown) |
+| Academic Retrieval/Writing agent | OpenScholar、CitationClaw、ClawPhD | Retrieval light process training; partially licensed unknown |
+| Teaching agents | DeepTutor | Closely oriented but stand-alone product patterns; practices that can be drawn upon (wrong text)/It's not a mirror. It's not a mirror. |
+| Skills bank (partially launched) | AI-Research-SKILLs（Orchestra, MIT） | Reconstructed 12 Substitute ML systems side; the rest 74 A to-need, non-volume mirror. |
+| Reload/Template Migration Tool | Auto-Resubmit | Single-point tool, overlapping with back-up pipes; further discussion as required |
 
-## 我们保留的“反目标”（anti-roadmap）
+## We keep it.“Counter-target”（anti-roadmap）
 
-- 不做全自动发论文流水线；
-- 不承诺“输入想法、输出论文”；
-- 不收集使用者数据、不托管他人记忆；
-- 不为绕过安全扫描器改写技能内容。
-
-降低门槛 ≠ 降低标准：红线（不虚构、先查账、口径统一、代价先行）对初学者同样生效，
-因为**可信度正是初学者最该先学会的东西**。
+- (b) Do not do fully automatic thesis streaming;
+- I don't promise.“Enter ideas, output papers”；
+- (b) Do not collect user data and do not host the memory of others;
+- Do not rewrite skill content to bypass the security scanner. Lower threshold ≠ Lower criteria: The red line (no fiction, first check, same caliber, first step) is equally valid for beginners, because**Credibility is what beginners should learn first.**。

@@ -1,6 +1,6 @@
 ---
 name: jurisdiction-format
-description: "Compile patent application into jurisdiction-specific filing format. Use when user says \"格式转换\", \"jurisdiction format\", \"国家格式\", \"compile patent\", or wants formatted patent documents for CN/US/EP filing."
+description: "Compile patent application into jurisdiction-specific filing format. Use when user says \"Format Conversion\", \"jurisdiction format\", \"National format\", \"compile patent\", or wants formatted patent documents for CN/US/EP filing."
 argument-hint: "[patent-directory-or-jurisdiction]"
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob
 ---
@@ -14,7 +14,7 @@ Analogous to `/paper-compile` but for patent document formatting instead of LaTe
 ## Constants
 
 - `JURISDICTION = "auto"` — From pipeline or args: `CN`, `US`, `EP`, `ALL`
-- `PATENT_TYPE = "invention"` — `invention` (发明专利) or `utility_model` (实用新型, CN only)
+- `PATENT_TYPE = "invention"` — `invention` (Patents for inventions) or `utility_model` (A new type of practicality., CN only)
 - `OUTPUT_FORMAT = "markdown"` — `markdown` (for review) or `docx` (for filing, requires python-docx)
 - `OUTPUT_DIR = "patent/output/"` — Base output directory
 
@@ -45,23 +45,23 @@ From `$ARGUMENTS` or constant:
 
 Output to `patent/output/CN/`:
 
-#### 权利要求书 (Claims)
+#### Claims (Claims)
 - Extract claims from `patent/CLAIMS.md`
 - Format per CNIPA conventions:
-  - Independent claims: "1. 一种[主题]的方法，...其特征在于..."
-  - Dependent claims: "2. 根据权利要求1所述的方法，其特征在于..."
-- Ensure Chinese terminology is correct (所述, 其特征在于, 包括, 等)
+  - Independent claims: "1. One.[Theme]The way....It's characterized by......"
+  - Dependent claims: "2. On the basis of the claim1The method in question is characterized by:..."
+- Ensure Chinese terminology is correct (Description, It's characterized by..., Including, Wait.)
 
-#### 说明书 (Description)
+#### Notes (Description)
 Combine all specification sections in CNIPA order:
-1. 发明名称 (from title.md)
-2. 技术领域 (from technical_field.md)
-3. 背景技术 (from background.md)
-4. 发明内容 (from summary.md — split into 技术问题/技术方案/有益效果)
-5. 附图说明 (from drawings_description.md)
-6. 具体实施方式 (from detailed_description.md)
+1. Invent Name (from title.md)
+2. Technical areas (from technical_field.md)
+3. Background technology (from background.md)
+4. Invent Contents (from summary.md — split into Technical issues/Technical programmes/Useful effects)
+5. Annotations to the figure (from drawings_description.md)
+6. Modalities of implementation (from detailed_description.md)
 
-#### 说明书摘要 (Abstract)
+#### Summary of notes (Abstract)
 - Extract from abstract.md
 - Verify word count <= 300 Chinese characters
 - Include most representative claim
@@ -72,8 +72,8 @@ If `OUTPUT_FORMAT = "markdown"`:
 
 If `OUTPUT_FORMAT = "docx"`:
 - Use python-docx to create Word documents matching CNIPA templates
-- Set font to 宋体 (SimSun) for body, 黑体 (SimHei) for headers
-- Standard margins (上下 2.54cm, 左右 3.17cm)
+- Set font to Song (SimSun) for body, Bold (SimHei) for headers
+- Standard margins (Up and down 2.54cm, Left and right. 3.17cm)
 
 ### Step 3: Generate US Format (if US or ALL)
 
@@ -156,9 +156,9 @@ Write `patent/output/OUTPUT_SUMMARY.md`:
 #### CN (CNIPA)
 | File | Description | Status |
 |------|-------------|--------|
-| 权利要求书.md | Claims in CN format | Complete |
-| 说明书.md | Description in CN format | Complete |
-| 说明书摘要.md | Abstract (CN) | Complete |
+| Claims.md | Claims in CN format | Complete |
+| Notes.md | Description in CN format | Complete |
+| Summary of notes.md | Abstract (CN) | Complete |
 
 #### US (USPTO)
 | File | Description | Status |
@@ -183,7 +183,7 @@ Write `patent/output/OUTPUT_SUMMARY.md`:
 
 ## Key Rules
 
-- Never mix jurisdiction formats (e.g., do not include "其特征在于" in US claims).
+- Never mix jurisdiction formats (e.g., do not include "It's characterized by..." in US claims).
 - Claims must be identical in technical content across jurisdictions, only the format differs.
 - For CN output, verify Chinese patent terminology is correct and consistent.
 - For EP output, the two-part claim form is mandatory -- every independent claim must have "characterised in that."
@@ -191,7 +191,6 @@ Write `patent/output/OUTPUT_SUMMARY.md`:
 - The jurisdiction-format skill does NOT modify claim content -- it reformats existing content only.
 - If `OUTPUT_FORMAT = "docx"`, check that python-docx is available; if not, fall back to markdown.
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

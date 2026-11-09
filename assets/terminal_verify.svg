@@ -4,10 +4,10 @@
 <rect width="1000" height="34" rx="10" fill="#161B22"/>
 <rect y="24" width="1000" height="10" fill="#161B22"/>
 <circle cx="22" cy="17" r="5" fill="#FF5F56"/><circle cx="42" cy="17" r="5" fill="#FFBD2E"/><circle cx="62" cy="17" r="5" fill="#27C93F"/>
-<text x="84" y="22" font-family="Consolas, monospace" font-size="12.5" fill="#8B949E">verify_demo.py — 独立第二实现（零依赖）</text>
+<text x="84" y="22" font-family="Consolas, monospace" font-size="12.5" fill="#8B949E">verify_demo.py · independent recomputation</text>
 <text x="20" y="70" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#7EE787">$ python docs/demo_assets/verify_demo.py</text>
 <text x="20" y="96" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#C9D1D9">seeds          : [0, 1, 2]</text>
 <text x="20" y="122" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#C9D1D9">per-seed delta : [3.2, 0.7, -0.4]</text>
 <text x="20" y="148" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#C9D1D9">mean +/- std   : 1.17 +/- 1.84  (sample std, n=3)</text>
-<text x="20" y="174" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#5EEAD4">PASS: README 的数字与原始 CSV 的独立重算一致。</text>
+<text x="20" y="174" font-family="Consolas, 'Cascadia Mono', 'Microsoft YaHei', monospace" font-size="15" fill="#5EEAD4">PASS: README values match an independent recomputation from the raw CSV.</text>
 </svg>

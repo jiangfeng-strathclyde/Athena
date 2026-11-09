@@ -1,40 +1,37 @@
-# UPSTREAM_SYNC · 上游同步与策展流程
+# UPSTREAM_SYNC · Upstream synchronisation and synthesizing process
 
-> `skills/` 镜像自 [ARIS](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)（MIT）。
-> 本文件规定如何跟踪上游演进并把变更**策展**进本仓库：只镜像、不魔改、全程留痕。
+> `skills/` Mirror From [ARIS](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)（MIT）。
+> This document sets out how to track upstream evolution and make changes**Development**Into the warehouse: a mirror, an unmistakable, and a trail from the entire journey.
 
-## 快照基线
+## Snapshot Baseline
 
-- 快照日期与清单：`clone-kit/MANIFEST.json`（含每个技能的 source / version / installUrl）。
-- 镜像范围：上游顶层 87 个技能目录的 SKILL.md 原文 + 本仓库追加的"镜像说明"段（见 `skills/NOTICE.md`）。
-- 支持文件（scripts/、references/、../shared-references/）**不随镜像分发**，使用时回上游解析。
+- Checkout date and list:`clone-kit/MANIFEST.json`（With every skill. source / version / installUrl）。
+- Mirror scope: Upper upstream 87 A skills directory. SKILL.md Original + Additional to this warehouse"Mirror description"Paragraph (see `skills/NOTICE.md`）。
+- Support documentation (%1)scripts/、references/、../shared-references/）**No mirror distribution**，Go back upstream when used.
 
-## 同步流程（每月或上游大版本时）
+## Synchronization of processes (on a monthly or larger upstream version)
 
-0. **取差异（机器化）**：`python scripts/upstream_diff.py`（浅克隆上游到仓库外缓存，
-   剥离本仓库追加段/行尾/结尾空行后逐技能哈希对比），输出 added / removed / changed；
-   策展完成后 `--save-snapshot` 刷新 `clone-kit/UPSTREAM_SNAPSHOT.json` 基线。
-1. **取差异**：拉上游最新 tag/commit，与 MANIFEST 的快照 commit 对比：
-   `git -C <上游克隆> log --oneline <快照commit>..HEAD -- skills/`；
-   列出 新增 / 删除 / 修改 的技能目录。
-2. **分类**：
-   - 修改：逐技能 diff SKILL.md；判断是否影响指令语义（语义变更→重跑安全自检清单；纯措辞→直接同步）；
-   - 新增：按 `CONTRIBUTING.md` 的诚信自检清单过一遍，再决定是否策展入镜像；
-   - 删除：从镜像移除并在 TRANSPARENCY_LOG 记录"上游移除"。
-3. **安全扫描**：新/改内容提交平台或 CI 扫描；**被拦截不绕过**，按 TRANSPARENCY_LOG 流程公开记录。
-4. **更新清单**：刷新 MANIFEST 的快照日期与 version 字段；README 徽章如含计数则同步。
-5. **留痕提交**：commit message 固定前缀 `sync(aris): <快照commit短哈希> -> <新短哈希>`，
-   body 列出 新增/删除/语义变更 三类清单。
-6. **公告**：Discussions 发一条 sync 公告（模板可复用 skill-request 的结构）。
+0. **Take differences (mechanized)**：`python scripts/upstream_diff.py`（Aluminous clones upstream of the warehouse cache, stripping out of this warehouse for additional sections/End of line/The end of the line is empty, and the skills of the Hashi comparison, the output. added / removed / changed；
+   When the show's done, `--save-snapshot` Refresh `clone-kit/UPSTREAM_SNAPSHOT.json` Baseline.
+1. **Take the difference.**：Upstream, newest. tag/commit，and MANIFEST A snapshot. commit Contrast:
+   `git -C <Upstream cloning> log --oneline <A snapshot.commit>..HEAD -- skills/`；
+   List New / Delete / Modify the skills directory.
+2. **Classification**：
+   - Revision: skills by skills diff SKILL.md；Determining whether to influence the semantics of the instructions (semanmatic changes)→Rerun security self-check list; plain language→Direct synchronization;
+   - Add: Press `CONTRIBUTING.md` (b) A self-checking list of good faith and a decision on whether or not to develop a mirror;
+   - Delete: Remove from mirror and TRANSPARENCY_LOG Records"Upstream Remove"。
+3. **Security Scan**：New/Change of content to the platform or CI Scanning;**I can't get past it.**，Press TRANSPARENCY_LOG Processes are publicly recorded.
+4. **Update List**：Refresh MANIFEST The date of the snapshot and the date of the version Fields;README Synchronizes the badges if they contain a count.
+5. **Queue submission**：commit message Fixed Prefix `sync(aris): <A snapshot.commitShort Hashi.> -> <New Hashi.>`，
+   body List New/Delete/Semantic changes to the list of three categories.
+6. **Announcement**：Discussions Send one. sync Bulletin (templates can be reused) skill-request the structure of the).)
 
-## 策展原则（为什么不是全自动镜像）
+## Principles of communication (why not all automatic mirrors)
 
-- 本仓库是**策展版**：保留对初学者有用的子集与中文导读，不做上游的完整 fork；
-- 上游新增技能默认**不进**镜像，经 Discussion 需求或维护者评估后进入（需求驱动）；
-- 任何对上游文本的追加段（如"镜像说明"）必须显式标注、不改变指令语义；
-- 许可链不断：NOTICE 与 LICENSE 附录始终保留上游版权行。
+- This warehouse is...**Policy version**：Keep subsets and Chinese guides useful to beginners, without upstream integrity fork；
+- Default for additional skills upstream**I'm not coming in.**Mirrors, menstruation. Discussion Entry after needs or maintenance assessment (demand-driven);
+- Any additional paragraphs to the upstream text (e.g."Mirror description"）It must be clearly marked and do not change the semantics of the instructions;
+- The chain of permits is continuous:NOTICE and LICENSE The upstream copyright line is always retained in the appendix.
 
-## 非 ARIS 来源技能
-
-社区贡献或自研技能进入 `skills/` 时：frontmatter 注明来源（原创/上游 URL），
-许可必须 MIT 兼容；在 MANIFEST 中以 `source: community|original` 标记，与 `source: aris-mirror` 区分。
+## Not ARIS Source skills Community contribution or self-research skills entry `skills/` Hour:frontmatter Source indicated (original)/Upper URL），
+Permission must be granted. MIT compatibility; in MANIFEST Middle by `source: community|original` Tags, with `source: aris-mirror` Distinguishing.

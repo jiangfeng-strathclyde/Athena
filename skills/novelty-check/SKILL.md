@@ -1,6 +1,6 @@
 ---
 name: novelty-check
-description: Verify research idea novelty against recent literature. Use when user says "查新", "novelty check", "有没有人做过", "check novelty", or wants to verify a research idea is novel before implementing.
+description: Verify research idea novelty against recent literature. Use when user says "Chasing", "novelty check", "Has anyone ever done that?", "check novelty", or wants to verify a research idea is novel before implementing.
 argument-hint: "[method-or-idea-description]"
 allowed-tools: Bash(*), WebSearch, WebFetch, Grep, Read, Glob, mcp__codex__codex, mcp__antigravity__antigravity, mcp__antigravity__antigravity-reply, mcp__grok__grok, mcp__grok__grok-reply, mcp__claude-review__review, mcp__claude-review__review_reply, mcp__claude-review__review_start, mcp__claude-review__review_reply_start, mcp__claude-review__review_status
 ---
@@ -154,15 +154,12 @@ Output a structured report:
 
 After each `mcp__codex__codex` or `mcp__codex__codex-reply` reviewer call, save the trace following `shared-references/review-tracing.md` (Policy C — forensic; never silently skip). Use `save_trace.sh` (resolved per the chain in `shared-references/integration-contract.md` §2) or write files directly to `.aris/traces/<skill>/<date>_run<NN>/`. Respect the `--- trace:` parameter (default: `full`).
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.
 
-## 环境适配（本公开仓库追加）
-
-检索诚实性补充（红线可执行化，依据见 docs/LESSONS_FROM_OTHERS.md 第一节）：
-- 最低检索源数：快速查证 ≥2 个独立来源；综述 ≥3；系统综述/查新 ≥4，并记录检索式；
-- 空结果必须显式报告"未找到"，禁止回退到训练记忆编造条目、作者或数字；
-- 收尾前过 checklist：①每条结果含可核验信息（标题/作者/年份/出处）②不确定项标"待核验"
-  ③写明筛选标准 ④检索过矛盾/反面证据。
+## Environmentally appropriate (additional to this open warehouse) Retrieval integrity supplement (red line executable on the basis of docs/LESSONS_FROM_OTHERS.md Section I:
+- Minimum search source: quick check ≥2 Independent sources; overview ≥3；System Overview/Chasing ≥4，and record search mode;
+- The results have to be reported."Not found"，(b) Prohibition of regression to training memory to create entries, authors or numbers;
+- I'll be right over. checklist：①Each result contains verifiable information (titles)/Author/Year/Source)②Undefined item"To be verified"
+  ③Specify screening criteria ④Retrieving contradictions/Negative evidence.

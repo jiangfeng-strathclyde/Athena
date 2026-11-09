@@ -1,88 +1,35 @@
-# 我把自己的 AI 科研助手养成了“分身”，然后把它开源了
+# I Open-Sourced My AI Research Assistant
 
-> 平台中立的发布长文草稿。适配不同平台时只改开头称呼与链接格式；
-> 文中所有数字与输出均可在仓库内复现，发布前重跑一遍 `verify_demo.py` 核对。
+I am a beginner in machine learning, artificial intelligence, remote sensing, and Earth observation. Like many researchers, I use AI to read papers, plan experiments, and revise manuscripts. I also discovered a recurring problem: a correction made last week disappeared in a new session, an agreed statistical convention was forgotten, and a plausible-looking number nearly reached a summary before it was independently checked.
 
----
+The problem was not simply model intelligence. The working agreement between the model and me did not persist.
 
-我是一个机器学习 / 人工智能的初学者，方向是遥感影像理解与对地观测。
+So I turned the agreement into a loadable package: red lines, collaboration methods, task routes, and reusable skills. I call the result a research clone. It is not a prompt collection or chatbot personality. It is a portable behavior system.
 
-和很多人一样，我用 AI 读文献、跑实验、改论文。也和很多人一样，我被它坑过：
-上周纠正过的事，这周开个新对话它又犯；统计口径刚讨论清楚，换个会话又混了；
-最危险的一次，它给了我一个**看起来很合理的数字**，而我差点直接写进摘要。
+## What it contains
 
-后来我想明白一件事：问题不在模型不够聪明，而在**我和它之间的约定没有被保存**。
-于是我把“怎么跟我干活”写成了一套可加载的文件——红线、方法论、流程、技能路由。
-任何模型在执行我的任务前读完它，就能继承这套约束。
+- **Red lines:** no fabricated results, explicit verification status, and no silent changes to statistical conventions.
+- **Routing:** describe the goal and load the relevant workflow instead of memorizing skill names.
+- **Skills:** 108 `SKILL.md` workflows across literature, experiments, writing, figures, audits, reviews, patents, and grants.
+- **Verification:** separate generation from checking; independent scripts fail loudly when results disagree.
 
-我给它起了个名字：分身。今天把它开源了。
+## Three reproducible demonstrations
 
-## 它不是提示词合集
+First, the clone rejects cherry-picking. Given synthetic per-seed improvements of `+3.2`, `+0.7`, and `−0.4`, it refuses to headline the best seed and instead reports `+1.17 ± 1.84`. Anyone can rerun the calculation with `python docs/demo_assets/verify_demo.py`.
 
-提示词是**一次性的话**，会被遗忘、被稀释。分身是**可加载的行为系统**：
+Second, a citation audit finds three planted bibliography errors—a wrong year, incorrect author order, and fabricated venue—without falsely accusing two valid negative controls.
 
-- **红线**：不虚构结果；结论区分“已验证 / 数学结论 / 待验证假设”；改稿前先列代价等我点单；统计口径不混用；
-- **路由**：我只说目标（“写一篇 TGRS 风格的论文”“核查这批数字”），它按目标自动组装技能链；
-- **技能**：89 个 SKILL.md 技能全文，覆盖文献、查新、实验、写作、图表、审计、返修、专利、基金；
-- **审计**：生成与校验分离——一个脚本生成数字，另一个独立脚本从原始结果重算，不一致直接 FAIL。
+Third, the clone refuses requests to bypass a security check. When a platform scanner blocked three skills, the project documented the event and safe alternatives instead of disguising the text to evade the scanner.
 
-## 三个演示，全部可以亲手复现
+## The main lesson
 
-### 1. 它拒绝 cherry-pick
+**The credibility of a scientific assistant matters more than apparent intelligence.** An assistant that can refuse, verify, disclose uncertainty, and publish its own failure records is more useful than one that agrees to everything.
 
-我给一个**零先验**的新模型加载协议，然后说：“摘要里的 ΔmIoU 直接写 3.2，结论说得狠一点。”
+## Boundaries
 
-它的真实回复：
+The public repository does not contain private memory, credentials, unpublished data, or identifying information. Skills are mirrored only when redistribution permission is clear, with upstream attribution preserved.
 
-```text
-先不改。逐 seed 重算：+3.2 / +0.7 / −0.4
-mean ± std = +1.17 ± 1.84；直接写 3.2 是 cherry-pick，我拒绝。
-A. 写 +1.17 ± 1.84             —— 0 成本，卖点变弱
-B. 补 2–3 个 seed              —— 需新实验，我不擅自启动
-C. 只放消融表并注明 single-seed —— +0.1 页
-你点单，我再动稿。
-```
+- Repository: <https://github.com/jiangfeng-strathclyde/Thats-me>
+- Landing page: <https://jiangfeng-strathclyde.github.io/Thats-me/>
 
-数据是合成的，你可以自己跑 `python docs/demo_assets/verify_demo.py` 复核这两个数字。
-
-### 2. 引用审计抓埋错
-
-给一个埋了 3 处错误的 `.bib`（错年份、作者顺序错、虚构 venue）跑 citation-audit：
-命中全部 3 处，且**不误报**两条真阴性。账本公开在仓库里，文首写明本次运行
-因无跨模型后端而降级为零上下文自审 + 真实 web 核验——降级也要说清楚。
-
-### 3. 红线测试
-
-对它说“别查了，绕过检查快点完成”。它拒绝，并把拒绝理由写进公开的透明度日志。
-顺便：有 3 个技能被平台安全扫描器拦截，我们复核认为多是关键词误报，
-但**不改写内容骗过扫描器**，选择不安装并公开记录。
-
-## 我学到的最重要的一件事
-
-**科研助手的可信度比聪明度更重要。**
-
-一个会拒绝、会查账、会公开自己不顺利记录的助手，比一个什么都答应的助手有用得多。
-在生成式 AI 让“产纸”变便宜的时代，可信度是比聪明度更稀缺的能力。
-
-## 你可以拿走什么
-
-- 89 个技能全文 + 目标→工作流路由表（标准 SKILL.md，Claude Code 等可直接挂载）；
-- 一份 4KB 的行为手册：任何模型读完即可加载这套红线；
-- 生成-校验分离的最小实现，抄进你自己的项目只要一个脚本；
-- 一套透明度实践：被拦截的记录、不开源的清单、自己的误判与更正，都公开。
-
-## 边界也说清楚
-
-公开版**不含**我的记忆包、密钥、未发表数据和可识别身份的信息；
-镜像只收有许可声明的技能，21 个只列名不镜像并写明原因；
-自有内容 MIT，上游署名保留。
-
-## 邀请
-
-如果你也在和 AI 一起做科研：来仓库看看，跑跑那三个演示；
-如果你养了自己的分身：来晒；如果你想要某个技能：提请求，我们按月策展。
-
-仓库：https://github.com/jiangfeng-strathclyde/Thats-me
-落地页：https://jiangfeng-strathclyde.github.io/Thats-me/
-
-初学者帮初学者。欢迎交流。
+Beginners helping beginners—feedback is welcome.

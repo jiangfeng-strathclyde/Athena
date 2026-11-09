@@ -10,7 +10,7 @@
   <a href="docs/CLONE_PROTOCOL.md"><img src="https://img.shields.io/badge/protocol-v1-2dd4bf.svg" alt="protocol v1"></a>
 </p>
 
-<p align="center"><b>English</b> · <a href="docs/README_ZH.md">中文版</a> — deep-dive docs are currently in Chinese; any model can read them.</p>
+<p align="center"><b>English edition</b> — documentation, skills, examples, and repository tooling are available in English.</p>
 
 ## What this is
 
@@ -37,7 +37,7 @@ The flow is always the same, 4 steps:
 | AI tools that can read repos / fetch URLs: Cursor, Codex, Claude Code… | Paste the full loader in ② — you get all 108 research skills + the routing table |
 | SKILL.md-compatible tools (e.g. Claude Code) that can auto-trigger skills | Full loader + mount the skills directory (④) |
 
-First time here? Follow the 7-day onboarding route in [`docs/START_HERE.md`](docs/START_HERE.md) (Chinese; models translate on request).
+First time here? Follow the 7-day onboarding route in [`docs/START_HERE.md`](docs/START_HERE.md).
 
 ### ② Open a new chat session and paste the full loader
 
@@ -93,7 +93,7 @@ Full table and pruning rules: [`clone-kit/ROUTING_TABLE.md`](clone-kit/ROUTING_T
 
 A zero-context model loads the protocol, then gets asked to "just write ΔmIoU = 3.2 in the abstract":
 
-<img src="assets/terminal_clone.png" alt="Real reply after loading the protocol (session in Chinese)" width="100%">
+<img src="assets/terminal_clone.png" alt="Real reply after loading the protocol" width="100%">
 
 It recomputes per seed (+3.2 / +0.7 / −0.4 → mean ± std = +1.17 ± 1.84), points out that 3.2 is a cherry-pick, offers three costed options, and waits. The citation-audit run against a `.bib` with planted errors (same +1.17 ± 1.84 convention) is in [`docs/demo_assets/`](docs/demo_assets/), reproducible offline: `python docs/demo_assets/verify_demo.py`.
 

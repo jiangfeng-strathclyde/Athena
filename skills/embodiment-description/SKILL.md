@@ -1,6 +1,6 @@
 ---
 name: embodiment-description
-description: "Write detailed embodiment descriptions for patent specifications. Use when user says \"撰写实施例\", \"write embodiment\", \"实施例描述\", \"detailed description\", or wants to describe how to practice an invention."
+description: "Write detailed embodiment descriptions for patent specifications. Use when user says \"Preparation of executory examples\", \"write embodiment\", \"Description of the executory\", \"detailed description\", or wants to describe how to practice an invention."
 argument-hint: "[claims-path-or-embodiment-details]"
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob
 ---
@@ -118,8 +118,8 @@ Each embodiment section should be self-contained but cross-reference other embod
 - Multiple embodiments strengthen the specification against enablement challenges.
 - Describe the invention, do NOT evaluate it empirically ("The embodiment achieves 95% accuracy" is wrong; "The processor classifies the input data" is correct).
 - **CRITICAL — NO experimental data, test results, accuracy percentages, detection rates, precision values, or comparative performance data.** These belong in papers, not patents. The embodiment teaches HOW to make and use, not HOW WELL it performs.
-- WRONG: "传感器对直径超过150μm的金属颗粒实现了100%的检测精度，即使在检测限处仍保持94%的高精度。"
-- RIGHT: "当不锈钢颗粒通过间隙传感区域时，谐振频率下降。颗粒直径越大，频率偏移幅度越大。"
+- WRONG: "Sensor over diameter150μmThe metal particles have been realized.100%The accuracy of the tests is maintained even at the limits of the tests.94%High-precision."
+- RIGHT: "When stainless steel particles pass through the gap zone, the harmonic frequency decreases. The greater the diameter of the particles, the greater the frequency shift."
 - Do NOT include tables of experimental results, graphs of measurement data, or comparisons with prior art performance.
 - **CRITICAL — An embodiment is NOT an experiment.** Do NOT describe "repeated experiments", "accuracy evaluation", "precision testing", "calibration experiments", or "comparison with reference methods". An embodiment describes ONE way to make and use the invention — it is a recipe, not a test report.
 - Do NOT copy experimental sections from source papers verbatim. Transform the experimental setup into a manufacturing/operation description.
@@ -128,7 +128,6 @@ Each embodiment section should be self-contained but cross-reference other embod
 - Reference numerals must be consistent with the figures.
 - Do NOT use subjective language ("excellent", "surprising", "superior").
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

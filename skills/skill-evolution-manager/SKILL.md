@@ -1,54 +1,54 @@
 ---
 license: MIT
 name: "skill-evolution-manager"
-description: "当一个项目、工单、客户沟通或资料阅读结束后，需要判断是否沉淀新技能、更新旧技能、合并重复技能或丢弃噪声经验时使用。"
+description: "When a project, worksheet, client communication or information reading is completed, it needs to be used to determine whether new skills are being embedded, old skills are being updated, skills are being combined or noise is being discarded."
 ---
 
-# 技能演化管理
+# Skills Development Management
 
-## 触发场景
+## Trigger scene
 
-- 项目复盘后出现可重复使用的方法。
-- 用户多次给出稳定偏好或约束。
-- 资料阅读后发现可迁移流程。
-- 现有技能之间出现重复、冲突或过时。
-- 某个技能执行效果不好，需要优化。
+- Reusable methods emerge from project revisits.
+- Users have repeatedly given stable preferences or constraints.
+- Read the information and it is found that the process can be migrated.
+- There is duplication, conflict or obsolescence of existing skills.
+- The implementation of a given skill is ineffective and needs to be optimized.
 
-## 输入
+## Input
 
-- 原始经验：项目记录、工单、对话、代码阅读、文档摘要。
-- 目标任务类型：销售、研发、科研、交付、风控、数据、硬件。
-- 已有技能列表。
-- 质量反馈：失败原因、返工点、用户偏好、验收问题。
+- Original experience: Project records, worksheets, dialogue, code reading, document summary.
+- Target types of tasks: sales, R & D, research, delivery, wind control, data, hardware.
+- A list of skills is available.
+- Quality feedback: causes of failure, back-to-work sites, user preferences, acceptance problems.
 
-## 输出
+## Output
 
-- `discard`：经验太偶然，不沉淀。
-- `create`：创建新技能。
-- `improve`：更新已有技能。
-- `merge`：合并重复技能。
-- `version_note`：技能版本更新说明。
-- `quality_gate`：后续使用该技能的验收门禁。
+- `discard`：Experience is so accidental and unsettled.
+- `create`：Create new skills.
+- `improve`：Updating of available skills.
+- `merge`：Merge and repeat skills.
+- `version_note`：Skills version update notes.
+- `quality_gate`：The receiving and inspection door for the subsequent use of the skills is forbidden.
 
-## 工作流
+## Workstream
 
-1. 判断经验是否具有重复价值，避免把一次性聊天变成噪声技能。
-2. 检索已有技能，查找相似职责和触发场景。
-3. 如果只是补充约束，优先更新已有技能。
-4. 如果职责边界不同，创建新技能。
-5. 如果多个技能重复，提出合并方案。
-6. 写明输入、输出、禁区、人工审批点和验收标准。
-7. 由韩验进行技能质量评审，由温知登记到知识库。
+1. To judge whether experience is repetitive and avoid turning one-time chat into a noise skill.
+2. Retrieval of existing skills to find similar functions and trigger scenarios.
+3. If only additional constraints, priority is given to upgrading existing skills.
+4. Create new skills if the boundaries of responsibilities differ.
+5. When multiple skills are repeated, a merger is proposed.
+6. Identify input, output, restricted areas, manual approval points and acceptance criteria.
+7. Quality of skills is reviewed by the Korean test and registered to the knowledge base by Wincheon.
 
-## 质量门禁
+## Quality off-limits
 
-- 技能必须有清晰触发条件，不能泛泛而谈。
-- 技能必须产生可归档交付物。
-- 技能不能扩大权限边界。
-- 技能更新必须保留版本说明。
-- 涉及报价、合同、付款、真实客户数据和生产系统的技能必须转人工审批。
+- Skills must be subject to clear trigger conditions and cannot be said in general terms.
+- Skills must produce archived deliverables.
+- Skills do not extend the boundaries of authority.
+- The skills update must be maintained in a version of the description.
+- Skills related to quotations, contracts, payments, real customer data and production systems must be manually approved.
 
-## 参考来源
+## References
 
 - `source/xiaohongshu/extracted/AutoSkill-main`
 - `source/xiaohongshu/extracted/skills-coach-main`

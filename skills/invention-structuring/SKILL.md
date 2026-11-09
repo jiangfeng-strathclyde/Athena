@@ -1,6 +1,6 @@
 ---
 name: invention-structuring
-description: "Structure a raw invention idea into a formal invention disclosure. Use when user says \"构建发明\", \"structure invention\", \"发明构建\", \"invention disclosure\", or wants to formalize a rough idea into a patent-ready structure."
+description: "Structure a raw invention idea into a formal invention disclosure. Use when user says \"Build an invention\", \"structure invention\", \"Invent Build\", \"invention disclosure\", or wants to formalize a rough idea into a patent-ready structure."
 argument-hint: "[invention-description-or-brief-path]"
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, mcp__codex__codex, mcp__antigravity__antigravity, mcp__antigravity__antigravity-reply, mcp__grok__grok, mcp__grok__grok-reply, mcp__claude-review__review, mcp__claude-review__review_reply, mcp__claude-review__review_start, mcp__claude-review__review_reply_start, mcp__claude-review__review_status
 ---
@@ -44,18 +44,18 @@ Load `../shared-references/patent-writing-principles.md` for the Problem-Solutio
 
 Structure the invention using the universal patent framework:
 
-**Technical Problem (要解决的技术问题)**:
+**Technical Problem (Technical problems to be solved)**:
 - Derived from prior art deficiencies identified in NOVELTY_ASSESSMENT.md
 - Must be a specific, technical problem (not a commercial or social problem)
 - Statement format: "The technical problem to be solved is how to [specific technical objective] given [specific technical constraint]."
 
-**Technical Solution (技术方案)**:
+**Technical Solution (Technical programmes)**:
 - The invention's specific technical contribution
 - Focus on the mechanism, not the result
 - Must be described at a level that matches the intended claim scope
 - Identify which features are known vs. inventive
 
-**Advantages (有益效果)**:
+**Advantages (Useful effects)**:
 - Measurable or quantifiable improvements over prior art
 - Must result from the inventive features, not just good engineering
 - Include specific technical effects if known (e.g., "reduces processing time by 40%")
@@ -64,17 +64,17 @@ Structure the invention using the universal patent framework:
 
 Break the invention into three layers:
 
-**Core Inventive Concept (核心发明构思)**:
+**Core Inventive Concept (Core Ideas)**:
 - The minimal set of features that make the invention patentable
 - This maps to the independent claim scope
 - Test: if you remove this feature, the invention is no longer novel
 
-**Supporting Features (支撑性特征)**:
+**Supporting Features (Supporting Characteristics)**:
 - Features that make the invention work well in practice
 - These become dependent claim material
 - They narrow the scope but add practical value
 
-**Optional Features (可选特征)**:
+**Optional Features (Optional features)**:
 - Implementation details, preferred parameters, alternatives
 - These become embodiment material
 - They support broader claim interpretation
@@ -200,7 +200,6 @@ Write `patent/INVENTION_DISCLOSURE.md`:
 - Never invent embodiments that do not correspond to the actual invention or user-provided materials.
 - If the selected reviewer is unavailable, record `REVIEW_UNAVAILABLE`; continue only as an explicitly unreviewed draft, without switching providers.
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

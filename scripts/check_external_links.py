@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""外链周报：抽取 README 与 docs/*.md 的 http(s) 链接做存活探测。
+"""Check external HTTP(S) links in the README, docs, and clone kit.
 
-用法：python scripts/check_external_links.py
-仅在周 cron 中运行（push 时跑会拖慢且易抖动）。硬 404/5xx 且重试仍失败 → 退出 1。
-SKIP 列表里的模式不做判定（如未启用的 Discussions 页、 shields 徽章端点）。
+Run with: ``python scripts/check_external_links.py``
+The weekly workflow runs this separately from push checks because network
+requests can be slow or flaky. A confirmed 404/5xx response exits with status
+1. Known dynamic endpoints and badge services are skipped.
 """
 import re
 import sys
@@ -60,11 +61,11 @@ def main():
             print(f"FAIL  {status}  {url}  ({src})")
             bad.append(url)
     if bad:
-        print(f"\n{len(bad)} 个外链失效：")
+        print(f"\n{len(bad)} external link(s) failed:")
         for u in bad:
             print("  -", u)
         return 1
-    print("\n外链全部存活。")
+    print("\nAll checked external links are reachable.")
     return 0
 
 

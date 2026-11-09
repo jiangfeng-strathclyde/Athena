@@ -1,6 +1,6 @@
 ---
 name: figure-description
-description: "Process user-provided patent figures and generate formal drawing descriptions. Use when user says \"附图处理\", \"figure description\", \"附图说明\", \"drawings description\", or wants to describe patent figures with reference numerals."
+description: "Process user-provided patent figures and generate formal drawing descriptions. Use when user says \"Chart Processing\", \"figure description\", \"Annotations to the figure\", \"drawings description\", or wants to describe patent figures with reference numerals."
 argument-hint: "[figure-directory-or-figure-list]"
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
 ---
@@ -60,13 +60,11 @@ For each identified component:
 
 ### Step 4: Generate Drawing Descriptions
 
-Write formal drawing descriptions (附图说明):
+Write formal drawing descriptions (Annotations to the figure):
 
 **For CN jurisdiction (Chinese)**:
 ```
-图1是[发明名称]的系统结构示意图；
-图2是[发明名称]的方法流程图；
-图3是[具体组件]的详细结构示意图；
+Figure1Yes.[Invent Name]a map of the structure of the system;2Yes.[Invent Name]flow chart of methodologies;3Yes.[Specific components]A detailed chart of the structure;
 ```
 
 **For US/EP jurisdiction (English)**:
@@ -137,7 +135,6 @@ Write `patent/figures/numeral_index.md`:
 - Flag missing figures that the claims require but the user has not provided.
 - Drawing descriptions are one sentence each, in a consistent format.
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

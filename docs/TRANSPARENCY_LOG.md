@@ -1,61 +1,55 @@
-# TRANSPARENCY_LOG · 透明度日志
+# TRANSPARENCY_LOG · Transparency Log
 
-> 原则：**可信度靠公开，不靠承诺。** 本文件记录分身体系里"不顺利但被诚实处理"的事。
+> Principles:**Credibility depends on openness and not on commitment.** This document records the symbiosis system."It didn't go well, but it was handled honestly."Something.
 
-## 1. 被安全扫描器拦截的技能（拒绝绕过）
+## 1. Skills intercepted by a security scanner (refusal to bypass)
 
-2026-11-06 将 ARIS 技能集注册到数字员工平台时，3 个技能被 daemon 安全扫描器拦截。
-我们复核认为均为**关键词误报**，但**不改写内容骗过扫描器**，选择不安装并公开记录：
+2026-11-06 Will ARIS When the skills set is registered on the digital workforce platform, it will be the first time that a digital employee has been registered.3 ♪ A skill bet ♪ daemon Security scanner intercepts.**Misstatement of keywords**，But...**You lied to the scanner without rewriting it.**，Select not to install and record publicly:
 
-| 技能 | 扫描器警告 | 人工复核 | 替代方案 |
+| Skills | Scanner Warning | Manual review | Alternatives |
 |---|---|---|---|
-| deepxiv | 疑似外传本地凭据 | 正文仅描述 token 环境变量与 SDK 行为，且声明不读取/不回显 token | 文献阅读用 arxiv / alphaxiv / research-lit |
-| paper-compile | 疑似提权 | 触发行为注释中的 `sudo apt-get`（目标机为 Windows，该行本就无用） | 用项目自有编译+独立校验管线 |
-| paper-poster-html | 疑似外传本地凭据 | 触发词为排版术语 "design token" | 海报需求低频，暂缺 |
+| deepxiv | Suspected sending local documents. | Text only describes token Environment variables versus SDK Behavior and declare not to read/Do Not Rehearsal token | Bibliography arxiv / alphaxiv / research-lit |
+| paper-compile | Suspected raising power. | Trigger behavior note `sudo apt-get`（The target is... Windows，The book is useless. | Compiling with project ownership+Independent verification of tube lines |
+| paper-poster-html | Suspected sending local documents. | Trigger word is typed "design token" | Poster requirements are low and not available |
 
-技能全文仍镜像在本仓库 `skills/`（含上述三个，供自行审查后本地使用），
-平台侧安装状态以本日志为准。若未来启用：人工审核安装，或出具**逐行说明的透明修订稿**后重试。
+The full skill is still mirrored in this warehouse. `skills/`（Includes the above three for local use after self-censorship) and the platform side installation status is based on this log.**A transparent revised version of the line-by-line note**Try again.
 
-## 2. 我们不开源什么（隐私设计清单）
+## 2. We don't open up anything.
 
-- 分身的**长期记忆包**（含项目事实、协作史）——仅作者本地保存；
-- 任何**密钥 / token / webhook**——员工包导出时显式排除 secrets；
-- **未发表**的实验数据、论文稿、审稿状态与证据缺口清单；
-- 可识别作者**真实身份/职务**的信息（公开人设为"ML/AI 初学者 + 遥感方向"）。
+- It's a double.**Long-term memory pack**（(including project facts, history of collaboration)——Save only the author locally;
+- Any**Key / token / webhook**——Show exclusions when staff packages are exported secrets；
+- **Unpublished**Experimental data, manuscripts, review of manuscripts and a list of evidentiary gaps;
+- Recognized Author**Real identity./Functions**information (as set by the public person)"ML/AI Beginners + Remotely sensed direction"）。
 
-## 3. 误报与更正记录
+## 3. Misreporting and correction of records
 
-- 曾把 PDF 低分辨率下的 `0.722` 误读为 `0.723`、把不同口径的训练时长误判为矛盾；
-  均以生成脚本源码溯源复核后撤销质疑。教训：**对自家产物的质疑也要双实现复核**。
+- ♪ Once upon a time ♪ PDF Low resolution `0.722` Misread As `0.723`、The error of the length of the training of different calibres is interpreted as a contradiction; both are reviewed with a view to the creation of the source of the script and the withdrawal of the challenge.**Question of home property is also subject to double scrutiny.**。
 
-## 4. 已知局限（自我声明）
+## 4. Known limits (self-declared)
 
-- 技能链中跨模型评审依赖外部后端；后端缺失时审计降级为单模型自审，结论强度下降且会明示；
-- 蒸馏手册是压缩态，与全量记忆不一致时以全量为准；
-- 本仓库技能镜像随上游 ARIS 演进，快照日期见 `clone-kit/MANIFEST.json`。
+- Cross-model reviews in the skills chain rely on external backends; audits are downgraded to a single model self-review when the back end is missing, and conclusions are reduced in intensity and explicit;
+- The distillation manual is a compressed state, whichever is inconsistent with the full amount of memory;
+- This warehouse skills mirror follows upstream. ARIS Evolution. I'll see you on the date. `clone-kit/MANIFEST.json`。
 
-## 5. 未镜像技能清单（只列名，不镜像全文）
+## 5. Non-recording skills list (list only, not full text) Principles:**It's only a mirror with a permit to make a statement.**。Below 21 A skill exists in the author's place, but not in the public domain. `skills/`，
+Yes. `clone-kit/MANIFEST.json` Middle by `mirrored: false` Mark with reason.
 
-原则：**有许可声明才镜像**。以下 21 个技能在作者本地存在，但不进入公开 `skills/`，
-在 `clone-kit/MANIFEST.json` 中以 `mirrored: false` 标记并附原因。
-
-**上游未声明许可（16）**——公开再分发授权不明，仅列名：
+**Unproscribed permission to (upstream)16）**——Public re-issuance authorization is unknown, listing only:
 analytics-data-analysis, chart-craft-plus, data-analysis-pro, data-extractor,
 data-scientist, data-visualization, document-processor, excel,
 excel-data-analysis-and-report-generation, excel-weekly-dashboard, finance-charts,
 market-research-litiao, prompt-extractor, py-math-viz, report-generation, skill-file-converter
 
-**平台内部（2）**——含平台管理面指令与受管启动器描述，不公开：
+**Inside the platform (2）**——Include platform management command and managed starter description, in camera:
 qoderwake-assistant, wake-dws-cli
 
-**厂商发布（3）**——vendor 文档衍生，不代为再分发：
+**Vendors publish (3）**——vendor Document derivative, without redistribution:
 alibabacloud-dataworks-infra-manage, alibabacloud-dataworks-workspace-manage, alibabacloud-sls-query
 
-若上游后续补充许可声明，按 `UPSTREAM_SYNC.md` 流程评估后策展入镜像，并在本节日志记录变更。
+In case of a subsequent upstream supplementary permit statement, press `UPSTREAM_SYNC.md` The process evaluation is followed by a mirroring exercise and the recording of changes in this section of the log.
 
-## 6. 许可证据不一致记录
+## 6. Inconsistent records of licensed evidence
 
-- **Orchestra AI-Research-SKILLs 1.4.0**：README 徽章与仓库 LICENSE 文件均为 MIT
-  （Copyright (c) 2025 Claude AI Research Skills Contributors），但 `package.json` 的
-  `license` 字段写 ISC。本仓库以 **LICENSE 文件**为准镜像策展子集（12 个），
-  并在 `skills/NOTICE.md` 保留 MIT 署名；若上游澄清为 ISC，将重新评估并记录。
+- **Orchestra AI-Research-SKILLs 1.4.0**：README Insignia and warehouse LICENSE It's all the papers. MIT
+  (Copyright (c) 2025 Claude AI Research Skills Contributors), but its `package.json` metadata differs from the repository license;
+  `license` Field Write ISC。This warehouse is... **LICENSE Documentation**A sub-set of mirrors (e.g., mirrors)12 ), and `skills/NOTICE.md` Reservations MIT Signature; if upstream clarification is ISC，It will be reassessed and recorded.

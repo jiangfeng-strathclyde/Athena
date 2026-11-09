@@ -1,6 +1,6 @@
 ---
 name: overleaf-sync
-description: "Two-way sync between a local paper directory and an Overleaf project, so ARIS audit/edit workflows stay on the local copy while collaborators edit in the Overleaf web UI. Use when user says \"同步 overleaf\", \"overleaf sync\", \"推送到 overleaf\", \"connect overleaf\", \"Overleaf 桥接\", \"pull overleaf\", \"push overleaf\", or wants to bridge their ARIS paper directory with an Overleaf project."
+description: "Two-way sync between a local paper directory and an Overleaf project, so ARIS audit/edit workflows stay on the local copy while collaborators edit in the Overleaf web UI. Use when user says \"Sync overleaf\", \"overleaf sync\", \"Push it. overleaf\", \"connect overleaf\", \"Overleaf Bridge\", \"pull overleaf\", \"push overleaf\", or wants to bridge their ARIS paper directory with an Overleaf project."
 argument-hint: "[setup <project-id> | pull | push | status]"
 allowed-tools: Bash(*), Read, Grep, Glob, Edit, Write, Skill
 ---
@@ -219,7 +219,6 @@ When in doubt, run `status` first.
 - `/paper-compile` — local LaTeX build; Overleaf compiles independently in the cloud
 - Overleaf Git bridge docs: https://www.overleaf.com/learn/how-to/Using_Git_and_GitHub
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

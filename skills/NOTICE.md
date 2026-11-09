@@ -1,41 +1,25 @@
-# NOTICE · 上游版权与许可声明
+# NOTICE · Upstream Copyright and Licenses
 
-本目录是 **Max 的技能库**：技能全文按“有许可声明才镜像”的原则策展。
-镜像部分的 upstream 归属如下，版权与许可随原文保留：
+Skills in this repository retain their original attribution and license notices.
 
 - **Auto-claude-code-research-in-sleep (ARIS)**
-  https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep
-  Copyright (c) 2026 wanshuiyin, MIT License.（87 个科研技能）
+  <https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep>
+  Copyright (c) 2026 wanshuiyin, MIT License.
 - **crawl4ai-skill** — Copyright (c) Lancelin, MIT-0 License.
-- **excel-formula** — MIT License（upstream frontmatter 声明，作者未署名）。
-- **Orchestra Research · AI-Research-SKILLs 1.4.0**（策展子集 12 个）
-  https://www.npmjs.com/package/@orchestra-research/ai-research-skills
-  Copyright (c) 2025 Claude AI Research Skills Contributors, MIT License（以仓库 LICENSE 文件为准）。
-  许可证据不一致已在 `../docs/TRANSPARENCY_LOG.md` 记录：README 徽章与 LICENSE 文件为 MIT，
-  而 package.json 的 `license` 字段为 ISC；本仓库依 LICENSE 文件镜像并保留本署名。
-- **自研技能（7 个）** — academic-paper-narrative、research-integrity-pipeline、
-  skill-evolution-manager、patent-disclosure-drafter、remote-sensing-workbench、
-  data-profile-and-plot、lit-reading-assignment；
-  Copyright (c) 2026 Thats-me contributors, MIT License。
-  其中 patent-disclosure-drafter 的流程思想借鉴 `handsomestWei/patent-disclosure-skill`，文本为自研；
-  公开版已移除私有仓库路径引用与内部角色名。
+- **excel-formula** — MIT License, as declared in the upstream metadata.
+- **Orchestra Research · AI-Research-SKILLs 1.4.0**
+  <https://www.npmjs.com/package/@orchestra-research/ai-research-skills>
+  Copyright (c) 2025 Claude AI Research Skills Contributors. The upstream evidence contains a license inconsistency: its README and LICENSE say MIT, while `package.json` says ISC. This repository preserves the upstream LICENSE and records the inconsistency in [`TRANSPARENCY_LOG.md`](../docs/TRANSPARENCY_LOG.md).
+- **Seven original research skills** — `academic-paper-narrative`, `research-integrity-pipeline`, `skill-evolution-manager`, `patent-disclosure-drafter`, `remote-sensing-workbench`, `data-profile-and-plot`, and `lit-reading-assignment`; Copyright (c) 2026 Thats-me contributors, MIT License.
 
-MIT / MIT-0 许可全文见各上游仓库。本仓库对上游内容仅做：
-策展、镜像（逐字保留 SKILL.md 原文）、中文导读（路由表/清单），
-并在部分技能文末追加"环境适配"附注段（声明支持文件源目录解析方式）；
-追加段以注释性说明形式存在，不改变上游指令语义。
+The full permissions are defined by each upstream license. Added English guidance and environment-adaptation notes are explanatory and do not change the upstream instructions.
 
-## 未镜像技能（只列名，不镜像全文）
+## Skills listed but not mirrored
 
-21 个本地存在的技能**不**进入本目录，原因见 `../docs/TRANSPARENCY_LOG.md` 第 5 节：
-16 个上游未声明许可（公开再分发授权不明）、2 个平台内部技能、3 个厂商技能。
-它们在 `../clone-kit/MANIFEST.json` 中以 `mirrored: false` 标记并附原因。
+Twenty-one local skills are listed in [`MANIFEST.json`](../clone-kit/MANIFEST.json) with `mirrored: false`: sixteen lacked clear redistribution permission, two were platform-internal, and three were duplicates. Details are recorded in [`TRANSPARENCY_LOG.md`](../docs/TRANSPARENCY_LOG.md).
 
-## 平台安装状态差异
+## Platform installation status
 
-其中 3 个技能（deepxiv、paper-compile、paper-poster-html）在作者的平台注册中被安全扫描器
-拦截而未安装；镜像全文仅供本地自行审查使用。详见 `../docs/TRANSPARENCY_LOG.md`。
+Three mirrored skills—`deepxiv`, `paper-compile`, and `paper-poster-html`—were blocked by a platform security scanner and were not installed there. Their source remains available for local review. See [`BLOCKED_NOTE.md`](BLOCKED_NOTE.md).
 
-## 快照
-
-镜像快照日期：2026-11-06；清单与版本见 `../clone-kit/MANIFEST.json`。
+Last reviewed: 2026-11-06. The authoritative inventory is [`MANIFEST.json`](../clone-kit/MANIFEST.json).

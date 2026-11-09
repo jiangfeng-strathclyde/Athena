@@ -1,6 +1,6 @@
 ---
 name: formula-derivation
-description: Structures and derives research formulas when the user wants to 推导公式, build a theory line, organize assumptions, turn scattered equations into a coherent derivation, or rewrite theory notes into a paper-ready formula document. Use when the derivation target is not yet fully fixed, the main object still needs to be chosen, or the user needs a coherent derivation package rather than a finished theorem proof.
+description: Structures and derives research formulas when the user wants to Indication Formula, build a theory line, organize assumptions, turn scattered equations into a coherent derivation, or rewrite theory notes into a paper-ready formula document. Use when the derivation target is not yet fully fixed, the main object still needs to be chosen, or the user needs a coherent derivation package rather than a finished theorem proof.
 argument-hint: "[problem-goal-current-formulas-or-notes]"
 allowed-tools: Read, Write, Edit, Grep, Glob, Skill(lean-formalize)
 ---
@@ -250,11 +250,11 @@ Write:
 ## Relationship to `proof-writer`
 
 Use `formula-derivation` when the user says things like:
-- “我不知道怎么起这条推导主线”
-- “这个公式到底该从哪个量出发”
-- “帮我把理论搭顺”
-- “把说明文档变成可写进论文的公式文档”
-- “这几段公式之间逻辑不通”
+- “I don't know how to get up this lead line.”
+- “What is the point of departure for this formula?”
+- “Help me with the theory.”
+- “Turn the narrative document into a formula document that can be written into the paper”
+- “There's no logic between these formulas.”
 
 Use `proof-writer` only after:
 - the exact claim is fixed
@@ -284,7 +284,6 @@ After writing the target derivation file, respond briefly with:
 - If uncertainty remains, mark it explicitly in `Open Risks`; do not hide it in polished prose.
 - Coherence matters more than elegance.
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

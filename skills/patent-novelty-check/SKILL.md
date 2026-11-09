@@ -1,6 +1,6 @@
 ---
 name: patent-novelty-check
-description: "Assess patent novelty and non-obviousness against prior art. Use when user says \"专利查新\", \"patent novelty\", \"可专利性评估\", \"patentability check\", or wants to evaluate if an invention is patentable."
+description: "Assess patent novelty and non-obviousness against prior art. Use when user says \"Patent search.\", \"patent novelty\", \"Patent assessment\", \"patentability check\", or wants to evaluate if an invention is patentable."
 argument-hint: "[invention-description-or-brief-path]"
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, WebSearch, WebFetch, mcp__codex__codex, mcp__antigravity__antigravity, mcp__antigravity__antigravity-reply, mcp__grok__grok, mcp__grok__grok-reply, mcp__claude-review__review, mcp__claude-review__review_reply, mcp__claude-review__review_start, mcp__claude-review__review_reply_start, mcp__claude-review__review_status
 ---
@@ -120,8 +120,8 @@ For each target jurisdiction, provide a patentability assessment:
 - Non-obviousness: PASS / FAIL (cite combination if fail)
 
 **Under Article 22 CN Patent Law (CN)**:
-- 新颖性 (Novelty): 通过 / 未通过
-- 创造性 (Inventive Step): 通过 / 未通过
+- Newity. (Novelty): Pass. / Not adopted
+- Creativity. (Inventive Step): Pass. / Not adopted
 
 **Under Article 54/56 EPC (EP)**:
 - Novelty: PASS / FAIL
@@ -165,7 +165,6 @@ Write `patent/NOVELTY_ASSESSMENT.md`:
 - The assessment is advisory only -- actual prosecution may reveal different prior art.
 - If the selected reviewer is unavailable, record `REVIEW_UNAVAILABLE`; continue only as an explicitly unreviewed draft, without switching providers.
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

@@ -1,6 +1,6 @@
 ---
 name: claims-drafting
-description: "Draft patent claims for an invention. Use when user says \"撰写权利要求\", \"draft claims\", \"写权利要求书\", \"claim drafting\", or wants to create patent claims. The core skill of the patent pipeline."
+description: "Draft patent claims for an invention. Use when user says \"Writing of claims\", \"draft claims\", \"Write a statement of claim.\", \"claim drafting\", or wants to create patent claims. The core skill of the patent pipeline."
 argument-hint: "[invention-disclosure-path]"
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, WebSearch, WebFetch, mcp__codex__codex, mcp__codex__codex-reply, mcp__antigravity__antigravity, mcp__antigravity__antigravity-reply, mcp__grok__grok, mcp__grok__grok-reply, mcp__claude-review__review, mcp__claude-review__review_reply, mcp__claude-review__review_start, mcp__claude-review__review_reply_start, mcp__claude-review__review_status
 ---
@@ -27,9 +27,9 @@ This is the most critical skill in the patent pipeline. Claims define the legal 
 - `REVIEWER_MODEL = gpt-6-astra` — External examiner for claim quality review
 - `MAX_CLAIM_REVISION_ROUNDS = 3` — Maximum revision iterations
 - `CLAIM_STYLE = "auto"` — `US` (Jepson or open), `EP` (two-part mandatory), `CN` (two-part), `auto` (detect from jurisdiction)
-- `MIN_INDEPENDENT_CLAIMS = 2` — Typically method + system. For utility model (实用新型): apparatus/device only, NO method claims.
+- `MIN_INDEPENDENT_CLAIMS = 2` — Typically method + system. For utility model (A new type of practicality.): apparatus/device only, NO method claims.
 - `MAX_TOTAL_CLAIMS = 20` — Practical limit (USPTO includes 20 in base fee)
-- `PATENT_TYPE = "invention"` — `invention` (发明专利) or `utility_model` (实用新型, apparatus claims only)
+- `PATENT_TYPE = "invention"` — `invention` (Patents for inventions) or `utility_model` (A new type of practicality., apparatus claims only)
 
 ## Inputs
 
@@ -41,7 +41,7 @@ This is the most critical skill in the patent pipeline. Claims define the legal 
 ## Shared References
 
 Load `../shared-references/patent-writing-principles.md` for claim drafting principles, antecedent basis rules, and common pitfalls.
-Load `../shared-references/patent-format-cn.md` for CN claim format (其特征在于).
+Load `../shared-references/patent-format-cn.md` for CN claim format (It's characterized by...).
 Load `../shared-references/patent-format-us.md` for US claim format (comprising, means-plus-function).
 Load `../shared-references/patent-format-ep.md` for EP two-part form (characterised in that).
 
@@ -51,17 +51,17 @@ Load `../shared-references/patent-format-ep.md` for EP two-part form (characteri
 
 Based on patent type and jurisdiction:
 
-**If `PATENT_TYPE = utility_model` (实用新型)**:
+**If `PATENT_TYPE = utility_model` (A new type of practicality.)**:
 - CN jurisdiction ONLY
 - Apparatus/device claims ONLY — no method, no product-by-process
 - `MIN_INDEPENDENT_CLAIMS = 1` (single apparatus claim is sufficient)
-- Claim format: "1. 一种[主题]，其特征在于，包括：[组件描述]。"
+- Claim format: "1. One.[Theme]，Its characteristics include:[Component Description]。"
 
 Based on target jurisdiction:
 
 | Jurisdiction | Claim Style | Characterising Phrase | Preamble Format |
 |-------------|------------|----------------------|-----------------|
-| CN | Two-part (两部式) | 其特征在于 | 一种...的方法/装置，包括： |
+| CN | Two-part (Two-part formula) | It's characterized by... | One....The method./Devices, including: |
 | US | Open (preferred) | comprising | A method for..., comprising: |
 | EP | Two-part (mandatory) | characterised in that | A method for..., comprising [known], characterised in that [inventive] |
 | ALL | Draft CN + US + EP | All of the above | All of the above |
@@ -78,8 +78,8 @@ Based on target jurisdiction:
 **CRITICAL — No empirical content in claims:**
 - Claims describe ONLY structural features or method steps
 - Do NOT include signal characteristics, detection principles, measurement results
-- WRONG: "产生负脉冲信号" / "谐振频率下降" — these are results, not features
-- RIGHT: "所述开口谐振环的开口处形成用于检测通过流体中颗粒物的间隙传感区域"
+- WRONG: "It's creating a negative pulse signal." / "Reconciling down frequency." — these are results, not features
+- RIGHT: "The opening of the said opening resonance ring forms a gap zone for detecting particulate matter via fluids."
 
 For each claim category identified in INVENTION_DISCLOSURE.md:
 
@@ -87,10 +87,10 @@ For each claim category identified in INVENTION_DISCLOSURE.md:
 1. Start with preamble identifying the category and purpose
 2. List the core inventive features (from the "Core Inventive Concept" section)
 3. Include enough known features for context (but not more than necessary)
-4. Use open transition ("comprising" / "包括")
+4. Use open transition ("comprising" / "Including")
 5. Each element should be separated by semicolons or on separate lines
 6. Apply jurisdiction-specific format:
-   - CN: 前序部分 + "其特征在于" + 特征部分
+   - CN: Preface + "It's characterized by..." + Characteristics Section
    - US: Preamble + "comprising:" + elements
    - EP: Preamble + known features + "characterised in that" + inventive features
 
@@ -119,7 +119,7 @@ For each independent claim, draft 5-10 dependent claims that:
 4. **Cover alternatives**: Different ways to achieve the same inventive result
 
 **Dependent claim format**:
-- CN: "根据权利要求X所述的[主题]，其特征在于，所述[特征]具体为..."
+- CN: "On the basis of the claimXDescription[Theme]，It's characterized by what it says.[Features]Specifically,..."
 - US: "The [method/system] of claim X, wherein the [element] comprises [limitation]."
 - EP: "The [method/system] according to claim X, characterised in that [limitation]."
 
@@ -239,7 +239,6 @@ Write `patent/CLAIMS.md`:
 - If drafting for ALL jurisdictions, produce separate claim sets for CN, US, and EP.
 - If the selected reviewer is unavailable, record `REVIEW_UNAVAILABLE`; continue only as an explicitly unreviewed draft, without switching providers.
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

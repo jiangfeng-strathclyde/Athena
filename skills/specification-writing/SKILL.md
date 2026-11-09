@@ -1,6 +1,6 @@
 ---
 name: specification-writing
-description: "Write the full patent specification from claims and invention disclosure. Use when user says \"撰写说明书\", \"write specification\", \"写说明书\", \"patent description\", or wants to draft the complete patent specification."
+description: "Write the full patent specification from claims and invention disclosure. Use when user says \"Writing notes\", \"write specification\", \"Write instructions.\", \"patent description\", or wants to draft the complete patent specification."
 argument-hint: "[claims-path]"
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, Skill, WebSearch, WebFetch, mcp__codex__codex, mcp__codex__codex-reply, mcp__antigravity__antigravity, mcp__antigravity__antigravity-reply, mcp__grok__grok, mcp__grok__grok-reply, mcp__claude-review__review, mcp__claude-review__review_reply, mcp__claude-review__review_start, mcp__claude-review__review_reply_start, mcp__claude-review__review_status
 ---
@@ -59,21 +59,21 @@ patent/specification/
 └── abstract.md
 ```
 
-### Step 2: Write Title (发明名称)
+### Step 2: Write Title (Invent Name)
 
 - Must match the broadest claim scope
 - No trademarks, no "improved" or "new" or "novel"
-- CN format: "一种[领域]的[技术主题]" or "[领域]的[技术主题]装置"
+- English format: "A [technical theme] method for [application area]" or "A [technical theme] device for [application area]."
 - US/EP format: "[Technical topic] for [purpose]" or "[Technical topic] and method thereof"
 - Keep concise (CN: typically under 25 characters; US: under 500 characters)
 
-### Step 3: Write Technical Field (技术领域)
+### Step 3: Write Technical Field (Technical areas)
 
 1-2 paragraphs identifying the technical domain:
 - "The present invention relates to [broad field], and more particularly to [specific area]."
-- CN: "本发明涉及[技术领域]，具体涉及[具体领域]。"
+- CN: "This invention involves...[Technical areas]，Specific reference[Specific areas]。"
 
-### Step 4: Write Background (背景技术)
+### Step 4: Write Background (Background technology)
 
 This is NOT a literature review. It directly sets up the problem.
 
@@ -84,30 +84,30 @@ Structure:
 4. DO NOT admit the prior art is "superior" or "better"
 5. DO NOT cite specific patent numbers unless they are known prior art (citations go in IDS for US, or Background section for CN)
 
-CN format: "背景技术" section describing existing technology and its shortcomings.
+CN format: "Background technology" section describing existing technology and its shortcomings.
 
-### Step 5: Write Summary (发明内容)
+### Step 5: Write Summary (Invent Contents)
 
 Three parts, directly mirroring INVENTION_DISCLOSURE.md:
 
-**Technical Problem (要解决的技术问题)**:
+**Technical Problem (Technical problems to be solved)**:
 - State the problem derived from background deficiencies
-- CN: "本发明要解决的技术问题是..."
+- CN: "The technical problem this invention has to solve...."
 
-**Technical Solution (技术方案)**:
+**Technical Solution (Technical programmes)**:
 - Describe how the invention solves the problem
 - Must provide support for ALL claim elements
 - Start from the broadest claim and describe the core inventive concept
-- CN: "为解决上述技术问题，本发明采用的技术方案是：..."
-- **NO formulas, NO mathematical derivations, NO circuit models** — these belong in 具体实施方式, not 发明内容
+- CN: "In order to address the above-mentioned technology issues, the technology options used in this invention are:..."
+- **NO formulas, NO mathematical derivations, NO circuit models** — these belong in Modalities of implementation, not Invent Contents
 
-**Advantages (有益效果)**:
+**Advantages (Useful effects)**:
 - Benefits derived from the structural/technical features (qualitative reasoning)
-- CN: "本发明的有益效果是：..."
+- CN: "The beneficial effects of this invention are:..."
 - **NO specific numerical results** (e.g., "detection limit 70μm", "response time 105ms") — these are experimental findings, not invention properties
-- Frame advantages structurally: "由于采用了...结构，因此具有...效果"
+- Frame advantages structurally: "As a result of the adoption...Structure, and therefore have...Effect"
 
-### Step 6: Write Brief Description of Drawings (附图说明)
+### Step 6: Write Brief Description of Drawings (Annotations to the figure)
 
 Invoke `/figure-description` as a sub-skill if user has provided figures:
 ```
@@ -117,10 +117,10 @@ Invoke `/figure-description` as a sub-skill if user has provided figures:
 If no user figures, describe what figures should exist based on the claims.
 
 Format:
-- CN: "图1是...的示意图；图2是...的流程图；"
+- CN: "Figure1Yes....schematic chart;2Yes....flowcharts;"
 - US: "FIG. 1 is a block diagram showing...; FIG. 2 is a flowchart illustrating..."
 
-### Step 7: Write Detailed Description (具体实施方式)
+### Step 7: Write Detailed Description (Modalities of implementation)
 
 Invoke `/embodiment-description` as a sub-skill:
 ```
@@ -133,7 +133,7 @@ This section must:
 - Support every claim element with explicit description
 - Include variations and alternatives for broader claim interpretation
 
-### Step 8: Write Abstract (摘要)
+### Step 8: Write Abstract (Summary)
 
 Jurisdiction-specific word limits:
 
@@ -223,7 +223,6 @@ Summary file: `patent/specification/SPECIFICATION_INDEX.md` with:
 - Large file handling: if a Write operation fails, retry with Bash `cat <<'EOF'` heredoc.
 - If the selected reviewer is unavailable, record `REVIEW_UNAVAILABLE`; continue only as an explicitly unreviewed draft, without switching providers.
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

@@ -2,34 +2,33 @@
 license: MIT
 name: my-skill-name
 description: >-
-  一句话说清“什么时候用我”：任务类型 + 触发词示例。
-  例：当用户需要 <做某类事> 时使用；触发词包括“<词1>”“<词2>”。
+  Let's get one thing straight.“When will you use me?”：Task Type + Example of trigger word. Example: When user needs <Do something like that.> when using;trigger words including“<Words1>”“<Words2>”。
 version: 0.1.0
 ---
 
-# <技能显示名>
+# <Skills Display Name>
 
-## 触发场景
+## Trigger scene
 
-- <场景 1：用户会怎么说>
-- <场景 2>
+- <Scene 1：What would the user say?>
+- <Scene 2>
 
-## 流程（按顺序，不可跳步）
+## Process (in order, no skipping)
 
-1. <第一步：先确认什么/声明什么>
-2. <第二步：做什么，产出什么>
-3. <第三步：如何校验/交付>
+1. <Step one: confirmation of what first/What's the statement?>
+2. <Step 2: What to do, what to produce>
+3. <Step 3: How to verify/Delivery>
 
-## 输出物
+## Output
 
-- <文件/清单/图/报告>
+- <Documentation/List/Figure/Report>
 
-## 红线
+## Red Line
 
-- 不虚构结果；找不到证据就说找不到；
-- <本技能特有的红线，如口径、许可、隐私边界>；
-- 涉及昂贵计算或外部付费 API 时，先报代价再等用户点单。
+- (b) Unconstructive results; no evidence can be found and no evidence can be found;
+- <Red threads specific to this skill, e.g. calibre, permission, privacy boundaries>；
+- Involve expensive calculations or external payments API When you pay the price, you wait for the user list.
 
-## 协作技能
+## Collaborative skills
 
-- <上游技能名>（做什么）· <下游技能名>（做什么）
+- <Upstream Skill Name>（What are you doing?· <Downstream Skill Name>（What are you doing?

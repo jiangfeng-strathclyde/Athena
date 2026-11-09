@@ -1,13 +1,13 @@
 ---
 name: qzcli
-description: Manage GPU compute jobs on the Qizhi (启智) platform using qzcli — a kubectl-style CLI tool. Use when user says "qzcli", "启智平台", "submit job", "stop job", "查计算组", "avail", "list jobs", "batch submit", or needs to manage distributed training jobs on a Qizhi instance.
+description: Manage GPU compute jobs on the Qizhi (Xinji!) platform using qzcli — a kubectl-style CLI tool. Use when user says "qzcli", "Platform for enlightenment", "submit job", "stop job", "Check Calculator", "avail", "list jobs", "batch submit", or needs to manage distributed training jobs on a Qizhi instance.
 argument-hint: "[login|avail|list|create|stop <job-id>|batch|status|watch]"
 allowed-tools: Bash(*), Read, Write
 ---
 
-# qzcli — 启智平台任务管理
+# qzcli — Mission management of the enlightenment platform
 
-A kubectl/docker-style CLI for managing GPU compute jobs on the Qizhi (启智) platform.
+A kubectl/docker-style CLI for managing GPU compute jobs on the Qizhi (Xinji!) platform.
 
 **GitHub:** [tianyilt/qzcli_tool](https://github.com/tianyilt/qzcli_tool)
 
@@ -316,14 +316,13 @@ qzcli ws -p "My Project"
 | Problem | Cause | Fix |
 |---------|-------|-----|
 | Cookie expired | Session gap | Re-run `qzcli login` |
-| `未找到名称为 'xxx' 的工作空间` | Stale cache | Run `qzcli res -u` |
+| `No name found 'xxx' Workspace` | Stale cache | Run `qzcli res -u` |
 | No resources in `create -i` | Cache empty | Run `qzcli login && qzcli res -u` |
 | `qzcli-mcp` not found | Not installed | `cd qzcli_tool && pip install -e .` |
 | Spec not in workspace | ID mismatch | Match spec ID to the correct workspace |
 | Silent job failure | Script `sys.exit(0)` | Check job logs directly |
 | zsh glob errors | Remote shell is zsh | Wrap commands in `bash -c` or use Python |
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

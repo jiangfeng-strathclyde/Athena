@@ -1,6 +1,6 @@
 ---
 name: proof-writer
-description: Writes rigorous mathematical proofs for ML/AI theory. Use when asked to prove a theorem, lemma, proposition, or corollary, fill in missing proof steps, formalize a proof sketch, 补全证明, 写证明, 证明某个命题, or determine whether a claimed proof can actually be completed under the stated assumptions.
+description: Writes rigorous mathematical proofs for ML/AI theory. Use when asked to prove a theorem, lemma, proposition, or corollary, fill in missing proof steps, formalize a proof sketch, Completing the certificate., Write the proof., Prove something., or determine whether a claimed proof can actually be completed under the stated assumptions.
 argument-hint: "[theorem-statement-and-assumptions]"
 allowed-tools: Read, Write, Edit, Grep, Glob, Skill(lean-formalize)
 ---
@@ -235,7 +235,6 @@ After writing the target proof file, respond briefly with:
 - If uncertainty remains, mark it explicitly in `Open Risks`; do not hide it inside polished prose.
 - Correctness matters more than brevity.
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

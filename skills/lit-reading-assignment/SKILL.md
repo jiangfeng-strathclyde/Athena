@@ -2,60 +2,57 @@
 license: MIT
 name: lit-reading-assignment
 description: >-
-  为学生/团队生成可直接使用的文献精读清单：完整可检索书目（标题/作者/venue/年份/DOI）、
-  按主题分组、标注阅读优先级、说明每篇“读什么、与项目的关系”与建议阅读顺序。
-  当用户（老师/组长）要布置精读任务、组会书单、入门路线时使用。
+  For the students./Team generation of directly usable bibliography list: complete searchable bibliography (titles)/Author/venue/Year/DOI）、
+  Grouping by theme, priority reading, description of each“What's it about? What's it got to do with the project?”Read in order with the recommendation./The team leader is required to prepare a list of reading tasks, group books, and an entry route.
 version: 1.0.0
 ---
 
-# Literature Reading Assignment（精读清单生成）
+# Literature Reading Assignment（Exact List Generation)
 
-## 触发场景
+## Trigger scene
 
-- “给学生布置这几周的精读”“组会书单”“给新人一个入门路线”；
-- 需要把一堆文献整理成“可直接执行”的阅读任务，而不是丢一个 Zotero 库。
+- “I'll set up a few weeks of reading for the students.”“Group Books”“Give the newcomer an introduction route.”；
+- There's a lot of paperwork that needs to be sorted out.“Directly enforceable”...the task of reading, not losing one. Zotero Coop.
 
-## 输入
+## Input
 
-- 主题或项目背景（一句话即可）；
-- 读者层级（本科毕设 / 硕士一年级 / 博士 / 合作者）与可用周数；
-- 可选：已有候选文献列表、目标期刊/会议范围。
+- Theme or project background (one sentence sufficient);
+- Reader ' s Level (HBO) / Master ' s first grade / Doctor. / (a) The number of weeks available;
+- Optional: List of candidates, target periodicals available/Scope of the meeting.
 
-## 流程
+## Process
 
-1. **检索**：`research-lit` / `arxiv` / `semantic-scholar` / `openalex` 拉候选（≥20 篇）；
-2. **书目核验**：逐条在线核 DOI/作者/年份/venue（轻量版 `citation-audit`）；
-   核不到的标 UNCERTAIN 并换源重试，**绝不编 DOI**；
-3. **分组与优先级**：按主题分 3–5 组；每组内标 必读 / 选读 / 泛读，并给一句理由；
-4. **每篇三问**：读什么（方法/数据集/结论哪一部分）、与项目的关系（支撑哪一环）、
-   读时带着的 3 个问题（防止泛读）；
-5. **排序**：给出建议阅读顺序（先综述后方法、先基线后 SOTA），并估每篇耗时；
-6. **交付**：单文件清单，学生无需再问即可开始。
+1. **Search**：`research-lit` / `arxiv` / `semantic-scholar` / `openalex` Draws out candidatures (%)≥20 (b) Books;
+2. **Bibliographic verification**：Line-by-line Nuclear DOI/Author/Year/venue（Lighter version `citation-audit`）；
+   Unrecognizable markers UNCERTAIN And retrying with a new source.**I'll never make it up. DOI**；
+3. **Grouping and Priority**：By theme 3–5 groups;headings per group have to be read / Select to read / (b) A general reading and a statement of reasons;
+4. **All three questions.**：Read what?/Datasets/Which part of the conclusions, what relationship to the project (which ring it supports), what it's reading with it. 3 Question (prevention of general reading);
+5. **Sort**：Suggested order of reading (summation of methodology, baseline) SOTA），And it's time-consuming to estimate each one.
+6. **Delivery**：A single list of documents can be opened without further questions from students.
 
-## 输出模板
+## Output Template
 
 ```markdown
-# <主题> 精读清单（<层级> · <周数>）
-## 组 1 · <主题组名>
-### [必读] <标题>
-- 书目：<作者> , <venue> <年份> , DOI: <doi>
-- 读什么：<方法/数据/结论的具体部分>
-- 与项目关系：<支撑哪一环>
-- 带着问题读：1) ... 2) ... 3) ...
-- 预计耗时：<h>
+# <Theme> Exact List (List)<Level> · <Weeks>）
+## Group 1 · <Theme Group Name>
+### [I'll read it.] <Title>
+- Bibliography:<Author> , <venue> <Year> , DOI: <doi>
+- Read what?<Methodology/Data/Specific part of the conclusions>
+- Relationship to project:<Hold on to that ring.>
+- Read it with questions:1) ... 2) ... 3) ...
+- Projected time-consuming:<h>
 ...
-## 建议顺序与周计划
-第 1 周：...；第 2 周：...
+## Recommended order and weekly plan
+
+Week 1: establish the reading list and assign foundational papers. Week 2: compare methods, evidence, and open questions.
 ```
 
-## 红线
+## Red Line
 
-- 书目必须可检索：标题/作者/venue/年份/DOI 齐全且核验过；
-- 优先级与“读什么”必须给理由，不写空话（如“很重要”）；
-- 不塞入与主题弱相关的凑数文献；宁少勿滥；
-- 涉及在审/未发表工作时只给公开版本引用，不泄露内部稿信息。
+- Bibliography must be searchable: title/Author/venue/Year/DOI Full and verified;
+- Priority versus“Read what?”There must be a reason not to write empty words (e.g.“It's important.”）；
+- (b) Do not insert a collection of literature related to the weak theme; prefer not to abuse it;
+- In connection with the ongoing trial/When not working, only public versions are quoted and no internal text information is disclosed.
 
-## 协作技能
-
-检索 `research-lit`、`semantic-scholar`、`openalex`；核验 `citation-audit`；
-综述写法 `comm-lit-review` / `research-lit`；知识库沉淀 `research-wiki`。
+## Collaborative skills Retrieval `research-lit`、`semantic-scholar`、`openalex`；Verification `citation-audit`；
+Overview `comm-lit-review` / `research-lit`；The knowledge base settles. `research-wiki`。

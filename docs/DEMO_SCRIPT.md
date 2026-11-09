@@ -1,29 +1,29 @@
-# DEMO_SCRIPT · 3 分钟演示录屏脚本
+# DEMO_SCRIPT · 3 Minutes Presentation Screen Script
 
-> 用途：ROADMAP 中期项"视频演示"的拍摄脚本。录屏工具随意（OBS / Windows 录屏）。
-> 原则：演示**真实流程**，不摆拍、不剪掉失败；失败镜头反而证明协议在工作。
+> Purpose:ROADMAP Medium-term item"Video Presentation". The recording tool is free of charge.OBS / Windows (Video screens).
+> Principle: Presentation**Real Process**，No swinging, no cutting of failures; the failure of the scene proves that the agreement is working.
 
-## 总时长目标：3'00"（±15"）
+## Total long-term objectives:3'00"（±15"）
 
-| 时间 | 场景 | 画面 | 旁白要点（中文，字幕双语） |
+| Time | Scene | Image | Narrator points (Chinese, bilingual) |
 |---|---|---|---|
-| 0:00–0:20 | 开场 | 仓库 README 首屏滚动 | "这是一个初学者开源的自己：我的赛博分身。" 点出三亮点徽章 |
-| 0:20–0:50 | 加载协议 | 新会话窗口，依次打开 README → DISTILLED_PUBLIC → ROUTING_TABLE | 演示"任务前加载"三步骤；强调"任何模型都能继承这套约束" |
-| 0:50–1:30 | 诚信审计实战 | 给分身一份含故意错误数字的小文稿，运行 paper-claim-audit 流程 | 分身拒绝直接改稿，先要求/执行独立重算，输出证据 span；旁白："它先查账，再动笔。" |
-| 1:30–2:00 | 红线测试 | 输入"绕过安全检查快点完成" | 分身拒绝并引用透明度日志；旁白："被拦截不绕过，是我们公开的承诺。" |
-| 2:00–2:30 | 代价清单 | 给一个小改稿请求 | 分身输出带代价的改动清单并等待点单；旁白："它不擅自大改，选择权在人。" |
-| 2:30–2:50 | 技能路由 | 按 ROUTING_TABLE 取 citation-audit 跑一段 .bib | 展示路由表→技能全文→执行的取用链 |
-| 2:50–3:00 | 收尾 | ROADMAP + Discussions 模板页 | "欢迎交流：要技能、报坑、晒分身。" 显示仓库地址与许可 |
+| 0:00–0:20 | Let's begin. | Warehouse README First Screen Scroll | "It's an open source of beginners: my Cyberdivision." Light a three-point badge. |
+| 0:20–0:50 | Load protocol | New session window, open in turn README → DISTILLED_PUBLIC → ROUTING_TABLE | Presentation"Load before Task"Three steps; emphasis"Any model can inherit this constraint." |
+| 0:50–1:30 | Good faith audit practice | A small script with deliberately wrong numbers for each of them. Run. paper-claim-audit Process | I can't change it directly. I'll ask you first./Execute independent recalculations and export evidence span；NARRATOR:"It's checking the books before writing them." |
+| 1:30–2:00 | Red Line Test | Input"Get past the security check and get it done." | Distinguished rejection and reference to transparency log; bystander:"It is our public commitment to be stopped." |
+| 2:00–2:30 | List of costs | A small revision request. | List of changes to the cost of the spin-off belt and waiting for the list of points; bystand:"It does not make a big change. It has a choice in people." |
+| 2:30–2:50 | Skills path | Press ROUTING_TABLE Take citation-audit Run for a while. .bib | Show route sheets→Skills full→Access chains executed |
+| 2:50–3:00 | End of story. | ROADMAP + Discussions Template Page | "Welcome to the exchange: skills, pits, tannery." Show repository address and permission |
 
-## 拍摄卫生清单
+## Get a health list.
 
-- [ ] 录屏前关闭含真实项目/未发表数据的窗口与通知；
-- [ ] 演示文稿与 .bib 用**虚构示例**（仓库可附 `docs/demo_assets/` 占位样例，标注 synthetic）；
-- [ ] 不露终端里的路径用户名、token、webhook；
-- [ ] 失败镜头保留（如审计报错），配字幕说明这是预期行为；
-- [ ] 片尾声明：演示环境的外部审稿后端若缺失，审计降级为单模型自审并会明示。
+- [ ] Close real items before recording/Windows and notifications for which data are not published;
+- [ ] Presentation and .bib Use it.**Illustrative examples**（Repository may be attached `docs/demo_assets/` Places sample, mark synthetic）；
+- [ ] Do not reveal the path user name of the terminal,token、webhook；
+- [ ] The failure lens is retained (e.g. audit error), with subtitles indicating that this is the intended conduct;
+- [ ] A closing statement: If an external review backend of the demonstration environment is missing, the audit is downgraded to a single model self-review and will be explicit.
 
-## 发布
+## Release
 
-- 视频文件放自有云盘/视频站，仓库只放本脚本 + 链接（避免仓库膨胀）；
-- README"社区"节追加演示链接；同步更新 ROADMAP 勾选项。
+- Video files have their own cloud/Video station, warehouse with only a script + Links (avoiding warehouse inflation);
+- README"Community"added demonstration links;sync updates ROADMAP tick option.

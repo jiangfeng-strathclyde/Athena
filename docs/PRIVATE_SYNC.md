@@ -1,39 +1,38 @@
-# PRIVATE_SYNC · 私有分身 ↔ 公开手册 的同步协议
+# PRIVATE_SYNC · Private parties ↔ Synchronization protocol for the public manual
 
-> 私有副本（含记忆与项目事实）只存作者本地；公开版只承载**可迁移的方法论与红线**。
-> 本文件规定两者如何保持“该一致的一致、该隔离的隔离”。
+> Private copies (including memory and project facts) are stored only locally by the author; public versions only carry**Migrationable Methods and Red Lines**。
+> This document sets out how they should be maintained.“The unity, the isolation.”。
 
-## 触发时机
+## Trigger timing
 
-- 私有蒸馏手册（`D:\Max分身\docs\MAX_DISTILLED.md`）发生变更后；
-- 公开版 `docs/DISTILLED_PUBLIC.md` 被修订后；
-- 每月第一个周一，与上游同步 batching 一起跑。
+- When the private distilled guide changes, review it for public-safe methodological updates without copying private paths, facts, or memory.
+- Open `docs/DISTILLED_PUBLIC.md` Amended;
+- First Monday of the month, synchronized with upstream. batching Run together.
 
-## 步骤
+## Steps
 
-1. 跑漂移检查（只输出计数与归属侧，不把私有内容写进仓库）：
+1. Run drift inspection (output count and belonging only, without writing private contents into the warehouse):
 
    ```bash
    python scripts/private_sync_diff.py
    ```
 
-2. 对 `only-private` 逐条判定（注意：比对为**逐字匹配**，公开版改写过的条目会同时出现在
-   两侧清单里，需人工识别为“已迁移但措辞不同”，不算新漂移）：
-   - **可迁移**（通用红线、协作算法、写作约定、方法论链条）→ 改写去身份化后并入公开版对应小节；
-   - **不可迁移**（项目事实、口径细节、证据缺口、合作者信息）→ 不动，留在私有版；
-3. 对 `only-public` 逐条判定：是否已被私有版废弃；废弃则从公开版删除并在透明度日志记一行；
-4. 公开版改动后：重跑 `scripts/check_repo_consistency.py` 与 `docs/demo_assets/verify_demo.py`；
-5. 私有包重导出（员工包 + 记忆包，排除 secrets），与公开版同日期打快照；
-6. 在本文件“历史”节追加一行：日期 + 两侧 sha + 迁移条数（**不写内容**）。
+2. Yeah. `only-private` Article-by-article determination (Note: match)**Word-by-word matching**，The public rewrite entry will appear on both sides of the list and will need to be manually identified as“Modified with different wording”，Not new drifting:
+   - **Removable**（Universal red lines, collaborative algorithms, writing engagements, methodological links)→ (b) Rewrite de-identification and incorporate it into the public version of the corresponding section;
+   - **Non-movable**（Project facts, calibre details, evidentiary gaps, collaborators ' information)→ Stay still, stay in the private version;
+3. Yeah. `only-public` (b) To decide, article by article, whether it has been abandoned in a private version; to remove it from the public version and to record a line in the transparency log;
+4. Changes to the public version: run again `scripts/check_repo_consistency.py` and `docs/demo_assets/verify_demo.py`；
+5. Private Packer Re-export (staff bag) + Memory packs, excluded. secrets），A snapshot of the same date as the public edition;
+6. In this document“History”Section Add a row: Date + On both sides. sha + Number of migration bars (%)**Do Not Write**）。
 
-## 红线
+## Red Line
 
-- 私有记忆包、密钥、未发表数据、可识别身份信息**永不**进入公开仓库；
-- 漂移检查的输出不得粘贴进仓库文件（它可能含私有表述）；
-- 公开版与私有版冲突时，以私有版为行为准、以公开版为对外承诺准；两者差异必须能被本脚本看见。
+- Private memory bags, keys, unpublished data, identifiable information**Never.**Access to open warehouses;
+- The output of the drift check shall not be pasted into the warehouse file (which may contain private representations);
+- When a public version conflicts with a private version, the private version is used as a standard of conduct and the public version as a standard of external commitment; the difference must be visible in the original script.
 
-## 历史
+## History
 
-| 日期 | private sha | public sha | 迁移条数 | 备注 |
+| Date | private sha | public sha | Number of migration bars | Remarks |
 |---|---|---|---|---|
-| 2026-11-06 | 见当次运行 | 见当次运行 | 0 | 建协议；首跑漂移摘要仅在会话内汇报 |
+| 2026-11-06 | ♪ See the current run ♪ | ♪ See the current run ♪ | 0 | Agreement-building; summary of first-run drifting only reports in session |

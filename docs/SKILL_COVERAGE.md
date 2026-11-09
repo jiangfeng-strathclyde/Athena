@@ -1,24 +1,24 @@
-# SKILL_COVERAGE · 108 个镜像技能覆盖地图
+# SKILL_COVERAGE · 108 A mirror skill to cover maps
 
-> 快照：2026-11-09。许可与署名见 [`../skills/NOTICE.md`](../skills/NOTICE.md)；
-> 只列名不镜像的条目见 [`../clone-kit/SKILL_QUEUE.md`](../clone-kit/SKILL_QUEUE.md)。
+> Snapshot:2026-11-09。Permission and signature [`../skills/NOTICE.md`](../skills/NOTICE.md)；
+> Only non-recorded entries listed are available. [`../clone-kit/SKILL_QUEUE.md`](../clone-kit/SKILL_QUEUE.md)。
 
-## 入门推荐（先玩这 12 个）
+## I'd like to introduce you. 12 (numbers)
 
 `citation-audit`、`paper-claim-audit`、`experiment-audit`、`research-lit`、`arxiv`、`lit-reading-assignment`、`data-profile-and-plot`、`novelty-check`、`paper-plan`、`mermaid-diagram`、`academic-paper-narrative`、`remote-sensing-workbench`
 
-配合 [`START_HERE.md`](START_HERE.md) 的 7 天路线使用。
+Use this table together with the seven-day route in [`START_HERE.md`](START_HERE.md).
 
-## 自研技能（MIT，7）（7）
+## Self-researching skills (in thousands of US dollars)MIT，7）（7）
 
 `academic-paper-narrative`、`data-profile-and-plot`、`lit-reading-assignment`、`patent-disclosure-drafter`
 `remote-sensing-workbench`、`research-integrity-pipeline`、`skill-evolution-manager`
 
-## 社区许可镜像（2）（2）
+## Community-licensed mirrors (circumstances)2）（2）
 
 `crawl4ai-skill`、`excel-formula`
 
-## 科研全流程技能（上游 MIT，87）（87）
+## Scientific and research full-flow skills (upstream) MIT，87）（87）
 
 `ablation-planner`、`alphaxiv`、`analyze-results`、`arxiv`
 `auto-paper-improvement-loop`、`auto-review-loop`、`auto-review-loop-llm`、`auto-review-loop-minimax`
@@ -43,7 +43,7 @@
 `specification-writing`、`system-profile`、`training-check`、`vast-gpu`
 `web-debug-search`、`wiki-enrich`、`writing-systems-papers`
 
-## ML 系统侧策展子集（Orchestra MIT，12）（12）
+## ML System profile subset (System)Orchestra MIT，12）（12）
 
 `brainstorming-research-ideas`、`clip`、`evaluating-llms-harness`、`huggingface-accelerate`
 `ml-paper-writing`、`optimizing-attention-flash`、`peft-fine-tuning`、`segment-anything-model`

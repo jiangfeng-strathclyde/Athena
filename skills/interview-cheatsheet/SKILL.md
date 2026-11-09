@@ -1,7 +1,7 @@
 ---
 name: interview-cheatsheet
-description: "Generate a long-form Chinese interview-prep cheat sheet on a specific ML/LLM topic — formulas with derivations, from-scratch PyTorch code, comparison tables, and 25 高频面试题 (L1 必会 / L2 进阶 / L3 顶级 lab). Use when the user says '写面试 cheat sheet', '写一份 X 教程', '帮我准备 Y 面试题', '出一份 X 速查', or wants a 600-1000 line Chinese tutorial on a specific ML topic."
-argument-hint: '<topic> [--effort balanced|max] [--byline "Name (姓名), Affiliation"] [--commit false]'
+description: "Generate a long-form Chinese interview-prep cheat sheet on a specific ML/LLM topic — formulas with derivations, from-scratch PyTorch code, comparison tables, and 25 High-frequency interview questions (L1 Yes, I will. / L2 Step / L3 Top level lab). Use when the user says 'Write an interview. cheat sheet', 'Write a copy. X Academy', 'Get me ready. Y Interview questions', 'Here's a copy. X Quick check.', or wants a 600-1000 line Chinese tutorial on a specific ML topic."
+argument-hint: '<topic> [--effort balanced|max] [--byline "Name (Name), Affiliation"] [--commit false]'
 allowed-tools: Bash(*), Read, Write, Edit, mcp__codex__codex, mcp__antigravity__antigravity, mcp__antigravity__antigravity-reply, mcp__grok__grok, mcp__grok__grok-reply, mcp__claude-review__review, mcp__claude-review__review_reply, mcp__claude-review__review_start, mcp__claude-review__review_reply_start, mcp__claude-review__review_status
 ---
 
@@ -18,7 +18,7 @@ allowed-tools: Bash(*), Read, Write, Edit, mcp__codex__codex, mcp__antigravity__
 > to reviewer-bearing children. Generation workers are unchanged.
 
 
-Generate one comprehensive Chinese cheat sheet per invocation: formulas + derivations + from-scratch code + 25 高频题. Output passes cross-model math/code review before rendering. **Detect-only by default: never auto-commits.**
+Generate one comprehensive Chinese cheat sheet per invocation: formulas + derivations + from-scratch code + 25 High frequency issues. Output passes cross-model math/code review before rendering. **Detect-only by default: never auto-commits.**
 
 ## Inputs
 
@@ -33,14 +33,14 @@ Generate one comprehensive Chinese cheat sheet per invocation: formulas + deriva
 
 ```
 ## §0 TL;DR — callout intro line + numbered list of 5-7 takeaways
-## §1 直觉 — why this matters; analogy; one-paragraph mental model
-## §2 核心公式 — main formula + derivation (variance / scaling / boundary)
-## §3 实现细节 — 50-80 line from-scratch PyTorch
-## §4-7 变体 / 工程实践 / 常见 bug — variants, comparison tables, footguns
-## §8 复杂度 / 资源 — time + memory complexity
-## §9 与相关方法对比 — placement in the ecosystem
-## §10 25 高频面试题 — L1 (10 必会) + L2 (10 进阶) + L3 (5 顶级 lab), all with <details><summary> collapsible answers
-## §A 附录 (optional) — sanity-check output, reference list
+## §1 Intuition. — why this matters; analogy; one-paragraph mental model
+## §2 Core formula — main formula + derivation (variance / scaling / boundary)
+## §3 Realize Details — 50-80 line from-scratch PyTorch
+## §4-7 Variant / Engineering practices / Common bug — variants, comparison tables, footguns
+## §8 Complexity / Resources — time + memory complexity
+## §9 Comparison with relevant methodologies — placement in the ecosystem
+## §10 25 High-frequency interview questions — L1 (10 Yes, I will.) + L2 (10 Step) + L3 (5 Top level lab), all with <details><summary> collapsible answers
+## §A Appendix (optional) — sanity-check output, reference list
 ```
 
 ### Conventions — bake the established lessons in
@@ -49,20 +49,20 @@ Generate one comprehensive Chinese cheat sheet per invocation: formulas + deriva
 |---|---|---|
 | Heading format `## §N Title` with **space after §N** | Older versions had `§0TL;DR` glued | `## §0 TL;DR Cheat Sheet` |
 | Math in table cells: use `\lvert ... \rvert` not `\|...\|` | `\|` inside markdown table = cell separator → row break | `$\text{score}_{ij} - m \cdot \lvert i-j \rvert$` |
-| Callouts with body list: **split** into callout intro line + separate list | Otherwise the list's first item is swallowed by the callout, then items 2..N restart numbering at 1 | `> 💡 **Sampler 选择** — 按 NFE/质量排序如下。`<br/>`- Euler …`<br/>`- Heun …` |
-| Callout prefixes only: `💡` `⚠️` `✅` `❌` (others won't get class) | renderer maps these to `callout-info/warn/good/bad` | `> ⚠️ **FP16 overflow** — 即使除了 √d_k …` |
+| Callouts with body list: **split** into callout intro line + separate list | Otherwise the list's first item is swallowed by the callout, then items 2..N restart numbering at 1 | `> 💡 **Sampler Selection** — Press NFE/Quality is sorted as follows.`<br/>`- Euler …`<br/>`- Heun …` |
+| Callout prefixes only: `💡` `⚠️` `✅` `❌` (others won't get class) | renderer maps these to `callout-info/warn/good/bad` | `> ⚠️ **FP16 overflow** — Even if it's not. √d_k …` |
 | Math: `$...$` inline, `$$...$$` display, `$$\boxed{...}$$` for key boxes | MathJax CDN; literal in source | — |
 | Code: ```python fences, **real PyTorch that would run** | reviewer will check executability | — |
 | Personal-info banlist: owner's institution/lab/center names, degree-program affiliations, private server aliases, job-search context, `/Users/...` paths, specific lab/company names | reviewer flags as FAIL | byline goes via `--author` at render time, not in body |
-| Language: Chinese primary, English technical terms in-place | matches established cheat-sheet style | "softmax 饱和", "vector field" |
+| Language: Chinese primary, English technical terms in-place | matches established cheat-sheet style | "softmax Saturation", "vector field" |
 
 ### Eyebrow / subtitle / title naming
 
 | Field | Pattern |
 |---|---|
 | `--eyebrow` | `Interview Prep · <Topic>` |
-| `--subtitle` | one Chinese sentence describing scope (e.g. `公式推导 + From-Scratch 代码 + 25 高频题（L1 必会 · L2 进阶 · L3 顶级 lab）`) |
-| `--title` | `<Topic> 面试 Cheat Sheet` or `<Topic> Quick Reference` |
+| `--subtitle` | one Chinese sentence describing scope (e.g. `Formula Deposition + From-Scratch Code + 25 High frequency (HF)L1 Yes, I will. · L2 Step · L3 Top level lab）`) |
+| `--title` | `<Topic> Interview Cheat Sheet` or `<Topic> Quick Reference` |
 | `--lang` | `zh-CN` |
 
 ### Slug
@@ -142,7 +142,7 @@ Call directly (do not invoke `/render-html` as a sub-skill; call its python scri
 python3 skills/render-html/scripts/render_html.py docs/tutorials/<slug>_tutorial.md \
   --template academic \
   --out docs/tutorials/<slug>_tutorial.html \
-  --title "<Topic> 面试 Cheat Sheet" \
+  --title "<Topic> Interview Cheat Sheet" \
   --subtitle "<one-line scope summary>" \
   --eyebrow "Interview Prep · <Topic>" \
   --author "<byline>" \
@@ -211,7 +211,7 @@ Do **NOT** `git add` / `git commit` / `git push`. Report:
 After the tutorial passes, optionally append a row to `docs/tutorials/README.md`:
 
 ```
-| **<Topic> 面试 Cheat Sheet** | [`<slug>_tutorial.md`](<slug>_tutorial.md) | [`<slug>_tutorial.html`](https://wanshuiyin.github.io/Auto-claude-code-research-in-sleep/tutorials/<slug>_tutorial.html) | <one-line topic list> |
+| **<Topic> Interview Cheat Sheet** | [`<slug>_tutorial.md`](<slug>_tutorial.md) | [`<slug>_tutorial.html`](https://wanshuiyin.github.io/Auto-claude-code-research-in-sleep/tutorials/<slug>_tutorial.html) | <one-line topic list> |
 ```
 
 Suggest the row to the user but let them edit it in themselves if they want to curate.
@@ -255,7 +255,6 @@ Suggest the row to the user but let them edit it in themselves if they want to c
 
 Extracted from the two pilot tutorials (Attention + Flow Matching, May 2026). Both passed cross-model review; the attention tutorial required 3 review rounds — catching a table-pipe collision and a callout-list collision that were not obvious from the rendered output. Those lessons are now baked into the style guide and reviewer checks 5+6 so future tutorials don't repeat them.
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

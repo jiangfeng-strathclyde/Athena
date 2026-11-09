@@ -1,6 +1,6 @@
 ---
 name: paper-illustration
-description: "Generate publication-quality AI illustrations for academic papers using Gemini image generation. Creates architecture diagrams, method illustrations with Claude-supervised iterative refinement loop. Use when user says \"生成图表\", \"画架构图\", \"AI绘图\", \"paper illustration\", \"generate diagram\", or needs visual figures for papers."
+description: "Generate publication-quality AI illustrations for academic papers using Gemini image generation. Creates architecture diagrams, method illustrations with Claude-supervised iterative refinement loop. Use when user says \"Generate Charts\", \"Draw the schematics.\", \"AIDrawing\", \"paper illustration\", \"generate diagram\", or needs visual figures for papers."
 argument-hint: "[description-or-method-file] [— style-ref: <source>]"
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, mcp__codex__codex, mcp__codex__codex-reply, WebSearch
 ---
@@ -141,42 +141,42 @@ Sources accepted: local TeX dir / file, local PDF, arXiv id, http(s) URL. Overle
 - **No crossings** — Reorganize layout to avoid arrow crossings
 - **CORRECT DIRECTION** — Arrows must point to the RIGHT target!
 
-### Visual Appeal (科研风格 - Professional Academic Style)
+### Visual Appeal (Research style - Professional Academic Style)
 
-**目标：既不保守也不花哨，找到平衡点**
+**Target: Unconservative and fancy, find a balance.**
 
-#### ✅ 应该有的视觉元素：
-- **Subtle gradient fills** — 淡雅的渐变填充（同色系从浅到深），不是炫彩
-- **Rounded corners** — 圆角矩形（6-10px radius），现代感但不夸张
-- **Clear visual hierarchy** — 通过大小、颜色深浅区分层次
-- **Consistent color coding** — 统一的配色方案（3-4种主色）
-- **Internal structure** — 大模块内部显示子组件（如Encoder内部的layer结构）
-- **Professional typography** — 清晰的标签，适当的字号层次
+#### ✅ There should be visual elements:
+- **Subtle gradient fills** — A light-along gradient fill (slight-to-deep) is not a showoff.
+- **Rounded corners** — Rounded Rectangle (Rectangle)6-10px radius），Modern sense, but not exaggeration.
+- **Clear visual hierarchy** — Differentiated by size, depth of colour
+- **Consistent color coding** — Unified colour scheme (%1)3-4master colour)
+- **Internal structure** — Show subcomponents within large modules (e.g.,EncoderInternallayer(Structure)
+- **Professional typography** — Clear label, appropriate word level
 
-#### ✅ 配色建议（学术专业）：
-- **Inputs**: 柔和的绿色系 (#10B981 / #34D399)
-- **Encoders**: 专业的蓝色系 (#2563EB / #3B82F6)
-- **Fusion**: 优雅的紫色系 (#7C3AED / #8B5CF6)
-- **Outputs**: 温暖的橙色系 (#EA580C / #F97316)
-- **Arrows**: 黑色或深灰 (#333333 / #1F2937)
-- **Background**: 纯白 (#FFFFFF)，不要花纹
+#### ✅ Colour advice (academic specialization):
+- **Inputs**: A soft green system. (#10B981 / #34D399)
+- **Encoders**: A professional blue system. (#2563EB / #3B82F6)
+- **Fusion**: An elegant purple system. (#7C3AED / #8B5CF6)
+- **Outputs**: A warm orange system. (#EA580C / #F97316)
+- **Arrows**: Black or Dark Ash (#333333 / #1F2937)
+- **Background**: Pure White (#FFFFFF)，No stripes.
 
-#### ❌ 要避免的过度装饰：
-- ❌ Rainbow color schemes (彩虹配色)
-- ❌ Heavy drop shadows (重阴影效果)
-- ❌ 3D effects / perspective (3D透视)
-- ❌ Excessive gradients (夸张的多色渐变)
-- ❌ Clip art / cartoon icons (卡通图标)
-- ❌ Decorative patterns in background (背景花纹)
-- ❌ Glowing effects (发光效果)
-- ❌ Too many small icons (过多小图标)
+#### ❌ Overdressing to avoid:
+- ❌ Rainbow color schemes (Rainbow Colour)
+- ❌ Heavy drop shadows (Overshading effect)
+- ❌ 3D effects / perspective (3DPerspective)
+- ❌ Excessive gradients (Exaggerating multi-colour gradients.)
+- ❌ Clip art / cartoon icons (Cartoon Icon)
+- ❌ Decorative patterns in background (Background Stripes)
+- ❌ Glowing effects (luminous effects)
+- ❌ Too many small icons (Too Many Small Icons)
 
-#### ✓ 理想的视觉效果：
-- 一眼看上去**专业、清晰**
-- 有**适度的视觉吸引力**，但不抢眼
-- 符合**CVPR/NeurIPS论文**的审美标准
-- **打印友好**（灰度模式下也能清晰辨认）
-- 像**精心设计**的学术图表，而不是PPT模板
+#### ✓ Ideal visual effects:
+- It looks like it.**Professional, clear.**
+- Yes.**Moderate visual attraction.**，But not the eyes.
+- Match**CVPR/NeurIPSPapers**It's the best of all.
+- **Print friendly**（It can be clearly identified in greyscale mode.
+- Like...**Designed carefully.**The academic chart, not...PPTTemplates
 
 ### What to AVOID (CRITICAL)
 - ❌ Rainbow color schemes (too many colors)
@@ -231,27 +231,26 @@ Claude's task:
 ```
 Create a PROFESSIONAL, VISUALLY APPEALING publication-quality academic diagram following CVPR/ICLR/NeurIPS standards.
 
-## Visual Style: 科研风格 (Academic Professional Style)
-### 目标：平衡 — 既不保守也不花哨
+## Visual Style: Research style (Academic Professional Style)
+### Objective: To achieve balance — It's neither conservative nor fancy.
 
-#### DO (应该有):
-- **Subtle gradients** — 同色系淡雅渐变（如 #2563EB → #3B82F6），不是多色炫彩
-- **Rounded corners** — 圆角矩形（6-10px），现代感
-- **Clear visual hierarchy** — 通过大小、深浅区分层次
-- **Internal structure** — 大模块内显示子组件结构
-- **Consistent color coding** — 统一的3-4色方案
-- **Professional polish** — 精致但不夸张
+#### DO (I think so.):
+- **Subtle gradients** — The same color is a light accelerator gradient (e.g. #2563EB → #3B82F6），It's not colored.
+- **Rounded corners** — Rounded Rectangle (Rectangle)6-10px），Modern sense.
+- **Clear visual hierarchy** — Differentiated by size, depth
+- **Internal structure** — Show subcomponent structure in large modules
+- **Consistent color coding** — Unified3-4Color Scheme
+- **Professional polish** — It's not exaggeration.
 
-#### DON'T (不要有):
-- ❌ Rainbow/multi-color gradients (彩虹渐变)
-- ❌ Heavy drop shadows (重阴影)
-- ❌ 3D effects / perspective (3D效果)
-- ❌ Glowing effects (发光效果)
-- ❌ Excessive decorative icons (过多装饰图标)
-- ❌ Plain boring rectangles (完全平淡的方块)
+#### DON'T (Don't have it.):
+- ❌ Rainbow/multi-color gradients (Rainbow Gradient)
+- ❌ Heavy drop shadows (Shading Shadows)
+- ❌ 3D effects / perspective (3DEffect)
+- ❌ Glowing effects (luminous effects)
+- ❌ Excessive decorative icons (Too Much Decorative Icon)
+- ❌ Plain boring rectangles (A square that's completely flat.)
 
-#### 理想效果：
-像顶会论文中精心设计的架构图 — 专业、清晰、有适度的视觉吸引力
+#### Ideal effect: like a carefully designed structure in a ceremonial paper — Professional, clear, moderate visual attraction.
 
 ## Figure Type
 [Architecture Diagram / Pipeline / Comparison / etc.]
@@ -402,7 +401,7 @@ Ensure compliance with:
 1. **Color Palette**: Use professional academic colors (green for inputs, blue for encoders, purple for fusion, orange for outputs)
 2. **Arrow Standards**: Thick (5-6px), black/dark gray, clear arrowheads, all labeled
 3. **Font Standards**: Sans-serif, minimum 14pt, readable in print
-4. **Visual Appeal (科研风格)**:
+4. **Visual Appeal (Research style)**:
    - ✅ Subtle same-color gradients, rounded corners (6-10px), internal structure visible
    - ❌ NO heavy shadows, NO glowing effects, NO rainbow gradients
 
@@ -581,19 +580,19 @@ Check EACH block:
 - [ ] Labels are readable (not too small)
 - [ ] Labels correctly describe the data flowing
 
-#### E. Visual Appeal (科研风格 - Balanced Academic Style) (any failure = score ≤ 8)
-- [ ] **有适度视觉吸引力** — 有subtle渐变或圆角，但不夸张
-- [ ] **不是平淡方块** — 有一定设计感
-- [ ] **不过度装饰** — 没有重阴影、发光效果、彩虹配色
-- [ ] **专业学术风格** — 像CVPR论文中的图表，不是PPT模板
-- [ ] **Internal structure visible** — 大模块内部显示子组件结构
-- [ ] **Color palette: 3-4种协调色** — 不是彩虹，也不是纯黑白
+#### E. Visual Appeal (Research style - Balanced Academic Style) (any failure = score ≤ 8)
+- [ ] **It's a moderate visual attraction.** — Yes.subtleGradient or rounding, but not exaggeration.
+- [ ] **It's not a square square.** — It's a certain design.
+- [ ] **But the decorations.** — No shadow, glowing effects, rainbow coloring.
+- [ ] **Professional academic style** — Like...CVPRCharts in the paper, no.PPTTemplates
+- [ ] **Internal structure visible** — Show subcomponent structure within large modules
+- [ ] **Color palette: 3–4 coordinated colors** — Avoid both rainbow palettes and pure black-and-white unless the venue requires them.
 
 #### E2. Visual Appeal - RED FLAGS (immediate score ≤ 7 if found)
-- [ ] **NO heavy drop shadows** (重阴影 = too flashy)
-- [ ] **NO glowing effects** (发光效果 = too flashy)
-- [ ] **NO rainbow gradients** (彩虹渐变 = unprofessional)
-- [ ] **NO excessive decorative icons** (过多装饰图标 = distracting)
+- [ ] **NO heavy drop shadows** (Shading Shadows = too flashy)
+- [ ] **NO glowing effects** (luminous effects = too flashy)
+- [ ] **NO rainbow gradients** (Rainbow Gradient = unprofessional)
+- [ ] **NO excessive decorative icons** (Too Much Decorative Icon = distracting)
 
 #### F. Layout & Flow (any failure = score ≤ 7)
 - [ ] Clean horizontal left-to-right flow
@@ -617,17 +616,17 @@ Check EACH block:
 ### Score: X/10
 
 ### STRICT Score Breakdown Guide:
-- **10**: Perfect. No issues. Publication-ready masterpiece. 视觉风格完美平衡。
-- **9**: Excellent. Minor issues that don't affect understanding. 可以直接使用。
-- **8**: Good but has noticeable issues. 视觉上太平淡或太花哨都需要改进。
-- **7**: Usable but has clear problems. 箭头或内容有问题。
-- **6**: Has arrow direction errors (箭头指向错误) OR missing major components.
+- **10**: Perfect. No issues. Publication-ready masterpiece. A perfect balance of visual style.
+- **9**: Excellent. Minor issues that don't affect understanding. It can be used directly.
+- **8**: Good but has noticeable issues. There is a need for improvement in the light or the flair of vision.
+- **7**: Usable but has clear problems. There is a problem with the arrow or content.
+- **6**: Has arrow direction errors (Arrow point error) OR missing major components.
 - **1-5**: Major issues. Unacceptable.
 
-### Visual Style Scoring (视觉风格评分):
-- **太花哨 (Too flashy)**: 重阴影、发光效果、彩虹配色 → score ≤ 7
-- **太平淡 (Too plain)**: 纯黑白方块、无任何视觉设计 → score ≤ 8
-- **恰到好处 (Balanced)**: 适度渐变、圆角、清晰层次 → score 9-10
+### Visual Style Scoring (Visualized Rating):
+- **It's too fancy. (Too flashy)**: Shade, glowing, rainbow coloring. → score ≤ 7
+- **It's flat. (Too plain)**: Pure black and white squares without any visual design → score ≤ 8
+- **That's right. (Balanced)**: Moderate gradients, round corners, clear layers → score 9-10
 
 ### Verdict
 [ ] ACCEPT (score ≥ 9 AND all critical checks pass)
@@ -735,7 +734,6 @@ figures/ai_generated/
 | Step 4 | gemini-3-pro-image-preview (Paperbanana) | High-quality image rendering |
 | Step 5 | Claude | STRICT visual review and scoring |
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

@@ -1,6 +1,6 @@
 ---
 name: research-implement-feature
-description: "Build a working artifact from a plain \"implement X for me\" request: a running end-to-end spine first, then one feature per rung, with every under-determined decision written to an assumption ledger BEFORE the code that depends on it and a cross-model sweep for the ones that slipped through undeclared. Use when user says \"给我实现\", \"implement X\", \"帮我做一个能跑的\", \"先搭个原型再加功能\", \"build this feature\", \"prototype then extend\", or hands over a capability description rather than an experiment plan."
+description: "Build a working artifact from a plain \"implement X for me\" request: a running end-to-end spine first, then one feature per rung, with every under-determined decision written to an assumption ledger BEFORE the code that depends on it and a cross-model sweep for the ones that slipped through undeclared. Use when user says \"Make it happen to me.\", \"implement X\", \"Help me make one that can run.\", \"Let's build a prototype and add functionality.\", \"build this feature\", \"prototype then extend\", or hands over a capability description rather than an experiment plan."
 argument-hint: "[what-to-build] [— effort: lite|balanced|max|beast] [— ask: never|semantic] [— base repo: <url>]"
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, Skill, AskUserQuestion, mcp__codex__codex, mcp__codex__codex-reply, mcp__antigravity__antigravity, mcp__antigravity__antigravity-reply, mcp__grok__grok, mcp__grok__grok-reply, mcp__claude-review__review, mcp__claude-review__review_reply, mcp__claude-review__review_start, mcp__claude-review__review_reply_start, mcp__claude-review__review_status
 ---
@@ -593,7 +593,6 @@ and `semantic_undeclared: 1`. It does not say the policy is any good — that is
 - `/experiment-bridge` — the plan-driven sibling, for an existing `EXPERIMENT_PLAN.md`
 - `/experiment-audit`, `/result-to-claim` — where "it runs" becomes "it means something"
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

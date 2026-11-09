@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""仓库自校验：README/题图里的计数与目录、清单、演示数据必须互相咬合。
+"""Check that repository counts, links, and demo claims stay in sync.
 
-用法：python scripts/check_repo_consistency.py
-任一检查失败退出码为 1。仅用标准库。
+Run with: ``python scripts/check_repo_consistency.py``
+The script exits with status 1 if any check fails and uses only the standard
+library.
 """
 import csv
 import json
@@ -33,7 +34,7 @@ def check(label, ok, detail=""):
 
 
 def declares_skill_count(text):
-    return (f"{EXPECTED_SKILL_DIRS} 个科研技能" in text
+    return (f"{EXPECTED_SKILL_DIRS} scientific skills" in text
             or f"{EXPECTED_SKILL_DIRS} research skills" in text)
 
 
@@ -42,23 +43,23 @@ def main():
     skill_dirs = sorted(p.name for p in SKILLS.iterdir() if p.is_dir())
 
     n = len(skill_dirs)
-    check(f"skills/ 目录数 == {EXPECTED_SKILL_DIRS}", n == EXPECTED_SKILL_DIRS, f"actual={n}")
-    check("README 声明 108 个技能（中/英文任一）", declares_skill_count(readme))
+    check(f"skills/ directory count == {EXPECTED_SKILL_DIRS}", n == EXPECTED_SKILL_DIRS, f"actual={n}")
+    check(f"README declares {EXPECTED_SKILL_DIRS} research skills", declares_skill_count(readme))
     for svg in ["assets/hero.svg", "assets/social-preview.svg"]:
         text = (ROOT / svg).read_text(encoding="utf-8")
-        check(f"{svg} 声明 108 个技能（中/英文任一）", declares_skill_count(text))
+        check(f"{svg} declares {EXPECTED_SKILL_DIRS} research skills", declares_skill_count(text))
 
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     m = len(manifest)
-    check(f"MANIFEST 条目 == {EXPECTED_MANIFEST_ENTRIES}", m == EXPECTED_MANIFEST_ENTRIES, f"actual={m}")
+    check(f"MANIFEST entry count == {EXPECTED_MANIFEST_ENTRIES}", m == EXPECTED_MANIFEST_ENTRIES, f"actual={m}")
 
     for name in TRIPLE:
-        check(f"最小可信集技能存在: {name}", (SKILLS / name / "SKILL.md").is_file())
-        check(f"README 提到 {name}", f"`{name}`" in readme)
+        check(f"core audit skill exists: {name}", (SKILLS / name / "SKILL.md").is_file())
+        check(f"README mentions {name}", f"`{name}`" in readme)
 
     for name in BLOCKED:
-        check(f"被拦截技能仍镜像: {name}", (SKILLS / name / "SKILL.md").is_file())
-        check(f"TRANSPARENCY_LOG 记录 {name}", name in TRANSPARENCY.read_text(encoding="utf-8"))
+        check(f"blocked upstream skill remains mirrored: {name}", (SKILLS / name / "SKILL.md").is_file())
+        check(f"TRANSPARENCY_LOG records {name}", name in TRANSPARENCY.read_text(encoding="utf-8"))
 
     deltas = {}
     with DEMO_CSV.open(newline="", encoding="utf-8") as fh:
@@ -67,21 +68,21 @@ def main():
     seq = [round(d["ours"] - d["baseline"], 4) for _, d in sorted(deltas.items())]
     mean, std = statistics.mean(seq), statistics.stdev(seq)
     claim = f"{mean:.2f} ± {std:.2f}"
-    check(f"README 数字与 demo CSV 重算一致 ({claim})", readme.count(claim) >= 2, f"occurrences={readme.count(claim)}")
+    check(f"README claim matches demo CSV ({claim})", readme.count(claim) >= 2, f"occurrences={readme.count(claim)}")
 
     for match in re.finditer(r"\[[^\]]*\]\(([^)]+)\)", readme):
         link = match.group(1)
         if link.startswith(("http", "#", "mailto")):
             continue
         target = (README.parent / link.split("#")[0]).resolve()
-        check(f"README 链接有效: {link}", target.exists())
+        check(f"README link resolves: {link}", target.exists())
 
     if failures:
-        print(f"\n{len(failures)} 项不一致：")
+        print(f"\n{len(failures)} check(s) failed:")
         for f in failures:
             print("  -", f)
         return 1
-    print("\n全部一致。")
+    print("\nAll repository consistency checks passed.")
     return 0
 
 

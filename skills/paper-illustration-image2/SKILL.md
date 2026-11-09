@@ -148,7 +148,7 @@ and a **local Codex app-server MCP bridge** as the raster renderer.
 
 ### Visual Appeal (Academic Professional Style)
 
-**目标：既不保守也不花哨，找到平衡点**
+**Target: Unconservative and fancy, find a balance.**
 
 #### ✅ Should have
 - **Subtle gradients** — Gentle same-family gradients are acceptable
@@ -400,7 +400,6 @@ figures/ai_generated/
 | Step 5 | Claude | Strict visual review and scoring |
 | Step 7 | `python3 "$IMAGE2_HELPER" finalize` + `verify` | Emit canonical artifacts and external verification receipt |
 
-## 镜像说明（本公开仓库追加）
-- 本文件为上游 ARIS 原文镜像；支持文件（scripts/、references/、../shared-references/）未随镜像分发，
-  完整原件见上游仓库 https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
-- 执行技能时若引用支持文件，请从上游仓库解析相对路径。
+## Mirror description (additional to this open warehouse)
+- This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
+- If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.

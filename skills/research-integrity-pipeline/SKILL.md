@@ -1,52 +1,52 @@
 ---
 license: MIT
 name: "research-integrity-pipeline"
-description: "当需要写论文、投资说明、政策依据、客户方案、标书或行业研究时，用于建立证据链、引用核查、反幻觉和人工在环质量门禁。"
+description: "Where papers, investment statements, policy bases, client programmes, tenders or industry studies are required, they are used to establish evidence chains, reference verifications, anti-phantoms and artificial seals."
 ---
 
-# 研究与证据完整性流水线
+# Research and evidence integrity flow lines
 
-## 触发场景
+## Trigger scene
 
-- 写投资说明、商业计划书、政策依据或行业白皮书。
-- 写科研论文、基金申请、技术报告或学术综述。
-- 客户方案中出现市场规模、政策、监管、技术指标等可核查主张。
-- 需要把 PDF/网页/代码库资料转成可信论据。
+- Write investment statements, business plans, policy bases or industry white papers.
+- Written scientific papers, applications for funds, technical reports or academic overviews.
+- verifiable ideas of market size, policy, regulation, technical indicators, etc. have emerged in client programmes.
+- I need one. PDF/Web page/The source information is turned into a credible argument.
 
-## 输入
+## Input
 
-- 研究问题或商业主张。
-- 原始资料：论文、政策、网页、代码仓库、客户访谈。
-- 目标交付物：报告、PPT、方案、标书、论文、README。
-- 允许引用范围和敏感数据边界。
+- Research on issues or commercial propositions.
+- Source: Papers, policies, web pages, code warehouse, client interviews.
+- Target delivery: reporting,PPT、Programmes, tenders, papers,README。
+- Quoted scope and sensitive data boundaries are allowed.
 
-## 输出
+## Output
 
-- 主张清单：事实、推断、假设、建议分开。
-- 证据表：每条主张对应来源、页码/段落/链接。
-- 风险标注：未证实、过时、推断过强、引用不支撑。
-- 质量门禁报告。
-- 可交付文本草稿。
+- List of claims: facts, inferences, assumptions, recommendations separated.
+- Table of evidence: Corresponding sources, page numbers per claim/Paragraph/link.
+- Risk profile: unsubstantiated, outdated, over-injected, unsubstantiated.
+- Quality access report.
+- Draft deliverable text.
 
-## 工作流
+## Workstream
 
-1. 把目标文本拆成可核查主张。
-2. 为每条主张寻找来源，优先官方、论文、客户原始资料。
-3. 标注哪些是事实，哪些是分析推断。
-4. 对政策、市场、法律、财务、医学、安全等高风险内容做二次核查。
-5. 检查引用是否真的支撑主张，避免“真引用支撑假结论”。
-6. 输出前列出未解决问题和人工判断点。
-7. 由真人确认最终对外版本。
+1. The target text is deconstructed into verifiable propositions.
+2. For each claim, priority is given to official, dissertation, client source material.
+3. Indicate which are facts and which are analytical inferences.
+4. Secondary verification of high-risk elements such as policy, market, legal, financial, medical and security.
+5. Check whether the reference really supports the idea, avoids it.“It's true. It's a pseudo-conclusion.”。
+6. The output is preceded by an unsettled and manually judged point.
+7. The final external version is confirmed by the real person.
 
-## 质量门禁
+## Quality off-limits
 
-- 没有来源的强主张不能进入对外材料。
-- 不得伪造论文、政策、客户案例或市场数据。
-- 引用必须和论点匹配。
-- 高风险领域必须标注“需专业顾问确认”。
-- AI 只做研究助理，不替代学术判断、法律意见、合同承诺和安全责任。
+- No access to external material is possible for strong claims without sources.
+- No papers, policies, client cases or market data may be forged.
+- References must match arguments.
+- High-risk areas must be marked“Confirmation by a professional consultant”。
+- AI Research assistant only, not a substitute for academic judgement, legal opinion, contractual commitments and security responsibilities.
 
-## 参考来源
+## References
 
 - `source/xiaohongshu/extracted/academic-research-skills-main`
 - `source/xiaohongshu/PAPER_INDEX.md`
