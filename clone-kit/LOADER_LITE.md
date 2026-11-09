@@ -2,7 +2,13 @@
 
 Use this compact loader when a chat tool cannot read the repository. It carries
 the core workflow and integrity rules without plugins, files, or API keys. For
-the full skill collection, use the loader in the root `README.md`.
+the full skill collection, follow the [platform setup guide](../docs/INSTALL_ONCE.md).
+
+Use this prompt in ChatGPT, Claude, Gemini, DeepSeek, Qwen, or another text-chat
+app. Copy only the code block below, replace `<your goal>`, and send it as the
+first message in a new chat. This is a compact workflow prompt, not an
+installation of Athena's 108 skills. Its effectiveness depends on the model
+and the tools available in that app.
 
 ## Paste this into any chat
 
@@ -43,6 +49,9 @@ My goal: <your goal>
 ## Usage notes
 
 - Replace `<your goal>` with a concrete outcome.
+- Paste the prompt again in a new chat, or save it in project or custom-assistant
+  instructions if your host supports them. Saved instructions apply within
+  the scope provided by that host.
 - Without web access, require claims based only on memory to be marked unverified.
 - Re-paste the red lines before high-stakes work if a long conversation drifts.
 - For 108 skills, routing tables, and audit pipelines, use the

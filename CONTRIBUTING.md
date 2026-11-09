@@ -44,6 +44,12 @@ result in [`docs/TRANSPARENCY_LOG.md`](docs/TRANSPARENCY_LOG.md) and discuss it.
 
 ## Protocol and documentation changes
 
+Before submitting installer or packaging changes, run the commands in
+[`docs/VALIDATION.md`](docs/VALIDATION.md). Installer tests must use isolated
+temporary directories, not a contributor's real agent configuration. Include
+failure-path tests when changing replacement or recovery behavior. A format
+check or copied skill directory is not evidence of an end-to-end workflow.
+
 A semantic change to `docs/CLONE_PROTOCOL.md` should update the protocol version
 and explain backward compatibility in the pull request. Never add private
 identity information, unpublished data, credentials, or private memory to the

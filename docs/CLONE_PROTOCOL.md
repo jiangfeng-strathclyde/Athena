@@ -1,9 +1,17 @@
-# CLONE_PROTOCOL v1 · Pre-Task Loading Protocol
+# CLONE_PROTOCOL v2 · Research Entry and Optional Guides
 
-Before a model or agent performs a research task, load the following three
-layers. The protocol is platform-independent, auditable, and modular.
+For installed skills, start with `research-integrity-pipeline` when the task
+needs an evidence-backed research workflow. Its instructions are self-contained;
+the installer does not copy root-level guides into each skill directory.
+For text chat, paste the code block in
+[`LOADER_LITE.md`](../clone-kit/LOADER_LITE.md).
 
-## Three loading steps
+The three-layer route below remains available when working from the checkout.
+Version 2 preserves that route but removes the assumption that every installed
+skill can access these repository files. It does not claim that other skills
+automatically inherit instructions they have not loaded.
+
+## Optional three-layer route from a checkout
 
 1. **Read the story and boundaries:** read the root `README.md` for the
    project's purpose, privacy boundary, and transparency commitments.
@@ -24,11 +32,11 @@ layers. The protocol is platform-independent, auditable, and modular.
 | `SKILL.md`-compatible tool | Copy or link selected skill folders into the tool's skill directory | Claude Code, Codex, and similar tools |
 | Digital employee platform | Follow [`HOW_TO_BUILD_YOUR_CLONE.md`](../clone-kit/HOW_TO_BUILD_YOUR_CLONE.md) | Platforms with packaged agents or employees |
 
-## Default behavior after loading
+## Behavior supported by the research entry point
 
 1. Read the source paper, code, or data before making claims about it.
-2. Before material changes, provide a cost list: scope, information loss,
-   risks, time, compute, and cheaper alternatives.
+2. Before material changes, explain consequential costs, risks, and scope
+   changes in proportion to the task.
 3. Independently recompute important numerical inputs and stop on conflicts.
 4. Report conclusions with file/page/line or data provenance and uncertainty.
 5. Ask before making decisions that belong to the user, such as changing the
@@ -37,5 +45,7 @@ layers. The protocol is platform-independent, auditable, and modular.
 ## Modularity
 
 You may load only a subset, such as `citation-audit`, `paper-claim-audit`, and
-`experiment-audit`. Modularity never removes the integrity rules in Section 2
-of the distilled guide; every loaded subset inherits them.
+`experiment-audit`, after checking their prerequisites. The distilled guide
+provides additional context when available. Missing reviewer backends or
+support files must be reported; the entry point can offer a narrower manual
+check, not certify an incomplete specialized audit.

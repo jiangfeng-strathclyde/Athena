@@ -16,7 +16,7 @@ The full permissions are defined by each upstream license. Added English guidanc
 
 ## Skills listed but not mirrored
 
-Twenty-one local skills are listed in [`MANIFEST.json`](../clone-kit/MANIFEST.json) with `mirrored: false`: sixteen lacked clear redistribution permission, two were platform-internal, and three were duplicates. Details are recorded in [`TRANSPARENCY_LOG.md`](../docs/TRANSPARENCY_LOG.md).
+Twenty-one individually named local skills are listed in [`MANIFEST.json`](../clone-kit/MANIFEST.json) with `mirrored: false`: sixteen lacked clear redistribution permission, two were platform-internal, and three were vendor-published skills not redistributed here. A separate manifest entry tracks the remaining, unmirrored Orchestra collection. Details are recorded in [`TRANSPARENCY_LOG.md`](../docs/TRANSPARENCY_LOG.md).
 
 ## Platform installation status
 

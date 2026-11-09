@@ -2,7 +2,9 @@
 
 > Complete one small, verifiable research cycle yourself—and enjoy the process.
 > Spend 30–60 minutes a day using the included synthetic data or your own course
-> materials. No GPU, paid account, or programming experience is required.
+> materials. The supplied arithmetic fixture needs no GPU or paid service.
+> A terminal and Python are used below; text-only alternatives are included.
+> Online source verification depends on your host's browsing access.
 
 ## Before Day 1
 
@@ -21,15 +23,21 @@ If your chat tool cannot install persistent skills or plugins, paste
 
 - Run `python docs/demo_assets/verify_demo.py` and inspect how it recomputes
   mean ± standard deviation from CSV data.
+- Without a terminal, open `docs/demo_assets/demo_results.csv`, give the rows
+  to your assistant, and check the paired differences with a calculator.
+  Ask it to distinguish a calculated result from code it actually executed.
 - Ask the assistant to report an incorrect value such as `Δ=3.2`. It should
   refuse and offer costed correction options.
 - **Milestone:** an assistant that values evidence over obedience.
 
 ## Day 2 · Audit your reading list
 
-- Provide a course bibliography (`.bib`) or a short handwritten list.
+- Start with the included synthetic `docs/demo_assets/demo.bib` bibliography.
 - Ask it to verify each title, DOI, author list, and year.
 - Compare the result with `docs/demo_assets/expected_findings.md`.
+- Then try your own reading list. The fixture's expected findings do not apply
+  to your bibliography. If source access is unavailable, record those checks
+  as unverified rather than treating a plausible title as evidence.
 - **Milestone:** finding one incorrect citation is more useful than generating
   ten unverified summaries.
 
@@ -52,8 +60,9 @@ If your chat tool cannot install persistent skills or plugins, paste
 ## Day 5 · Reproduce a small experiment
 
 - Choose a small public dataset or `demo_results.csv`.
-- Use `experiment-plan` to specify one baseline, one change, and three random
-  seeds in a short script.
+- Specify one baseline, one change, and three random seeds in a short script.
+  Use `experiment-plan` only after checking its dependencies. Recomputing the
+  supplied CSV is a statistics exercise, not a new experimental rerun.
 - **Milestone:** a result you ran yourself with clearly documented scope.
 
 ## Day 6 · Write and audit a one-page report
@@ -76,4 +85,6 @@ step. On Days 2 and 4, use textbooks instead of research papers. The principle
 does not change: **check the evidence, state the cost, then decide.**
 
 The integrity tools also work independently: `citation-audit`,
-`paper-claim-audit`, and `experiment-audit`.
+`paper-claim-audit`, and `experiment-audit`, once their prerequisites are met.
+Start with `research-integrity-pipeline` when you only have supplied sources
+and basic host tools. See [`VALIDATION.md`](VALIDATION.md) for current limits.
