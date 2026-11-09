@@ -6,16 +6,15 @@
 
 ## Before Day 1
 
-Open a new AI conversation and paste:
+Install Athena once by following [`INSTALL_ONCE.md`](INSTALL_ONCE.md), then open
+a new conversation and ask normally:
 
 ```text
-Repository: https://github.com/jiangfeng-strathclyde/Athena
-Read docs/DISTILLED_PUBLIC.md and clone-kit/ROUTING_TABLE.md.
 I am a beginner. Give me a plan and its costs before acting. Never invent
 results, and independently recompute every important number.
 ```
 
-If your chat tool cannot access repositories, paste
+If your chat tool cannot install persistent skills or plugins, paste
 [`clone-kit/LOADER_LITE.md`](../clone-kit/LOADER_LITE.md) instead.
 
 ## Day 1 · Check the arithmetic

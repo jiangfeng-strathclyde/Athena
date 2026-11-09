@@ -1,0 +1,44 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "athena",
+  "version": "1.0.0",
+  "description": "Evidence-first research workflows for literature review, experiments, writing, figures, citations, grants, patents, and peer review.",
+  "author": {
+    "name": "Athena contributors",
+    "url": "https://github.com/jiangfeng-strathclyde"
+  },
+  "homepage": "https://github.com/jiangfeng-strathclyde/Athena",
+  "repository": "https://github.com/jiangfeng-strathclyde/Athena",
+  "license": "MIT",
+  "keywords": [
+    "research",
+    "reproducibility",
+    "academic-writing",
+    "literature-review",
+    "agent-skills"
+  ],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./onboarding/SKILL.md",
+      "interface": {
+        "displayName": "Athena",
+        "shortDescription": "Evidence-first research copilot",
+        "longDescription": "Athena routes research goals to 108 reusable skills and keeps claims tied to verifiable evidence.",
+        "developerName": "Athena contributors",
+        "category": "Productivity",
+        "capabilities": [
+          "Research",
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://github.com/jiangfeng-strathclyde/Athena",
+        "defaultPrompt": [
+          "Audit the claims and citations in my draft.",
+          "Plan a reproducible literature review.",
+          "Design an experiment with explicit trade-offs."
+        ],
+        "brandColor": "#0F766E"
+      }
+    }
+  }
+}

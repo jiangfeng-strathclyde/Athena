@@ -1,6 +1,9 @@
 ---
 name: excel-formula
-description: "ExcelFormula Assistant. Write for usersExcelandGoogle Sheetsformulae,VLOOKUP/SUMIF/Array Formula/Perspective table. When the user says, "Help me write the formula."ExcelFormulaVLOOKUPHow do you use it?SUMIF」「Plural formulae "Form formulae"Google SheetsFormula "Condition of Conditions" "DataView Table"excel formula」「spreadsheet」「lookup」. Keywords:Excel、formulae,formula、VLOOKUP、HLOOKUP、XLOOKUP、SUMIF、SUMIFS、COUNTIF、INDEX、MATCH、IF、Embedded functions, array formulae, perspective tables,pivot table、Conditional format, data validation,Google Sheets、WPSTables,SUMPRODUCT、OFFSET、INDIRECT、power query、Macros,VBA"
+description: >-
+  Excel formula assistant for Excel, Google Sheets, and WPS. Use when users
+  need formulas, lookups, conditional calculations, arrays, pivot tables,
+  validation, Power Query, macros, or VBA guidance.
 version: "1.0.0"
 license: "MIT"
 user-invocable: true

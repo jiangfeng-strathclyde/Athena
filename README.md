@@ -12,28 +12,31 @@
 
 **Athena** is an open-source research copilot. Tell it what you want to accomplish; it selects the right skills, proposes a plan, and checks the evidence before it writes conclusions.
 
-## Try it in one minute
+## Install once, then ask normally
 
-Open ChatGPT, Claude, Codex, Cursor, or another AI assistant that can read web links. Paste this:
+For Codex, install Athena for your user account:
 
-```text
-Use Athena: https://github.com/jiangfeng-strathclyde/Athena
-
-Read docs/DISTILLED_PUBLIC.md and clone-kit/ROUTING_TABLE.md.
-Choose the skills needed for my goal. Show me the plan and its trade-offs first,
-then wait for my approval. Do not invent evidence or report numbers that cannot
-be reproduced from the source data.
-
-My goal: <describe what you want to do>
+```bash
+git clone https://github.com/jiangfeng-strathclyde/Athena.git
+cd Athena
+python scripts/install_athena.py --agent codex
 ```
 
-Replace the final line with a real goal, for example:
+Start a new session. Athena's skills are now available across conversations;
+just state the goal:
 
 - `Check whether the numerical claims in my draft are supported.`
 - `Plan a literature review on flood mapping with satellite imagery.`
 - `Help me design a reproducible ablation study.`
 
-Using a chat app that cannot open GitHub links? Paste the self-contained [Lite Loader](clone-kit/LOADER_LITE.md) instead.
+All 108 skills are discoverable, while only the relevant instructions are
+loaded for each task. This keeps the context focused without requiring a
+loader in every conversation.
+
+Athena is also packaged as a ChatGPT/Codex plugin. See [Install once](docs/INSTALL_ONCE.md)
+for plugin details, Claude Code, custom skill directories, and updates. If a chat
+app cannot install skills or plugins, use the self-contained [Lite Loader](clone-kit/LOADER_LITE.md)
+as a fallback.
 
 ## What Athena does
 
@@ -44,6 +47,8 @@ Using a chat app that cannot open GitHub links? Paste the self-contained [Lite L
 | Your constraints | Explicit trade-offs and approval points | Work that stays under your control |
 
 Athena includes **108 reusable research skills** for literature review, experiment design, scientific writing, figures, citation checks, rebuttals, patents, grants, and more.
+Its core integrity checks are `citation-audit`, `paper-claim-audit`, and
+`experiment-audit`.
 
 ## See the difference
 
@@ -60,26 +65,10 @@ python docs/demo_assets/verify_demo.py
 ## Explore
 
 - [Start here](docs/START_HERE.md) — a guided first session
+- [Install once](docs/INSTALL_ONCE.md) — keep Athena available across conversations
 - [Browse the skill map](docs/SKILL_COVERAGE.md) — see what Athena can do
 - [Understand the evidence rules](docs/DISTILLED_PUBLIC.md) — how Athena avoids unsupported claims
 - [Add a skill](CONTRIBUTING.md) — contribute a reusable research workflow
-
-<details>
-<summary><strong>Use Athena as a local skill library</strong></summary>
-
-```bash
-git clone https://github.com/jiangfeng-strathclyde/Athena.git
-```
-
-Tools that support `SKILL.md` can mount individual folders from `Athena/skills/`. Start with the integrity trio: `citation-audit`, `paper-claim-audit`, and `experiment-audit`.
-
-```bash
-cp -r Athena/skills/citation-audit Athena/skills/paper-claim-audit Athena/skills/experiment-audit .claude/skills/
-```
-
-See the [platform guide](docs/PLATFORM_MATRIX.md) for other tools.
-
-</details>
 
 ## Principles
 

@@ -1,6 +1,10 @@
 ---
 name: research-refine
-description: 'Turn a vague research direction into a problem-anchored, elegant, frontier-aware, implementation-oriented method plan via iterative GPT-6-Astra review. Use when the user says "refine my approach", "Help me refine the plan.", "decompose this problem", "It's grinding.idea", "refine research plan", "Elaborating research programmes", or wants a concrete research method that stays simple, focused, and top-venue ready instead of a vague or overbuilt idea.'
+description: >-
+  Turn a vague research direction into a problem-anchored, frontier-aware,
+  implementation-oriented method plan through iterative review. Use when the
+  user wants to refine, decompose, or concretize a research approach while
+  keeping it simple, focused, and ready for a strong venue.
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, WebSearch, WebFetch, mcp__codex__codex, mcp__codex__codex-reply, mcp__antigravity__antigravity, mcp__antigravity__antigravity-reply, mcp__grok__grok, mcp__grok__grok-reply, mcp__claude-review__review, mcp__claude-review__review_reply, mcp__claude-review__review_start, mcp__claude-review__review_reply_start, mcp__claude-review__review_status
 ---
 
