@@ -1,7 +1,8 @@
 # POSITIONING · 我们不做“一键出 paper”
 
-> 调研快照：2026-11-06。对象：作者本地 `research agent/others/` 下约 25 个第三方
-> 自动科研框架/平台（仅调研，不镜像、不 fork）。
+> 调研快照：2026-11-06（2026-11-09 扩充）。对象：作者本地 `research agent/others/` 下约 45 个第三方
+> 自动科研框架/平台（仅调研，不镜像、不 fork）。逐项目机制与可吸收经验的完整版见
+> [`LESSONS_FROM_OTHERS.md`](LESSONS_FROM_OTHERS.md)。
 
 ## 一句话定位
 
@@ -26,7 +27,7 @@
 |---|---|---|
 | 自主科研代理平台 | AutoResearchClaw、ResearchClaw、ScienceClaw、PaperClaw、MedgeClaw | 目标是自主产出，与“人在环 + 门槛阶梯”定位冲突；许可混杂（MIT/Apache/未知） |
 | 学术检索/写作代理 | OpenScholar、CitationClaw、ClawPhD | 重检索轻过程训练；部分许可未知 |
-| 教学代理 | DeepTutor | 方向相近但为独立产品形态；许可未明，不镜像 |
+| 教学代理 | DeepTutor | 方向相近但为独立产品形态；做法可借鉴（错题本/自测题），代码不镜像 |
 | 技能库（已部分策展） | AI-Research-SKILLs（Orchestra, MIT） | 已策展 12 个补 ML 系统侧；其余 74 个待需求，不批量镜像 |
 | 重投/模板迁移工具 | Auto-Resubmit | 单点工具，与返修管线重叠；按需再议 |
 

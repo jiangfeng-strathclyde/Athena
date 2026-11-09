@@ -6,7 +6,7 @@
 
 | 能力 | QoderWake 数字员工 | Claude Code | Codex 类 CLI | 任意对话模型（零依赖） |
 |---|---|---|---|---|
-| 加载协议（读 3 文件） | ✅ 身份/记忆内置 | ✅ `CLAUDE.md` + 会话引用 | 🟡 `AGENTS.md`；SKILL.md 自动触发视版本 | ✅ 开场粘贴三段 |
+| 加载协议（读 3 文件） | ✅ 身份/记忆内置 | ✅ `CLAUDE.md` + 会话引用 | 🟡 `AGENTS.md`；SKILL.md 自动触发视版本 | ✅ 开场粘贴三段；读不了仓库时贴 [`LOADER_LITE`](../clone-kit/LOADER_LITE.md)（红线内联，零依赖） |
 | 87 个 SKILL.md 技能 | ✅ 平台技能目录 | ✅ `.claude/skills/` | 🟡 视版本：skills 目录或转写为 `AGENTS.md` 指令 | 🟡 按路由表手动读全文 |
 | 场景路由表 | ✅ | ✅ | ✅ | ✅ |
 | 诚信三件套（citation / claim / experiment-audit） | ✅ | ✅ | ✅ | 🟡 可用，但无跨模型后端时降级为单模型自审并明示 |

@@ -41,6 +41,9 @@
 我的目标：<你的目标>
 ```
 
+没有能读仓库的工具？在手机或任意聊天应用（豆包、Kimi、ChatGPT 等）里，粘贴
+[零依赖轻量版](clone-kit/LOADER_LITE.md)——红线和工作方式已全部内联，不需要访问本仓库。
+
 在 Claude Code 等兼容 SKILL.md 的工具里，也可以直接挂载技能目录。
 最小可信三件套：
 
@@ -86,7 +89,7 @@ for d in Thats-me/skills/*/; do cp -r "${d%/}" .claude/skills/; done
 
 ## 想深入再看
 
-[`7 天入门`](docs/START_HERE.md) · [`加一个技能`](clone-kit/SKILL_TEMPLATE.md) · [`技能覆盖地图`](docs/SKILL_COVERAGE.md) · [`定位`](docs/POSITIONING.md) · [`FAQ`](docs/FAQ.md) · [`端到端案例`](docs/EXAMPLES.md) · [`平台适配矩阵`](docs/PLATFORM_MATRIX.md) · [`蒸馏手册`](docs/DISTILLED_PUBLIC.md) · [`打造你自己的分身`](clone-kit/HOW_TO_BUILD_YOUR_CLONE.md) · [`落地页`](docs/index.html)
+[`7 天入门`](docs/START_HERE.md) · [`加一个技能`](clone-kit/SKILL_TEMPLATE.md) · [`技能覆盖地图`](docs/SKILL_COVERAGE.md) · [`定位`](docs/POSITIONING.md) · [`同类项目调研`](docs/LESSONS_FROM_OTHERS.md) · [`FAQ`](docs/FAQ.md) · [`端到端案例`](docs/EXAMPLES.md) · [`平台适配矩阵`](docs/PLATFORM_MATRIX.md) · [`蒸馏手册`](docs/DISTILLED_PUBLIC.md) · [`打造你自己的分身`](clone-kit/HOW_TO_BUILD_YOUR_CLONE.md) · [`落地页`](docs/index.html)
 
 有问题或想晒你的分身：[Discussions](https://github.com/jiangfeng-strathclyde/Thats-me/discussions)。
 

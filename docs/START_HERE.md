@@ -16,6 +16,9 @@
 我是初学者：先给方案和代价，等我点单再执行；不虚构结果；数字要能重算。
 ```
 
+手机上做、或用的是普通聊天应用（豆包、Kimi 等，读不了仓库）？改贴
+[`clone-kit/LOADER_LITE.md`](../clone-kit/LOADER_LITE.md) 的零依赖轻量版，7 天路线同样能走。
+
 ## Day 1 · 让它先学会“查账”
 
 - 跑 `python docs/demo_assets/verify_demo.py`，看它怎么从原始 CSV 重算 mean ± std；
