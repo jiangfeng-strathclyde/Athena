@@ -1,6 +1,6 @@
 ---
 name: research-lit
-description: Search and analyze research papers, find related work, summarize key ideas. Use when user says "find papers", "related work", "literature review", "what does this paper say", or needs to understand academic papers.
+description: Search and analyze research papers, find related work, summarize key ideas, screen a supplied paper collection, and organize claim-level supporting and opposing evidence. Use when user says "find papers", "related work", "literature review", "screen these papers", "evidence for and against", "what does this paper say", or needs to understand academic papers.
 argument-hint: "[paper-topic-or-url]"
 allowed-tools: Bash(*), Read, Glob, Grep, WebSearch, WebFetch, Write, Agent(aris-fanout-leaf), mcp__zotero__*, mcp__obsidian-vault__*
 ---
@@ -8,6 +8,38 @@ allowed-tools: Bash(*), Read, Glob, Grep, WebSearch, WebFetch, Write, Agent(aris
 # Research Literature Review
 
 Research topic: $ARGUMENTS
+
+## Athena adaptation: screening and claim-evidence synthesis
+
+For requests to screen a supplied paper collection, group papers into a reading
+route, or compare evidence for and against a research claim, read the local
+[evidence-matrix workflow](references/evidence-matrix.md) and use that standalone
+mode. This is an Athena addition, not an upstream ARIS dependency.
+
+- Work within the requested corpus and retrieval scope. This mode does **not**
+  require running the upstream search, helper scripts, fan-out, scratch-file
+  writes, or research-wiki ingestion below. A supplied-corpus review does not
+  inherit the search-source minimums in the final retrieval supplement. Extend
+  retrieval only when the user's request includes it; do not silently turn a
+  screening task into a broader search or a systematic review.
+- Deliver a screening ledger with every input paper accounted for, then the
+  requested grouping/reading order or claim-evidence matrix. Each substantive
+  finding needs a real source locator, the material actually read, and applicable
+  conditions. Keep supporting, opposing, and uncertain evidence distinguishable;
+  do not decide by vote, citation count, or journal prestige.
+- Missing ARIS, MCP, or network tools do not prevent manual table-based analysis
+  of material supplied by the user. State what is unavailable. If no usable
+  source content is available, return only the inventory, evidence gaps, and
+  needed inputs; never invent papers, results, or evidence to fill the table.
+- Keep external literature support separate from bibliographic identity checks
+  and from auditing the user's own experimental numbers. The latter belongs to
+  `paper-claim-audit` when requested; this mode does not certify those numbers.
+- Return the result in the conversation unless saving is within the user's
+  request. Existing wiki folders or upstream defaults are not authorization to
+  write files in this mode.
+
+For a general literature-search request, the original workflow below remains
+available within the user's scope and the host's actual tool capabilities.
 
 ## Constants
 
@@ -786,6 +818,7 @@ python3 "$WIKI_SCRIPT" ingest_paper research-wiki/ \
 ## Mirror description (additional to this open warehouse)
 - This document is considered upstream. ARIS mirrors in original;support files (scripts/、references/、../shared-references/）Not distributed with mirrors, full originals can be found at the upstream warehouse https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。
 - If supporting documents are cited for implementation skills, then the relative path should be parsed from the upstream warehouse.
+- Exception: the Athena adaptation above and `references/evidence-matrix.md` are local additions distributed with this skill; they do not require upstream support files.
 
 ## Environmentally appropriate (additional to this open warehouse) Retrieval integrity supplement (red line executable on the basis of docs/LESSONS_FROM_OTHERS.md Section I:
 - Minimum search source: quick check ≥2 Independent sources; overview ≥3；System Overview/Chasing ≥4，and record search mode;

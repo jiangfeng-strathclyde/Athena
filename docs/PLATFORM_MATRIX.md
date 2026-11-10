@@ -21,8 +21,8 @@ four local hosts remain untested in the available environment. Use the
 | Compatible plugin hosts | Host's plugin installation flow | Requires a compatible import route or available listing; scope follows the host |
 
 The local-agent options are arguments to
-`python scripts/install_athena.py` after cloning Athena. They copy 106 skills
-by default from the 109-skill catalog; three flagged skills require explicit
+`python scripts/install_athena.py` after cloning Athena. They copy 107 skills
+by default from the 110-skill catalog; three flagged skills require explicit
 authorization. Use `--skill NAME` for a smaller selection and `--dry-run` to
 preview it. The chat route supplies a compact prompt instead. Local
 installation does not automatically configure web, mobile, or cloud sessions.

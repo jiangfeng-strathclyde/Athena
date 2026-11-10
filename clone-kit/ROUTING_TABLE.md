@@ -11,9 +11,11 @@ or report them when unavailable, and never fabricate a result.
 | User goal | Suggested skill chain | Main output |
 |---|---|---|
 | Write a paper | research-lit → novelty-check → experiment-plan → paper-plan → paper-write → paper-figure → citation-audit + paper-claim-audit + experiment-audit | Submission draft and audit trail |
-| Verify claims or numbers | paper-claim-audit → independent recomputation → costed correction list | Claim-to-evidence table |
+| Verify a manuscript's experimental numbers | paper-claim-audit → independent recomputation → costed correction list | Claim-to-evidence table |
+| Check evidence for an external claim | research-lit | Claim-to-source evidence table with support, contradictions, and gaps |
 | Respond to reviewers | rebuttal → resubmit-pipeline | Response letter and change log |
 | Build a survey or reading list | arxiv / semantic-scholar / openalex → research-lit → comm-lit-review | Structured bibliography and reading order |
+| Trace backward references and forward citations from a seed paper | citation-tracing → research-lit | Bounded citation trail, screening decisions, and source/coverage records |
 | Generate and refine ideas | idea-creator → novelty-check → research-refine | Ranked research directions |
 | Run experiments | experiment-plan → run-experiment / experiment-queue → monitor-experiment → analyze-results → result-to-claim | Results dashboard and supported claims |
 | Develop a proof | formula-derivation → proof-writer → proof-checker → optional lean-formalize | Assumptions, derivation, and verification |
@@ -38,7 +40,7 @@ or report them when unavailable, and never fabricate a result.
 
 | Scenario | Skills |
 |---|---|
-| Literature discovery | arxiv, semantic-scholar, openalex, alphaxiv, deepxiv, research-lit, comm-lit-review, gemini-search (ext), exa-search (ext), firecrawl-search (ext), keenable-search, crawl4ai-skill, lit-reading-assignment |
+| Literature discovery | arxiv, semantic-scholar, openalex, alphaxiv, deepxiv, citation-tracing, research-lit, comm-lit-review, gemini-search (ext), exa-search (ext), firecrawl-search (ext), keenable-search, crawl4ai-skill, lit-reading-assignment |
 | Citation verification | citation-audit, citation-crosscheck |
 | Research ideas and refinement | idea-creator, novelty-check, research-refine, research-refine-pipeline, idea-discovery, idea-discovery-robot, brainstorming-research-ideas |
 | Experiment planning and execution | experiment-plan, experiment-bridge, research-implement-feature, run-experiment, experiment-queue, monitor-experiment, training-check, dse-loop, peft-fine-tuning, huggingface-accelerate, optimizing-attention-flash |
@@ -53,7 +55,7 @@ or report them when unavailable, and never fabricate a result.
 | Review and adversarial critique | research-review (ext), auto-review-loop (ext), auto-review-loop-llm (ext), auto-review-loop-minimax (ext), kill-argument, auto-paper-improvement-loop (ext) |
 | Revision and resubmission | rebuttal, resubmit-pipeline |
 | Proofs and formulas | proof-writer, proof-checker, proof-orchestrator, formula-derivation, lean-formalize |
-| Integrity and evidence | integrity-forensics, paper-claim-audit, experiment-audit, citation-audit, research-integrity-pipeline |
+| Integrity and evidence | integrity-forensics, paper-claim-audit, experiment-audit, citation-audit, research-lit, research-integrity-pipeline |
 | Knowledge and skill maintenance | research-wiki, wiki-enrich, meta-optimize, meta-apply, skill-evolution-manager |
 | Presentations | paper-slides, paper-talk, slides-polish (ext), paper-poster, paper-poster-html, paper-illustration |
 | Patents and grants | patent-pipeline, patent-novelty-check, claims-drafting, specification-writing, jurisdiction-format, embodiment-description, figure-description, prior-art-search, grant-proposal, patent-disclosure-drafter |

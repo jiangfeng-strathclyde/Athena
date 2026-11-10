@@ -7,7 +7,7 @@ the full skill collection, follow the [platform setup guide](../docs/INSTALL_ONC
 Use this prompt in ChatGPT, Claude, Gemini, DeepSeek, Qwen, or another text-chat
 app. Copy only the code block below, replace `<your goal>`, and send it as the
 first message in a new chat. This is a compact workflow prompt, not an
-installation of Athena's 108 skills. Its effectiveness depends on the model
+installation of Athena's 110 skills. Its effectiveness depends on the model
 and the tools available in that app.
 
 ## Paste this into any chat
@@ -54,7 +54,7 @@ My goal: <your goal>
   the scope provided by that host.
 - Without web access, require claims based only on memory to be marked unverified.
 - Re-paste the red lines before high-stakes work if a long conversation drifts.
-- For 108 skills, routing tables, and audit pipelines, use the
+- For 110 skills, routing tables, and audit pipelines, use the
   [full repository](../README.md).
 
 Keep this loader synchronized with Sections 2 and 3 of

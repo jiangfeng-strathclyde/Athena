@@ -50,7 +50,7 @@ ROUTING_TABLE , the assembly rules indicate the default approval level at the op
 - **MedgeClaw**（README Name MIT，None LICENSE Documents:state.json + Single HTML Zero reliance on progress dashboards for rounding;
 - **PaperClaw**（README Name MIT，None LICENSE Documents:"The meta-skill generation area Agent"——An interview collection of knowledge in the field, and a scaffolding belt. 5 Profiling and tracking of papers on time-bound tasks Agent；To re-index. + The status file design of the file lock.
 
-**Orientation of Absorption**：109 Skillable skills can be broken down. `references/` Load as required; agree a unified status document for long-chain skills;
+**Orientation of Absorption**：110 Skillable skills can be broken down. `references/` Load as required; agree a unified status document for long-chain skills;
 "Rewrite memory vs Only add logs"The separation is written into the collaboration agreement.
 
 ### 5. Licensing health and expectation management (reverse materials are equally useful)

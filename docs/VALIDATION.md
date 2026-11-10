@@ -14,8 +14,9 @@ A discoverable skill is an instruction package, not a verified tool service.
 | Numerical example | Offline recomputation from the included synthetic CSV | A model executing a complete scientific audit |
 | Upstream dependency adaptation | Standalone arXiv, OpenAlex, and Semantic Scholar helpers; pinned provenance/licenses; isolated-install tests; selected live requests | Agent-driven literature retrieval, rate-limited endpoints, live PDF downloads, and remaining mirror dependencies |
 | Multi-platform support | Five-host fixture preparation; two real Codex numerical cases with trace review | Other hosts, implicit activation, citation checks, and the full catalog |
+| Citation tracing and evidence synthesis | Isolated resource-install tests and two independent, supplied-corpus agent exercises; see the 2026-11-10 report below | Live citation indexes, implicit skill selection, other hosts, and scientific correctness |
 
-The implementation was tested locally on Windows on 2026-11-09. Tests that
+The implementation was tested locally on Windows on 2026-11-09 and 2026-11-10. Tests that
 need symlink privileges can be skipped when the OS does not grant them; inspect
 the test summary rather than treating a skipped check as passed.
 
@@ -32,6 +33,7 @@ python scripts/check_skill_dependencies.py
 python scripts/check_skill_dependencies.py --skill research-integrity-pipeline --strict
 python scripts/check_skill_dependencies.py --skill arxiv --strict
 python scripts/check_skill_dependencies.py --skill openalex --skill semantic-scholar --skill academic-paper-narrative --strict
+python scripts/check_skill_dependencies.py --skill citation-tracing --strict
 python skills/research-integrity-pipeline/scripts/paired_summary.py docs/demo_assets/demo_results.csv --metric miou --baseline baseline --candidate ours --unit percentage-points
 ```
 
@@ -85,6 +87,11 @@ actual model execution, saved-output checks, and trace review. The
 unavailable environments. Unit tests and operating-system CI remain separate
 from model-driven acceptance; no authenticated model calls run in CI.
 
+The [v1.1.0 report](validation/2026-11-10.md) records the citation-tracing and
+evidence-matrix exercises, their synthetic inputs and observed outputs, and the
+current local test results. These small offline cases do not establish live
+literature-search completeness or support on other hosts.
+
 ## Remaining work
 
 - Package and version the dependencies needed by the priority audit workflows.
@@ -92,4 +99,4 @@ from model-driven acceptance; no authenticated model calls run in CI.
 - Review remaining mirrored instructions for translation quality and host-specific assumptions.
 - Resolve the recorded upstream license-metadata discrepancy before broadening that mirror.
 
-Keep those limitations visible when describing the 109-skill catalog.
+Keep those limitations visible when describing the 110-skill catalog.

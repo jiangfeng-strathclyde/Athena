@@ -99,7 +99,7 @@ is an unavailable test environment, not a successful compatibility result.
 ## Scope and evidence handling
 
 These cases explicitly name one skill. They do not test implicit activation,
-all 109 skills, web/mobile chat, citations, reviewer independence, or scientific
+all 110 skills, web/mobile chat, citations, reviewer independence, or scientific
 validity of real experiments. Text-chat Lite Loader use needs a separate test
 of the capabilities actually offered by that app; it cannot inherit a local
 CLI result.

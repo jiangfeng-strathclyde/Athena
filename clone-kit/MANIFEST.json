@@ -950,8 +950,8 @@
   },
   {
     "name": "research-lit",
-    "source": "agent-created",
-    "version": "1.0.0",
+    "source": "aris-adapted",
+    "version": "1.1.0",
     "installUrl": null,
     "enabled": true
   },
@@ -1470,6 +1470,15 @@
   },
   {
     "name": "explorable-paper",
+    "source": "original",
+    "version": "1.0.0",
+    "installUrl": null,
+    "enabled": true,
+    "mirrored": true,
+    "mirror_reason": "self-authored, MIT declared in frontmatter"
+  },
+  {
+    "name": "citation-tracing",
     "source": "original",
     "version": "1.0.0",
     "installUrl": null,

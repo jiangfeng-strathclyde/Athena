@@ -1,6 +1,6 @@
 {
   "name": "athena",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Evidence-first research workflows for literature review, experiments, writing, figures, citations, grants, patents, and peer review.",
   "author": {
     "name": "Athena contributors",
@@ -20,7 +20,7 @@
   "interface": {
     "displayName": "Athena",
     "shortDescription": "Evidence-first research copilot",
-    "longDescription": "Athena routes research goals to 109 reusable skills and keeps claims tied to verifiable evidence.",
+    "longDescription": "Athena routes research goals to 110 reusable skills and keeps claims tied to verifiable evidence.",
     "developerName": "Athena contributors",
     "category": "Productivity",
     "capabilities": [

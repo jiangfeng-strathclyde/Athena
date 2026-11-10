@@ -10,7 +10,7 @@ So I turned the agreement into a loadable package: red lines, collaboration meth
 
 - **Red lines:** no fabricated results, explicit verification status, and no silent changes to statistical conventions.
 - **Routing:** describe the goal and load the relevant workflow instead of memorizing skill names.
-- **Skills:** 109 `SKILL.md` workflows across literature, experiments, writing, explorable papers, figures, audits, reviews, patents, and grants.
+- **Skills:** 110 `SKILL.md` workflows across literature, experiments, writing, explorable papers, figures, audits, reviews, patents, and grants.
 - **Verification:** separate generation from checking; independent scripts fail loudly when results disagree.
 
 ## Three reproducible demonstrations

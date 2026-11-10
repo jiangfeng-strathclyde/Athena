@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT"></a>
-  <img src="https://img.shields.io/badge/research_skills-109-blue.svg" alt="109 research skills">
+  <img src="https://img.shields.io/badge/research_skills-110-blue.svg" alt="110 research skills">
   <a href="docs/CLONE_PROTOCOL.md"><img src="https://img.shields.io/badge/evidence-first-2dd4bf.svg" alt="Evidence first"></a>
 </p>
 
@@ -47,8 +47,8 @@ To select one agent instead, replace the last command with:
 | Codex / shared local skills directory | `python scripts/install_athena.py --agent universal` |
 | Another `SKILL.md` host | `python scripts/install_athena.py --target /path/to/skills` |
 
-Start a new agent session. The catalog contains 109 skills; the installer
-selects 106 by default and excludes three that require explicit review and
+Start a new agent session. The catalog contains 110 skills; the installer
+selects 107 by default and excludes three that require explicit review and
 authorization. Compatible hosts discover installed skills and load relevant
 instructions on demand. Check the host's skill list to confirm discovery. These local files
 are separate from web accounts and remote or cloud sessions.
@@ -81,7 +81,7 @@ No terminal is needed for this route:
 3. Paste it into a new chat and provide the draft, data, or other material needed.
 
 This provides Athena's core research workflow as a prompt, rather than
-installing the 109-skill library. Repeat it in new chats, or save it in a
+installing the 110-skill library. Repeat it in new chats, or save it in a
 project or custom assistant's instructions if your app supports that feature.
 Browsing, file handling, and code execution depend on the app you use.
 
@@ -95,6 +95,7 @@ After either setup, describe the outcome you want:
 
 - `Check whether the numerical claims in my draft are supported.`
 - `Plan a literature review on flood mapping with satellite imagery.`
+- `Trace the references and later citations of this seed paper; show sources and coverage gaps.`
 - `Help me design a reproducible ablation study.`
 
 ## What Athena does
@@ -105,7 +106,7 @@ After either setup, describe the outcome you want:
 | Drafts, data, or results | Evidence and consistency checks | Claims tied to reproducible sources |
 | Your constraints | Explicit trade-offs and approval points | Work that stays under your control |
 
-Athena includes **109 reusable research skills** for literature review, experiment design, scientific writing, explorable papers, figures, citation checks, rebuttals, patents, grants, and more.
+Athena includes **110 reusable research skills** for literature review, citation tracing, experiment design, scientific writing, explorable papers, figures, citation checks, rebuttals, patents, grants, and more.
 Its core integrity checks are `citation-audit`, `paper-claim-audit`, and
 `experiment-audit`. These specialized workflows require their documented
 support files and reviewer backends; their presence in the catalog is not a
@@ -139,6 +140,7 @@ and the input file hash. Missing or duplicate pairs stop the calculation.
 - [Start here](docs/START_HERE.md) — a guided first session
 - [Install once](docs/INSTALL_ONCE.md) — keep Athena available across conversations
 - [Browse the skill map](docs/SKILL_COVERAGE.md) — see what Athena can do
+- [Trace a paper's citations](skills/citation-tracing/SKILL.md) — bounded backward/forward tracing from supplied materials or available host tools
 - [Open the explorable antenna paper](https://jiangfeng-strathclyde.github.io/Athena/examples/antenna-direction.html) — a self-contained interactive research case study
 - [Understand the evidence rules](docs/DISTILLED_PUBLIC.md) — how Athena avoids unsupported claims
 - [Add a skill](CONTRIBUTING.md) — contribute a reusable research workflow

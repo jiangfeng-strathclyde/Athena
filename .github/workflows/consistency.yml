@@ -29,5 +29,7 @@ jobs:
         run: python scripts/check_skill_dependencies.py --skill research-integrity-pipeline --strict
       - name: Check standalone literature adaptations and narrative references
         run: python scripts/check_skill_dependencies.py --skill arxiv --skill openalex --skill semantic-scholar --skill academic-paper-narrative --strict
+      - name: Check self-contained citation tracing
+        run: python scripts/check_skill_dependencies.py --skill citation-tracing --strict
       - name: Report catalog packaging gaps (informational, not a runtime certification)
         run: python scripts/check_skill_dependencies.py
