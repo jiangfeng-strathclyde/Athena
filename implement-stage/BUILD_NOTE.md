@@ -12,9 +12,9 @@ Base commit: `3031536937276e28ca7211399f7d95c332711358`.
 
 | Rung | Deliverable | Acceptance command | Status |
 |---|---|---|---|
-| F0 | Importable CLI and safe project initialization | `python -m unittest tests.test_alpha_cli -v` | pending |
-| F1 | Durable tasks, planning, resume, checkpoint | `python -m unittest tests.test_alpha_state -v` | pending |
-| F2 | Core routing and deterministic policy denial | `python -m unittest tests.test_alpha_policy -v` | pending |
+| F0 | Importable CLI and safe project initialization | `python -m unittest tests.test_alpha_cli -v` | passed (4/4) |
+| F1 | Durable tasks, planning, resume, checkpoint | `python -m unittest tests.test_alpha_state -v` | passed (6/6, 1 platform skip) |
+| F2 | Core routing and deterministic policy denial | `python -m unittest tests.test_alpha_policy -v` | passed (16/16, 1 platform skip) |
 | F3 | Immutable, verifiable Research Release | `python -m unittest tests.test_alpha_release -v` | pending |
 | F4 | Website, docs, metadata, CI, full regression | full validation suite | pending |
 
@@ -48,4 +48,9 @@ next rung is considered complete.
 ## Build log
 
 - Specification and assumptions recorded before implementation.
-
+- F0: `athena init` creates strict, private local state and refuses unsafe roots
+  or accidental reinitialization.
+- F1: tasks, routes, checkpoints, artifact hashes, revisions, and resumable next
+  actions survive process restarts; corrupt or future state fails closed.
+- F2: bilingual deterministic routing and model-independent policy enforcement
+  deny network, paid, destructive, overwrite, and external-write effects.

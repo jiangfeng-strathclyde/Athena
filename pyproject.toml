@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "athena-research-bot"
+version = "1.2.0a1"
+description = "Local-first research projects and verifiable Research Releases"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Athena contributors"}]
+dependencies = []
+
+[project.scripts]
+athena = "athena.cli:main"
+
+[tool.setuptools]
+packages = ["athena"]
+
