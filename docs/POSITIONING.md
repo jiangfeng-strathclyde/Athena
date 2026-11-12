@@ -1,37 +1,78 @@
-# POSITIONING · We're not doing it.“One key out. paper”
+# Positioning
 
-> Research snapshot:2026-11-06（2026-11-09 Object: Local author `research agent/others/` Let's go. 45 A third party
-> Automated scientific framework/Platforms (research only, no mirrors, no fork）。For a complete version of the project-by-project mechanism and possible lessons learned, see
-> [`LESSONS_FROM_OTHERS.md`](LESSONS_FROM_OTHERS.md)。
+**Athena is an open-source Research Bot that turns a research question, paper,
+or dataset into a source-linked, versioned Research Release.**
 
-## A word of orientation.
+## The category
 
-**We're going to take down the science threshold, and we're going to get beginners to take a step-by-step job, and we're going to feel happy doing it in the process.** The fun of science is in the process: asking questions, checking accounts, rebuttals, and improving. Any product that skips the process, skips the fun and the training at the same time.
+Athena is a **local-first research control plane**. It sits between a research
+goal and the local agent or tools that do the work. Its job is to make the
+route, evidence, artifacts, uncertainty, and release history inspectable.
 
-## and“Make yourself at home. paper”Category framework differences
+The unit of value is not a chat answer or a generated manuscript. It is a
+**Research Release**: a versioned local bundle that records the question,
+sources, completed steps, supporting artifacts, limitations, and checksums.
 
-| Dimensions | One key./Make yourself at home. paper Frame | Athena |
-|---|---|---|
-| Objective | End-to-end automatic output of essays | Let's learn and enjoy a reenactable scientific process. |
-| The position of the person. | Bystander/Approval Button | Decision-makers: Programs and costs are set out for you first, so you can do it. |
-| Could not close temporary folder: %s | Try again or beautify silently | Express demotion, retention of negative results, public failure to record |
-| Credibility | Reliance on model conscious | Hard process: Generate-Verify Separation + Third-tier audit + Transparency Log |
-| Beginner path | None (aimed at experienced users) | A seven-day guided route in `START_HERE.md`, including simpler fallback explanations |
-| Skills concept | Black Box in Frame | 110 Readable, tailorable, self-playable. SKILL.md Full text |
+## Who it is for
 
-## Subjects researched, excluded (category and reason)
+- Researchers who want an auditable handoff between a question and its evidence.
+- Students who need a visible process instead of an opaque final answer.
+- Teams that want a reproducible local record before sharing or publishing.
+- Builders who want portable `SKILL.md` workflows without coupling the
+  research record to one model provider.
 
-| Category | Representative | Reasons for non-admission |
-|---|---|---|
-| Autonomous Science Agency Platform | AutoResearchClaw、ResearchClaw、ScienceClaw、PaperClaw、MedgeClaw | The objective is to produce autonomous outputs, and“You're in the ring. + Threshold ladder”Positioning conflict;mixed (permitted)MIT/Apache/Unknown) |
-| Academic Retrieval/Writing agent | OpenScholar、CitationClaw、ClawPhD | Retrieval light process training; partially licensed unknown |
-| Teaching agents | DeepTutor | Closely oriented but stand-alone product patterns; practices that can be drawn upon (wrong text)/It's not a mirror. It's not a mirror. |
-| Skills bank (partially launched) | AI-Research-SKILLs（Orchestra, MIT） | Reconstructed 12 Substitute ML systems side; the rest 74 A to-need, non-volume mirror. |
-| Reload/Template Migration Tool | Auto-Resubmit | Single-point tool, overlapping with back-up pipes; further discussion as required |
+## The difference
 
-## We keep it.“Counter-target”（anti-roadmap）
+| Approach | Primary output | Typical state | Athena's boundary |
+|---|---|---|---|
+| General chat assistant | A response | Conversation history | Athena records a project, artifacts, and release manifest |
+| Prompt or skill pack | Reusable instructions | Host-specific configuration | Athena adds lifecycle state and an export gate |
+| Autonomous paper generator | A document | Hidden or tool-specific run | Athena keeps the human decision point and does not claim one-click science |
+| Repository template | Files and conventions | Git working tree | Athena adds deterministic routing, checkpoints, and offline verification |
 
-- (b) Do not do fully automatic thesis streaming;
-- I don't promise.“Enter ideas, output papers”；
-- (b) Do not collect user data and do not host the memory of others;
-- Do not rewrite skill content to bypass the security scanner. Lower threshold ≠ Lower criteria: The red line (no fiction, first check, same caliber, first step) is equally valid for beginners, because**Credibility is what beginners should learn first.**。
+Athena can work with a compatible local agent, but the Alpha does not contain
+or host that agent. It controls the workflow; it does not pretend to have
+executed research that another tool must perform.
+
+## Product principles
+
+1. **Evidence before prose.** Important claims should point to sources or be
+   marked unverified.
+2. **Artifacts before completion.** Work is not exportable merely because an
+   agent says it is done.
+3. **Local before hosted.** The Alpha stores project state and releases on the
+   user's machine.
+4. **Explicit uncertainty.** Calculations, verified findings, hypotheses, and
+   unknowns remain distinct.
+5. **Human authority.** Publishing, sending, paid compute, deletion, and other
+   consequential effects require a separate decision.
+
+## Alpha reality
+
+Today Athena provides a local CLI, deterministic routing across three core
+skills (`citation-tracing` → `research-integrity-pipeline` →
+`explorable-paper`), checkpointed artifacts, a strict release gate, and offline verification.
+The website is documentation and a sample entry point. There is no hosted
+Athena bot, model runtime, account system, or cloud storage.
+
+The repository also includes [110 research skills](SKILL_COVERAGE.md). They
+extend what compatible agents can do, but many specialized workflows require
+their own tools, credentials, or support files. The catalog is a capability
+library, not evidence that every workflow is ready in every host.
+
+## What Athena does not claim
+
+- It does not turn one idea into a trustworthy paper automatically.
+- A verified package is not the same as a verified scientific conclusion.
+- It does not guarantee citation correctness without accessible sources.
+- It does not make third-party model or cloud use private.
+- It does not replace peer review, domain expertise, or research judgment.
+
+## Short description
+
+> Athena turns a research question, paper, or dataset into a local,
+> source-linked, versioned Research Release—with explicit steps, recorded
+> artifacts, and an offline verification gate.
+
+See the [Alpha contract](RESEARCH_BOT_ALPHA.md), [quickstart](START_HERE.md),
+and [roadmap](../ROADMAP.md).

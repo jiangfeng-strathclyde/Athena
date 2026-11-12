@@ -1,20 +1,20 @@
 cff-version: 1.2.0
 message: >-
-  If you load or reuse this clone kit (behavior manual, goal-first skill
-  routing, integrity audits), please cite this repository and keep the
-  upstream attributions in skills/NOTICE.md.
-title: "Athena: an open-source cyber clone for research"
+  If you use Athena Research Bot, its goal-first skill routing, or its
+  evidence-linked Research Release format, please cite this repository and
+  keep the upstream attributions in skills/NOTICE.md.
+title: "Athena: an open-source Research Bot"
 type: software
 license: MIT
 repository-code: "https://github.com/jiangfeng-strathclyde/Athena"
 url: "https://jiangfeng-strathclyde.github.io/Athena/"
-version: "1.0.0"
-date-released: "2026-11-06"
+version: "1.2.0-alpha.1"
+date-released: "2026-11-12"
 authors:
   - name: "Athena contributors"
     alias: "jiangfeng-strathclyde"
 keywords:
-  - research-assistant
+  - research-bot
   - llm-agents
   - skills
   - research-integrity

@@ -26,11 +26,11 @@ class RouterTests(unittest.TestCase):
 
         self.assertEqual(
             decision.skills,
-            ("explorable-paper", "research-integrity-pipeline"),
+            ("explorable-paper",),
         )
         self.assertNotIn("citation-tracing", decision.skills)
         self.assertIn("explicit:explorable-paper", decision.matched_rules)
-        self.assertIn("invariant:integrity-baseline", decision.matched_rules)
+        self.assertNotIn("invariant:integrity-baseline", decision.matched_rules)
         self.assertTrue(decision.explicit_override)
 
     def test_embedded_explicit_skill_invocation_is_supported(self) -> None:
@@ -38,7 +38,7 @@ class RouterTests(unittest.TestCase):
 
         self.assertEqual(
             decision.skills,
-            ("citation-tracing", "research-integrity-pipeline"),
+            ("citation-tracing",),
         )
         self.assertIn("explicit:citation-tracing", decision.matched_rules)
 
@@ -72,8 +72,8 @@ class RouterTests(unittest.TestCase):
             ["explorable-paper", "citation-tracing", "explorable-paper"],
         )
 
-        self.assertEqual(decision.skills, CORE_SKILL_ORDER)
-        self.assertEqual(decision.skills.count("research-integrity-pipeline"), 1)
+        self.assertEqual(decision.skills, ("citation-tracing", "explorable-paper"))
+        self.assertNotIn("research-integrity-pipeline", decision.skills)
 
     def test_unknown_explicit_skill_fails_clearly(self) -> None:
         with self.assertRaisesRegex(ValueError, "unsupported core skill"):

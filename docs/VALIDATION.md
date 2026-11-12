@@ -7,6 +7,7 @@ A discoverable skill is an instruction package, not a verified tool service.
 
 | Layer | Evidence available | What remains unverified |
 |---|---|---|
+| Research Bot Alpha | Dependency-free CLI tests for project initialization, durable task state, deterministic routing, checkpoints, policy denial, release export, and offline verification | Hosted execution, automatic model calls, cross-device memory, external publishing, and scientific correctness |
 | Repository structure | Count, frontmatter, README-link, and demo-number checks | Scientific quality of every skill |
 | Installer | Isolated tests for selection, dry runs, conflicts, staging, backups, and rollback | Every host's discovery and synchronization behavior |
 | Packaging | Static report of missing inline links, outside-folder references, and unbundled-support notices | Paths in executable examples, credentials, tools, and runtime behavior |
@@ -16,7 +17,9 @@ A discoverable skill is an instruction package, not a verified tool service.
 | Multi-platform support | Five-host fixture preparation; two real Codex numerical cases with trace review | Other hosts, implicit activation, citation checks, and the full catalog |
 | Citation tracing and evidence synthesis | Isolated resource-install tests and two independent, supplied-corpus agent exercises; see the 2026-11-10 report below | Live citation indexes, implicit skill selection, other hosts, and scientific correctness |
 
-The implementation was tested locally on Windows on 2026-11-09 and 2026-11-10. Tests that
+The catalog implementation was tested locally on Windows on 2026-11-09 and
+2026-11-10. The Research Bot Alpha was tested locally on Windows on 2026-11-12.
+Tests that
 need symlink privileges can be skipped when the OS does not grant them; inspect
 the test summary rather than treating a skipped check as passed.
 
@@ -25,7 +28,11 @@ the test summary rather than treating a skipped check as passed.
 From the checkout, with Python 3.10 or newer:
 
 ```bash
+python -m athena --version
+python -m athena --help
+python -m unittest discover -s tests -p "test_alpha_*.py" -v
 python -m unittest discover -s tests -v
+python scripts/smoke_wheel_install.py
 python scripts/check_repo_consistency.py
 python scripts/check_skills_quality.py
 python docs/demo_assets/verify_demo.py
@@ -36,6 +43,23 @@ python scripts/check_skill_dependencies.py --skill openalex --skill semantic-sch
 python scripts/check_skill_dependencies.py --skill citation-tracing --strict
 python skills/research-integrity-pipeline/scripts/paired_summary.py docs/demo_assets/demo_results.csv --metric miou --baseline baseline --candidate ours --unit percentage-points
 ```
+
+For a stateful smoke test, use a disposable directory and run `init`, `plan`,
+`resume`, `checkpoint`, `export`, and `verify` in sequence. `resume` reports the
+next skill action; it does not claim that an LLM or research tool ran. The wheel
+smoke test runs outside the checkout and confirms that `instruction_path` is an
+absolute, readable path to the installed `SKILL.md` and that its
+`instruction_sha256` matches the planning pin. A checkpoint records work that
+was actually completed, and `verify` checks file integrity rather than
+scientific validity. The installed-wheel path also executes the shell fallback
+from a virtual environment and project whose names contain spaces, apostrophes,
+percent-delimited text, and shell metacharacters, guarding against command-shell
+reinterpretation on Windows and POSIX hosts.
+
+Regression tests also confirm that a `blocked` task or next step makes both
+`resume` and `checkpoint` fail closed without changing task state or registering
+an artifact. The Alpha does not automatically unlock a task in place; after
+correcting the input or source problem, create a new task with `plan`.
 
 The catalog dependency report is informational by default because known gaps
 remain in mirrored upstream procedures. `--strict` makes those findings fail
@@ -52,8 +76,24 @@ values. It does not infer valid experimental pairing or test significance.
 
 ## Recommended first use
 
-Install only `research-integrity-pipeline` to start with source-backed manual
-checks using tools already available in your host. It reports unverified
+For the persistent Alpha path, start in a new directory:
+
+```bash
+python -m athena init my-research --name "My research"
+python -m athena plan --project my-research "Understand this paper and audit its central claims" --source https://example.org/paper
+python -m athena resume --project my-research
+```
+
+Athena stores inspectable state under `.athena/`. Planning records usable local
+source paths and fingerprints, or sanitized URLs; it does not copy or upload the
+source. Export redacts absolute local paths from its task snapshot. A compatible
+agent or researcher completes the reported skill step and then records the real
+result with `athena checkpoint`.
+
+For the skill-only path, install only `research-integrity-pipeline` to start
+with source-backed manual checks using tools already available in your host.
+
+It reports unverified
 citations, missing data, and unavailable independent reviewers explicitly.
 It does not depend on Athena's root documentation being installed alongside it.
 

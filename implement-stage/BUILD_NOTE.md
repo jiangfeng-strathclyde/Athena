@@ -2,55 +2,80 @@
 
 ## Scope
 
-Build Athena Research Bot `1.2.0-alpha.1` as a dependency-free local runtime,
-integrate it with the existing repository and GitHub Pages site, and verify the
-full public story without erasing the 110-skill catalog.
+Athena Research Bot `1.2.0-alpha.1`, built from
+`3031536937276e28ca7211399f7d95c332711358`, adds a dependency-free local
+control plane while preserving the 110-skill catalog and existing GitHub Pages
+site.
 
-Base commit: `3031536937276e28ca7211399f7d95c332711358`.
+## Functional ladder
 
-## Planned rungs
-
-| Rung | Deliverable | Acceptance command | Status |
+| Rung | Deliverable | Acceptance | Status |
 |---|---|---|---|
-| F0 | Importable CLI and safe project initialization | `python -m unittest tests.test_alpha_cli -v` | passed (4/4) |
-| F1 | Durable tasks, planning, resume, checkpoint | `python -m unittest tests.test_alpha_state -v` | passed (6/6, 1 platform skip) |
-| F2 | Core routing and deterministic policy denial | `python -m unittest tests.test_alpha_policy -v` | passed (16/16, 1 platform skip) |
-| F3 | Immutable, verifiable Research Release | `python -m unittest tests.test_alpha_release -v` | pending |
-| F4 | Website, docs, metadata, CI, full regression | full validation suite | pending |
+| F0 | CLI and safe initialization | `tests.test_alpha_cli` | passed (5) |
+| F1 | Durable plan/resume/checkpoint state | `tests.test_alpha_state` | passed (32; 2 platform skips) |
+| F2 | Explainable router and fail-closed policy | router + policy suites | passed (24; 1 ordinary-symlink skip) |
+| F3 | Immutable, offline-verifiable Research Release | `tests.test_alpha_release` | passed (33; 1 POSIX-only skip) |
+| F4 | Website, docs, metadata, CI, regression | full validation suite | passed |
 
-Each rung must pass its own command and all earlier rung commands before the
-next rung is considered complete.
+## Run record
+
+- Alpha-focused suite: 94 tests executed; 90 passed and 4 platform-dependent
+  tests skipped. Windows junction/reparse-point regressions ran and passed.
+- Full repository suite: 161 tests executed; 155 passed and 6
+  environment-dependent tests skipped.
+- Repository consistency: passed, including runtime/package/plugin/CITATION
+  versions, 110 skill directories, 200 manifest entries, docs, and links.
+- Skill quality: 110 parsed; all hard checks passed.
+- Independent demo recomputation: `1.17 ± 1.84`; passed.
+- Strict dependency scans: integrity, literature helpers, and citation tracing;
+  no packaging findings.
+- Offline wheel installation: source and wheel inventories matched for 132
+  skill resources, including all 110 `SKILL.md` files; the installed CLI then
+  completed a checkpoint contract, exported a release, and verified it offline.
+- Manual CLI spine: init → explicit three-skill plan → resume → three ordered
+  checkpoints → export → offline verify; passed. Release core SHA-256:
+  `21f6390e7da51ba1a5cd6d1ae3ab2a30de7499402264d6f47a5acf53b03f41f8`.
+- `compileall` and `git diff --check`: passed (Git reports only Windows line-ending
+  notices).
+
+## Implemented boundaries
+
+- Strict schemas, atomic writes, revisions, locks, checkpoint hash revalidation,
+  deterministic bilingual routing, and model-independent permission denial.
+- Plans pin the exact skill instruction digest; drift blocks resume. Private
+  state keeps usable local source paths, while releases replace them with a
+  fixed sentinel. JSONL records are strict and bound to one task; values that
+  would lose decimal precision and unencodable Unicode surrogates fail closed.
+- Each resumed action returns both exact checkpoint argv and a self-contained
+  shell command. Windows transports the exact argv inside an encoded PowerShell
+  program rather than treating CreateProcess quoting as cmd.exe escaping. Python
+  and project paths containing spaces, apostrophes, percent-delimited text, and
+  shell metacharacters are covered by installed-wheel regression tests.
+- Export requires a completed task and registered artifacts. It rejects path
+  traversal, links/reparse points, case-fold collisions, tampering, unexpected
+  files, recognized URL credentials, secrets, over-nested escape encodings,
+  Markdown URL-delimiter tricks, and copy races.
+  `.athena/private/` is excluded. Failed post-move verification removes the new
+  directory before `current.json` can advance.
+- `manifest.json` and `release.json` bind their stable `created_at` value to the
+  completed task revision. `current.json.updated_at` records the successful
+  export/reuse invocation and advances only after verification.
+- Windows reparse ancestors are rejected. Stable POSIX parent aliases are
+  canonicalized before containment checks; same-user replacement races remain
+  outside the stated threat model.
+- Public copy says the Alpha returns a next action and does not itself execute
+  skills, run a hosted model, upload memory, or publish a release.
 
 ## Explicit deferrals
 
-- No hosted account system, tenant database, web API, background worker, or
-  synchronized cloud memory.
-- No real model invocation, autonomous browsing, citation-index subscription,
-  GPU job, payment, email, GitHub push, or publication adapter.
-- No claim that all 110 catalog skills are executable or independently audited.
-- No exactly-once guarantee for future external services. Such a guarantee
-  would require provider idempotency keys and reconciliation APIs.
-- No byte-identical guarantee for a fresh LLM run. Reproducibility covers a
-  rebuild from frozen inputs and recorded raw outputs.
-- No assertion that integrity verification makes arbitrary bundled HTML safe to
-  open or publish.
+No hosted accounts, web API, background worker, synchronized cloud memory,
+model invocation, autonomous browsing, paid service, publication adapter, or
+claim that all 110 skills are runtime-executable or independently audited.
+Exactly-once external effects and byte-identical fresh LLM runs are not claimed.
 
-## Evidence log
+## Assurance note
 
-- Baseline reported by independent read-only audit: 67 tests pass; two Windows
-  symlink tests skip where privileges are unavailable; existing consistency,
-  quality, demo, and strict packaging checks pass.
-- Current risk gap: those tests cover installer behavior, not Bot checkpointing,
-  policy enforcement, prompt-injection boundaries, or Release integrity.
-- P0 enforcement will live outside the model in deterministic state, policy,
-  path, and manifest code.
-
-## Build log
-
-- Specification and assumptions recorded before implementation.
-- F0: `athena init` creates strict, private local state and refuses unsafe roots
-  or accidental reinitialization.
-- F1: tasks, routes, checkpoints, artifact hashes, revisions, and resumable next
-  actions survive process restarts; corrupt or future state fails closed.
-- F2: bilingual deterministic routing and model-independent policy enforcement
-  deny network, paid, destructive, overwrite, and external-write effects.
+An independent same-family cold audit is run against the raw diff. It is useful
+but remains provisional; without an available cross-family backend, the required
+cross-family silent-assumption sweep is recorded as `SWEEP_UNAVAILABLE`, never
+fabricated as a clean verdict.

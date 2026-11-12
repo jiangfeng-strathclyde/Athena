@@ -2,7 +2,8 @@
 
 The router deliberately does not invoke a model.  It normalises a goal, applies
 small bilingual rules, and returns a stable skill chain that can be persisted in
-project state.  Research integrity is the mandatory baseline for every route.
+project state.  Research integrity is the baseline for implicit routes; explicit
+requests select an exact subset in canonical order.
 """
 
 from __future__ import annotations
@@ -15,8 +16,8 @@ from collections.abc import Iterable
 
 CORE_SKILL_ORDER: tuple[str, ...] = (
     "citation-tracing",
-    "explorable-paper",
     "research-integrity-pipeline",
+    "explorable-paper",
 )
 
 _INTEGRITY_SKILL = "research-integrity-pipeline"
@@ -220,6 +221,8 @@ def _requested_from_argument(
         return ()
     values = (requested_skills,) if isinstance(requested_skills, str) else requested_skills
     requested = {_canonical_requested_skill(value) for value in values}
+    if not requested:
+        raise ValueError("Explicit skill selection must not be empty.")
     return tuple(skill for skill in CORE_SKILL_ORDER if skill in requested)
 
 
@@ -240,22 +243,16 @@ def _requested_from_goal(normalized_goal: str) -> tuple[str, ...]:
     return tuple(skill for skill in CORE_SKILL_ORDER if skill in requested)
 
 
-def _with_integrity_baseline(skills: Iterable[str]) -> tuple[str, ...]:
-    selected = set(skills)
-    selected.add(_INTEGRITY_SKILL)
-    return tuple(skill for skill in CORE_SKILL_ORDER if skill in selected)
-
-
 def route_goal(
     goal: str,
     requested_skills: str | Iterable[str] | None = None,
 ) -> RouteDecision:
     """Route *goal* to an ordered Alpha skill chain.
 
-    An explicit skill request overrides keyword routing.  The mandatory
-    integrity baseline is then added exactly once.  Without an explicit request,
-    bilingual rules are combined and emitted in ``CORE_SKILL_ORDER`` regardless
-    of keyword order.  An unmatched goal defaults to integrity review.
+    An explicit skill request overrides keyword routing and selects exactly the
+    requested subset in ``CORE_SKILL_ORDER``.  Without an explicit request,
+    bilingual rules are combined with an integrity baseline and emitted in
+    canonical order.  An unmatched goal defaults to integrity review.
     """
 
     normalized_goal = normalize_goal(goal)
@@ -266,15 +263,10 @@ def route_goal(
     if requested:
         rules = [f"explicit:{skill}" for skill in requested]
         explanations = [f"The user explicitly requested {skill}." for skill in requested]
-        if _INTEGRITY_SKILL not in requested:
-            rules.append("invariant:integrity-baseline")
-            explanations.append(
-                "Research integrity is included once as Athena's mandatory baseline."
-            )
         return RouteDecision(
             goal=goal,
             normalized_goal=normalized_goal,
-            skills=_with_integrity_baseline(requested),
+            skills=requested,
             matched_rules=tuple(rules),
             explanations=tuple(explanations),
             explicit_override=True,

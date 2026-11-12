@@ -60,7 +60,10 @@ def score(fm, body):
 
 
 def main():
-    dirs = sorted(p for p in SKILLS.iterdir() if p.is_dir())
+    dirs = sorted(
+        p for p in SKILLS.iterdir()
+        if p.is_dir() and p.name != "__pycache__"
+    )
     failures, scores = [], []
     for d in dirs:
         f = d / "SKILL.md"

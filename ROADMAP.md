@@ -1,26 +1,44 @@
-# ROADMAP · Where the Clone Goes Next
+# Athena Research Bot roadmap
 
-## Completed
+Athena is an open-source Research Bot that turns a research question, paper, or dataset into a source-linked, versioned Research Release.
 
-- [x] **Clone card and badges** — generate a compact snapshot of skill count, protocol version, audit status, and date.
-- [x] **Skill request queue** — collect requests through the `skill-request` Discussion template and review them in batches.
-- [x] **English public guide** — publish the complete English behavior contract in `docs/DISTILLED_PUBLIC.md`.
-- [x] **Minimum integrity quickstart** — demonstrate citation, claim, and experiment audits in `docs/EXAMPLES.md`.
-- [x] **Platform matrix** — document setup for digital-employee platforms, Claude Code, Codex, and ordinary chat models.
-- [x] **Weekly link check** — validate external links through `.github/workflows/external-links-weekly.yml`.
+The roadmap starts from the product that exists today: a local-first Alpha control plane. Items below describe direction, not delivery promises.
 
-## Medium term
+## Available in the Alpha
 
-- [ ] Publish the public methodology as a searchable knowledge base while keeping private memory separate.
-- [ ] Record a three-minute demo from a blank session through a reproducible audit.
-- [ ] Monitor upstream ARIS releases and propose reviewed synchronization changes.
+- [x] Initialize local projects with versioned state under `.athena/`.
+- [x] Plan deterministic core workflows from a goal and source references.
+- [x] Return an explicit next-action contract without silently executing a model.
+- [x] Checkpoint completed steps with registered artifacts and hashes.
+- [x] Block export until every planned step is complete and at least one artifact exists.
+- [x] Export a versioned Research Release and verify it offline.
+- [x] Keep release records for claims, evidence, decisions, artifacts, and integrity metadata.
+- [x] Ship 110 research skills, with 107 selected by the full installer by default.
+- [x] Provide a synthetic sample release and repository consistency checks.
 
-## Long term
+## Alpha priorities
 
-- [ ] Let domain-specific clones exchange selected routing rules without sharing private memory.
-- [ ] Turn the generate–verify separation and three-layer audit into reusable journal and conference checklists.
+- [ ] Stabilize the Research Release schema, compatibility policy, and migration story.
+- [ ] Add richer source, evidence-location, and claim-to-artifact records.
+- [ ] Improve recovery guidance for interrupted or stale local projects.
+- [ ] Add more end-to-end fixtures for multi-step tasks, tampering, and failed export gates.
+- [ ] Make local agent adapters explicit about capabilities, approvals, and external calls.
+- [ ] Keep the static sample viewer aligned with the exported release format.
+- [ ] Document reproducible handoff and review patterns for teams using shared repositories.
+
+## Later, after the Alpha contract is stable
+
+- [ ] Evaluate an optional release viewer that can open local packages without changing them.
+- [ ] Explore interoperable release exchange between research tools.
+- [ ] Consider collaboration features only with explicit identity, storage, retention, and access-control policies.
 
 ## Anti-roadmap
 
-- No fully automatic paper publishing and no “one-click paper” claims. The project lowers workflow friction; it does not replace scientific judgment.
-- No collection of user data and no hosted storage of other people's private memory.
+- No “one-click paper” or fully automatic publication claims.
+- No automatic publishing or external writes without explicit user approval.
+- No claim that a verified package makes its scientific conclusions true.
+- No claim that the static website is a hosted bot or collects research inputs.
+- No cloud-privacy promise for services Athena does not operate or control.
+- No hidden replacement of missing sources, tools, or model capabilities with invented output.
+
+See the [Alpha contract](docs/RESEARCH_BOT_ALPHA.md), [local quickstart](docs/START_HERE.md), and [validation boundaries](docs/VALIDATION.md).

@@ -19,11 +19,19 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: Check README counts, links and demo numbers against the tree
         run: python scripts/check_repo_consistency.py
+      - name: Smoke-test the Athena Research Bot Alpha CLI
+        run: |
+          python -m athena --version
+          python -m athena --help
+      - name: Run the Alpha runtime tests explicitly
+        run: python -m unittest discover -s tests -p "test_alpha_*.py" -v
+      - name: Build, install and resume from the wheel entirely offline
+        run: python scripts/smoke_wheel_install.py
       - name: Skill QC (frontmatter hard checks + quality score report)
         run: python scripts/check_skills_quality.py
       - name: Recompute demo statistics independently
         run: python docs/demo_assets/verify_demo.py
-      - name: Test installation, rollback, packaging, and installed numerical helper
+      - name: Run the complete regression suite
         run: python -m unittest discover -s tests -v
       - name: Check the self-contained research entry point
         run: python scripts/check_skill_dependencies.py --skill research-integrity-pipeline --strict

@@ -1,0 +1,67 @@
+{
+  "undeclared": [
+    {
+      "site": "athena/release.py:852",
+      "decision": "Every task release includes all project-wide claims, evidence, and decisions records, without filtering or binding them to the selected task.",
+      "why_it_matters": "A release can contain unrelated tasks' information, and changes to unrelated project records change the release core for an otherwise frozen task. The assumptions do not declare this scope.",
+      "class": "semantic"
+    },
+    {
+      "site": "athena/state.py:701",
+      "decision": "Resume uses the current checkout's skill instructions, rather than instructions pinned when the task was planned or checkpointed.",
+      "why_it_matters": "Editing or updating a skill changes the action ID and execution instructions without changing the task revision. Completed task snapshots do not preserve which instruction version produced their artifacts.",
+      "class": "semantic"
+    },
+    {
+      "site": "athena/router.py:243",
+      "decision": "Research integrity is mandatory even when the caller explicitly requests a different skill subset.",
+      "why_it_matters": "An explicit citation-only or explorable-only request gains an additional required step. A-008 declares broad-goal ordering, but not this override of explicit selection.",
+      "class": "semantic"
+    }
+  ],
+  "stale_rows": [
+    "A-006 and docs/VALIDATION.md:75 say planning records local source paths; normalize_sources stores only candidate.name, losing the actual locator.",
+    "A-010 presents the installed console as an optional usable entry point, but the built wheel contains no skill instructions and installed resume fails.",
+    "athena/cli.py:51 says repeated --skill arguments set an ordered chain, while routing canonicalizes their order and adds the mandatory integrity step."
+  ],
+  "semantic_undeclared": 3,
+  "verdict": "gaps",
+  "defects": [
+    {
+      "severity": "P1",
+      "site": "athena/state.py:803",
+      "issue": "Checkpoint checks only an existing destination leaf, not its ancestors. Reproduced with a real Windows junction at .athena/artifacts/<task_id>: checkpoint succeeded, marked the task complete, and created the artifact outside the project. Task-directory reads and writes also lack equivalent ancestor checks.",
+      "fix": "Apply no-link/reparse-point and containment checks to every state/artifact destination and existing ancestor before mutation, including task files and lock paths. Add real junction regression tests and account for check-to-use replacement races."
+    },
+    {
+      "severity": "P1",
+      "site": "athena/state.py:376",
+      "issue": "A live writer's lock is stolen solely because its file modification time exceeds 60 seconds. Reproduced by aging an actively held lock and acquiring a second writer token inside the first critical section. Large checkpoint copies or release exports can naturally exceed this duration, permitting overlapping writes and lost revisions.",
+      "fix": "Do not expire an active lock based only on age. Prefer an operating-system lock released on process termination, or a robust ownership/liveness protocol. Test a long-running owner against a second writer."
+    },
+    {
+      "severity": "P2",
+      "site": "pyproject.toml:29; athena/state.py:683",
+      "issue": "The distribution packages only athena, but resume requires a sibling skills/<skill>/SKILL.md tree. Built and installed the wheel in an isolated temporary directory: it contained zero SKILL.md files, and init/plan succeeded but resume raised BlockedError for unavailable instructions.",
+      "fix": "Package the required skill resources and resolve them through package resources, or explicitly support a validated external catalog location. Add a wheel-build/install/resume smoke test outside the repository checkout."
+    },
+    {
+      "severity": "P2",
+      "site": "athena/state.py:486",
+      "issue": "load_task validates the document's schema and project membership but never checks that its embedded task_id matches the requested ID and filename. Reproduced by placing task B's valid JSON under task A's filename: load_task(A) silently returned B. Subsequent operations can act on the wrong task and persist contradictory identities.",
+      "fix": "Reject task documents whose task_id differs from the requested identifier, and test swapped or renamed task-state files across status, resume, checkpoint, and export."
+    },
+    {
+      "severity": "P2",
+      "site": "athena/release.py:852; athena/release.py:752",
+      "issue": "Research records are checked only for UTF-8 and secret patterns, not JSONL validity. Reproduced with claims.jsonl containing 'not JSON at all\\n': export succeeded and verify returned verified=true, despite the stated corrupt-state rejection and JSONL contract.",
+      "fix": "Strictly parse every nonempty record line during export and verification, rejecting malformed JSON, duplicate keys, and non-finite values; define and enforce the supported record shape."
+    },
+    {
+      "severity": "P2",
+      "site": "athena/state.py:516",
+      "issue": "Local source locators are reduced to basenames. A source outside the project cannot be found from the resumed action, and different directories containing the same filename become indistinguishable as locations. This contradicts the recorded-path contract.",
+      "fix": "Persist a usable private source locator or an explicit source-binding mechanism. Keep private paths out of releases through deliberate redaction, rather than discarding the locator needed for execution."
+    }
+  ]
+}

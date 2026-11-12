@@ -48,7 +48,7 @@ def build_parser() -> argparse.ArgumentParser:
     plan.add_argument(
         "--skill", action="append",
         choices=["citation-tracing", "research-integrity-pipeline", "explorable-paper"],
-        help="Explicit core skill; repeat to set an ordered chain.",
+        help="Select an exact core-skill subset; repeat as needed. Steps use canonical order.",
     )
     plan.add_argument("--json", action="store_true")
 
@@ -74,7 +74,10 @@ def build_parser() -> argparse.ArgumentParser:
     export = commands.add_parser("export", help="Create an immutable local Research Release draft.")
     _project_argument(export)
     export.add_argument("--task", required=True)
-    export.add_argument("--release-version", required=True)
+    export.add_argument(
+        "--release-version", "--version", dest="release_version", required=True,
+        help="Semantic version or draft label for the local release.",
+    )
     export.add_argument("--title")
     export.add_argument("--json", action="store_true")
 
@@ -95,6 +98,7 @@ def _emit(value: dict[str, Any], as_json: bool) -> None:
             action = value["action"]
             print(f"Next: {action['step_id']} — {action['skill']}")
             print(f"Instructions: {action['instruction_path']} ({action['instruction_sha256'][:12]})")
+            print(f"Artifact: {action['result_contract']['artifact_path']}")
             print(f"Checkpoint: {action['result_contract']['checkpoint_command']}")
         return
     if "tasks" in value:
@@ -183,4 +187,3 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(f"ERROR: filesystem operation failed: {exc}", file=sys.stderr)
         return 1
     return 1
-

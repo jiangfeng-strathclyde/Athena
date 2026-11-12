@@ -5,16 +5,27 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "athena-research-bot"
 version = "1.2.0a1"
-description = "Local-first research projects and verifiable Research Releases"
+description = "Athena Research Bot for local-first projects and verifiable Research Releases"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [{name = "Athena contributors"}]
 dependencies = []
+keywords = ["research-bot", "research-integrity", "reproducibility", "agent-skills"]
+
+[project.urls]
+Homepage = "https://jiangfeng-strathclyde.github.io/Athena/"
+Repository = "https://github.com/jiangfeng-strathclyde/Athena"
+Documentation = "https://jiangfeng-strathclyde.github.io/Athena/START_HERE.html"
 
 [project.scripts]
 athena = "athena.cli:main"
 
 [tool.setuptools]
-packages = ["athena"]
+packages = ["athena", "skills"]
 
+[tool.setuptools.package-data]
+skills = ["**/*"]
+
+[tool.setuptools.exclude-package-data]
+skills = ["*.pyc", "**/*.pyc", "__pycache__/*", "**/__pycache__/*"]

@@ -1,0 +1,8 @@
+{
+  "status": "SWEEP_UNAVAILABLE",
+  "required_reviewer": "independent cross-family model",
+  "reason": "No independent cross-family reviewer backend was available in this environment.",
+  "provisional_review": "PROVISIONAL_SAME_FAMILY_SWEEP.json",
+  "provisional_review_status": "gaps",
+  "claim": "This file does not certify a clean silent-assumption sweep. The provisional same-family review found actionable gaps; its raw response is preserved separately and every reported defect must be resolved or explicitly carried before release."
+}

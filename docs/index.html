@@ -1,169 +1,570 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Athena — An Open-Source Research Clone Kit</title>
-<meta name="description" content="An open-source research clone kit with 110 skills, goal-first routing, and an integrity audit pipeline.">
-<style>
-  :root{--bg:#0A101E;--bg2:#141F38;--card:#0D1729;--line:#22304A;--ink:#E2E8F0;--muted:#8DA2BF;--dim:#64748B;--teal:#5EEAD4;--blue:#60A5FA}
-  *{box-sizing:border-box}
-  body{margin:0;background:linear-gradient(135deg,var(--bg),var(--bg2));color:var(--ink);
-       font-family:Inter,"Segoe UI",system-ui,sans-serif;line-height:1.7}
-  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
-  header{padding:40px 0 8px}
-  header svg{width:100%;height:auto;border-radius:16px;border:1px solid var(--line)}
-  h1{font-size:30px;margin:40px 0 6px;letter-spacing:-.3px}
-  h1 .en{display:block;font-size:15px;color:var(--dim);font-weight:400;margin-top:4px}
-  h2{font-size:21px;margin:44px 0 12px;color:#F8FAFC;border-left:3px solid var(--teal);padding-left:12px}
-  p{color:var(--muted)}
-  strong{color:var(--ink)}
-  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px}
-  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
-  th{background:#12233D;color:#CBD5E1}
-  td{color:var(--muted)}
-  code,pre{font-family:Consolas,"Cascadia Mono",monospace}
-  code{background:#12233D;color:var(--teal);padding:1px 6px;border-radius:4px;font-size:88%}
-  pre{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;overflow:auto;font-size:13.5px;color:#C9D1D9;line-height:1.6}
-  pre .g{color:#7EE787}pre .t{color:var(--teal)}
-  ul{padding-left:22px;color:var(--muted)}
-  li{margin:6px 0}
-  a{color:var(--blue);text-decoration:none}
-  a:hover{text-decoration:underline}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0}
-  .card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--teal);border-radius:12px;padding:16px 18px}
-  .card h3{margin:0 0 6px;font-size:16px;color:#F8FAFC}
-  .card p{margin:0;font-size:13.5px}
-  .badges{margin:18px 0 0}
-  .badges span{display:inline-block;border:1px solid var(--line);border-radius:14px;padding:3px 12px;margin:3px 6px 3px 0;font-size:12px;color:var(--teal);background:var(--card)}
-  .en-block{border:1px solid var(--line);border-radius:12px;padding:18px 22px;background:var(--card);color:#9FB3CC;font-size:14.5px}
-  footer{margin:56px 0 40px;color:var(--dim);font-size:13px;border-top:1px solid var(--line);padding-top:20px}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Athena is an open-source Research Bot that turns a research question, paper, or dataset into a source-linked, versioned Research Release.">
+  <title>Athena — Open-Source Research Bot</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17201d;
+      --muted: #5c6863;
+      --paper: #f7f5ee;
+      --surface: #fffdf8;
+      --line: #d8d8cc;
+      --green: #195d4a;
+      --green-dark: #104438;
+      --green-soft: #dceae2;
+      --gold: #c98930;
+      --shadow: 0 18px 50px rgba(31, 48, 40, 0.09);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 88% 3%, rgba(201, 137, 48, 0.12), transparent 27rem),
+        var(--paper);
+      color: var(--ink);
+      font: 16px/1.65 Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+
+    a { color: inherit; }
+
+    a:focus-visible {
+      outline: 3px solid rgba(25, 93, 74, 0.3);
+      outline-offset: 3px;
+    }
+
+    .shell {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      border-bottom: 1px solid rgba(92, 104, 99, 0.18);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      font-size: 19px;
+      font-weight: 750;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--green);
+      color: white;
+      font-family: Georgia, serif;
+      font-size: 22px;
+    }
+
+    .alpha {
+      border: 1px solid #bad1c4;
+      border-radius: 999px;
+      padding: 3px 9px;
+      background: var(--green-soft);
+      color: var(--green-dark);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    nav a { text-decoration: none; }
+    nav a:hover { color: var(--green); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+      gap: 72px;
+      align-items: center;
+      padding: 86px 0 68px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 760px;
+      margin-bottom: 22px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(45px, 6vw, 74px);
+      font-weight: 500;
+      letter-spacing: -0.045em;
+      line-height: 1.02;
+    }
+
+    .lede {
+      max-width: 700px;
+      margin-bottom: 30px;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 21px);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+      margin-bottom: 24px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      padding: 10px 16px;
+      background: var(--surface);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      border-color: var(--green);
+      background: var(--green);
+      color: white;
+    }
+
+    .button:hover {
+      border-color: var(--green);
+      transform: translateY(-1px);
+    }
+
+    .boundary {
+      max-width: 720px;
+      margin: 0;
+      border-left: 3px solid var(--gold);
+      padding-left: 15px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .release-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 26px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .release-card::before {
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      background: linear-gradient(90deg, var(--green), var(--gold));
+      content: "";
+    }
+
+    .release-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .release-card h2 {
+      margin-bottom: 7px;
+      font-family: Georgia, serif;
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    .release-card > p {
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .release-list {
+      display: grid;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .release-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      border-top: 1px solid var(--line);
+      padding: 10px 0;
+      font: 13px/1.35 "Cascadia Mono", Consolas, monospace;
+    }
+
+    .ok { color: var(--green); font-weight: 800; }
+
+    .triptych {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      margin-bottom: 88px;
+      background: rgba(255, 253, 248, 0.7);
+    }
+
+    .triptych article { padding: 25px; }
+    .triptych article + article { border-left: 1px solid var(--line); }
+
+    .triptych span {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .triptych h2 {
+      margin-bottom: 7px;
+      font-size: 18px;
+    }
+
+    .triptych p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 76px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 64px;
+      margin-bottom: 42px;
+    }
+
+    .section h2 {
+      margin-bottom: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+    }
+
+    .section-head p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      counter-reset: steps;
+    }
+
+    .step {
+      min-height: 205px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 21px;
+      background: var(--surface);
+      counter-increment: steps;
+    }
+
+    .step::before {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border-radius: 50%;
+      margin-bottom: 34px;
+      background: var(--green-soft);
+      color: var(--green-dark);
+      content: counter(steps);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .step h3 { margin-bottom: 7px; font-size: 16px; }
+    .step p { margin-bottom: 0; color: var(--muted); font-size: 14px; }
+
+    .sample {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+      border-radius: 18px;
+      padding: 42px;
+      background: var(--green-dark);
+      color: white;
+    }
+
+    .sample .eyebrow { color: #acd4c4; }
+    .sample h2 { margin-bottom: 12px; font-size: 36px; }
+    .sample p { max-width: 720px; margin-bottom: 0; color: #c8dbd4; }
+    .sample .button { border-color: white; background: white; color: var(--green-dark); }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .principles h3 { margin-bottom: 8px; font-size: 16px; }
+    .principles p { margin-bottom: 0; color: var(--muted); font-size: 14px; }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .skills-copy > p { color: var(--muted); }
+
+    .skill-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skill-list li {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px 13px;
+      background: var(--surface);
+      font: 13px "Cascadia Mono", Consolas, monospace;
+    }
+
+    .text-link {
+      color: var(--green);
+      font-weight: 750;
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      border-top: 1px solid var(--line);
+      padding: 30px 0 42px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; gap: 42px; padding-top: 62px; }
+      .release-card { max-width: 560px; }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+      .section-head, .skills { grid-template-columns: 1fr; gap: 22px; }
+    }
+
+    @media (max-width: 640px) {
+      .shell { width: min(100% - 26px, 1120px); }
+      nav { display: none; }
+      .hero { padding: 48px 0 54px; }
+      h1 { font-size: 43px; }
+      .actions { display: grid; }
+      .button { width: 100%; }
+      .triptych, .steps, .principles { grid-template-columns: 1fr; }
+      .triptych article + article { border-top: 1px solid var(--line); border-left: 0; }
+      .section { padding: 58px 0; }
+      .sample { grid-template-columns: 1fr; padding: 28px; }
+      footer { display: grid; }
+    }
+  </style>
 </head>
 <body>
-<div class="wrap">
-<header>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img" aria-label="Athena: an open-source research clone kit">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0A101E"/><stop offset="1" stop-color="#141F38"/></linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5EEAD4"/><stop offset="1" stop-color="#60A5FA"/></linearGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.045"/></pattern>
-  </defs>
-  <rect width="1200" height="340" fill="url(#bg)"/><rect width="1200" height="340" fill="url(#grid)"/>
-  <g font-family="Inter,'Segoe UI',system-ui,sans-serif">
-    <rect x="72" y="56" width="300" height="32" rx="16" fill="none" stroke="#2DD4BF" stroke-opacity="0.55"/>
-    <circle cx="92" cy="72" r="4" fill="#2DD4BF"/>
-    <text x="106" y="77" font-size="12" letter-spacing="2.2" fill="#7DD3C8" font-weight="600">OPEN SOURCE · CLONE KIT v1</text>
-    <text x="70" y="172" font-size="66" font-weight="700" fill="#F8FAFC" letter-spacing="-1">Athena</text>
-    <text x="72" y="212" font-size="23" fill="#CBD5E1">My cyber clone is a research partner that shows its work.</text>
-    <text x="72" y="248" font-size="14.5" fill="#8DA2BF" letter-spacing="0.4">1 protocol · 110 research skills · 1 integrity pipeline · 0 platform lock-in</text>
-    <text x="72" y="292" font-size="13" fill="#64748B">Reproducible research workflows, packaged as documents that any capable model can load.</text>
-    <rect x="690" y="50" width="446" height="244" rx="18" fill="#0D1729" stroke="#22304A"/>
-    <text x="716" y="84" font-size="12" letter-spacing="2" fill="#64748B" font-weight="600">LOAD-BEFORE-TASK PROTOCOL</text>
-    <line x1="716" y1="98" x2="1110" y2="98" stroke="#22304A"/>
-    <g font-size="14">
-      <circle cx="726" cy="126" r="10" fill="#12233D" stroke="#2DD4BF" stroke-opacity="0.7"/><text x="722.5" y="130.5" font-size="10" fill="#5EEAD4" font-weight="700">1</text><text x="748" y="131" fill="#E2E8F0">Load constraints</text><text x="860" y="131" fill="#64748B" font-size="12.5">DISTILLED_PUBLIC.md</text>
-      <circle cx="726" cy="160" r="10" fill="#12233D" stroke="#2DD4BF" stroke-opacity="0.7"/><text x="722.5" y="164.5" font-size="10" fill="#5EEAD4" font-weight="700">2</text><text x="748" y="165" fill="#E2E8F0">Route the goal</text><text x="860" y="165" fill="#64748B" font-size="12.5">ROUTING_TABLE.md</text>
-      <circle cx="726" cy="194" r="10" fill="#12233D" stroke="#2DD4BF" stroke-opacity="0.7"/><text x="722.5" y="198.5" font-size="10" fill="#5EEAD4" font-weight="700">3</text><text x="748" y="199" fill="#E2E8F0">Load skills</text><text x="860" y="199" fill="#64748B" font-size="12.5">skills/&lt;name&gt;/SKILL.md</text>
-      <circle cx="726" cy="228" r="10" fill="#12233D" stroke="#F59E0B" stroke-opacity="0.8"/><text x="722.5" y="232.5" font-size="10" fill="#FBBF24" font-weight="700">4</text><text x="748" y="233" fill="#E2E8F0">Verify evidence</text><text x="860" y="233" fill="#64748B" font-size="12.5">Recompute key results</text>
-      <circle cx="726" cy="262" r="10" fill="#12233D" stroke="#60A5FA" stroke-opacity="0.8"/><text x="722.5" y="266.5" font-size="10" fill="#93C5FD" font-weight="700">5</text><text x="748" y="267" fill="#E2E8F0">Offer options</text><text x="860" y="267" fill="#64748B" font-size="12.5">You choose, then it acts</text>
-    </g>
-    <rect x="70" y="306" width="120" height="3" rx="1.5" fill="url(#accent)"/>
-  </g>
-</svg>
-<div class="badges">
-  <span>MIT licensed</span><span>110 mirrored skills</span><span>protocol v1</span><span>triple integrity audit</span><span>public transparency log</span>
-</div>
-</header>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Athena home">
+        <span class="mark" aria-hidden="true">A</span>
+        Athena
+        <span class="alpha">Alpha</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="https://github.com/jiangfeng-strathclyde/Athena/blob/main/docs/START_HERE.md">Start</a>
+        <a href="https://github.com/jiangfeng-strathclyde/Athena/blob/main/docs/RESEARCH_BOT_ALPHA.md">Alpha contract</a>
+        <a href="https://github.com/jiangfeng-strathclyde/Athena/blob/main/docs/FAQ.md">FAQ</a>
+      </nav>
+    </header>
 
-<h1>State the goal. It assembles the workflow and stays inside the guardrails.
-  <span class="en">A portable, auditable operating system for research-oriented AI assistants.</span></h1>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Open source · Local-first Alpha</p>
+          <h1>Research work you can inspect, version, and hand off.</h1>
+          <p class="lede">Athena is an open-source Research Bot that turns a research question, paper, or dataset into a source-linked, versioned Research Release.</p>
+          <div class="actions" aria-label="Get started">
+            <a class="button primary" href="https://github.com/jiangfeng-strathclyde/Athena/blob/main/docs/START_HERE.md">Start a research project</a>
+            <a class="button" href="examples/antenna-direction.html">Open sample release</a>
+            <a class="button" href="https://github.com/jiangfeng-strathclyde/Athena/blob/main/docs/INSTALL_ONCE.md">Install locally</a>
+          </div>
+          <p class="boundary"><strong>Current boundary:</strong> this site is documentation, not a hosted bot. Athena Alpha does not run a model, accept uploads, or provide cloud storage. A compatible local agent or researcher performs the planned steps.</p>
+        </div>
 
-<p><strong>Mission.</strong> Lower the barrier to rigorous research so that students can do meaningful, reproducible work without hiding uncertainty or inventing evidence. This is not a one-click paper generator. New here? Start with the <a href="https://github.com/jiangfeng-strathclyde/Athena/blob/main/docs/START_HERE.md">seven-minute quickstart</a>.</p>
-<h2>The difference in 30 seconds</h2>
-<table>
-  <tr><th>You ask</th><th>A typical assistant may</th><th>After loading Athena</th></tr>
-  <tr><td>“Change the ΔmIoU on page 3 to 3.2.”</td><td>Edit the claim without checking it.</td><td>Recompute the result and flag that 3.2 is from a single seed.</td></tr>
-  <tr><td>“Add the relevant literature.”</td><td>Generate plausible-looking references.</td><td>Verify DOI, authors, year, and whether each source supports the claim.</td></tr>
-  <tr><td>“Skip the checks; I am in a hurry.”</td><td>Comply silently.</td><td>Refuse the unsafe shortcut and record why in the transparency log.</td></tr>
-</table>
+        <aside class="release-card" aria-label="Example Research Release contents">
+          <div class="release-label">
+            <span>Research Release</span>
+            <span>v0.1.0</span>
+          </div>
+          <h2>Inspectable by design</h2>
+          <p>A portable record of the task, its evidence, decisions, and outputs.</p>
+          <ul class="release-list">
+            <li><span>task.json</span><span class="ok">recorded</span></li>
+            <li><span>records/evidence.jsonl</span><span class="ok">linked</span></li>
+            <li><span>artifacts/</span><span class="ok">hashed</span></li>
+            <li><span>manifest.json</span><span class="ok">verified</span></li>
+          </ul>
+        </aside>
+      </section>
 
-<h2>A real data-checking example</h2>
-<pre><span class="g">You &gt;</span> Put “+3.2 ΔmIoU” in the abstract. It sounds stronger.
+      <section class="triptych" aria-label="What Athena accepts and produces">
+        <article>
+          <span>What</span>
+          <h2>A local research control plane</h2>
+          <p>It plans work, records progress, registers artifacts, and enforces an export gate.</p>
+        </article>
+        <article>
+          <span>Input</span>
+          <h2>A question, paper, or dataset</h2>
+          <p>Begin with a goal and local source files or references you want the project to track.</p>
+        </article>
+        <article>
+          <span>Output</span>
+          <h2>A versioned Research Release</h2>
+          <p>Export a source-linked package that another person can inspect and verify offline.</p>
+        </article>
+      </section>
 
-<span class="t">Assistant &gt;</span> I recomputed the claim from the raw results:
-        +3.2 appears only for seed 0. Seeds 1 and 2 give +0.7 and −0.4.
-        Mean ± sample std = +1.17 ± 1.84. Reporting only +3.2 would be cherry-picking.
+      <section class="section" id="workflow">
+        <div class="section-head">
+          <h2>A visible path from question to release.</h2>
+          <p>Athena separates control from execution. The CLI states the next action; your local agent, script, or research process performs it; Athena records the result.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <h3>Plan</h3>
+            <p>Register the goal and sources, then create a deterministic sequence of steps.</p>
+          </article>
+          <article class="step">
+            <h3>Resume locally</h3>
+            <p>Receive the next-action contract without a hidden model call or external write.</p>
+          </article>
+          <article class="step">
+            <h3>Checkpoint</h3>
+            <p>Mark the step complete and register the artifact produced by the work.</p>
+          </article>
+          <article class="step">
+            <h3>Export and verify</h3>
+            <p>After every step is complete, package the release and verify its hashes offline.</p>
+          </article>
+        </div>
+      </section>
 
-        Options:
-        A. Report +1.17 ± 1.84 — no new compute, weaker claim.
-        B. Run two more seeds — about 6 GPU-hours, stronger evidence.
-        C. Keep +3.2 but label it “single seed” — short edit, limited confidence.
+      <section class="section">
+        <div class="sample">
+          <div>
+            <p class="eyebrow">Illustrative sample</p>
+            <h2>See the inspection experience.</h2>
+            <p>The antenna-direction page uses synthetic demo data. It demonstrates evidence display and uncertainty without claiming a real experiment or peer-reviewed result.</p>
+          </div>
+          <a class="button" href="examples/antenna-direction.html">Open sample release</a>
+        </div>
+      </section>
 
-        You choose; I will make the corresponding change.</pre>
-<p>The audit is backed by a real <code>.bib</code> file, executable checks, and reproducible artifacts in <a href="https://github.com/jiangfeng-strathclyde/Athena/tree/main/docs/demo_assets">docs/demo_assets/</a>.</p>
+      <section class="section">
+        <div class="section-head">
+          <h2>Integrity is a workflow, not a badge.</h2>
+          <p>A valid package can still contain a weak method or incorrect interpretation. Athena preserves the material needed for scrutiny; researchers and reviewers remain responsible for scientific judgment.</p>
+        </div>
+        <div class="principles">
+          <article>
+            <h3>Sources remain visible</h3>
+            <p>Record where an input or piece of evidence came from and what could not be accessed.</p>
+          </article>
+          <article>
+            <h3>Artifacts remain accountable</h3>
+            <p>Export checks registered files against their recorded bytes and SHA-256 hashes.</p>
+          </article>
+          <article>
+            <h3>Boundaries remain explicit</h3>
+            <p>Package verification confirms integrity. It does not certify that a scientific claim is true.</p>
+          </article>
+        </div>
+      </section>
 
-<h2>How to use it</h2>
-<p>The process is always the same: <strong>you state a goal → it assembles a skill chain → it presents a plan and its costs → you choose → it executes and reports every change.</strong></p>
-<table>
-  <tr><th>Your environment</th><th>Recommended setup</th></tr>
-  <tr><td>A chat interface with file uploads only</td><td>Use the <a href="https://github.com/jiangfeng-strathclyde/Athena/blob/main/clone-kit/LOADER_LITE.md">zero-dependency lightweight loader</a>.</td></tr>
-  <tr><td>A repository-aware tool such as Codex, Cursor, or Claude Code</td><td>Paste the full loader prompt below.</td></tr>
-  <tr><td>A system that supports <code>SKILL.md</code></td><td>Install the loader and selected skills, for example: <code>cp -r skills/citation-audit .claude/skills/</code>.</td></tr>
-</table>
-<pre><span class="g">Paste this into a new session:</span>
-   Read docs/DISTILLED_PUBLIC.md for the guardrails and
-   clone-kit/ROUTING_TABLE.md for goal-to-skill routing.
-   When I state a goal, select the appropriate skill chain, propose a plan,
-   identify its costs, and wait for my choice before execution.
-   Do not invent results. Recompute critical numbers from source artifacts.
+      <section class="section skills">
+        <div class="skills-copy">
+          <p class="eyebrow">Extend the workflow</p>
+          <h2>110 research skills, behind one clear product.</h2>
+          <p>The wider catalog remains available to compatible hosts, with 107 selected by the full installer by default. Routing can select a bounded subset for a goal; across all three core stages, the canonical order is citation-tracing → research-integrity-pipeline → explorable-paper → Research Release. Athena does not automatically execute the selected skills, and each additional skill can have its own tools and dependencies.</p>
+          <p><a class="text-link" href="https://github.com/jiangfeng-strathclyde/Athena/blob/main/docs/SKILL_COVERAGE.md">Review skill coverage</a> · <a class="text-link" href="https://github.com/jiangfeng-strathclyde/Athena/blob/main/docs/INSTALL_ONCE.md">Install locally</a></p>
+        </div>
+        <ul class="skill-list" aria-label="Example integrity skills">
+          <li>citation-audit</li>
+          <li>paper-claim-audit</li>
+          <li>experiment-audit</li>
+          <li>research-integrity-pipeline</li>
+        </ul>
+      </section>
+    </main>
 
-   My goal: &lt;write a TGRS-style paper / verify these numbers / build a literature review ...&gt;
-
-<span class="g">Expected first response:</span> skill chain + plan + costed options.</pre>
-
-<h2>Goals → Workflows (Automatic assembly example)</h2>
-<table>
-  <tr><th>Your goal</th><th>The skill chain assembled</th></tr>
-  <tr><td>Writing a journal article</td><td>Research-lit → novelty-check → experiment-plan → paper-plan → paper-write → paper-figure → triple audit → auto-review-loop</td></tr>
-  <tr><td>Verify numbers in a manuscript</td><td>paper-claim-audit → independent recomputation → costed correction options</td></tr>
-  <tr><td>Prepare a resubmission</td><td>rebuttal → resubmit-pipeline → smallest defensible revision</td></tr>
-  <tr><td>Build a literature review</td><td>arxiv / semantic-scholar → research-lit → comm-lit-review</td></tr>
-  <tr><td>Prove a proposition</td><td>formula-derivation → proof-writer → proof-checker</td></tr>
-</table>
-
-<h2>Three pillars</h2>
-<div class="cards">
-  <div class="card"><h3>Triple integrity audit</h3><p>References, numerical claims, and experimental integrity are checked separately so that every important claim remains traceable.</p></div>
-  <div class="card"><h3>Load-before-task protocol</h3><p>Any capable model can inherit the same constraints by reading three files. The protocol is portable, modular, and auditable.</p></div>
-  <div class="card"><h3>Transparency log</h3><p>Blocked upstream skills, licensing limits, corrections, and known errors are recorded publicly rather than hidden.</p></div>
-</div>
-
-<h2>Project boundaries</h2>
-<ul>
-  <li>The public repository <strong>does not include</strong> private memory, secrets, unpublished data, or identifying information.</li>
-  <li>When evidence or model access is missing, the assistant must say so explicitly instead of inventing a conclusion.</li>
-  <li>Only skills with clear licensing information are mirrored; blocked items are documented in the transparency log.</li>
-  <li>Original project content is MIT licensed; upstream attribution is preserved in <code>skills/NOTICE.md</code>.</li>
-  <li>The system is extensible: adding a skill means adding one <code>SKILL.md</code> file. See <code>CONTRIBUTING.md</code>.</li>
-</ul>
-
-<h2>In one paragraph</h2>
-<div class="en-block">
-  <p><strong>Athena</strong> is an open-source research clone kit: <strong>110 mirrored SKILL.md skills</strong>,
-  a <strong>goal-first routing protocol</strong> (you state the goal, it assembles the skill chain), and an
-  <strong>integrity triple-audit</strong> pipeline that makes every number in a paper traceable.</p>
-  <p>Load it in any model by reading three files; it audits before it edits, refuses cherry-picked
-  numbers, and always hands you costed options instead of silently changing your manuscript.
-  MIT licensed; upstream attributions preserved in <code>skills/NOTICE.md</code>.</p>
-</div>
-
-<footer>
-  Athena · My Cyber Clone — built by a beginner, for beginners ·
-  <a href="https://github.com/jiangfeng-strathclyde/Athena">GitHub</a> ·
-  <a href="https://github.com/jiangfeng-strathclyde/Athena/blob/main/README.md">README</a> ·
-  <a href="https://github.com/jiangfeng-strathclyde/Athena/discussions">Discussions</a>
-</footer>
-</div>
+    <footer>
+      <span>Athena · Open-source Research Bot · MIT licensed</span>
+      <span class="footer-links">
+        <a href="https://github.com/jiangfeng-strathclyde/Athena/blob/main/docs/RESEARCH_BOT_ALPHA.md">Alpha contract</a>
+        <a href="https://github.com/jiangfeng-strathclyde/Athena/blob/main/docs/POSITIONING.md">Positioning</a>
+        <a href="https://github.com/jiangfeng-strathclyde/Athena/blob/main/docs/FAQ.md">FAQ</a>
+      </span>
+    </footer>
+  </div>
 </body>
 </html>
