@@ -15,7 +15,7 @@ No pip packages, Bash, ARIS checkout, or MCP server are required.
 From this skill's directory, using the available Python executable:
 
 ```text
-python scripts/openalex_fetch.py search "antenna selection" --max 5
+python scripts/openalex_fetch.py search "damped oscillator" --max 5
 python scripts/openalex_fetch.py search "remote sensing" --year 2023- --type article --open-access --min-citations 10 --sort citations --max 5
 python scripts/openalex_fetch.py work "W2741809807"
 python scripts/openalex_fetch.py work "10.1038/nature14539"

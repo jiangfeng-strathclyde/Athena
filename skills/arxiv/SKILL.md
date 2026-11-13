@@ -16,7 +16,7 @@ Choose the available Python executable (`python`, `python3`, or `py -3`).
 Run these commands from this skill's directory, substituting the user's query:
 
 ```text
-python scripts/arxiv_fetch.py search "all:antenna AND all:selection" --max 5
+python scripts/arxiv_fetch.py search "all:damped AND all:oscillator" --max 5
 python scripts/arxiv_fetch.py search "1706.03762v1" --max 1
 python scripts/arxiv_fetch.py search "cs/0601001" --max 1
 ```

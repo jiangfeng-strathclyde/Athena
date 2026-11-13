@@ -4,9 +4,9 @@ This is an offline exercise using invented fixture records, not a scientific lit
 
 ## Scope and coverage
 
-- **Question:** Which works cited by S or citing S concern antenna-direction methods and their evaluations?
-- **Seed:** S, *AngleStep: antenna direction estimation in a clear corridor*, Mira Example and Rowan Fixture, 2024, preprint v1, synthetic ID `10.0000/fixture.s`.
-- **Inclusion:** Works addressing antenna-direction estimation methods or their evaluations. Potentially relevant but insufficiently evidenced records remain pending. A verified citation alone does not establish topical relevance.
+- **Question:** Which works cited by S or citing S concern damping-ratio estimators and their synthetic evaluations?
+- **Seed:** S, *DampTrace: damping-ratio estimation from low-noise oscillator traces*, Mira Example and Rowan Fixture, 2024, preprint v1, synthetic ID `10.0000/fixture.s`.
+- **Inclusion:** Works addressing damping-ratio estimation methods or their evaluations. Potentially relevant but insufficiently evidenced records remain pending. A verified citation alone does not establish topical relevance.
 - **Limits:** One hop backward and forward from S; at most 10 unique candidate works; supplied corpus only; no online retrieval. Related recommendations are recorded separately from verified adjacency.
 - **Dates:** Inspected on 2026-11-10 (Asia/Shanghai); corpus and `CitingExport` snapshot dated 2026-11-09.
 - **Counts:** Six unique non-seed candidate works, seven works including S. Both counts are below 10. P-alias is merged into P, and the two export rows for F are deduplicated. Four unique citation edges are verified within the fixture.
@@ -24,13 +24,13 @@ Locators below refer to the single corpus file identified above. “Include” m
 
 | Work ID | Bibliographic record | Synthetic identifier; publication/version | Inspected source and access level | Screening decision |
 |---|---|---|---|---|
-| S | *AngleStep: antenna direction estimation in a clear corridor* — Mira Example and Rowan Fixture, 2024 | `10.0000/fixture.s`; preprint v1 | “Seed S — record and supplied excerpt”; S.Results.1; S.Ref.1–2. Metadata, relevant result passage, complete reference list; no full text. | **Include — seed.** Directly concerns antenna-direction estimation and a clear-corridor evaluation. |
-| P | *Grid baseline for antenna direction* — Lee Sample, 2022 | `10.0000/fixture.p`; journal v1 | Bibliographic catalog rows P and P-alias; P.Abstract.1; S.Ref.1. Metadata and abstract. | **Include.** The abstract describes an antenna-direction estimator for a clear corridor and reports a reference implementation. The implementation itself is not supplied. |
-| M | *Calibration notes for direction sensors* — Nia Placeholder, 2023 | `10.0000/fixture.m`; report v1 | Bibliographic catalog row M; S.Ref.2. Metadata only. | **Pending.** A verified predecessor citation, but the title alone does not establish its connection to antenna-direction estimation methods or evaluations. |
-| F | *Obstructed-corridor evaluation of AngleStep* — Eli Test, 2025 | `10.0000/fixture.f`; journal v1 | Bibliographic catalog row F; F.Results.1; F.Ref.7; CitingExport.page1.row1 and row2. Metadata, relevant result passage, one reference, export rows; no full text. | **Include.** The supplied passage evaluates AngleStep and Grid on an obstructed-corridor test set. |
-| X | *Teaching citation management with AngleStep* — Avery Demo, 2025 | `10.0000/fixture.x`; workshop v1 | Bibliographic catalog row X; X.Abstract.1; CitingExport.page1.row3. Metadata and abstract, plus citation-export evidence. | **Exclude.** Its abstract explicitly concerns bibliography formatting and says it does not study antenna-direction methods or accuracy. Its citation remains part of the verified network. |
-| R | *A different estimator for antenna direction* — Quinn Mock, 2025 | `10.0000/fixture.r`; preprint v1 | Bibliographic catalog row R; RelatedList.row1. Metadata and topic-similarity recommendation only. | **Pending; outside the verified one-hop network.** The title suggests relevance, but no substantive text or citation relation is supplied. |
-| J | *AngleStep: antenna direction estimation in a clear corridor* — Mira Example and Rowan Fixture, 2025 | `10.0000/fixture.j`; journal v1 | Bibliographic catalog row J; RelatedList.row2. Metadata and possible-version recommendation only. | **Pending; outside the verified one-hop network.** Its relationship to S is unconfirmed. Title and author overlap does not verify a version mapping or a citation edge. |
+| S | *DampTrace: damping-ratio estimation from low-noise oscillator traces* — Mira Example and Rowan Fixture, 2024 | `10.0000/fixture.s`; preprint v1 | “Seed S — record and supplied excerpt”; S.Results.1; S.Ref.1–2. Metadata, relevant result passage, complete reference list; no full text. | **Include — seed.** Directly concerns damping-ratio estimation and a low-noise synthetic evaluation. |
+| P | *PeakDrop baseline for damping-ratio estimation* — Lee Sample, 2022 | `10.0000/fixture.p`; journal v1 | Bibliographic catalog rows P and P-alias; P.Abstract.1; S.Ref.1. Metadata and abstract. | **Include.** The abstract describes a damping-ratio estimator for a synthetic oscillator and reports a reference implementation. The implementation itself is not supplied. |
+| M | *Calibration notes for synthetic ring-down signals* — Nia Placeholder, 2023 | `10.0000/fixture.m`; report v1 | Bibliographic catalog row M; S.Ref.2. Metadata only. | **Pending.** A verified predecessor citation, but the title alone does not establish its connection to damping-ratio estimation methods or evaluations. |
+| F | *High-noise evaluation of DampTrace* — Eli Test, 2025 | `10.0000/fixture.f`; journal v1 | Bibliographic catalog row F; F.Results.1; F.Ref.7; CitingExport.page1.row1 and row2. Metadata, relevant result passage, one reference, export rows; no full text. | **Include.** The supplied passage evaluates DampTrace and PeakDrop on a high-noise synthetic trace set. |
+| X | *Teaching citation management with DampTrace* — Avery Demo, 2025 | `10.0000/fixture.x`; workshop v1 | Bibliographic catalog row X; X.Abstract.1; CitingExport.page1.row3. Metadata and abstract, plus citation-export evidence. | **Exclude.** Its abstract explicitly concerns bibliography formatting and says it does not study oscillator models or estimation error. Its citation remains part of the verified network. |
+| R | *A different estimator for oscillator damping ratio* — Quinn Mock, 2025 | `10.0000/fixture.r`; preprint v1 | Bibliographic catalog row R; RelatedList.row1. Metadata and topic-similarity recommendation only. | **Pending; outside the verified one-hop network.** The title suggests relevance, but no substantive text or citation relation is supplied. |
+| J | *DampTrace: damping-ratio estimation from low-noise oscillator traces* — Mira Example and Rowan Fixture, 2025 | `10.0000/fixture.j`; journal v1 | Bibliographic catalog row J; RelatedList.row2. Metadata and possible-version recommendation only. | **Pending; outside the verified one-hop network.** Its relationship to S is unconfirmed. Title and author overlap does not verify a version mapping or a citation edge. |
 
 ### Identity handling
 
@@ -50,22 +50,22 @@ Every arrow means **citing work → cited work**. The table is the network; scre
 | F | S | Forward, hop 1 | CitingExport.page1.row1; CitingExport.page1.row2; F.Ref.7 explicitly cites preprint v1, 2024, `10.0000/fixture.s` | Verified in supplied corpus; one edge with three supporting locators |
 | X | S | Forward, hop 1 | CitingExport.page1.row3 | Verified in supplied corpus; X excluded by topical screening |
 
-R's recommendation and J's possible-version suggestion are **not citation edges**. There is no evidence for an edge between S and either work in either direction. F's comparison with Grid also does not, by itself, verify an F → P citation.
+R's recommendation and J's possible-version suggestion are **not citation edges**. There is no evidence for an edge between S and either work in either direction. F's comparison with PeakDrop also does not, by itself, verify an F → P citation.
 
 ## Reading order
 
-1. **S — read the seed's supplied result passage first.** This defines the method name, baseline, and clear-corridor evaluation setting. The available passage supports only a narrow account of reported results; it does not disclose enough to reconstruct the method.
-2. **P — read P.Abstract.1 for the baseline's stated purpose.** It identifies Grid as an antenna-direction estimator for clear corridors and reports a reference implementation. Detailed algorithm, implementation, and evaluation assessment require material absent from this corpus.
-3. **F — read F.Results.1 and F.Ref.7.** The result passage supplies a relevant evaluation in an obstructed corridor; the reference separately confirms that F cites the seed preprint. This is the most directly relevant supplied follow-up evaluation, but its full methods and uncertainty assessment are unavailable.
+1. **S — read the seed's supplied result passage first.** This defines the method name, baseline, and low-noise synthetic evaluation setting. The available passage supports only a narrow account of reported results; it does not disclose enough to reconstruct the method.
+2. **P — read P.Abstract.1 for the baseline's stated purpose.** It identifies PeakDrop as a damping-ratio estimator for a synthetic oscillator and reports a reference implementation. Detailed algorithm, implementation, and evaluation assessment require material absent from this corpus.
+3. **F — read F.Results.1 and F.Ref.7.** The result passage supplies a relevant evaluation on high-noise synthetic traces; the reference separately confirms that F cites the seed preprint. This is the most directly relevant supplied follow-up evaluation, but its full methods and uncertainty assessment are unavailable.
 
 M, R, and J remain conditional follow-up candidates rather than assessed on-topic reading. X is excluded and is not recommended for this research question.
 
 ### What the result passages actually support
 
-| Passage | Supplied test condition | Reported mean angular error | Limits of the passage |
+| Passage | Supplied test condition | Reported mean absolute damping-ratio error | Limits of the passage |
 |---|---|---|---|
-| S.Results.1 | Clear-corridor test set | AngleStep: 2°; Grid: 4° | No obstructed-corridor results or uncertainty estimates in this excerpt. |
-| F.Results.1 | Separately collected obstructed-corridor test set | AngleStep: 6°; Grid: 4° | No uncertainty estimates in this excerpt. |
+| S.Results.1 | Low-noise synthetic trace set | DampTrace: 0.02; PeakDrop: 0.04 | No high-noise results or uncertainty estimates in this excerpt. |
+| F.Results.1 | Separately generated high-noise synthetic trace set | DampTrace: 0.06; PeakDrop: 0.04 | No uncertainty estimates in this excerpt. |
 
 These invented passages report different error orderings under different test conditions. They do not establish a general contradiction, replication, causal explanation, or statistically reliable superiority. The citation evidence establishes that F cites S; it does not establish that F extends, validates, or refutes S.
 

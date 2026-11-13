@@ -111,6 +111,6 @@ and a validation report separating:
 - unresolved or stale items.
 
 Never describe template validation as scientific reproduction or self-review
-as independent review. The bundled Athena antenna example is summarized in
-[antenna-case-study.md](references/antenna-case-study.md); use it as a design
-reference, not as a universal page template.
+as independent review. The bundled Athena synthetic example is summarized in
+[damped-oscillator-case-study.md](references/damped-oscillator-case-study.md);
+use it as a design reference, not as a universal page template.

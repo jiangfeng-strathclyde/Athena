@@ -64,7 +64,7 @@ The integrity catalog includes `citation-audit`, `paper-claim-audit`, and `exper
 
 ## Is the sample release real research?
 
-No. The [antenna-direction sample](examples/antenna-direction.html) is an illustrative presentation built from synthetic demo data. It shows the intended inspection experience; it is not a peer-reviewed result or evidence that Athena has independently run an experiment.
+No. The [damped-oscillator sample](examples/damped-oscillator.html) is a fully synthetic teaching model computed from the equation shown on the page. It contains no paper results, private data, or empirical research claim; it only demonstrates the intended inspection experience.
 
 ## How does Athena relate to ARIS?
 
@@ -76,4 +76,4 @@ Yes, subject to the license attached to each component and to the terms of any e
 
 ## Where should I start?
 
-Follow the [local quickstart](START_HERE.md), inspect the [sample release](examples/antenna-direction.html), or read the [Research Bot Alpha contract](RESEARCH_BOT_ALPHA.md).
+Follow the [local quickstart](START_HERE.md), inspect the [synthetic sample](examples/damped-oscillator.html), or read the [Research Bot Alpha contract](RESEARCH_BOT_ALPHA.md).

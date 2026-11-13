@@ -82,7 +82,7 @@ recommend them as on-topic reading.
 
 ## Example requests
 
-- “From this antenna paper, trace one hop of references and later citing work;
+- “From this damping-estimation paper, trace one hop of references and later citing work;
   keep at most 15 candidates and explain which I should read first.”
 - “Use only these PDFs and this citation export. Show what cites what, flag
   duplicates, and tell me which links cannot be confirmed.”

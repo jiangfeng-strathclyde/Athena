@@ -15,7 +15,7 @@ api.semanticscholar.org. No pip packages, Bash, ARIS checkout, or MCP are needed
 Run from this skill's directory with the available Python executable:
 
 ```text
-python scripts/semantic_scholar_fetch.py search "antenna selection" --max 5
+python scripts/semantic_scholar_fetch.py search "damped oscillator" --max 5
 python scripts/semantic_scholar_fetch.py search "remote sensing" --year 2023- --publication-types JournalArticle,Conference --max 5
 python scripts/semantic_scholar_fetch.py search-bulk "transformer" --sort citationCount:desc --max 5
 python scripts/semantic_scholar_fetch.py paper "ARXIV:1706.03762"

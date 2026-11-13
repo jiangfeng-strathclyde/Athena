@@ -137,5 +137,5 @@ status is `complete`; only then run `export`.
 
 - [Research Bot Alpha contract](RESEARCH_BOT_ALPHA.md)
 - [Install skills for a compatible agent](INSTALL_ONCE.md)
-- [Open the sample release presentation](examples/antenna-direction.html)
+- [Open the synthetic damped-oscillator release](examples/damped-oscillator.html)
 - [Understand current validation boundaries](VALIDATION.md)

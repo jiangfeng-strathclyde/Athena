@@ -6,44 +6,44 @@ looked up. The corpus is a local snapshot dated 2026-11-09.
 
 ## Seed S — record and supplied excerpt
 
-- Title: AngleStep: antenna direction estimation in a clear corridor
+- Title: DampTrace: damping-ratio estimation from low-noise oscillator traces
 - Authors: Mira Example and Rowan Fixture
 - Year: 2024
 - Type/version: preprint v1
 - Identifier: `10.0000/fixture.s`
 - Material: metadata, result excerpt, and complete reference list only
-- Result excerpt S.Results.1: In the clear-corridor test set, AngleStep's mean
-  angular error was 2 degrees and the Grid baseline's was 4 degrees. No obstructed
-  corridor tests or uncertainty estimates are included in this excerpt.
-- Reference S.Ref.1: Lee Sample. Grid baseline for antenna direction. 2022.
+- Result excerpt S.Results.1: In the low-noise synthetic trace set, DampTrace's
+  mean absolute damping-ratio error was 0.02 and the PeakDrop baseline's was 0.04.
+  No high-noise traces or uncertainty estimates are included in this excerpt.
+- Reference S.Ref.1: Lee Sample. PeakDrop baseline for damping-ratio estimation. 2022.
   `https://doi.org/10.0000/FIXTURE.P`
-- Reference S.Ref.2: Nia Placeholder. Calibration notes for direction sensors.
+- Reference S.Ref.2: Nia Placeholder. Calibration notes for synthetic ring-down signals.
   2023. `10.0000/fixture.m`
 
 ## Bibliographic catalog
 
 | ID | Title | Authors | Year | ID/version | Available content |
 |---|---|---|---|---|---|
-| P | Grid baseline for antenna direction | Lee Sample | 2022 | `10.0000/fixture.p`; journal v1 | Metadata and P.Abstract.1 below |
-| P-alias | Grid baseline for antenna direction | Lee Sample | 2022 | `HTTPS://DOI.ORG/10.0000/FIXTURE.P`; journal v1 | Same source record as P |
-| M | Calibration notes for direction sensors | Nia Placeholder | 2023 | `10.0000/fixture.m`; report v1 | Metadata only; no text supplied |
-| F | Obstructed-corridor evaluation of AngleStep | Eli Test | 2025 | `10.0000/fixture.f`; journal v1 | Metadata, result excerpt, one reference |
-| X | Teaching citation management with AngleStep | Avery Demo | 2025 | `10.0000/fixture.x`; workshop v1 | Metadata and abstract |
-| R | A different estimator for antenna direction | Quinn Mock | 2025 | `10.0000/fixture.r`; preprint v1 | Metadata only |
-| J | AngleStep: antenna direction estimation in a clear corridor | Mira Example and Rowan Fixture | 2025 | `10.0000/fixture.j`; journal v1 | Metadata only; relationship to S not confirmed |
+| P | PeakDrop baseline for damping-ratio estimation | Lee Sample | 2022 | `10.0000/fixture.p`; journal v1 | Metadata and P.Abstract.1 below |
+| P-alias | PeakDrop baseline for damping-ratio estimation | Lee Sample | 2022 | `HTTPS://DOI.ORG/10.0000/FIXTURE.P`; journal v1 | Same source record as P |
+| M | Calibration notes for synthetic ring-down signals | Nia Placeholder | 2023 | `10.0000/fixture.m`; report v1 | Metadata only; no text supplied |
+| F | High-noise evaluation of DampTrace | Eli Test | 2025 | `10.0000/fixture.f`; journal v1 | Metadata, result excerpt, one reference |
+| X | Teaching citation management with DampTrace | Avery Demo | 2025 | `10.0000/fixture.x`; workshop v1 | Metadata and abstract |
+| R | A different estimator for oscillator damping ratio | Quinn Mock | 2025 | `10.0000/fixture.r`; preprint v1 | Metadata only |
+| J | DampTrace: damping-ratio estimation from low-noise oscillator traces | Mira Example and Rowan Fixture | 2025 | `10.0000/fixture.j`; journal v1 | Metadata only; relationship to S not confirmed |
 
-P.Abstract.1: This paper introduces the Grid baseline for estimating antenna
-direction in a clear corridor. It reports a reference implementation.
+P.Abstract.1: This paper introduces the PeakDrop baseline for estimating the
+damping ratio of a synthetic oscillator. It reports a reference implementation.
 
-F.Results.1: On a separately collected obstructed-corridor test set, AngleStep's
-mean angular error was 6 degrees and Grid's was 4 degrees. No uncertainty
+F.Results.1: On a separately generated high-noise synthetic trace set, DampTrace's
+mean absolute damping-ratio error was 0.06 and PeakDrop's was 0.04. No uncertainty
 estimates are supplied in this excerpt.
 
-F.Ref.7: Mira Example and Rowan Fixture. AngleStep: antenna direction estimation
-in a clear corridor. Preprint v1, 2024. `10.0000/fixture.s`.
+F.Ref.7: Mira Example and Rowan Fixture. DampTrace: damping-ratio estimation from
+low-noise oscillator traces. Preprint v1, 2024. `10.0000/fixture.s`.
 
-X.Abstract.1: This workshop exercise uses AngleStep's reference list to teach
-bibliography formatting. It does not study antenna-direction methods or accuracy.
+X.Abstract.1: This workshop exercise uses DampTrace's reference list to teach
+bibliography formatting. It does not study oscillator models or estimation error.
 
 ## Forward-citation export for S
 

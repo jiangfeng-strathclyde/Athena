@@ -2,7 +2,7 @@
 
 **Athena is an open-source Research Bot that turns a research question, paper, or dataset into a source-linked, versioned Research Release.**
 
-[Start a research project](docs/START_HERE.md) · [Open sample release](docs/examples/antenna-direction.html) · [Install locally](docs/INSTALL_ONCE.md)
+[Start a research project](docs/START_HERE.md) · [Open synthetic sample](docs/examples/damped-oscillator.html) · [Install locally](docs/INSTALL_ONCE.md)
 
 > **Alpha · local first.** The repository is Athena's control plane: it keeps
 > project state, routes work, records artifacts, and exports verifiable releases.
@@ -120,7 +120,7 @@ Catalog presence does not mean those dependencies are installed. See
 
 - [Research Bot Alpha contract](docs/RESEARCH_BOT_ALPHA.md)
 - [Quickstart](docs/START_HERE.md)
-- [Sample release presentation](docs/examples/antenna-direction.html)
+- [Synthetic damped-oscillator release](docs/examples/damped-oscillator.html)
 - [Skill map](docs/SKILL_COVERAGE.md)
 - [FAQ](docs/FAQ.md)
 - [Positioning](docs/POSITIONING.md)
