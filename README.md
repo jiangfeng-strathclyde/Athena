@@ -139,7 +139,7 @@ and the input file hash. Missing or duplicate pairs stop the calculation.
 - [Start here](docs/START_HERE.md) — a guided first session
 - [Install once](docs/INSTALL_ONCE.md) — keep Athena available across conversations
 - [Browse the skill map](docs/SKILL_COVERAGE.md) — see what Athena can do
-- [Open the explorable antenna paper](https://jiangfeng-strathclyde.github.io/Athena/examples/antenna-direction.html) — a self-contained interactive research case study
+- [Explore a synthetic damped oscillator](https://jiangfeng-strathclyde.github.io/Athena/examples/damped-oscillator.html) — an interactive, paper-free teaching case with explicit assumptions
 - [Understand the evidence rules](docs/DISTILLED_PUBLIC.md) — how Athena avoids unsupported claims
 - [Add a skill](CONTRIBUTING.md) — contribute a reusable research workflow
 

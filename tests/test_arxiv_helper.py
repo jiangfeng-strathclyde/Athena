@@ -37,10 +37,10 @@ class ArxivTests(unittest.TestCase):
 
     def test_query_and_feed(self):
         self.assertIn("id_list=1706.03762v1", helper.api_url("1706.03762v1"))
-        self.assertIn("search_query=all%3Aantenna", helper.api_url("all:antenna"))
+        self.assertIn("search_query=all%3Aoscillator", helper.api_url("all:oscillator"))
         for count in [0, 101, -1]:
             with self.assertRaises(ValueError):
-                helper.api_url("antenna", count)
+                helper.api_url("oscillator", count)
         paper = helper.parse_feed(FEED)[0]
         self.assertEqual(paper["id"], "1706.03762v1")
         self.assertEqual(paper["title"], "Example title")
